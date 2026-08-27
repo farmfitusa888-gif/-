@@ -10,7 +10,7 @@ server behind it.
 
 These are eight other places that shape fits.
 
-**Start with [`ideas/00-METHOD.md`](ideas/00-METHOD.md)** — it sets out the gate
+**Start with [`ideas/00-OVERVIEW.md`](ideas/00-OVERVIEW.md)** for the scoring and the ranking, then [`ideas/00-METHOD.md`](ideas/00-METHOD.md) — it sets out the gate
 every idea had to clear and the sourcing rules. Then read the briefs.
 
 ---
@@ -66,25 +66,25 @@ built, as code in the existing repository:
 
 ## The recommendation
 
-**Build 8 — "what's behind this wall."**
+**7 — the barrier survey — is the strongest business.** The buyer already bills
+**$1,700–$4,500 per survey**, so the return on a subscription is one line of
+arithmetic rather than an argument. A barrier survey is read in litigation, which
+makes "what was measured versus what was assumed" a professional necessity rather
+than a nice-to-have. Its risk is distribution, not product.
 
-Not because it scores highest — it ties. Because it is the only one of the eight
-where **the contractor makes money instead of spending it**, and that is a
-fundamentally shorter sale than any other idea here. It also directly answers the
-risk Trueline names against itself in `docs/BUSINESS.md`: *"the free tier is the
-product... a thousand users, a great App Store rating, and $400 a month."* An
-idea whose pitch is "put $250 on your next invoice" does not have that failure
-mode.
+**8 — what's behind this wall — is the best idea.** It is the only one of the
+eight where the operator **makes** money instead of spending it: a $150–$400 line
+item on a job where the walls were already open. That is a far shorter sale than
+any subscription pitch, and it is the most defensible of the eight — nobody in
+the category has noticed that the person who benefits most is the homeowner, not
+the contractor. Its risk is that the value arrives four years late, and latent
+value has to be sold rather than bought.
 
-It reuses the posed-photo capture that already exists and is currently doing
-nothing but decorating a scan. And it can be sold **to Trueline's own users**,
-which is distribution you do not have to buy twice.
+**1 and 6 are the fastest to a working prototype**, and each is gated on a single
+unmeasured accuracy figure that one afternoon would settle.
 
-**Second: 7, the barrier survey** — the strongest pure fit for the provenance
-engine, and a buyer who already bills $1,700–$4,500 per survey. Its constraint is
-distribution, not product.
-
-**Do not build 4.** It is the most creative idea here and it is genuinely late.
+**Do not build 4.** It is the most creative idea here and it is genuinely late —
+four phone-based competitors already ship, one using the same sensor.
 
 ## Before writing any code
 
@@ -92,11 +92,12 @@ Every brief ends with **one test that settles it**, chosen to cost a day or less
 and to be runnable before the first commit. Idea 1's test costs one slab; idea
 6's costs one afternoon; idea 8's costs five phone calls.
 
-**Run the test first.** Trueline's own history is the argument for this: the
-RoomPlan inspector "found two of the room model's assumptions wrong, one field
-missing, and the closure trap" — by looking at real data before trusting the
-model. Same discipline, applied one step earlier.
+**Run the test first.** Several of these ideas are gated on an accuracy figure
+that does not exist in public sources and was not measured here. Those gates are
+named in each brief and listed together in `SOURCES.md`. Running the test is
+cheap; building first and finding the sensor cannot hold the tolerance is not.
 
 ---
 
-Sources for every figure: [`SOURCES.md`](SOURCES.md).
+Sources for every figure: [`SOURCES.md`](SOURCES.md). \
+The whole set as one print-ready document: [`build/Eight-Business-Ideas.pdf`](build/Eight-Business-Ideas.pdf) — 37 pages.
