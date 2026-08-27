@@ -120,11 +120,20 @@ Two things are ready to act on now, both for idea 8:
   five-call demand test: the script, what to listen for, a scoring rubric and a
   decision rule to write down *before* dialling. No code, one afternoon, and it
   can kill the idea for the price of five phone calls.
-- **[`apps/openwall/`](apps/openwall/)** — the measurement core, as working code:
-  exact integer geometry, camera unprojection, triangulation that reports its own
-  error, provenance, and the self-contained artefact generator. **43 tests, clean
-  typecheck**, and `npm run demo` writes a real record you can open with the wifi
-  off.
+- **[`apps/`](apps/) — all five products, as Swift.** A shared `MeasureKit`
+  engine plus `OpenWall`, `Riser`, `Plumb`, `Flatline` and `Templat`, each with a
+  pure tested core and a SwiftUI + ARKit app layer. **114 Swift tests written.**
+- **[`apps/openwall/`](apps/openwall/)** — the TypeScript reference core that
+  actually runs here: **43 tests, clean typecheck**, and `npm run demo` writes a
+  real record you can open with the wifi off.
+- **[`apps/verify/`](apps/verify/)** — the reference implementation of
+  MeasureKit's numerics, **20 tests passing**, which is where every expected value
+  in the Swift tests was computed and checked.
+
+**The Swift was not compiled** — `download.swift.org` is blocked here, so no
+toolchain could be installed. [`apps/README.md`](apps/README.md) states exactly
+what was verified instead, the three bugs that verification caught, and the five
+measurements still outstanding.
 
 ## Before writing any code
 
