@@ -72,7 +72,7 @@ can open in ten years.**
 | **Job setup** | Address, homeowner name, rooms |
 | **Capture** | Walk the open room. LiDAR builds the wall geometry; the camera shoots continuously with pose attached |
 | **Trace** | Tap a pipe or cable in one frame, tap it again in another from a different angle. The app triangulates a real 3D position. Label it: cold water, 12-2 romex, 3" waste, HVAC supply |
-| **Provenance** | A run seen and triangulated is `measured`. A run inferred between two visible points is `derived` and prints differently |
+| **Provenance** | A run seen in two frames is `triangulated`; one a tape was put on is `measured`; one inferred between visible points is `derived`. All three print differently. **A sensor result is never labelled the same as a tape** |
 | **Verify** | A tape on one wall per axis anchors the room, same as any measured space |
 | **Issue** | One self-contained file — geometry, positioned runs, photographs, the provenance legend — that opens in any browser with no app and no login |
 | **Invoice** | The record becomes a priced line item |

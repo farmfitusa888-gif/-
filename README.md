@@ -112,6 +112,20 @@ share of a market, and these five markets differ by a factor of twenty-one.
 reaches break-even** — its steady-state ceiling (175 customers) sits below its
 break-even (181). Churn eats it first.
 
+## Validation and code
+
+Two things are ready to act on now, both for idea 8:
+
+- **[`buildouts/08-CALL-SCRIPT.md`](buildouts/08-CALL-SCRIPT.md)** — the exact
+  five-call demand test: the script, what to listen for, a scoring rubric and a
+  decision rule to write down *before* dialling. No code, one afternoon, and it
+  can kill the idea for the price of five phone calls.
+- **[`apps/openwall/`](apps/openwall/)** — the measurement core, as working code:
+  exact integer geometry, camera unprojection, triangulation that reports its own
+  error, provenance, and the self-contained artefact generator. **43 tests, clean
+  typecheck**, and `npm run demo` writes a real record you can open with the wifi
+  off.
+
 ## Before writing any code
 
 Every brief ends with **one test that settles it**, chosen to cost a day or less

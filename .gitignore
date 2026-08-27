@@ -1,3 +1,5 @@
 build/*.html
 build/chk-*.png
 build/v-*.png
+node_modules/
+apps/*/build/
