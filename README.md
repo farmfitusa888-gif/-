@@ -86,6 +86,32 @@ unmeasured accuracy figure that one afternoon would settle.
 **Do not build 4.** It is the most creative idea here and it is genuinely late —
 four phone-based competitors already ship, one using the same sensor.
 
+## Complete buildouts — ideas 7, 8, 1, 6, 2
+
+Five of the eight are built out in full in [`buildouts/`](buildouts/): product
+spec, technical architecture, build plan in weeks, a validation protocol to run
+*before* any code, pricing, unit economics, go-to-market with a sales script,
+competitive battle card, legal posture, metrics, kill criteria and a 90-day plan.
+
+**Read [`buildouts/00-SHARED.md`](buildouts/00-SHARED.md) first.** Sizing the
+markets changed the ranking, because break-even is not a customer count — it is a
+share of a market, and these five markets differ by a factor of twenty-one.
+
+| Idea | Buyers in US | Break-even | Share of market needed |
+|---|---:|---:|---:|
+| 2 Fire & life-safety | 19,845 | 80 | **0.40%** |
+| 8 Behind the wall | 127,394 | 145 | **0.11%** |
+| 6 Floor prep | 13,108 | 181 | **1.38%** |
+| 1 Templating | 5,951 | 60 (at $119) | **1.01%** |
+| 7 Barrier survey | **unknown** | 90 | **cannot be computed** |
+
+- **Buildout volume (PDF, 44 pages):** [`build/Five-Business-Buildouts.pdf`](build/Five-Business-Buildouts.pdf)
+- **Financial model (xlsx):** [`build/Five-Business-Models.xlsx`](build/Five-Business-Models.xlsx) — edit the Dials tab and everything recalculates
+
+**The model's hardest finding:** at the assumed sales rates, **floor prep never
+reaches break-even** — its steady-state ceiling (175 customers) sits below its
+break-even (181). Churn eats it first.
+
 ## Before writing any code
 
 Every brief ends with **one test that settles it**, chosen to cost a day or less
