@@ -1,4 +1,4 @@
-#if canImport(ARKit)
+#if os(iOS)
 import SwiftUI
 import UniformTypeIdentifiers
 import MeasureKit

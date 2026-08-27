@@ -1,11 +1,16 @@
-#if canImport(ARKit)
+#if os(iOS)
 import ARKit
 import simd
 
 /// Conversion between ARKit's simd types and MeasureKit's platform-neutral ones.
 ///
-/// Guarded so the package still builds and tests where ARKit does not exist -
-/// which is how the measurement engine stays testable without a device.
+/// The guard is `os(iOS)`, NOT `canImport(ARKit)`.
+///
+/// `canImport(ARKit)` is TRUE on macOS - the framework ships there - but
+/// `ARFrame`, `ARSession` and `ARCamera` are iOS-only, so the guard passed and
+/// then every type in this file failed to resolve. That broke `swift test` on a
+/// Mac with `cannot find type 'ARFrame' in scope`, which is exactly the class of
+/// error a compiler catches in a second and a careful reader does not.
 public extension Transform {
     /// ARKit's `simd_float4x4` is already column-major, so the columns map directly.
     init(_ m: simd_float4x4) {

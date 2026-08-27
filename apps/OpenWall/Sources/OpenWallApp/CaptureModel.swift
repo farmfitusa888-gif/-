@@ -1,4 +1,4 @@
-#if canImport(ARKit)
+#if os(iOS)
 import ARKit
 import CoreImage
 import UIKit
