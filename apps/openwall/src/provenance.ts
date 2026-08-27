@@ -28,18 +28,25 @@ export const PROVENANCE_LABEL: Record<Provenance, string> = {
   adjusted: "Adjusted by a later measurement",
 };
 
-/** Only these may be presented as observed fact. */
-export const OBSERVED: ReadonlySet<Provenance> = new Set<Provenance>(["triangulated", "measured"]);
-
-export const isObserved = (p: Provenance): boolean => OBSERVED.has(p);
+/** Whether anything actually saw this. Only `derived` was never observed. */
+export const isObserved = (p: Provenance): boolean => p !== "derived";
 
 /**
- * A span between two points is only as trustworthy as its weaker end, and an
- * unobserved end makes the whole span inferred.
+ * How much weight each carries, weakest first.
+ *
+ * An earlier version of this file kept a set of "observed" values that left
+ * `adjusted` out, which made `spanProvenance("adjusted", "measured")` return
+ * `derived` - claiming nothing had seen a span that a tape measurement had
+ * moved - and left the `adjusted` branch below unreachable. An explicit ordering
+ * cannot go subtly wrong in that way.
  */
-export function spanProvenance(a: Provenance, b: Provenance): Provenance {
-  if (a === "measured" && b === "measured") return "measured";
-  if (!isObserved(a) || !isObserved(b)) return "derived";
-  if (a === "adjusted" || b === "adjusted") return "adjusted";
-  return "triangulated";
-}
+const STRENGTH: Record<Provenance, number> = {
+  derived: 0,
+  triangulated: 1,
+  adjusted: 2,
+  measured: 3,
+};
+
+/** A span is exactly as trustworthy as its weaker end. */
+export const spanProvenance = (a: Provenance, b: Provenance): Provenance =>
+  STRENGTH[a] <= STRENGTH[b] ? a : b;

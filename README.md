@@ -124,11 +124,12 @@ Two things are ready to act on now, both for idea 8:
   engine plus `OpenWall`, `Riser`, `Plumb`, `Flatline` and `Templat`, each with a
   pure tested core and a SwiftUI + ARKit app layer. **130 Swift tests written.**
 - **[`apps/openwall/`](apps/openwall/)** — the TypeScript reference core that
-  actually runs here: **43 tests, clean typecheck**, and `npm run demo` writes a
+  actually runs here: **46 tests, clean typecheck**, and `npm run demo` writes a
   real record you can open with the wifi off.
 - **[`apps/verify/`](apps/verify/)** — the reference implementation of
-  MeasureKit's numerics, **20 tests passing**, which is where every expected value
-  in the Swift tests was computed and checked.
+  MeasureKit's numerics, **57 tests passing**, which is where every expected value
+  in the Swift tests was computed and checked - and where two real bugs in the
+  running code were found.
 
 **The Swift was not compiled** — `download.swift.org` is blocked here, so no
 toolchain could be installed. [`apps/README.md`](apps/README.md) states exactly

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { spanProvenance } from "../src/provenance.js";
+import { type Provenance, spanProvenance } from "../src/provenance.js";
 import {
   buildRun, distance, fromMetres, runLength, summarise, type TracePoint,
 } from "../src/runs.js";
@@ -88,5 +88,25 @@ describe("span provenance", () => {
   it("never upgrades an inferred end", () => {
     expect(spanProvenance("measured", "derived")).toBe("derived");
     expect(spanProvenance("triangulated", "derived")).toBe("derived");
+  });
+
+  /// The bug this replaced: `adjusted` was missing from the observed set, so a
+  /// span an actual tape had moved came back as "inferred, not seen".
+  it("treats an adjusted end as seen, because a measurement moved it", () => {
+    expect(spanProvenance("adjusted", "measured")).toBe("adjusted");
+    expect(spanProvenance("adjusted", "adjusted")).toBe("adjusted");
+    expect(spanProvenance("adjusted", "triangulated")).toBe("triangulated");
+    expect(spanProvenance("adjusted", "derived")).toBe("derived");
+  });
+
+  it("is exactly the weaker of the two ends, in both orders", () => {
+    const order: Provenance[] = ["derived", "triangulated", "adjusted", "measured"];
+    for (let i = 0; i < order.length; i++) {
+      for (let j = 0; j < order.length; j++) {
+        const expected = order[Math.min(i, j)]!;
+        expect(spanProvenance(order[i]!, order[j]!)).toBe(expected);
+        expect(spanProvenance(order[j]!, order[i]!)).toBe(expected);
+      }
+    }
   });
 });

@@ -105,6 +105,9 @@ final class ProvenanceTests: XCTestCase {
         XCTAssertEqual(combine(.measured, .derived), .derived)
         XCTAssertEqual(combine(.triangulated, .derived), .derived)
         XCTAssertEqual(combine(.triangulated, .scanned), .scanned)
+        XCTAssertEqual(combine(.measured, .scanned), .scanned)
+        XCTAssertEqual(combine(.adjusted, .measured), .adjusted)
+        XCTAssertEqual(combine(.derived, .scanned), .derived)
     }
 
     func testATypedMeasurementReplacesTheSensorValueRatherThanAveraging() {

@@ -145,6 +145,19 @@ describe("the artefact", () => {
     expect(html).toContain("<figcaption>\" onerror=\"alert(1)</figcaption>");
   });
 
+  it("refuses non-ASCII that merely looks alphanumeric", () => {
+    // Devanagari digits are `isNumber` in most languages' character classes.
+    // Base64 is ASCII by definition, so these must be rejected.
+    expect(() =>
+      renderRecord({
+        ...INPUT,
+        rooms: [{ ...INPUT.rooms[0]!, photos: [
+          { id: "bad", caption: "c", base64: "\u0966\u0967\u0968", mimeType: "image/png" },
+        ] }],
+      }),
+    ).toThrow(RangeError);
+  });
+
   it("refuses a photo that is a URL rather than inlined bytes", () => {
     expect(() =>
       renderRecord({

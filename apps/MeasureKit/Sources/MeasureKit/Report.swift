@@ -176,9 +176,21 @@ public enum ReportRenderer {
         """
     }
 
+    /// Base64 is ASCII by definition.
+    ///
+    /// `Character.isLetter` and `isNumber` accept Devanagari digits and Cyrillic
+    /// letters, so they would wave through a string that is not base64 at all -
+    /// and the only thing standing between that and a broken `data:` URI is this
+    /// check. An explicit ASCII set is the correct test.
     static func isPlainBase64(_ s: String) -> Bool {
-        !s.isEmpty && s.allSatisfy {
-            $0.isLetter || $0.isNumber || $0 == "+" || $0 == "/" || $0 == "="
+        guard !s.isEmpty else { return false }
+        return s.utf8.allSatisfy { byte in
+            (byte >= 65 && byte <= 90)    // A-Z
+                || (byte >= 97 && byte <= 122)  // a-z
+                || (byte >= 48 && byte <= 57)   // 0-9
+                || byte == 43                   // +
+                || byte == 47                   // /
+                || byte == 61                   // =
         }
     }
 

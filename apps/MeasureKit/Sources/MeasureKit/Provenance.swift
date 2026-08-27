@@ -27,9 +27,23 @@ public enum Provenance: String, CaseIterable, Sendable, Codable {
         }
     }
 
-    /// Only these may be presented as observed fact.
-    public var isObserved: Bool {
-        self == .triangulated || self == .measured || self == .adjusted
+    /// Whether anything actually saw this, by any means.
+    ///
+    /// `scanned` counts: a sensor did observe it. What `scanned` lacks is
+    /// VERIFICATION, which is `isIssuable` - and conflating the two is what made
+    /// the first version of `combine` below return `derived` for a scanned end,
+    /// claiming nothing had seen a point a sensor had.
+    public var isObserved: Bool { self != .derived }
+
+    /// How much weight this carries, weakest first. Used to combine two ends.
+    var strength: Int {
+        switch self {
+        case .derived: return 0        // never seen at all
+        case .scanned: return 1        // a sensor saw it; nobody checked
+        case .triangulated: return 2   // several sensor views agreed
+        case .adjusted: return 3       // follows from a measurement elsewhere
+        case .measured: return 4       // a tape was on it
+        }
     }
 
     /// Whether a document may be issued on this value alone.
@@ -60,14 +74,12 @@ public struct Provenanced<Value>: Sendable where Value: Sendable {
     }
 }
 
-/// A span is only as trustworthy as its weaker end.
+/// A span is only as trustworthy as its weaker end - literally.
 ///
-/// Deliberately pessimistic: one unobserved end makes the whole span inferred,
-/// because somebody downstream acts on this.
+/// The first version of this was a ladder of special cases, and it had a dead
+/// branch and one wrong answer: it called a triangulated-to-scanned span
+/// `derived`, which claims nothing saw a point a sensor had seen. Taking the
+/// weaker of the two ends is both correct and impossible to get subtly wrong.
 public func combine(_ a: Provenance, _ b: Provenance) -> Provenance {
-    if a == .measured && b == .measured { return .measured }
-    if !a.isObserved || !b.isObserved { return .derived }
-    if a == .adjusted || b == .adjusted { return .adjusted }
-    if a == .scanned || b == .scanned { return .scanned }
-    return .triangulated
+    a.strength <= b.strength ? a : b
 }
