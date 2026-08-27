@@ -42,34 +42,34 @@ is the arithmetic, because that is the part that was actually tested.
 Recorded because they are the whole argument for doing it this way. Two of them
 were live in code that **runs**, and are now fixed and proven fixed.
 
-1. ** was 4, which is millimetres**, while the DXF coordinates are
+1. **`$INSUNITS` was 4, which is millimetres**, while the DXF coordinates are
    written in inches. The file would have opened cleanly, looked correct, and cut
    every slab 25.4x too small. Caught by reading the specification instead of
    trusting memory.
 2. **The straightedge hump case was wrong by 50%.** A straightedge rests *on* a
-   hump and see-saws, so the deepest gap is at the quarter points - 83.33
-   thousandths - not the hump's full 125. The intuitive answer was the wrong one.
-3. ** was non-deterministic.** It sorted by size alone, and Swift's
+   hump and see-saws, so the deepest gap is at the quarter points — 83.33
+   thousandths — not the hump's full 125. The intuitive answer was the wrong one.
+3. **`carryList` was non-deterministic.** It sorted by size alone, and Swift's
    sort is not stable, so two equal entries could swap between runs. A list
    somebody works down with a tape cannot reorder itself.
-4. ** returned  for a scanned end** - claiming nothing had
+4. **`combine` returned `derived` for a `scanned` end** — claiming nothing had
    *seen* a point a sensor had, and leaving one branch of the function
    unreachable. The harness caught this as a **failing Swift test before that
    test had ever been run.** Replaced with an explicit weakness ordering: a span
    is exactly as strong as its weaker end.
-5. **The same bug shape, live, in the running TypeScript core.**  was
+5. **The same bug shape, live, in the running TypeScript core.** `adjusted` was
    missing from its observed set, so a span an actual tape measurement had moved
    came back as "inferred, not seen". Found by porting the Swift and comparing.
    Fixed, with a test that walks the whole lattice in both orders.
-6. ** accepted non-ASCII.**  and 
+6. **`isPlainBase64` accepted non-ASCII.** `Character.isLetter` and `isNumber`
    pass Devanagari digits and Cyrillic letters, and that check is the only thing
-   between a bad string and a broken  URI. Now an explicit ASCII test.
+   between a bad string and a broken `data:` URI. Now an explicit ASCII test.
 
-Also fixed by reading rather than running: a type named  in 
-that shadowed Swift's own, and a  passed where an **area** belonged - now
-a real  type, so the compiler catches it rather than a reviewer.
+Also fixed by reading rather than running: a type named `Result` in `RiserCore`
+that shadowed Swift's own, and a `Length` passed where an **area** belonged — now
+a real `Area` type, so the compiler catches it rather than a reviewer.
 
-**Four of these six were in the parts a careful reader would skim** - a units
+**Four of these six were in the parts a careful reader would skim** — a units
 constant, a sort predicate, a set membership, a character class. That is the
 category of bug that verification finds and review does not.
 
