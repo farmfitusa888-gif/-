@@ -1,7 +1,0 @@
-{
-  "name": "measurekit-vectors",
-  "private": true,
-  "type": "module",
-  "scripts": { "test": "vitest run", "emit": "tsx emit-vectors.ts" },
-  "devDependencies": { "tsx": "^4.19.2", "typescript": "^5.7.2", "vitest": "^2.1.8" }
-}

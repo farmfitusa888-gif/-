@@ -12,8 +12,7 @@ tell the difference.**
 | [`Plumb/`](Plumb/) | 7 | Accessibility barrier survey, built to be read in litigation |
 | [`Flatline/`](Flatline/) | 6 | Floor-prep screening that refuses to call itself an F-number |
 | [`Templat/`](Templat/) | 1 | Countertop templating that will not export to CNC on a guess |
-| [`openwall/`](openwall/) | 8 | The TypeScript reference core, **which runs and is tested here** |
-| [`verify/`](verify/) | — | The reference implementation of MeasureKit's numerics, **which runs and is tested here** |
+| [`ts/`](ts/) | all | **The runnable TypeScript port of MeasureKit and all five cores. 145 tests, and they execute here.** |
 
 ---
 
@@ -28,8 +27,8 @@ run, or type-checked by the author of this commit.
 
 | | |
 |---|---|
-| **The numerics are verified** | Every expected value in the Swift tests was computed and checked by [`verify/`](verify/), a line-for-line TypeScript port of the same algorithms - geometry, money, areas, the shoelace, the DXF structure, the schedule, the evaluator boundaries, leveller quantities and the provenance lattice. **57 tests pass.** |
-| **The TypeScript core runs** | [`openwall/`](openwall/) is the same product's engine in TS: **46 tests pass, typecheck clean**, and it renders a real artefact that was opened in a browser with all DNS mapped to `0.0.0.0`. |
+| **Every core is ported and executed** | [`ts/`](ts/) is a line-for-line TypeScript port of MeasureKit and all five `*Core` targets. **145 tests pass, typecheck clean**, and it renders a real document for each of the five products. |
+| **The documents were opened** | Every rendered document was displayed in Chromium with all DNS mapped to `0.0.0.0`, which is the offline promise tested rather than asserted. |
 | **Structural checks** | Brace and `#if`/`#endif` balance verified across every Swift file. |
 | **Spec facts checked, not recalled** | The DXF `$INSUNITS` value was looked up rather than remembered — see below. |
 
@@ -57,7 +56,7 @@ were live in code that **runs**, and are now fixed and proven fixed.
    unreachable. The harness caught this as a **failing Swift test before that
    test had ever been run.** Replaced with an explicit weakness ordering: a span
    is exactly as strong as its weaker end.
-5. **The same bug shape, live, in the running TypeScript core.** `adjusted` was
+5. **The same bug shape, live, in the ported TypeScript core.** `adjusted` was
    missing from its observed set, so a span an actual tape measurement had moved
    came back as "inferred, not seen". Found by porting the Swift and comparing.
    Fixed, with a test that walks the whole lattice in both orders.
@@ -76,6 +75,7 @@ category of bug that verification finds and review does not.
 ## Running it
 
 ```bash
+cd apps/ts         && npm test       # 145 tests - THESE RUN HERE
 cd apps/MeasureKit && swift test     # 47 tests
 cd apps/OpenWall   && swift test     # 12 tests
 cd apps/Riser      && swift test     # 16 tests

@@ -26,10 +26,14 @@ device for the capture half.
 ## Not compiled here
 
 **This Swift has never been built.** The repository is developed on Linux and the
-Swift toolchain download is blocked by network policy. The numerics it relies on
-were verified in [`../verify/`](../verify/) and [`../openwall/`](../openwall/),
-both of which run and pass. Expect ordinary first-build errors; do not expect the
-arithmetic to be wrong.
+Swift toolchain download is blocked by network policy.
+
+Its logic is proven anyway: [`../ts/src/plumb/`](../ts/src/plumb/) is a
+line-for-line TypeScript port of this core, and
+[`../ts/test/plumb.test.ts`](../ts/test/plumb.test.ts) runs the same assertions
+as `Tests/PlumbCoreTests`. `cd ../ts && npm test` executes them.
+
+Expect ordinary first-build errors here; do not expect the arithmetic to be wrong.
 
 See [`../README.md`](../README.md) for what was verified, the bugs that caught,
 and the measurements still outstanding.

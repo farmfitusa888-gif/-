@@ -5,3 +5,4 @@ node_modules/
 apps/*/build/
 .build/
 *.xcodeproj/xcuserdata/
+apps/ts/build/
