@@ -122,7 +122,7 @@ Two things are ready to act on now, both for idea 8:
   can kill the idea for the price of five phone calls.
 - **[`apps/`](apps/) — all five products, as Swift.** A shared `MeasureKit`
   engine plus `OpenWall`, `Riser`, `Plumb`, `Flatline` and `Templat`, each with a
-  pure tested core and a SwiftUI + ARKit app layer. **114 Swift tests written.**
+  pure tested core and a SwiftUI + ARKit app layer. **130 Swift tests written.**
 - **[`apps/openwall/`](apps/openwall/)** — the TypeScript reference core that
   actually runs here: **43 tests, clean typecheck**, and `npm run demo` writes a
   real record you can open with the wifi off.

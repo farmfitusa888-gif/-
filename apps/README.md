@@ -61,12 +61,13 @@ Swift's own, and a `Length` being passed where an **area** belonged — now a re
 ## Running it
 
 ```bash
-cd apps/MeasureKit && swift test     # 43 tests
-cd apps/OpenWall   && swift test
+cd apps/MeasureKit && swift test     # 47 tests
+cd apps/OpenWall   && swift test     # 12 tests
 cd apps/Riser      && swift test     # 16 tests
 cd apps/Plumb      && swift test     # 18 tests
 cd apps/Flatline   && swift test     # 17 tests
 cd apps/Templat    && swift test     # 20 tests
+#                                    # 130 total
 ```
 
 The `*App` targets need Xcode and a device: they are SwiftUI plus ARKit and are
