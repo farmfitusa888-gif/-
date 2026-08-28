@@ -23,11 +23,11 @@ takes the brand name from one field.
 |---|---|---|---|---|
 | 1 | Paycheck auditor | **Backpay** | `backpay.co` | Says the outcome, not the mechanism. The word already means "money you were owed and didn't get" — no explaining required. |
 | 2 | Claim advocate | **Overturn** | `overturn.co` | What the customer actually wants: the denial reversed. A verb, which makes for good ad copy and good CTAs. |
-| 3 | Benefits finder | **Claimable** | `claimable.org` | Eligibility is literally a threshold test. Also carries the sense of a doorway someone hasn't crossed yet — which is exactly the $58bn problem. |
+| 3 | Benefits finder | **Claimable** | `claimable.org` | The whole thesis in one word: this money *is* claimable and nobody claimed it. The `.org` is deliberate — the buyer is hospitals and health plans, where a mission signal helps the sale. |
 | 4 | Second opinion | **Overquote** | `overquote.com` | Names the villain. Searchable intent: people literally type "was I overcharged for car repair". |
 | 5 | Arm the advocates | **Counterweight** | `counterweight.app` | The whole thesis in one word — the institution has weight on its side of the scale, this puts weight on the other. Sold to the people already doing that job. |
-| 6 | The 2am line | **Hearth** | `hearth.care` | What a caregiver at 2am needs to hear and to feel. Calm, one syllable, no clinical coldness. |
-| 7 | The night shift | **Fourth** | `fourth.care` | Instantly understood by an exhausted parent, warm rather than medical, and it implies presence rather than intervention — which matches what the product can honestly do. |
+| 6 | The 2am line | **Hearth** | `hearth.care` | The fire kept going through the night, and the centre of a home. Warm rather than clinical, and it promises *presence* rather than treatment — which is exactly what the product can honestly deliver at 2am. |
+| 7 | The night shift | **Fourth** | `fourth.care` | From "fourth trimester", the term new parents already use for exactly this period. Meaningful to the buyer, meaningless to a competitor, and — crucially — not descriptive of the goods, which is what makes a mark protectable. |
 
 ## Naming rules I applied
 
@@ -49,18 +49,18 @@ takes the brand name from one field.
 |---|---|
 | Backpay | `getbackpay.com`, `backpay.app`, **Shortfall** (`shortfall.app`), **Owed** (`owed.co`) |
 | Overturn | `overturn.app`, `getoverturn.com`, **Rebuttal** (`rebuttal.co`), **Reopen** (`reopen.claims`) |
-| Threshold | `threshold.health`, `getthreshold.com`, **Qualify** (`qualify.care`) |
+| Claimable | `claimable.care`, `getclaimable.com`, **Unclaimed** (`unclaimed.org`), **Owed** (`owed.care`) |
 | Overquote | `overquote.co`, **Fairshop** (`fairshop.app`), **Secondop** (`secondop.com`) |
 | Counterweight | `counterweight.co`, `getcounterweight.com`, **Fulcrum** (`fulcrum.casework`), **Sidebar** (`sidebar.app`) |
-| Steady | `steady.support`, `getsteady.care`, **Nightwatch** (`nightwatch.care`) |
-| Nightlight | `nightlight.app`, `getnightlight.com`, **Fourth** (`fourth.care`) — as in fourth trimester |
+| Hearth | `hearth.support`, `gethearth.care`, **Nocturne** (`nocturne.care`), **Vigil** (`vigil.care`) |
+| Fourth | `fourth.app`, `getfourth.care`, **Wick** (`wick.care`) |
 
 ## One trademark warning worth taking seriously
 
-**I have not run a trademark search on any of these**, and I cannot from here.
-`Steady`, `Threshold` and `Nightlight` are common words with existing users in
-adjacent categories — `Steady` in particular is a known name in the gig-income
-space. Before spending anything on a brand:
+**A conflict screen has now been run** — see
+[`00-TRADEMARK-SCREEN.md`](00-TRADEMARK-SCREEN.md) — and it killed three of the
+original names. **It was not a clearance search**, because `uspto.gov` is
+blocked from this environment. Before spending anything on a brand:
 
 1. Search the **USPTO TESS** database free at `uspto.gov` for the exact name in
    the relevant class (usually 42 for software, 36 for insurance services, 44
