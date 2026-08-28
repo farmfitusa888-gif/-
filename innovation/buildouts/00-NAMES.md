@@ -1,5 +1,11 @@
 # Names and domains
 
+> **Superseded in three places.** The trademark screen in
+> [`00-TRADEMARK-SCREEN.md`](00-TRADEMARK-SCREEN.md) found real conflicts and
+> renamed idea 3 to **Claimable**, idea 6 to **Hearth** and idea 7 to
+> **Fourth**. The table below reflects those renames; the reasoning for the
+> original picks is kept because it still explains the naming rules.
+
 You asked me to name them all. Here they are, with the reasoning, plus what to
 do if a domain is gone.
 
@@ -17,11 +23,11 @@ takes the brand name from one field.
 |---|---|---|---|---|
 | 1 | Paycheck auditor | **Backpay** | `backpay.co` | Says the outcome, not the mechanism. The word already means "money you were owed and didn't get" — no explaining required. |
 | 2 | Claim advocate | **Overturn** | `overturn.co` | What the customer actually wants: the denial reversed. A verb, which makes for good ad copy and good CTAs. |
-| 3 | Benefits finder | **Threshold** | `threshold.care` | Eligibility is literally a threshold test. Also carries the sense of a doorway someone hasn't crossed yet — which is exactly the $58bn problem. |
+| 3 | Benefits finder | **Claimable** | `claimable.org` | Eligibility is literally a threshold test. Also carries the sense of a doorway someone hasn't crossed yet — which is exactly the $58bn problem. |
 | 4 | Second opinion | **Overquote** | `overquote.com` | Names the villain. Searchable intent: people literally type "was I overcharged for car repair". |
 | 5 | Arm the advocates | **Counterweight** | `counterweight.app` | The whole thesis in one word — the institution has weight on its side of the scale, this puts weight on the other. Sold to the people already doing that job. |
-| 6 | The 2am line | **Steady** | `steady.care` | What a caregiver at 2am needs to hear and to feel. Calm, one syllable, no clinical coldness. |
-| 7 | The night shift | **Nightlight** | `nightlight.care` | Instantly understood by an exhausted parent, warm rather than medical, and it implies presence rather than intervention — which matches what the product can honestly do. |
+| 6 | The 2am line | **Hearth** | `hearth.care` | What a caregiver at 2am needs to hear and to feel. Calm, one syllable, no clinical coldness. |
+| 7 | The night shift | **Fourth** | `fourth.care` | Instantly understood by an exhausted parent, warm rather than medical, and it implies presence rather than intervention — which matches what the product can honestly do. |
 
 ## Naming rules I applied
 
