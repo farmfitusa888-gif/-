@@ -93,23 +93,73 @@ of Counterweight's three audiences; the other two are still uncounted.
 The Socrata API supports filtering, so you can pull just the slice you want:
 `...?$where=expiration_date > '2026-08-28'&$limit=5000`
 
-### Illinois — **no bulk file. This is the honest answer.**
+### Illinois — no bulk file, but there IS a way to force one
 
-I searched for an Illinois equivalent of the Texas dataset and there is not one.
-Illinois offers lookup portals, not downloads. The routes, in order of how
-useful they actually are:
+**Update, after you pointed out the lookup form produces no list: it doesn't,
+and it never will.** `insuranceqa.illinois.gov` is a one-licensee-at-a-time
+verification tool. There is no Illinois equivalent of the Texas dataset.
+
+**The route that actually works is a FOIA request.** IDOI is a State agency
+subject to the Illinois Freedom of Information Act, a licence roster is plainly
+a public record, and the Act requires a response within **5 business days**
+(extendable by 5). It is free unless the extract is large enough to attract a
+duplication fee.
+
+#### Do this — exact addresses
+
+| Route | Address |
+|---|---|
+| **Online FOIA form (fastest)** | https://insurance.illinois.gov/Applications/FOIARequest/ |
+| Alternate form page | https://idoi.illinois.gov/aboutus/foia/foia-form.html |
+| **Email** | **DOI.FOIA@illinois.gov** |
+| FOIA Officer, by post | FOIA Officer, Illinois Department of Insurance, 320 W. Washington St, 4th Floor, Springfield, IL 62767-0001 |
+| Phone | (217) 557-9248 |
+| IDOI FOIA overview | https://idoi.illinois.gov/aboutus/foia.html |
+
+#### Text to send — copy this
+
+> To the FOIA Officer, Illinois Department of Insurance:
+>
+> Under the Illinois Freedom of Information Act, 5 ILCS 140, I request a copy of
+> the Department's current list of individuals and business entities holding an
+> active Public Adjuster licence in Illinois.
+>
+> I request the record in an electronic, machine-readable format — CSV or Excel
+> — and, to the extent the Department maintains them as part of the licence
+> record, that it include: licensee name, National Producer Number, licence
+> number, licence type and qualification, issue date, expiration date, licence
+> status, and business city, state and ZIP code.
+>
+> **I am not requesting home addresses, personal telephone numbers, personal
+> email addresses, dates of birth or any Social Security information**, and I
+> ask that any such fields be withheld or redacted.
+>
+> If any portion is exempt, please release the remainder and cite the specific
+> exemption. If fees will exceed $25, please contact me before proceeding.
+>
+> This request is for commercial purposes.
+
+Two things in that text matter. **Excluding personal data up front** removes the
+Department's most common reason to delay or redact, and asking for machine-
+readable format is what gets you a CSV instead of a PDF. **Declaring the
+commercial purpose is required** — under 5 ILCS 140/3.1 a commercial requester
+gets a 21-working-day response window rather than 5, and misdeclaring it is the
+one thing that can void the request.
+
+#### While you wait, the lookup routes
 
 | Route | URL | What you actually get |
 |---|---|---|
-| **Computer Data Request Form** | https://idoi.illinois.gov/producers.html | **The real answer for bulk data.** IDOI's formal mechanism for requesting a compiled data extract. Expect a form, possibly a fee, and a wait. |
-| Producer/agent lookup | https://insuranceqa.illinois.gov/producer/producerMain.html | One licensee at a time |
+| Producer/agent lookup | https://insuranceqa.illinois.gov/producer/producerMain.html | **One licensee at a time. Produces no list — confirmed.** Only useful for verifying a name you already have. |
+| Computer Data Request Form | https://idoi.illinois.gov/producers.html | A second formal route to an extract; the FOIA request above is faster and has a statutory clock behind it |
 | Agent lookup portal | https://idoi.illinois.gov/companies/agent-lookup.html | One at a time |
 | State service directory entry | https://www.illinois.gov/services/service.insurance-provider-license-search.html | Points at the same lookup |
 | **SBS (State Based Systems)** | https://www.statebasedsystems.com | Multi-state licensee lookup; choose Illinois → Licensee. Search, not bulk |
 | NIPR Illinois page | https://nipr.com/licensing-center/state-information/illinois | Licensing rules and requirements, not a roster |
 
-**My recommendation for Illinois:** submit the Computer Data Request while you
-work on Texas. Do not wait on it — Texas alone already exceeds break-even.
+**My recommendation for Illinois: send the FOIA email today and forget about
+it.** It costs five minutes, it has a statutory deadline behind it, and Texas
+alone already exceeds break-even so nothing is blocked while it runs.
 
 ### Florida — bulk download exists
 
@@ -235,3 +285,131 @@ The pattern you just used works fine and needs no configuration: **download the
 file yourself and upload it into the chat.** That is exactly how the Texas
 number went from "not established" to 1,708 in one step. For anything on the
 list above, that route is always available.
+
+---
+
+## 5. The DOL enforcement file — what it proved for Backpay
+
+From `allacts.csv` (WHD Enforcement Statistics: All Acts, FY2013–FY2025):
+
+| FY | Compliance actions | Back wages | Employees paid | Per employee |
+|---|---:|---:|---:|---:|
+| 2025 | 16,924 | $259,294,764 | 176,957 | **$1,465** |
+| 2024 | 17,300 | $202,676,115 | 151,989 | $1,333 |
+| 2020 | 26,096 | $257,829,604 | 229,934 | $1,121 |
+| 2016 | 28,589 | $266,566,178 | 283,677 | $939 |
+| 2013 | 33,146 | $249,954,412 | 269,250 | $928 |
+
+### Three findings, and the first one is the whole business
+
+**1. Enforcement capacity has halved while the problem has not.**
+Compliance actions fell **-49%** from 2013 to 2025 (33,146 → 16,924) and
+employees receiving back wages fell **-34%** (269,250 → 176,957). Back wages
+recovered stayed flat at **+4%**, which means the agency is running fewer,
+larger cases. **The small individual claim is exactly what has been squeezed
+out** — and the small individual claim is Backpay's entire market.
+
+**2. The 1% recovery gap is now confirmed from the government's own numbers.**
+DOL recovered **$3,281,591,879 over thirteen years**. Against $40–60bn taken
+per year, thirteen years is $520–780bn. **DOL recovered 0.50% of the
+midpoint** [derived]. My earlier "about 1%" came from EPI, an advocacy
+organisation; this is the enforcement agency's own data arriving at the same
+place from the opposite direction. **That is the single most load-bearing fact
+in idea 1 and it is now corroborated by two independent sources.**
+
+**3. It corrects Backpay's unit economics, downward.**
+I had assumed $3,300 per case, from the minimum-wage-violation average. **The
+DOL figure is $1,465 per employee in FY2025** — less than half. At a 25%
+contingency that is **$366 per successful case**, not $825, which moves
+break-even from 37 cases a month to **82 a month.**
+
+**But the DOL number is federal FLSA only** — minimum wage and overtime. It does
+not include California meal and rest premiums, which are an hour of pay per
+violation per day and routinely dwarf the overtime shortfall. The engine's own
+worked example (`engines/ca-wage`) produced **$399 in a single week** and
+**$32,718 over nineteen months** for one warehouse worker. The honest position:
+
+| Basis | Per case | 25% fee | Cases/month for $30k |
+|---|---:|---:|---:|
+| DOL federal average, FY2025 | $1,465 | $366 | **82** |
+| CA minimum-wage violation average | $3,300 | $825 | **37** |
+| CA multi-year case with meal/rest premiums | $32,718 | $8,180 | **4** |
+
+**The spread is the finding.** Backpay's economics depend entirely on which
+kind of case it finds, and California's meal and rest premiums are what make
+the difference. That is a strong argument for launching in California
+specifically — which is where the engine already is.
+
+## 6. The Florida file — wrong file, and here is why
+
+`AllActiveCountyAppointments.csv` (757,686 rows, 246MB unzipped) contains
+**zero adjusters**. Every row is a nonresident agent appointment:
+
+| Appointment class | Rows |
+|---|---:|
+| Nonresident health | 200,452 |
+| Nonres life, health & variable annuity | 197,187 |
+| Nonres life & variable annuity | 116,648 |
+| Nonresident life | 93,538 |
+| Nonres general lines (property & casualty) | 82,545 |
+| Nonresident life & health | 62,007 |
+| Nonres personal lines agent | 5,308 |
+
+**This is structural, not an accident of this particular file.** An
+"appointment" is a carrier authorising an agent to sell its products. **Public
+adjusters represent policyholders, not carriers, so they are never appointed
+and can never appear in an appointments file.**
+
+The file you want is the other one in your screenshot:
+**`AllValidLicensesIndividual.csv.zip`** (84.9MB).
+
+### It is too big to upload — filter it first
+
+Unzip it and run one command, then upload the result. It will be a few hundred
+kilobytes.
+
+**macOS / Linux:**
+```
+unzip AllValidLicensesIndividual.csv.zip
+head -1 AllValidLicensesIndividual.csv > fl_public_adjusters.csv
+grep -i "public adjuster" AllValidLicensesIndividual.csv >> fl_public_adjusters.csv
+wc -l fl_public_adjusters.csv
+```
+
+The first line keeps the header, the second keeps only matching rows. If the
+count looks wrong, check what the licence-class column actually says:
+```
+cut -d, -f5 AllValidLicensesIndividual.csv | sort | uniq -c | sort -rn | head -40
+```
+and send me that output — I will give you the exact filter for the real column.
+
+**The same trick works on the 1.42GB CFPB file**, which is far too large for any
+upload path:
+```
+unzip -p complaints.csv.zip | head -1 > cfpb_slice.csv
+unzip -p complaints.csv.zip | grep -i "medical bill\|debt collection" | head -50000 >> cfpb_slice.csv
+```
+
+## 7. Google Drive — yes, with a hard size limit
+
+Google Drive is connected to this session and I can search it, read files and
+download file content. **But the download returns the file as base64 text into
+my context**, which means:
+
+| File | Verdict |
+|---|---|
+| Under ~5MB | **Works well.** Put it in Drive and tell me the name. |
+| 5–20MB | Works for plain CSV, slowly, and eats a lot of context. |
+| **84.9MB Florida zip** | **No.** Filter it first, per above. |
+| **1.42GB CFPB zip** | **Absolutely not.** Filter it first. |
+
+**The limit is my context window, not Drive and not disk.** This container has
+**30GB of free disk**, and I never load big files into context anyway — the
+Texas analysis ran as a Python script over the file and only the summary came
+back. So:
+
+- **If you allowlist the host, size stops mattering entirely.** I would download
+  the 1.42GB CFPB file straight to disk and aggregate it with a script. That is
+  by far the best option and it is one setting.
+- **Until then, filter locally and upload the slice.** It costs you one command
+  and works today.
