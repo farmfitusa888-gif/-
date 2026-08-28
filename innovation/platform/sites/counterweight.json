@@ -1,0 +1,1586 @@
+{
+  "brand": "Counterweight",
+  "shortName": "Counterweight",
+  "mark": "C",
+  "domain": "counterweight.app",
+  "fontsHref": "https://fonts.googleapis.com/css2?family=Spectral:wght@400;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap",
+  "theme": {
+    "displayFont": "\"Spectral\", Georgia, serif",
+    "bodyFont": "\"Inter\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "monoFont": "\"JetBrains Mono\", ui-monospace, Menlo, monospace",
+    "light": {
+      "paper": "#F4F3F0",
+      "card": "#FBFAF8",
+      "ink": "#191A1C",
+      "muted": "#5F6167",
+      "accent": "#1D4E6F",
+      "accentSoft": "#E2EBF1",
+      "rule": "#DAD8D2"
+    },
+    "dark": {
+      "paper": "#121417",
+      "card": "#1B1E22",
+      "ink": "#E9E8E4",
+      "muted": "#9B9DA3",
+      "accent": "#79B4D6",
+      "accentSoft": "#16262F",
+      "rule": "#2A2E33"
+    }
+  },
+  "legalName": "Counterweight",
+  "tagline": "Case software for people who fight institutions",
+  "description": "Counterweight is case software for public adjusters, special education advocates and patient advocates. Read the policy, the IEP or the bill in minutes instead of hours, find the contradiction, and draft the argument — so you can carry more cases without hiring.",
+  "lang": "en-US",
+  "foundingDate": "2026-09-01",
+  "modified": "2026-08-28",
+  "email": "hello@counterweight.app",
+  "themeColor": "#1D4E6F",
+  "bgColor": "#F4F3F0",
+  "coverage": "United States",
+  "areaServed": [
+    "United States",
+    "Texas",
+    "Illinois",
+    "California",
+    "Florida"
+  ],
+  "geoRegions": [
+    "US-TX",
+    "US-IL",
+    "US-CA",
+    "US-FL"
+  ],
+  "geoPlacename": "United States",
+  "knowsAbout": [
+    "public adjusting",
+    "insurance claim documentation",
+    "special education advocacy",
+    "IEP review",
+    "patient advocacy",
+    "medical bill review",
+    "case management software"
+  ],
+  "contactPoint": {
+    "type": "customer support",
+    "email": "hello@counterweight.app",
+    "areaServed": "US"
+  },
+  "service": {
+    "name": "Counterweight case software",
+    "type": "Case management and document analysis software for professional advocates",
+    "audience": "Public adjusters, special education advocates, patient advocates",
+    "description": "Software that reads institutional documents, surfaces the contradictions that win cases, and drafts the argument — for solo and small-firm advocates paid on outcome."
+  },
+  "software": {
+    "name": "Counterweight",
+    "category": "BusinessApplication",
+    "os": "Web",
+    "features": [
+      "Document ingestion and timeline building",
+      "Contradiction detection across documents",
+      "Deadline and statutory clock tracking",
+      "Argument drafting with citations to source pages",
+      "Case file export"
+    ]
+  },
+  "pricing": [
+    {
+      "name": "Solo",
+      "price": "$149",
+      "priceValue": 149,
+      "per": "per month, one advocate, unlimited cases",
+      "summary": "One advocate, unlimited cases",
+      "includes": [
+        "Unlimited cases and documents",
+        "Contradiction finder",
+        "Deadline tracking",
+        "Draft letters with page citations",
+        "Case file export"
+      ],
+      "cta": "Start free trial"
+    },
+    {
+      "name": "Practice",
+      "price": "$299",
+      "priceValue": 299,
+      "per": "per month, up to five advocates",
+      "summary": "Up to five advocates",
+      "featured": true,
+      "includes": [
+        "Everything in Solo",
+        "Up to five seats",
+        "Shared case library",
+        "Supervisor review queue",
+        "Your letter templates and house style",
+        "Priority support"
+      ],
+      "cta": "Start free trial"
+    },
+    {
+      "name": "Firm",
+      "price": "$599",
+      "priceValue": 599,
+      "per": "per month, unlimited seats",
+      "summary": "Unlimited seats",
+      "includes": [
+        "Everything in Practice",
+        "Unlimited seats",
+        "Custom document types",
+        "Outcome reporting across the firm",
+        "Onboarding session"
+      ],
+      "cta": "Talk to us"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Public adjuster",
+      "definition": "A licensed professional who represents the policyholder — not the insurer — in preparing and negotiating a property insurance claim, typically paid a contingency of 10 to 20 percent of the settlement."
+    },
+    {
+      "term": "Proof of loss",
+      "definition": "A sworn statement of the amount and cause of a loss, which most property policies require the policyholder to submit within a set window. Missing the window can forfeit an otherwise valid claim."
+    },
+    {
+      "term": "Carve-back",
+      "definition": "Language inside a policy exclusion that restores coverage in defined circumstances. A denial letter that quotes an exclusion but stops before its carve-back is quoting selectively."
+    },
+    {
+      "term": "Concurrent causation",
+      "definition": "The situation where a loss has more than one cause, at least one covered and one excluded. How a state resolves concurrent causation frequently decides whether the claim is paid."
+    },
+    {
+      "term": "Appraisal",
+      "definition": "A policy provision allowing a dispute about the amount of loss — not about coverage — to be resolved by appraisers rather than litigation. It is usually subject to its own demand deadline."
+    },
+    {
+      "term": "IEP",
+      "definition": "Individualized Education Program. The legally binding document under IDEA setting out a student's special education goals, services and accommodations."
+    },
+    {
+      "term": "Present levels",
+      "definition": "The section of an IEP describing the student's current performance. It frequently names a need that the goals and services then fail to address, which is the most common basis for a successful challenge."
+    },
+    {
+      "term": "Service minutes",
+      "definition": "The quantity of special education or related service an IEP commits to, usually stated in a grid. The grid total and the narrative promise disagree more often than expected."
+    },
+    {
+      "term": "Unbundling",
+      "definition": "Billing separately for procedures that payer rules require to be billed together as one code, generally producing a higher total than the bundled rate."
+    },
+    {
+      "term": "Explanation of benefits",
+      "definition": "The statement a health plan sends showing what was billed, what the plan allowed, what it paid and what the patient owes. It is not a bill, and reconciling it against the provider's bill is where errors surface."
+    },
+    {
+      "term": "Endorsement",
+      "definition": "An amendment attached to a policy that modifies the base form. Endorsements frequently contain the provision that decides a claim, and are the most commonly overlooked part of a policy."
+    },
+    {
+      "term": "Sub-limit",
+      "definition": "A cap inside a policy that applies to a specific category of loss and is lower than the overall policy limit. Mould, water backup and ordinance-or-law coverage are common examples."
+    },
+    {
+      "term": "Prompt payment statute",
+      "definition": "A state law setting deadlines by which an insurer must acknowledge, investigate and pay or deny a claim, often with interest or penalties for breach."
+    },
+    {
+      "term": "Actual cash value",
+      "definition": "Replacement cost less depreciation. Whether a policy pays actual cash value or replacement cost is frequently the largest single dollar difference in a property claim."
+    },
+    {
+      "term": "Recoverable depreciation",
+      "definition": "The amount withheld from an initial claim payment that becomes payable once repairs are completed and documented. It is often never claimed because nobody tells the policyholder it exists."
+    },
+    {
+      "term": "Xactimate",
+      "definition": "The estimating software used across most of the property claims industry. Line-item disagreements between an adjuster's estimate and a contractor's are usually expressed in its terms."
+    },
+    {
+      "term": "FAPE",
+      "definition": "Free Appropriate Public Education. The standard a school district must meet under IDEA, and the legal question underlying most special education disputes."
+    },
+    {
+      "term": "LRE",
+      "definition": "Least Restrictive Environment. The IDEA requirement that a student be educated with non-disabled peers to the maximum extent appropriate."
+    },
+    {
+      "term": "Prior written notice",
+      "definition": "The formal notice a district must give when it proposes or refuses to change a student's identification, evaluation or placement. A refusal delivered verbally instead is itself a procedural issue."
+    },
+    {
+      "term": "Independent educational evaluation",
+      "definition": "An evaluation by a qualified examiner not employed by the district, which a parent may request at public expense when they disagree with the district's evaluation."
+    },
+    {
+      "term": "Due process complaint",
+      "definition": "The formal dispute mechanism under IDEA, triggering a hearing before an impartial officer. Strict filing deadlines apply and vary by state."
+    },
+    {
+      "term": "Balance billing",
+      "definition": "When a provider bills a patient for the difference between their charge and what the plan paid. It is restricted in many situations by federal and state law."
+    },
+    {
+      "term": "Upcoding",
+      "definition": "Billing a higher-intensity service code than the care actually delivered supports, producing a larger payment than the encounter warrants."
+    },
+    {
+      "term": "Prior authorisation",
+      "definition": "A payer requirement that a service be approved before it is delivered. A denial for missing prior authorisation is frequently reversible where the requirement was not communicated."
+    }
+  ],
+  "cta": {
+    "path": "/start",
+    "label": "Start free trial"
+  },
+  "nav": [
+    {
+      "label": "How it works",
+      "path": "/how-it-works"
+    },
+    {
+      "label": "Who it's for",
+      "path": "/who-its-for"
+    },
+    {
+      "label": "Pricing",
+      "path": "/pricing"
+    },
+    {
+      "label": "Guides",
+      "path": "/guides"
+    }
+  ],
+  "footer": [
+    {
+      "title": "Product",
+      "links": [
+        {
+          "label": "How it works",
+          "path": "/how-it-works"
+        },
+        {
+          "label": "Pricing",
+          "path": "/pricing"
+        },
+        {
+          "label": "Start a trial",
+          "path": "/start"
+        },
+        {
+          "label": "FAQ",
+          "path": "/faq"
+        }
+      ]
+    },
+    {
+      "title": "Who it's for",
+      "links": [
+        {
+          "label": "Public adjusters",
+          "path": "/for/public-adjusters"
+        },
+        {
+          "label": "Special education advocates",
+          "path": "/for/special-education-advocates"
+        },
+        {
+          "label": "Patient advocates",
+          "path": "/for/patient-advocates"
+        }
+      ]
+    },
+    {
+      "title": "Guides",
+      "links": [
+        {
+          "label": "All guides",
+          "path": "/guides"
+        },
+        {
+          "label": "Reading a denial letter",
+          "path": "/guides/reading-an-insurance-denial-letter"
+        },
+        {
+          "label": "IEP vs evaluation",
+          "path": "/guides/iep-does-not-match-evaluation"
+        },
+        {
+          "label": "Advocate pricing models",
+          "path": "/guides/how-advocates-charge"
+        },
+        {
+          "label": "Glossary",
+          "path": "/glossary"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "About",
+          "path": "/about"
+        },
+        {
+          "label": "Contact",
+          "path": "/contact"
+        },
+        {
+          "label": "Privacy",
+          "path": "/privacy"
+        },
+        {
+          "label": "Terms",
+          "path": "/terms"
+        }
+      ]
+    }
+  ],
+  "footerLegal": "Counterweight is software for licensed and practising advocates. It is not a law firm, not an insurance adjuster, and does not provide legal, insurance or medical advice.",
+  "disclaimer": "Counterweight does not represent consumers and does not adjust claims. Where a licence is required to act on someone's behalf, that licence remains yours.",
+  "pages": [
+    {
+      "path": "/",
+      "kind": "home",
+      "title": "Case software for advocates who fight institutions",
+      "metaTitle": "Counterweight — case software for public adjusters and advocates",
+      "h1": "Case software for people who fight institutions",
+      "description": "Read the policy, the IEP or the bill in minutes instead of hours. Counterweight finds the contradiction, tracks the deadline and drafts the argument, so a solo advocate can carry more cases without hiring.",
+      "keywords": [
+        "public adjuster software",
+        "IEP advocate software",
+        "patient advocate software",
+        "case management for advocates",
+        "insurance claim software"
+      ],
+      "speakable": [
+        "h1",
+        ".lede"
+      ],
+      "changefreq": "weekly",
+      "priority": "1.0",
+      "faqs": [
+        {
+          "q": "Does Counterweight replace my licence?",
+          "a": "No. Counterweight is software you use; the licence, the judgement and the client relationship remain yours. Where state law requires a licensed public adjuster to negotiate a claim, that person is still you."
+        },
+        {
+          "q": "Is my client data used to train models?",
+          "a": "No. Client documents are processed to produce your work product and are never used as training data."
+        },
+        {
+          "q": "How long does it take to learn?",
+          "a": "Upload one closed case you already know the answer to. If Counterweight does not find what you found, you have lost twenty minutes and learned something useful about the tool."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "For advocates paid on outcome",
+          "h1": "Case software for people who fight institutions",
+          "lede": "The insurer has software. The school district has software. The hospital has software. You have a highlighter and a Saturday. <strong>Counterweight puts weight back on your side of the scale</strong> — it reads the documents, finds the contradiction, tracks the clock and drafts the argument.",
+          "cta": "Start a free 14-day trial",
+          "cta2": {
+            "path": "/how-it-works",
+            "label": "See how it works"
+          },
+          "note": "No card required. Bring one closed case and check our work against yours."
+        },
+        {
+          "type": "stats",
+          "h2": "Why this exists",
+          "items": [
+            {
+              "value": "95.2%",
+              "label": "of Q1 2026 insurtech funding went to AI — aimed at carriers and infrastructure, not at the people representing policyholders",
+              "cite": "Industry reporting, 2026"
+            },
+            {
+              "value": "44%",
+              "label": "of 2025 claims at the five largest home insurers closed with no payment, up from 36% a decade earlier",
+              "cite": "Insurer claim-payment analysis, 2026"
+            },
+            {
+              "value": "$75–300",
+              "label": "per hour charged by special education advocates — while families who cannot afford 10–15 hours go unrepresented",
+              "cite": "Advocate rate surveys, 2026"
+            },
+            {
+              "value": "10–20%",
+              "label": "of the settlement is the standard public adjuster contingency — capacity, not demand, is what limits the practice",
+              "cite": "Public adjusting industry sources, 2026"
+            }
+          ]
+        },
+        {
+          "type": "steps",
+          "eyebrow": "The work, minus the reading",
+          "h2": "Four steps, and the tedious one is gone",
+          "items": [
+            {
+              "name": "Drop in the file",
+              "text": "The policy and the denial letter. Or the evaluation and the IEP. Or the itemised bill and the plan documents. Faxed, scanned, photographed, out of order — it does not matter."
+            },
+            {
+              "name": "It reads everything, then cross-references it",
+              "text": "Not a summary. A comparison. Where does the denial letter contradict the policy it cites? Where does the IEP fail to address a finding in the district's own evaluation? Where is the bill charging for something the plan already covers?"
+            },
+            {
+              "name": "You check the finding against the page",
+              "text": "Every point Counterweight raises links to the exact page and passage that produced it. You are reviewing evidence, not trusting a machine — which is the difference between a tool you can sign your name to and one you cannot."
+            },
+            {
+              "name": "It drafts, you decide",
+              "text": "A letter making your argument, in your house style, with citations. You edit it, you send it, it is your work product and your judgement."
+            }
+          ]
+        },
+        {
+          "type": "tiles",
+          "eyebrow": "What it actually does",
+          "h2": "Built around the part of the job that does not scale",
+          "cols": 3,
+          "items": [
+            {
+              "title": "The contradiction finder",
+              "body": "Across every document in the case at once. This is the part a human does badly at hour six and a machine does identically at hour six hundred."
+            },
+            {
+              "title": "Every claim cites its page",
+              "body": "No assertion appears without a link to the source passage. You can defend any sentence in the letter because you can see where it came from."
+            },
+            {
+              "title": "The clock",
+              "body": "Proof-of-loss windows, appraisal demands, prompt-payment statutes, IDEA timelines, appeal deadlines. Missed deadlines lose cases that were winnable."
+            },
+            {
+              "title": "Your templates, your voice",
+              "body": "It drafts in the format you already use. A tool that makes you sound like someone else creates work rather than removing it."
+            },
+            {
+              "title": "Nothing is used for training",
+              "body": "Client documents produce your work product and nothing else. No training, no sharing, deletion on request."
+            },
+            {
+              "title": "Outcome tracking from day one",
+              "body": "Win rate, dollars recovered, hours per case. We track it because a tool that claims to help you should be able to prove it."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "The honest part",
+          "h2": "What Counterweight will not do",
+          "body": "<p>It will not represent anyone. It will not negotiate a claim, attend a meeting, sign a filing or give advice. Where your state requires a licence to act for a policyholder or a family, that licence is yours and the responsibility stays with you.</p><p>It also will not tell you a case is winnable. It surfaces what the documents say and where they disagree. Deciding what that means is the professional judgement you are paid for, and any product that pretends otherwise is selling you a liability.</p><blockquote>In February 2025 the FTC required DoNotPay to pay $193,000 and stop advertising that its service performed like a real lawyer, because it never tested whether it did. We built the outcome tracking first, for that reason.</blockquote>"
+        },
+        {
+          "type": "links",
+          "eyebrow": "Who it's for",
+          "h2": "Three professions, one shape of problem",
+          "items": [
+            {
+              "path": "/for/public-adjusters",
+              "title": "Public adjusters",
+              "blurb": "Read the policy against the denial. Take the small claims that were never worth the hours."
+            },
+            {
+              "path": "/for/special-education-advocates",
+              "title": "Special education advocates",
+              "blurb": "Find where the IEP fails to address the district's own evaluation findings."
+            },
+            {
+              "path": "/for/patient-advocates",
+              "title": "Patient advocates",
+              "blurb": "Match the itemised bill against the plan documents and the coding rules."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "h2": "Bring a case you already won",
+          "body": "The fastest way to judge this is to run a closed case through it and see whether it finds what you found. Fourteen days, no card, and your documents are deleted when you say so.",
+          "cta": "Start the trial"
+        }
+      ]
+    },
+    {
+      "path": "/how-it-works",
+      "kind": "page",
+      "title": "How Counterweight works",
+      "h1": "How it works",
+      "description": "Counterweight ingests the documents in a case, cross-references them to find contradictions, tracks statutory deadlines and drafts the argument with a citation to every source page. Here is each step in detail.",
+      "keywords": [
+        "how counterweight works",
+        "advocate case software",
+        "document contradiction analysis"
+      ],
+      "breadcrumb": [],
+      "howto": {
+        "name": "How to run a case through Counterweight",
+        "description": "Four steps from a pile of documents to a drafted argument with citations.",
+        "totalTime": "PT25M",
+        "steps": [
+          {
+            "name": "Upload the case documents",
+            "text": "Add the institutional document and the governing document — a denial letter and the policy, an IEP and the evaluation, a bill and the plan. Scans, faxes and photographs are all accepted."
+          },
+          {
+            "name": "Review the extracted timeline",
+            "text": "Counterweight builds a dated timeline of what happened, with every entry linked to the page it came from. You correct anything it read wrong before analysis runs."
+          },
+          {
+            "name": "Work the contradiction list",
+            "text": "Each finding states what the governing document says, what the institution did, and where the two disagree — with both passages side by side."
+          },
+          {
+            "name": "Generate and edit the letter",
+            "text": "Counterweight drafts your argument in your template. You edit it, approve it and send it as your own work product."
+          }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Step by step",
+          "h1": "How it works",
+          "lede": "Four steps. The one that used to take a Saturday takes about four minutes, and every output is traceable to a page you can look at.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "steps",
+          "h2": "The four steps",
+          "items": [
+            {
+              "name": "Upload the case documents",
+              "text": "Add the institutional document and the governing document — a denial letter and the policy, an IEP and the evaluation, an itemised bill and the plan. Faxed, scanned, photographed, duplicated and out of order are all normal and all handled. Deduplication runs first, because provider and carrier productions are full of repeats."
+            },
+            {
+              "name": "Review the extracted timeline",
+              "text": "Before any analysis, Counterweight shows you a dated timeline of what happened and who said what, with every entry linked to its source page. You fix anything misread. This step exists because analysis built on a misread date is worse than no analysis."
+            },
+            {
+              "name": "Work the contradiction list",
+              "text": "Each finding is stated in three parts: what the governing document says, what the institution did, and precisely where they disagree — with both passages shown side by side. Findings are ranked by the dollar value or the legal weight at stake, not by the order they were found."
+            },
+            {
+              "name": "Generate and edit the letter",
+              "text": "Counterweight drafts the argument in your own template and house style, with a citation on every factual assertion. You edit, you approve, you send. It is your work product and your professional judgement, and the tool never sends anything itself."
+            }
+          ]
+        },
+        {
+          "type": "tiles",
+          "h2": "What happens to your documents",
+          "cols": 3,
+          "items": [
+            {
+              "title": "Encrypted in transit and at rest",
+              "body": "Standard, and worth stating plainly because your clients will ask you and you need an answer."
+            },
+            {
+              "title": "Never used for training",
+              "body": "Your client documents produce your work product. They are not training data, they are not shared, and they are not pooled."
+            },
+            {
+              "title": "Deleted when you say",
+              "body": "Per-case deletion on demand, and automatic deletion on a schedule you set. Closed cases do not need to sit on someone else's server forever."
+            }
+          ]
+        },
+        {
+          "type": "faq",
+          "h2": "Questions about the process",
+          "items": [
+            {
+              "q": "What if it reads a document wrong?",
+              "a": "You see the extracted timeline before analysis runs, and every finding links to its source page. The design assumption is that it will sometimes be wrong and that you must be able to catch it in seconds."
+            },
+            {
+              "q": "How long does a case take to process?",
+              "a": "A typical two-document case is minutes. A thousand-page medical production is longer and runs in the background while you work on something else."
+            },
+            {
+              "q": "Can I use my own letter templates?",
+              "a": "Yes, and on the Practice plan and above your templates become the default so drafts arrive in your house style."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "h2": "Try it on a case you already know the answer to",
+          "body": "It is the only test that tells you anything. Fourteen days, no card."
+        }
+      ]
+    },
+    {
+      "path": "/who-its-for",
+      "kind": "page",
+      "title": "Who Counterweight is for",
+      "h1": "Who it's for",
+      "description": "Counterweight is built for solo and small-firm advocates paid on outcome: public adjusters, special education advocates and patient advocates. Different vocabularies, the same underlying problem.",
+      "keywords": [
+        "public adjuster tools",
+        "IEP advocate tools",
+        "patient advocate tools"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Three professions",
+          "h1": "Who it's for",
+          "lede": "Different documents, different vocabulary, identical shape of problem: an institution wrote something, a governing document says something else, and finding the gap takes hours you cannot bill enough of.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "links",
+          "h2": "Pick your practice",
+          "items": [
+            {
+              "path": "/for/public-adjusters",
+              "title": "Public adjusters",
+              "blurb": "Policy against denial letter. Take the small claims that were never worth the reading time."
+            },
+            {
+              "path": "/for/special-education-advocates",
+              "title": "Special education advocates",
+              "blurb": "IEP against the district's own evaluation. The gap is the argument."
+            },
+            {
+              "path": "/for/patient-advocates",
+              "title": "Patient advocates",
+              "blurb": "Itemised bill against plan documents and coding rules."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "h2": "What the three have in common",
+          "body": "<p>Every one of these professions is paid on outcome or by the hour, is capacity-limited by one person's reading speed, and turns away work it would like to take. None of them has a demand problem.</p><p>They also share a failure mode: the winning argument is usually a contradiction between two documents that nobody had time to read side by side. That is a machine problem wearing a professional's clothes.</p>"
+        },
+        {
+          "type": "cta",
+          "h2": "Not one of these three?",
+          "body": "Counterweight handles any case built on institutional documents with a governing rulebook behind them. Tell us what you work on."
+        }
+      ]
+    },
+    {
+      "path": "/for/public-adjusters",
+      "kind": "page",
+      "title": "Counterweight for public adjusters",
+      "h1": "For public adjusters",
+      "description": "Read the policy against the denial letter in minutes. Track proof-of-loss and prompt-payment deadlines. Take the small claims that were never worth the reading hours. Built for licensed public adjusters in Texas, Illinois and beyond.",
+      "keywords": [
+        "public adjuster software",
+        "public adjuster case management",
+        "insurance claim denial analysis",
+        "Texas public adjuster",
+        "Illinois public adjuster"
+      ],
+      "breadcrumb": [
+        {
+          "name": "Who it's for",
+          "path": "/who-its-for"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Public adjusting",
+          "h1": "For public adjusters",
+          "lede": "Public adjusting does not scale because a licensed human has to read every policy. <strong>Counterweight makes the reading fast, so your licence is spent on the claims worth fighting</strong> — including the small ones you have always had to turn down.",
+          "cta": "Start a free trial",
+          "note": "Counterweight is software. It does not adjust claims and does not hold a licence — you do."
+        },
+        {
+          "type": "tiles",
+          "h2": "What it does on a property claim",
+          "items": [
+            {
+              "title": "Policy against denial",
+              "body": "Declarations, endorsements, exclusions and sub-limits read together, then matched against the stated reason for denial. Where the letter cites a provision that does not say what the letter claims, that is the finding."
+            },
+            {
+              "title": "The deadline board",
+              "body": "Proof-of-loss windows, appraisal demands and state prompt-payment clocks tracked per claim. These are how winnable claims get lost."
+            },
+            {
+              "title": "Evidence assembly",
+              "body": "Photographs, contractor estimates and weather data organised into the format carriers expect, so the file arrives complete the first time."
+            },
+            {
+              "title": "The honest answer too",
+              "body": "Sometimes the denial was correct. Counterweight will say so, and knowing that in ten minutes rather than after six hours is worth the subscription by itself."
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "h2": "The market you are working in",
+          "items": [
+            {
+              "value": "44%",
+              "label": "of 2025 claims at the five largest home insurers closed with no payment",
+              "cite": "Claim-payment analysis, 2026"
+            },
+            {
+              "value": "78%",
+              "label": "of claims closed without payment at the worst-performing named carrier in 2025",
+              "cite": "Same analysis"
+            },
+            {
+              "value": "23%",
+              "label": "of all homeowner claims are water damage or freezing — the most common category after wind and hail",
+              "cite": "Industry claim statistics, 2026"
+            },
+            {
+              "value": "$15,400",
+              "label": "average water damage claim, and roughly 1 in 60 insured homes files one each year",
+              "cite": "Industry claim statistics, 2026"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "h2": "A note on \"closed with no payment\"",
+          "body": "<p>That statistic is widely quoted and it is worth being precise about, because your clients will quote it back to you. <strong>\"Closed with no payment\" also counts claims that fell below the deductible and claims the policyholder withdrew.</strong> Not every one is a wrongful denial.</p><p>What the number does show is a trend — 36% to 44% over a decade — that deductibles alone do not explain, and a large population of withdrawn claims, which is often just a homeowner who gave up. Both are your market.</p>"
+        },
+        {
+          "type": "faq",
+          "h2": "Questions adjusters ask",
+          "items": [
+            {
+              "q": "Does using this affect my licence?",
+              "a": "Counterweight is a tool you use in your practice, like an estimating package. It does not communicate with carriers, does not negotiate and does not sign anything. Your licensed activity remains entirely yours."
+            },
+            {
+              "q": "Does it work with Xactimate?",
+              "a": "Counterweight analyses policy and correspondence documents and exports its findings; it does not write estimates. It is meant to sit beside your estimating software, not replace it."
+            },
+            {
+              "q": "What about post-catastrophe fee caps?",
+              "a": "Fee caps compress margin exactly when volume peaks, which is precisely when throughput matters most. That is the case for the tool, not against it."
+            },
+            {
+              "q": "Can I use it in more than one state?",
+              "a": "Yes. Deadline rules are tracked per state, starting with Texas and Illinois."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "h2": "Run a closed claim through it",
+          "body": "Take a claim you already settled and see whether Counterweight finds what you found. Fourteen days, no card."
+        }
+      ]
+    },
+    {
+      "path": "/for/special-education-advocates",
+      "kind": "page",
+      "title": "Counterweight for special education advocates",
+      "h1": "For special education advocates",
+      "description": "Find where an IEP fails to address the district's own evaluation findings, track IDEA timelines, and draft the parent letter with a citation to every page. Built for independent special education advocates.",
+      "keywords": [
+        "IEP advocate software",
+        "special education advocate tools",
+        "IEP review software",
+        "IDEA timeline tracking"
+      ],
+      "breadcrumb": [
+        {
+          "name": "Who it's for",
+          "path": "/who-its-for"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Special education advocacy",
+          "h1": "For special education advocates",
+          "lede": "The winning argument is almost always the same: <strong>the district's own evaluation found something the IEP does not address.</strong> Finding it means reading a 40-page evaluation against a 20-page IEP, line by line. That is the part Counterweight does.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "tiles",
+          "h2": "What it does on an IEP case",
+          "items": [
+            {
+              "title": "Evaluation against IEP",
+              "body": "Every finding, recommendation and area of need in the district's evaluation, matched to the goal, service or accommodation that addresses it — and a list of the ones that nothing addresses."
+            },
+            {
+              "title": "Goals that cannot be measured",
+              "body": "A goal without a baseline, a criterion or a measurement method is a goal that cannot be enforced later. These get flagged as written."
+            },
+            {
+              "title": "Service minutes, added up",
+              "body": "What the IEP promises versus what the service grid actually totals. They disagree more often than anyone expects."
+            },
+            {
+              "title": "The IDEA clock",
+              "body": "Evaluation timelines, meeting notice periods, consent windows and response deadlines, tracked per case and per state."
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "h2": "Why capacity is the constraint",
+          "items": [
+            {
+              "value": "$75–300",
+              "label": "per hour is the going advocate rate, depending on experience and metro",
+              "cite": "Advocate rate surveys, 2026"
+            },
+            {
+              "value": "10–15 hrs",
+              "label": "is a typical case, putting a full engagement at roughly $1,500–2,250",
+              "cite": "Advocate rate surveys, 2026"
+            },
+            {
+              "value": "15–20 hrs",
+              "label": "for a case involving a reevaluation, placement change or state complaint",
+              "cite": "Advocate rate surveys, 2026"
+            },
+            {
+              "value": "1–2 hrs",
+              "label": "of your billable time is all it takes to cover a month of Counterweight at $299",
+              "cite": "Arithmetic on the rates above"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "h2": "The families you currently turn away",
+          "body": "<p>The research on advocate pricing says plainly that cost is a substantial barrier and that the system is stacked against low and middle-income families. That is unmet demand at your current price — not a marketing problem, a capacity problem.</p><p>Halving the hours a case takes does two things at once: it raises your effective hourly rate on full-fee work, and it makes sliding-scale work possible on cases you would otherwise have to decline.</p>"
+        },
+        {
+          "type": "faq",
+          "h2": "Questions advocates ask",
+          "items": [
+            {
+              "q": "Does it decide eligibility or placement?",
+              "a": "No, and it is built not to. Eligibility and placement are team decisions under IDEA. Counterweight surfaces what the documents say and where they conflict; the argument and the judgement are yours."
+            },
+            {
+              "q": "Is student data safe?",
+              "a": "Documents are encrypted, never used for training, and deletable per case. You should still confirm your own obligations to the families you serve — advocates are not always covered by the same rules as districts."
+            },
+            {
+              "q": "Does it work for 504 plans too?",
+              "a": "Yes. The same comparison applies: what the evaluation found against what the plan provides."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "h2": "Test it on a case you won",
+          "body": "Upload an evaluation and IEP from a case you already argued. See whether the contradiction list matches your notes."
+        }
+      ]
+    },
+    {
+      "path": "/for/patient-advocates",
+      "kind": "page",
+      "title": "Counterweight for patient advocates",
+      "h1": "For patient advocates",
+      "description": "Match itemised hospital bills against plan documents and coding rules, find duplicate and unbundled charges, and draft the appeal with a citation to every line. For independent patient and medical billing advocates.",
+      "keywords": [
+        "patient advocate software",
+        "medical bill review software",
+        "medical billing advocate tools",
+        "claim appeal software"
+      ],
+      "breadcrumb": [
+        {
+          "name": "Who it's for",
+          "path": "/who-its-for"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Patient advocacy",
+          "h1": "For patient advocates",
+          "lede": "An itemised bill is a document designed to be difficult. <strong>Counterweight reads it against the plan documents and the coding rules</strong>, flags what does not belong, and drafts the appeal with a line-level citation.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "tiles",
+          "h2": "What it does on a billing case",
+          "items": [
+            {
+              "title": "Line against plan",
+              "body": "Every charge matched to what the plan says it covers, at what share, against which deductible."
+            },
+            {
+              "title": "Duplicates and unbundling",
+              "body": "The same service billed twice under different codes, and bundled procedures split into separately billed parts."
+            },
+            {
+              "title": "Dates that do not add up",
+              "body": "Charges for days the patient was not admitted, or services on dates with no corresponding record."
+            },
+            {
+              "title": "The appeal, drafted",
+              "body": "In the payer's required format, with the plan language quoted and every disputed line cited."
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "h2": "The size of the problem",
+          "items": [
+            {
+              "value": "80%",
+              "label": "of medical bills are reported to contain at least minor errors",
+              "cite": "Medical billing industry analyses, 2026"
+            },
+            {
+              "value": "~$1,300",
+              "label": "average overcharge on hospital bills over $10,000",
+              "cite": "Medical billing industry analyses, 2026"
+            },
+            {
+              "value": "~40%",
+              "label": "of people who challenge a medical bill get a reduction",
+              "cite": "Consumer billing surveys, 2026"
+            },
+            {
+              "value": "10–35%",
+              "label": "of savings is the standard negotiator contingency — the market rate for this work",
+              "cite": "Medical bill negotiation services, 2026"
+            }
+          ]
+        },
+        {
+          "type": "disclaimer",
+          "label": "Read this before relying on those figures",
+          "body": "<p>The 80% error figure is widely repeated in the medical billing industry and is reported by companies that sell billing services. It is directionally supported by the reduction rate, but treat it as a lead rather than a measurement. Counterweight tracks your own numbers precisely so you never have to rely on someone else's.</p>"
+        },
+        {
+          "type": "faq",
+          "h2": "Questions advocates ask",
+          "items": [
+            {
+              "q": "Does it give medical advice?",
+              "a": "No. It compares billing documents to plan documents and coding rules. Whether care was appropriate is a clinical question and is out of scope by design."
+            },
+            {
+              "q": "Is it HIPAA-aware?",
+              "a": "Documents are encrypted and never used for training, and a business associate agreement is available. Confirm your own status with counsel — independent advocates are not all business associates."
+            },
+            {
+              "q": "Does it negotiate for me?",
+              "a": "No. It prepares the case and drafts the appeal. Every conversation with a hospital or payer is yours."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "h2": "Bring a bill you already fought",
+          "body": "Fourteen days, no card, and you can delete everything when you are done."
+        }
+      ]
+    },
+    {
+      "path": "/pricing",
+      "kind": "page",
+      "title": "Counterweight pricing",
+      "h1": "Pricing",
+      "description": "Flat monthly pricing with unlimited cases and unlimited documents. $149 solo, $299 for up to five advocates, $599 unlimited seats. No per-case fees, no per-page fees, no per-gigabyte fees.",
+      "keywords": [
+        "public adjuster software pricing",
+        "advocate software cost",
+        "IEP advocate software price"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Pricing",
+          "h1": "Flat, and unlimited",
+          "lede": "Every tool adjacent to this work meters — per case, per page, per gigabyte, per claim. <strong>Metering punishes exactly the advocate who is trying to grow.</strong> Counterweight charges one flat price and does not count.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "pricing",
+          "h2": "Three plans",
+          "intro": "Fourteen-day trial on every plan. No card to start. Cancel in one click.",
+          "after": "<p style='margin-top:26px;color:var(--muted)'>All plans include unlimited cases, unlimited documents, unlimited storage while your account is open, deadline tracking, contradiction analysis and drafting. There is no usage meter anywhere in the product.</p>"
+        },
+        {
+          "type": "table",
+          "h2": "What you are comparing it to",
+          "intro": "The alternatives in adjacent categories, at their published rates.",
+          "headers": [
+            "What",
+            "How it charges",
+            "Cost shape"
+          ],
+          "rows": [
+            [
+              "Legal document review platforms",
+              "$3–10/GB processing, $5–15/GB per month hosting",
+              "A 50GB case is $250–500/month before user fees"
+            ],
+            [
+              "Entry tier of a self-serve discovery tool",
+              "$395/month floor",
+              "Charged whether you have one case or forty"
+            ],
+            [
+              "Medical bill negotiation services",
+              "10–35% of savings",
+              "Scales with your client's recovery, not your cost"
+            ],
+            [
+              "Counterweight Practice",
+              "$299/month, five seats",
+              "1–2 billable hours at typical advocate rates"
+            ]
+          ]
+        },
+        {
+          "type": "faq",
+          "h2": "Pricing questions",
+          "items": [
+            {
+              "q": "Is there really no per-case charge?",
+              "a": "None. The cost of serving a heavy user is not zero for us, but a meter changes how you use the tool — you start deciding whether a case is worth uploading, which is exactly the behaviour that makes tools like this useless."
+            },
+            {
+              "q": "What happens after the trial?",
+              "a": "Nothing automatic. The trial does not require a card, so it does not roll into a subscription. You choose a plan or you do not."
+            },
+            {
+              "q": "Do you offer a discount for sliding-scale practice?",
+              "a": "Yes. If a meaningful share of your caseload is sliding-scale or pro bono, write to us and we will work something out. Ask."
+            },
+            {
+              "q": "Can I cancel and export my cases?",
+              "a": "Yes, in one click, and your case files export in full. Software that holds your work hostage does not deserve the business."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/faq",
+      "kind": "faq",
+      "title": "Counterweight FAQ",
+      "h1": "Frequently asked questions",
+      "description": "Answers about licensing, client data, accuracy, pricing and what Counterweight will and will not do. Written plainly, including the parts that are not flattering.",
+      "keywords": [
+        "counterweight faq",
+        "advocate software questions"
+      ],
+      "faqs": [
+        {
+          "q": "Does Counterweight replace my licence?",
+          "a": "No. It is software you use in your practice. Where state law requires a licensed public adjuster to negotiate a claim on someone's behalf, that person is still you, and the professional responsibility is still yours."
+        },
+        {
+          "q": "Will it be wrong sometimes?",
+          "a": "Yes. Every finding links to the source page precisely so that you can catch it in seconds. Any vendor in this category who tells you their system is never wrong is describing a marketing position, not a product."
+        },
+        {
+          "q": "Do you train models on my client documents?",
+          "a": "No. Documents are processed to produce your work product and for nothing else. They are not training data and are not pooled across customers."
+        },
+        {
+          "q": "Can I delete a case?",
+          "a": "Yes, per case, on demand, and on an automatic schedule you set."
+        },
+        {
+          "q": "Is there a per-case or per-page fee?",
+          "a": "No. Flat monthly, unlimited cases and documents, on every plan."
+        },
+        {
+          "q": "What states do you handle deadlines for?",
+          "a": "Texas and Illinois first for property claims, with more added as customers ask. Federal IDEA timelines are handled nationally, with state variations added by request."
+        },
+        {
+          "q": "Do you take a share of my recovery?",
+          "a": "No. It is a subscription. Your fee arrangement with your client is entirely your business and we have no interest in it."
+        },
+        {
+          "q": "What happens to my data if you shut down?",
+          "a": "You get a full export and a notice period. Fair question to ask any small vendor, and you should ask it of all of them."
+        }
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "FAQ",
+          "h1": "Frequently asked questions",
+          "lede": "Including the answers that are not flattering, because you are a professional evaluating a tool and you will find out anyway.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "faq",
+          "h2": "Everything we get asked",
+          "items": [
+            {
+              "q": "Does Counterweight replace my licence?",
+              "a": "No. It is software you use in your practice. Where state law requires a licensed public adjuster to negotiate a claim on someone's behalf, that person is still you, and the professional responsibility is still yours."
+            },
+            {
+              "q": "Will it be wrong sometimes?",
+              "a": "Yes. Every finding links to the source page precisely so that you can catch it in seconds. Any vendor in this category who tells you their system is never wrong is describing a marketing position, not a product."
+            },
+            {
+              "q": "Do you train models on my client documents?",
+              "a": "No. Documents are processed to produce your work product and for nothing else. They are not training data and are not pooled across customers."
+            },
+            {
+              "q": "Can I delete a case?",
+              "a": "Yes, per case, on demand, and on an automatic schedule you set."
+            },
+            {
+              "q": "Is there a per-case or per-page fee?",
+              "a": "No. Flat monthly, unlimited cases and documents, on every plan."
+            },
+            {
+              "q": "What states do you handle deadlines for?",
+              "a": "Texas and Illinois first for property claims, with more added as customers ask. Federal IDEA timelines are handled nationally, with state variations added by request."
+            },
+            {
+              "q": "Do you take a share of my recovery?",
+              "a": "No. It is a subscription. Your fee arrangement with your client is entirely your business and we have no interest in it."
+            },
+            {
+              "q": "What happens to my data if you shut down?",
+              "a": "You get a full export and a notice period. Fair question to ask any small vendor, and you should ask it of all of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/guides",
+      "kind": "page",
+      "title": "Guides for advocates",
+      "h1": "Guides",
+      "description": "Practical guides for public adjusters, special education advocates and patient advocates — reading denial letters, matching IEPs to evaluations, and how advocates price their work.",
+      "keywords": [
+        "advocate guides",
+        "public adjuster guides",
+        "IEP advocacy guides"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Guides",
+          "h1": "Guides",
+          "lede": "Written for people who do this for a living, not for search engines. Each one covers a specific piece of the work in enough depth to be useful.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "links",
+          "h2": "All guides",
+          "items": [
+            {
+              "path": "/guides/reading-an-insurance-denial-letter",
+              "title": "How to read an insurance denial letter",
+              "blurb": "The four things a denial letter must tell you, and what it means when one is missing."
+            },
+            {
+              "path": "/guides/iep-does-not-match-evaluation",
+              "title": "When the IEP does not match the evaluation",
+              "blurb": "The most common winning argument in special education advocacy, and how to document it."
+            },
+            {
+              "path": "/guides/how-advocates-charge",
+              "title": "How advocates charge, and what it means for capacity",
+              "blurb": "Hourly, contingency and flat fee — and why every model runs into the same ceiling."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/guides/reading-an-insurance-denial-letter",
+      "kind": "guide",
+      "section": "Public adjusting",
+      "title": "How to read an insurance denial letter",
+      "h1": "How to read an insurance denial letter",
+      "description": "A denial letter has to do four things. Most do two well and two badly, and the gap between what it cites and what the policy says is where the claim is won. A working method for reading one.",
+      "keywords": [
+        "insurance denial letter",
+        "claim denial reasons",
+        "how to appeal insurance denial",
+        "policy exclusion analysis"
+      ],
+      "breadcrumb": [
+        {
+          "name": "Guides",
+          "path": "/guides"
+        }
+      ],
+      "published": "2026-08-28",
+      "modified": "2026-08-28",
+      "lede": "A denial letter is a legal document written by someone who does this all day, addressed to someone doing it for the first time. That asymmetry is the point of it. Here is how to take it apart.",
+      "sections": [
+        {
+          "h2": "What a denial letter must contain",
+          "body": "<p>Requirements vary by state, but a denial letter that is doing its job will tell you four things: what was claimed, what was decided, <strong>the specific policy provision relied on</strong>, and what the policyholder can do next.</p><p>The third is the one that matters and the one most often thin. A letter that says the loss is \"not covered under the terms and conditions of your policy\" has not cited anything. A letter that says the loss falls under a named exclusion has made a claim you can test against the policy itself.</p><p>When the provision is missing or vague, that absence is itself the first thing to write about, because in many states the carrier is required to be specific.</p>"
+        },
+        {
+          "h2": "Read the policy in the right order",
+          "body": "<p>Policies are not written to be read front to back, and reading them that way is how experienced people still miss things. The order that works:</p><ol><li><strong>The declarations page.</strong> What is actually covered, the limits, the deductibles, the endorsements attached. Endorsements modify the base form and are frequently where the answer sits.</li><li><strong>The insuring agreement.</strong> The broad grant of coverage, before anything takes coverage away.</li><li><strong>The exclusion the letter cited</strong> — and only then. Read it word by word, including its exceptions. Exclusions routinely contain carve-backs that restore coverage, and a carve-back is the single most productive thing to look for.</li><li><strong>Definitions.</strong> A policy defines its own terms and those definitions override ordinary meaning. Words like \"sudden\", \"accidental\", \"collapse\" and \"water damage\" are almost always defined and rarely mean what a homeowner assumes.</li></ol>"
+        },
+        {
+          "h2": "The four gaps that appear most often",
+          "body": "<p><strong>The cited provision does not say what the letter says it says.</strong> Read it directly rather than through the letter's paraphrase. This is common enough that it should be the first thing checked, not the last.</p><p><strong>An exception inside the exclusion was ignored.</strong> Exclusions frequently end with language restoring coverage in defined circumstances. A letter that quotes the exclusion and stops before the carve-back is quoting selectively.</p><p><strong>The wrong cause of loss was assigned.</strong> Damage often has a sequence — a covered event causes an excluded one, or the reverse. Which one is treated as the cause frequently decides the claim, and how that is resolved depends on your state's approach to concurrent causation.</p><p><strong>The investigation did not support the conclusion.</strong> If the file shows no inspection, no engineer, or a report that says something different from the letter, the denial rests on nothing.</p>"
+        },
+        {
+          "h2": "Build the response around the document, not the grievance",
+          "body": "<p>The letter that works is boring. It states the provision, quotes the policy language in full, states the fact, and shows the contradiction. It does not argue about fairness and it does not editorialise.</p><p>Structure that survives escalation:</p><ul><li>The claim, the date, the number.</li><li>What the denial said, quoted exactly.</li><li>What the policy says, quoted exactly, in full.</li><li>The facts, each one attached to the document that evidences it.</li><li>What you are asking for, specifically.</li><li>The deadline you are working to, and the statute or provision it comes from.</li></ul><p>Everything in that list is a citation. That is not a stylistic preference — a letter where every assertion is traceable is a letter that survives being forwarded to someone senior.</p>"
+        },
+        {
+          "h2": "Watch the clock from the first day",
+          "body": "<p>Proof-of-loss windows, appraisal demand periods and prompt-payment statutes all run on their own timetables and they vary by state. They are also the most common way a winnable claim is lost, because the deadline passes while the file is being assembled.</p><p>Diary every date the day the file opens rather than the day you start working it.</p>"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can a denial be reversed without a lawyer?",
+          "a": "Frequently, yes. Many are resolved by a documented response that shows the cited provision does not support the decision. Whether your situation needs a licensed public adjuster or a lawyer depends on your state and the amount at stake."
+        },
+        {
+          "q": "What if the letter cites no provision at all?",
+          "a": "Ask for it in writing, and note the date you asked. In many states a specific reason is required, and a refusal to give one is itself worth documenting."
+        },
+        {
+          "q": "Does asking for the claim file help?",
+          "a": "Often substantially. Inspection notes, photographs and engineer reports frequently do not match the conclusion in the letter. What you can obtain and when depends on your state."
+        }
+      ],
+      "closingLabel": "This is general information",
+      "closing": "<p>This guide describes how to read documents. It is not legal advice, not insurance advice, and no substitute for a licensed public adjuster or an attorney in your state. Requirements and deadlines vary substantially by jurisdiction.</p>"
+    },
+    {
+      "path": "/guides/iep-does-not-match-evaluation",
+      "kind": "guide",
+      "section": "Special education",
+      "title": "When the IEP does not match the evaluation",
+      "h1": "When the IEP does not match the evaluation",
+      "description": "The strongest argument in special education advocacy is usually built from the district's own evaluation: it identified a need that the IEP does not address. How to find that gap and document it.",
+      "keywords": [
+        "IEP evaluation mismatch",
+        "IEP not addressing needs",
+        "special education advocacy",
+        "IDEA compliance",
+        "IEP goals baseline"
+      ],
+      "breadcrumb": [
+        {
+          "name": "Guides",
+          "path": "/guides"
+        }
+      ],
+      "published": "2026-08-28",
+      "modified": "2026-08-28",
+      "lede": "You rarely need an outside expert to make the argument. The district already wrote the evidence down in its own evaluation — the question is whether the IEP responded to it.",
+      "sections": [
+        {
+          "h2": "Why the district's own evaluation is the strongest document you have",
+          "body": "<p>An outside expert can be argued with. The district's own evaluation cannot be argued with by the district, because they wrote it, they stand behind it, and it was produced by their own staff.</p><p>So the comparison that matters is narrow and mechanical: <strong>every need, finding and recommendation in the evaluation, against every goal, service and accommodation in the IEP.</strong> Anything on the left with nothing on the right is the argument.</p>"
+        },
+        {
+          "h2": "Build the crosswalk",
+          "body": "<p>Make a two-column table. On the left, every statement in the evaluation that identifies a need — including ones buried in narrative paragraphs rather than in the summary, which is where they hide. On the right, the specific goal, service, accommodation or minute allocation that addresses it.</p><p>Three categories come out of this:</p><ul><li><strong>Addressed.</strong> A need with a matching, measurable goal or service. Fine, move on.</li><li><strong>Named but unaddressed.</strong> The evaluation identified it; the IEP mentions it in the present levels and then does nothing about it. This is the most common finding and the most useful.</li><li><strong>Addressed too thinly.</strong> A significant need answered with a token accommodation or a handful of minutes. Harder to argue but often the more consequential problem.</li></ul>"
+        },
+        {
+          "h2": "Test each goal for enforceability",
+          "body": "<p>A goal that cannot be measured cannot be enforced later, which means it will not be. Every goal should have four parts: a baseline saying where the student is now, a target, a criterion for success, and a stated method of measurement.</p><p>Goals missing the baseline are extremely common and are worth flagging every time. Without a starting point there is no way to demonstrate a year from now that progress did or did not happen — which quietly removes the only mechanism the parent has.</p>"
+        },
+        {
+          "h2": "Add up the service minutes",
+          "body": "<p>Read what the IEP narrative promises, then add up what the service grid actually allocates. These disagree more often than anyone expects, and the grid is what the school actually delivers.</p><p>Check also whether the setting matches the service, and whether the minutes are per week, per month or per cycle — a change of unit is an easy way for a service to shrink without anyone appearing to decide anything.</p>"
+        },
+        {
+          "h2": "Write it as a request, not a complaint",
+          "body": "<p>The letter that works quotes the evaluation, quotes the IEP, and asks a question that is difficult to answer badly: <em>the evaluation identified X on page 12; I do not see a goal or service addressing X; can you point me to it or add one?</em></p><p>That framing is effective because it is genuinely open. Sometimes the answer is that it is addressed somewhere you did not look, and finding that out costs nothing. When there is no answer, the absence is now documented in writing, which is what matters if the case escalates.</p>"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What if the district refuses to reconvene?",
+          "a": "Put the request in writing, keep the date, and check your state's required response timeline. A refusal in writing is more useful to you than a verbal agreement."
+        },
+        {
+          "q": "Do I need an independent evaluation?",
+          "a": "Often not, if the district's own evaluation already identifies the need. An independent evaluation matters most when you are disputing the findings themselves rather than the response to them."
+        },
+        {
+          "q": "How long should the crosswalk take?",
+          "a": "By hand, several hours for a substantial evaluation and IEP. It is exactly the kind of exhaustive cross-referencing that is easy to do badly when tired."
+        }
+      ],
+      "closingLabel": "This is general information",
+      "closing": "<p>This guide describes a document review method. It is not legal advice. Special education law is federal but its procedures vary by state, and a family facing a due process matter should speak to an attorney licensed in their state.</p>"
+    },
+    {
+      "path": "/guides/how-advocates-charge",
+      "kind": "guide",
+      "section": "Practice",
+      "title": "How advocates charge, and what it means for capacity",
+      "h1": "How advocates charge, and what it means for capacity",
+      "description": "Hourly, contingency and flat fee across public adjusting, special education advocacy and patient advocacy — the published rates, and why every pricing model eventually hits the same capacity ceiling.",
+      "keywords": [
+        "advocate pricing",
+        "public adjuster fees",
+        "IEP advocate cost",
+        "contingency fee advocacy",
+        "patient advocate rates"
+      ],
+      "breadcrumb": [
+        {
+          "name": "Guides",
+          "path": "/guides"
+        }
+      ],
+      "published": "2026-08-28",
+      "modified": "2026-08-28",
+      "lede": "Three professions, three pricing models, one ceiling. Everyone in this work eventually runs out of the same thing, and it is not demand.",
+      "sections": [
+        {
+          "h2": "What the market actually charges",
+          "body": "<p>Published and widely reported rates as of 2026:</p><ul><li><strong>Public adjusters:</strong> 10–20% of the settlement, typically 10–15% on residential property. Florida caps this by statute at 10% in the year following a declared emergency and 20% otherwise.</li><li><strong>Medical bill negotiators:</strong> 10–35% of savings.</li><li><strong>Property tax appeal firms:</strong> 25–50% of first-year savings.</li><li><strong>Special education advocates:</strong> $75–300 per hour; roughly 10–15 hours for a typical case.</li></ul><p>Treat these as a guide rather than gospel — a large share of published rate information comes from firms selling the service.</p>"
+        },
+        {
+          "h2": "Contingency and the small-case problem",
+          "body": "<p>Contingency aligns you with the client and removes the affordability objection entirely, which is why it dominates in claims work. It has one structural weakness: <strong>it makes small cases irrational to take.</strong></p><p>At 15% of settlement, a $6,000 claim pays $900. If reading the policy and assembling the file takes eight hours, that is $112 an hour before overhead — and the small claim takes nearly as long to read as the large one, because the policy is the same length either way.</p><p>So the bottom of the market goes unserved, not because those people do not need help but because the reading time does not scale down with the claim. That is a capacity problem disguised as a pricing problem.</p>"
+        },
+        {
+          "h2": "Hourly and the affordability ceiling",
+          "body": "<p>Hourly billing is honest and it caps your income at your available hours. At $150 an hour and 20 billable hours a week, the ceiling is roughly $150,000 a year before overhead, and every hour of reading is an hour not spent in a meeting or on a call.</p><p>It also prices out exactly the families most likely to need help — the special education research says this directly, describing cost as a substantial barrier and the system as stacked against low and middle-income families.</p>"
+        },
+        {
+          "h2": "The ceiling everyone hits",
+          "body": "<p>Whatever the model, the constraint is the same: <strong>one person can only read so much.</strong> Not client acquisition, not competition, not pricing. Reading.</p><p>Which means the only real ways to grow are to raise rates until demand falls away, hire and supervise other people, or reduce the reading time per case. The third is the only one that also lets you serve people who cannot pay full freight.</p>"
+        },
+        {
+          "h2": "Working the arithmetic on any tool",
+          "body": "<p>The calculation is short. Multiply your hourly rate by the hours a tool saves per month and compare it to the price. At $150 an hour, a $299 tool needs to save two hours a month to break even; at $250 an hour it needs to save 72 minutes.</p><p>The more useful question is the second one: what would you do with the freed hours? More full-fee cases raises income. Sliding-scale cases raises reach. Both are better answers than working fewer hours, though that is a legitimate answer too.</p>"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is contingency allowed in every state?",
+          "a": "For public adjusting, it is standard but regulated, and several states cap the percentage — Florida's caps are the best-known. Rules differ by profession and state; check yours."
+        },
+        {
+          "q": "Should I switch from hourly to contingency?",
+          "a": "It depends on your case mix and your cash position. Contingency means carrying costs until settlement, which is a real constraint for a solo practice."
+        },
+        {
+          "q": "How do sliding-scale practices survive?",
+          "a": "Usually by cross-subsidising from full-fee cases, which only works if the full-fee cases are efficient enough to leave room."
+        }
+      ],
+      "closingLabel": "About these figures",
+      "closing": "<p>Rates cited are drawn from published industry and practitioner sources in 2026, several of which are published by firms that sell these services. They are indicative of the market rather than authoritative, and none was independently verified.</p>",
+      "metaTitle": "How advocates charge — and the capacity ceiling"
+    },
+    {
+      "path": "/about",
+      "kind": "page",
+      "title": "About Counterweight",
+      "h1": "About",
+      "description": "Counterweight exists because institutions automated their side of every dispute and the people representing individuals did not. Built for the advocates already doing that work.",
+      "keywords": [
+        "about counterweight",
+        "advocate software company"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "About",
+          "h1": "Why this exists",
+          "lede": "Both sides of a dispute were supposed to get better software. Only one side did.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "prose",
+          "h2": "The asymmetry",
+          "body": "<p>In the first quarter of 2026, 95.2% of insurtech funding went to AI companies — and industry reporting described that wave as aimed at infrastructure providers rather than at anything consumer-facing. Sixty-five percent of insurers planned scaled AI claims agents for the year. Over the same decade in which that capability was built, the share of claims closed with no payment at the five largest home insurers went from 36% to 44%.</p><p>The same shape holds elsewhere. School districts have compliance software. Hospitals have revenue-cycle systems. On the other side stands one person, doing this once, usually during the worst month of their life — or the advocate they hired, working from a highlighter and a Saturday.</p><p>Counterweight is built for that advocate. Not to replace them, which is neither possible nor legal in most of this work, but to make the reading fast enough that they can take the cases they currently turn away.</p>"
+        },
+        {
+          "type": "prose",
+          "h2": "What we learned from the last company that tried this",
+          "body": "<p>In February 2025 the Federal Trade Commission finalised an order requiring DoNotPay to pay $193,000 and to stop advertising that its service performed like a real lawyer. A parallel class action settled for the same amount. The finding was specific: the company never tested whether its system worked at the level it claimed, and never retained attorneys to check.</p><p>It had users. It had press. It had revenue. What it did not have was evidence.</p><p>So we do three things because of that order. We measure outcomes from the first customer. We keep the licensed professional in the loop wherever the law requires one. And we never claim to be the professional — Counterweight is a tool in your practice, and the name on the work is yours.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/contact",
+      "kind": "page",
+      "title": "Contact Counterweight",
+      "h1": "Contact",
+      "description": "Get in touch about Counterweight — questions about your practice, sliding-scale pricing, a state or document type we do not yet handle, or anything else.",
+      "keywords": [
+        "contact counterweight"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Contact",
+          "h1": "Contact",
+          "lede": "A real person reads these. Tell us what you work on and what is slowest about it.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "tiles",
+          "h2": "What to write to us about",
+          "cols": 3,
+          "items": [
+            {
+              "title": "Email",
+              "body": "hello@counterweight.app — questions, demos, or a case type you want handled."
+            },
+            {
+              "title": "Sliding-scale practice",
+              "body": "If a meaningful share of your caseload is sliding-scale or pro bono, say so and we will work something out."
+            },
+            {
+              "title": "A state we do not cover",
+              "body": "Deadline rules are added by request. Tell us your state and your case type and we will tell you honestly how long it will take."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/start",
+      "kind": "page",
+      "title": "Start a free Counterweight trial",
+      "h1": "Start your trial",
+      "description": "Fourteen days, no card required. Bring a case you have already closed and check Counterweight's findings against your own.",
+      "keywords": [
+        "counterweight trial",
+        "advocate software free trial"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Free trial",
+          "h1": "Start your trial",
+          "lede": "Fourteen days. No card. <strong>Bring a case you already closed</strong> — one where you know what the answer turned out to be — and check our findings against yours. It is the only evaluation that tells you anything real.",
+          "cta": "Email us to start",
+          "note": "While we are onboarding advocates one at a time, trials start with an email. That is deliberate — we want to know what you work on."
+        },
+        {
+          "type": "steps",
+          "h2": "What happens next",
+          "items": [
+            {
+              "name": "You write to us",
+              "text": "Tell us your practice type and your state. hello@counterweight.app."
+            },
+            {
+              "name": "We set you up the same day",
+              "text": "No sales call unless you want one."
+            },
+            {
+              "name": "You test it against a closed case",
+              "text": "You already know the answer, so you can grade it honestly."
+            },
+            {
+              "name": "You tell us where it was wrong",
+              "text": "That feedback is worth more to us than the subscription, and it is why we onboard slowly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/privacy",
+      "kind": "legal",
+      "title": "Privacy at Counterweight",
+      "h1": "Privacy",
+      "description": "How Counterweight handles case documents: encrypted, never used for model training, deletable per case, and never sold or shared.",
+      "keywords": [
+        "counterweight privacy"
+      ],
+      "noindex": false,
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Privacy",
+          "h1": "Privacy",
+          "lede": "The short version, in plain words, before the long version that a lawyer will write.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "prose",
+          "h2": "What we do with your documents",
+          "body": "<p><strong>We process them to produce your work product, and for nothing else.</strong> They are encrypted in transit and at rest. They are not used to train models. They are not pooled with other customers' documents. They are not sold, and they are not shared with anyone except the infrastructure providers required to run the service.</p><p>You can delete any case on demand and set an automatic deletion schedule. When you close your account you can export everything first.</p>"
+        },
+        {
+          "type": "disclaimer",
+          "label": "This page is not the final policy",
+          "body": "<p>This is a plain statement of intent written by the founder. <strong>A binding privacy policy — and, where you need one, a business associate agreement — must be drafted by a lawyer before this service handles real client data.</strong> If you are reading this and that has not happened yet, ask us about it directly and we will tell you where it stands.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/terms",
+      "kind": "legal",
+      "title": "Terms of service",
+      "h1": "Terms",
+      "description": "The terms on which Counterweight is provided: software for licensed and practising advocates, not a substitute for professional judgement, licence or advice.",
+      "keywords": [
+        "counterweight terms"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Terms",
+          "h1": "Terms",
+          "lede": "The parts that matter most, stated plainly.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "prose",
+          "h2": "What Counterweight is, and is not",
+          "body": "<p>Counterweight is software provided to advocates for use in their own professional practice. <strong>It is not a law firm, not a licensed public adjuster, not a medical provider, and not an advocate.</strong> It does not provide legal, insurance, medical or financial advice, and it does not represent anyone.</p><p>Everything Counterweight produces is a draft for your review. You are responsible for checking it, for the professional judgement applied to it, and for anything sent under your name. Where a licence is required for the work, holding it is your responsibility.</p><p>Counterweight makes no guarantee about the outcome of any case, and no representation that its analysis is complete or correct. Every finding links to a source page so that you can verify it, and verifying it is your job.</p>"
+        },
+        {
+          "type": "disclaimer",
+          "label": "This page is not the final agreement",
+          "body": "<p>This is a plain-language summary written by the founder, not a contract. <strong>Binding terms of service must be drafted by a lawyer before this service is sold.</strong> Where this summary and the eventual signed agreement differ, the agreement governs.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/glossary",
+      "kind": "page",
+      "title": "Glossary of advocacy, claims and IEP terms",
+      "h1": "Glossary",
+      "description": "Plain definitions of the terms that decide cases: carve-backs, concurrent causation, proof of loss, present levels, service minutes, unbundling, prior authorisation and more.",
+      "keywords": [
+        "insurance claim glossary",
+        "IEP terms glossary",
+        "medical billing terms",
+        "public adjuster terminology"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Reference",
+          "h1": "Glossary",
+          "lede": "The vocabulary that decides cases, defined plainly. Most of these are terms an institution uses correctly and assumes the other side does not understand.",
+          "cta": "Start a free trial"
+        },
+        {
+          "type": "prose",
+          "h2": "Terms",
+          "body": "<h3 id='t-actual-cash-value'>Actual cash value</h3><p>Replacement cost less depreciation. Whether a policy pays actual cash value or replacement cost is frequently the largest single dollar difference in a property claim.</p><h3 id='t-appraisal'>Appraisal</h3><p>A policy provision allowing a dispute about the amount of loss — not about coverage — to be resolved by appraisers rather than litigation. It is usually subject to its own demand deadline.</p><h3 id='t-balance-billing'>Balance billing</h3><p>When a provider bills a patient for the difference between their charge and what the plan paid. It is restricted in many situations by federal and state law.</p><h3 id='t-carve-back'>Carve-back</h3><p>Language inside a policy exclusion that restores coverage in defined circumstances. A denial letter that quotes an exclusion but stops before its carve-back is quoting selectively.</p><h3 id='t-concurrent-causation'>Concurrent causation</h3><p>The situation where a loss has more than one cause, at least one covered and one excluded. How a state resolves concurrent causation frequently decides whether the claim is paid.</p><h3 id='t-due-process-complaint'>Due process complaint</h3><p>The formal dispute mechanism under IDEA, triggering a hearing before an impartial officer. Strict filing deadlines apply and vary by state.</p><h3 id='t-endorsement'>Endorsement</h3><p>An amendment attached to a policy that modifies the base form. Endorsements frequently contain the provision that decides a claim, and are the most commonly overlooked part of a policy.</p><h3 id='t-explanation-of-benefits'>Explanation of benefits</h3><p>The statement a health plan sends showing what was billed, what the plan allowed, what it paid and what the patient owes. It is not a bill, and reconciling it against the provider's bill is where errors surface.</p><h3 id='t-fape'>FAPE</h3><p>Free Appropriate Public Education. The standard a school district must meet under IDEA, and the legal question underlying most special education disputes.</p><h3 id='t-iep'>IEP</h3><p>Individualized Education Program. The legally binding document under IDEA setting out a student's special education goals, services and accommodations.</p><h3 id='t-independent-educational-evaluation'>Independent educational evaluation</h3><p>An evaluation by a qualified examiner not employed by the district, which a parent may request at public expense when they disagree with the district's evaluation.</p><h3 id='t-lre'>LRE</h3><p>Least Restrictive Environment. The IDEA requirement that a student be educated with non-disabled peers to the maximum extent appropriate.</p><h3 id='t-present-levels'>Present levels</h3><p>The section of an IEP describing the student's current performance. It frequently names a need that the goals and services then fail to address, which is the most common basis for a successful challenge.</p><h3 id='t-prior-authorisation'>Prior authorisation</h3><p>A payer requirement that a service be approved before it is delivered. A denial for missing prior authorisation is frequently reversible where the requirement was not communicated.</p><h3 id='t-prior-written-notice'>Prior written notice</h3><p>The formal notice a district must give when it proposes or refuses to change a student's identification, evaluation or placement. A refusal delivered verbally instead is itself a procedural issue.</p><h3 id='t-prompt-payment-statute'>Prompt payment statute</h3><p>A state law setting deadlines by which an insurer must acknowledge, investigate and pay or deny a claim, often with interest or penalties for breach.</p><h3 id='t-proof-of-loss'>Proof of loss</h3><p>A sworn statement of the amount and cause of a loss, which most property policies require the policyholder to submit within a set window. Missing the window can forfeit an otherwise valid claim.</p><h3 id='t-public-adjuster'>Public adjuster</h3><p>A licensed professional who represents the policyholder — not the insurer — in preparing and negotiating a property insurance claim, typically paid a contingency of 10 to 20 percent of the settlement.</p><h3 id='t-recoverable-depreciation'>Recoverable depreciation</h3><p>The amount withheld from an initial claim payment that becomes payable once repairs are completed and documented. It is often never claimed because nobody tells the policyholder it exists.</p><h3 id='t-service-minutes'>Service minutes</h3><p>The quantity of special education or related service an IEP commits to, usually stated in a grid. The grid total and the narrative promise disagree more often than expected.</p><h3 id='t-sub-limit'>Sub-limit</h3><p>A cap inside a policy that applies to a specific category of loss and is lower than the overall policy limit. Mould, water backup and ordinance-or-law coverage are common examples.</p><h3 id='t-unbundling'>Unbundling</h3><p>Billing separately for procedures that payer rules require to be billed together as one code, generally producing a higher total than the bundled rate.</p><h3 id='t-upcoding'>Upcoding</h3><p>Billing a higher-intensity service code than the care actually delivered supports, producing a larger payment than the encounter warrants.</p><h3 id='t-xactimate'>Xactimate</h3><p>The estimating software used across most of the property claims industry. Line-item disagreements between an adjuster's estimate and a contractor's are usually expressed in its terms.</p>"
+        }
+      ]
+    }
+  ]
+}

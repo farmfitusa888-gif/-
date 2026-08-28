@@ -1,0 +1,430 @@
+#!/usr/bin/env node
+/**
+ * build.mjs — one generator, seven sites.
+ *
+ * Reads platform/sites/<slug>.json and writes dist/<slug>/. Hand-writing seven
+ * SEO sites would mean seven chances to get the metadata wrong and seven places
+ * to fix every future improvement; this way a change to the head or the schema
+ * graph lands on all seven at once.
+ *
+ * Usage:
+ *   node platform/build.mjs            # build every site
+ *   node platform/build.mjs paystub    # build one
+ */
+
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { head, sitemap, robots, webmanifest, feed, abs, esc, clamp, plain } from "./seo.mjs";
+
+const ROOT = dirname(fileURLToPath(import.meta.url));
+const SITES = join(ROOT, "sites");
+const DIST = join(ROOT, "..", "dist");
+
+/* ------------------------------------------------------------------ *
+ * Design system — tokens come from the site config so each brand differs,
+ * but the layout logic is shared. Light and dark are both defined at token
+ * level so a page never renders one theme's text on the other's ground.
+ * ------------------------------------------------------------------ */
+
+const css = (s) => `
+:root{
+  --paper:${s.theme.light.paper}; --card:${s.theme.light.card}; --ink:${s.theme.light.ink};
+  --muted:${s.theme.light.muted}; --accent:${s.theme.light.accent}; --accent-soft:${s.theme.light.accentSoft};
+  --rule:${s.theme.light.rule}; --focus:${s.theme.light.accent};
+  --display:${s.theme.displayFont}; --body:${s.theme.bodyFont}; --mono:${s.theme.monoFont};
+  --measure:68ch;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:${s.theme.dark.paper}; --card:${s.theme.dark.card}; --ink:${s.theme.dark.ink};
+  --muted:${s.theme.dark.muted}; --accent:${s.theme.dark.accent}; --accent-soft:${s.theme.dark.accentSoft};
+  --rule:${s.theme.dark.rule}; --focus:${s.theme.dark.accent};
+}}
+:root[data-theme="dark"]{
+  --paper:${s.theme.dark.paper}; --card:${s.theme.dark.card}; --ink:${s.theme.dark.ink};
+  --muted:${s.theme.dark.muted}; --accent:${s.theme.dark.accent}; --accent-soft:${s.theme.dark.accentSoft};
+  --rule:${s.theme.dark.rule}; --focus:${s.theme.dark.accent};
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,40px)}
+.col{max-width:var(--measure)}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+h1,h2,h3,h4{margin:0;text-wrap:balance;font-family:var(--display);font-weight:600;letter-spacing:-.015em}
+h1{font-size:clamp(34px,5.6vw,58px);line-height:1.06}
+h2{font-size:clamp(25px,3.6vw,36px);line-height:1.16}
+h3{font-size:20px}
+p{margin:0 0 1.05em}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:12px}
+.lede{font-size:20px;line-height:1.5;color:var(--muted);max-width:60ch}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:var(--card);padding:10px 14px;z-index:100;border:1px solid var(--rule);border-radius:3px}
+
+header.nav{border-bottom:1px solid var(--rule);position:sticky;top:0;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);z-index:50}
+header.nav .wrap{display:flex;align-items:center;gap:22px;height:62px}
+.brand{font-family:var(--display);font-weight:700;font-size:19px;color:var(--ink);text-decoration:none;letter-spacing:-.02em;margin-right:auto}
+header.nav a.navlink{font-size:14.5px;color:var(--muted);text-decoration:none}
+header.nav a.navlink:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:var(--paper);padding:10px 18px;border-radius:3px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--accent)}
+.btn.ghost{background:transparent;color:var(--accent)}
+@media(max-width:760px){header.nav a.navlink{display:none}}
+
+section{padding:clamp(44px,6vw,74px) 0}
+section.tint{background:var(--card);border-block:1px solid var(--rule)}
+.hero{padding-top:clamp(48px,7vw,90px)}
+.hero .lede{margin-top:20px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.note{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:14px}
+
+.grid{display:grid;gap:20px;margin-top:30px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tile{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:22px}
+.tile h3{margin-bottom:8px}
+.tile p{color:var(--muted);font-size:15.5px;margin:0}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-top:28px}
+.stat{background:var(--card);padding:20px}
+.stat b{display:block;font-family:var(--mono);font-size:29px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.stat span{display:block;font-size:14px;color:var(--muted);margin-top:6px;line-height:1.45}
+.stat cite{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);opacity:.75;margin-top:8px;font-style:normal}
+
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:28px 0 0;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+ol.steps li{background:var(--card);padding:20px 22px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+ol.steps li::before{counter-increment:s;content:counter(s);font-family:var(--mono);font-weight:700;color:var(--accent);font-size:15px;line-height:1.6}
+ol.steps h3{margin-bottom:5px}
+ol.steps p{margin:0;color:var(--muted);font-size:15.5px}
+
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px}
+.price{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:24px;display:flex;flex-direction:column}
+.price.feature{border-color:var(--accent);border-width:2px}
+.price .amt{font-family:var(--mono);font-size:34px;font-weight:700;letter-spacing:-.02em;margin:10px 0 4px}
+.price .per{font-size:13.5px;color:var(--muted)}
+.price ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px;font-size:15px}
+.price li{padding-left:20px;position:relative;color:var(--muted)}
+.price li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--accent)}
+.price .btn{margin-top:auto;text-align:center}
+
+details.faq{border-bottom:1px solid var(--rule);padding:16px 0}
+details.faq summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;gap:12px;align-items:baseline}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::before{content:"+";font-family:var(--mono);color:var(--accent);font-weight:700}
+details.faq[open] summary::before{content:"\\2013"}
+details.faq .a{padding:10px 0 2px 24px;color:var(--muted);max-width:66ch}
+
+article.prose{max-width:var(--measure)}
+article.prose h2{margin:34px 0 14px}
+article.prose h3{margin:26px 0 10px}
+article.prose ul,article.prose ol{color:var(--muted);padding-left:22px}
+article.prose li{margin-bottom:7px}
+article.prose blockquote{margin:22px 0;padding-left:20px;border-left:3px solid var(--accent);color:var(--ink);font-family:var(--display);font-size:19px;line-height:1.5}
+.toc{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:18px 22px;margin:26px 0}
+.toc p{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.toc ol{margin:0;padding-left:20px;font-size:15px}
+.toc li{margin-bottom:5px}
+
+.scroller{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--card);margin:26px 0}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:520px}
+th,td{padding:11px 15px;text-align:left;border-bottom:1px solid var(--rule);font-variant-numeric:tabular-nums}
+thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+tbody tr:last-child td{border-bottom:none}
+
+.crumbs{font-size:13.5px;color:var(--muted);padding-top:22px}
+.crumbs a{color:var(--muted)}
+.cardlinks{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-top:26px}
+.cardlink{display:block;background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:20px;text-decoration:none;color:var(--ink)}
+.cardlink:hover{border-color:var(--accent)}
+.cardlink b{display:block;font-family:var(--display);font-size:17px;margin-bottom:6px}
+.cardlink span{font-size:14.5px;color:var(--muted)}
+
+.disclaimer{background:var(--accent-soft);border:1px solid var(--rule);border-radius:4px;padding:18px 22px;margin-top:30px;font-size:14.5px;color:var(--ink)}
+.disclaimer b{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:block;margin-bottom:7px;color:var(--accent)}
+
+footer.site{border-top:1px solid var(--rule);margin-top:40px;padding:38px 0}
+footer.site .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:26px}
+footer.site h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:11px;font-weight:700}
+footer.site a{display:block;font-size:14.5px;color:var(--muted);text-decoration:none;margin-bottom:7px}
+footer.site a:hover{color:var(--ink)}
+footer.site .legal{margin-top:30px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted);max-width:80ch}
+`;
+
+/* ------------------------------------------------------------------ *
+ * Chrome
+ * ------------------------------------------------------------------ */
+
+const nav = (s) => `<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/">${esc(s.brand)}</a>
+  ${(s.nav || []).map((n) => `<a class="navlink" href="${n.path}">${esc(n.label)}</a>`).join("\n  ")}
+  <a class="btn" href="${s.cta.path}">${esc(s.cta.label)}</a>
+</div></header>`;
+
+const footer = (s) => `<footer class="site"><div class="wrap">
+  <div class="cols">
+    ${(s.footer || [])
+      .map(
+        (g) => `<div><h4>${esc(g.title)}</h4>${g.links
+          .map((l) => `<a href="${l.path}">${esc(l.label)}</a>`)
+          .join("")}</div>`
+      )
+      .join("\n    ")}
+  </div>
+  <div class="legal">
+    <p>© ${new Date().getUTCFullYear()} ${esc(s.brand)}. ${esc(s.footerLegal || "")}</p>
+    ${s.disclaimer ? `<p>${esc(s.disclaimer)}</p>` : ""}
+  </div>
+</div></footer>`;
+
+const crumbs = (s, page) => {
+  if (page.path === "/") return "";
+  const trail = [{ name: "Home", path: "/" }, ...(page.breadcrumb || [])];
+  return `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb">${trail
+    .map((t) => `<a href="${t.path}">${esc(t.name)}</a> / `)
+    .join("")}<span>${esc(page.h1 || page.title)}</span></nav></div>`;
+};
+
+/* ------------------------------------------------------------------ *
+ * Section renderers
+ * ------------------------------------------------------------------ */
+
+const R = {
+  hero: (b, s) => `<section class="hero"><div class="wrap col">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    <h1>${esc(b.h1)}</h1>
+    <p class="lede">${b.lede}</p>
+    <div class="cta-row"><a class="btn" href="${s.cta.path}">${esc(b.cta || s.cta.label)}</a>${
+      b.cta2 ? `<a class="btn ghost" href="${b.cta2.path}">${esc(b.cta2.label)}</a>` : ""
+    }</div>
+    ${b.note ? `<p class="note">${esc(b.note)}</p>` : ""}
+  </div></section>`,
+
+  stats: (b) => `<section class="tint"><div class="wrap">
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    <div class="stats">${b.items
+      .map(
+        (i) =>
+          `<div class="stat"><b>${esc(i.value)}</b><span>${i.label}</span>${
+            i.cite ? `<cite>${esc(i.cite)}</cite>` : ""
+          }</div>`
+      )
+      .join("")}</div>
+  </div></section>`,
+
+  prose: (b) => `<section><div class="wrap col">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    ${b.body}
+  </div></section>`,
+
+  tiles: (b) => `<section><div class="wrap">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    ${b.intro ? `<p class="lede">${b.intro}</p>` : ""}
+    <div class="grid ${b.cols === 3 ? "g3" : "g2"}">${b.items
+      .map((i) => `<div class="tile"><h3>${esc(i.title)}</h3><p>${i.body}</p></div>`)
+      .join("")}</div>
+  </div></section>`,
+
+  steps: (b) => `<section class="tint"><div class="wrap col">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    <ol class="steps">${b.items
+      .map((i, n) => `<li id="step-${n + 1}"><div><h3>${esc(i.name)}</h3><p>${i.text}</p></div></li>`)
+      .join("")}</ol>
+  </div></section>`,
+
+  pricing: (b, s) => `<section><div class="wrap">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    ${b.intro ? `<p class="lede">${b.intro}</p>` : ""}
+    <div class="prices">${s.pricing
+      .map(
+        (t) => `<div class="price${t.featured ? " feature" : ""}">
+        <h3>${esc(t.name)}</h3>
+        <div class="amt">${esc(t.price)}</div>
+        <div class="per">${esc(t.per || "")}</div>
+        <ul>${t.includes.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
+        <a class="btn${t.featured ? "" : " ghost"}" href="${s.cta.path}">${esc(t.cta || s.cta.label)}</a>
+      </div>`
+      )
+      .join("")}</div>
+    ${b.after ? `<div class="col">${b.after}</div>` : ""}
+  </div></section>`,
+
+  faq: (b) => `<section class="tint"><div class="wrap col">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    ${b.items
+      .map(
+        (f) =>
+          `<details class="faq"><summary>${esc(f.q)}</summary><div class="a">${f.a}</div></details>`
+      )
+      .join("")}
+  </div></section>`,
+
+  table: (b) => `<section><div class="wrap">
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    ${b.intro ? `<p class="lede">${b.intro}</p>` : ""}
+    <div class="scroller"><table>
+      <thead><tr>${b.headers.map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead>
+      <tbody>${b.rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody>
+    </table></div>
+  </div></section>`,
+
+  links: (b) => `<section><div class="wrap">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    <div class="cardlinks">${b.items
+      .map(
+        (i) =>
+          `<a class="cardlink" href="${i.path}"><b>${esc(i.title)}</b><span>${esc(i.blurb)}</span></a>`
+      )
+      .join("")}</div>
+  </div></section>`,
+
+  disclaimer: (b) => `<section><div class="wrap col"><div class="disclaimer"><b>${esc(
+    b.label || "Important"
+  )}</b>${b.body}</div></div></section>`,
+
+  cta: (b, s) => `<section class="tint"><div class="wrap col">
+    <h2>${esc(b.h2)}</h2>
+    ${b.body ? `<p class="lede">${b.body}</p>` : ""}
+    <div class="cta-row"><a class="btn" href="${s.cta.path}">${esc(b.cta || s.cta.label)}</a></div>
+  </div></section>`,
+};
+
+function renderBlocks(blocks, s) {
+  return blocks
+    .map((b) => {
+      const fn = R[b.type];
+      if (!fn) throw new Error(`Unknown block type: ${b.type}`);
+      return fn(b, s);
+    })
+    .join("\n");
+}
+
+/** Guides are long-form prose; render from a section list with an auto TOC. */
+function renderGuide(page, s) {
+  const toc = page.sections
+    .map((sec, i) => `<li><a href="#s${i + 1}">${esc(sec.h2)}</a></li>`)
+    .join("");
+  const body = page.sections
+    .map((sec, i) => `<h2 id="s${i + 1}">${esc(sec.h2)}</h2>\n${sec.body}`)
+    .join("\n");
+  return `<section><div class="wrap"><article class="prose">
+    <span class="eyebrow">${esc(page.section || "Guide")}</span>
+    <h1>${esc(page.h1)}</h1>
+    <p class="lede">${page.lede}</p>
+    <div class="toc"><p>On this page</p><ol>${toc}</ol></div>
+    ${body}
+    ${page.faqs?.length ? `<h2 id="faq">Common questions</h2>${page.faqs.map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><div class="a">${f.a}</div></details>`).join("")}` : ""}
+    ${page.closing ? `<div class="disclaimer"><b>${esc(page.closingLabel || "Note")}</b>${page.closing}</div>` : ""}
+  </article></div></section>`;
+}
+
+/* ------------------------------------------------------------------ *
+ * Page assembly
+ * ------------------------------------------------------------------ */
+
+function renderPage(s, page) {
+  const main =
+    page.kind === "guide" ? renderGuide(page, s) : renderBlocks(page.blocks || [], s);
+  return `<!doctype html>
+<html lang="${s.lang || "en-US"}">
+<head>
+${head(s, page)}
+${s.fontsHref ? `<link rel="stylesheet" href="${esc(s.fontsHref)}">` : ""}
+<style>${css(s)}</style>
+</head>
+<body>
+${nav(s)}
+${crumbs(s, page)}
+<main id="main">
+${main}
+</main>
+${footer(s)}
+</body>
+</html>
+`;
+}
+
+/** Word count for Article schema — computed, never guessed. */
+function countWords(page) {
+  const text =
+    page.kind === "guide"
+      ? [page.lede, ...page.sections.map((x) => x.body), ...(page.faqs || []).map((f) => f.a)].join(" ")
+      : JSON.stringify(page.blocks || "");
+  return plain(text).split(/\s+/).filter(Boolean).length;
+}
+
+function buildSite(slug) {
+  const s = JSON.parse(readFileSync(join(SITES, `${slug}.json`), "utf8"));
+  const out = join(DIST, slug);
+  rmSync(out, { recursive: true, force: true });
+  mkdirSync(out, { recursive: true });
+
+  const pages = s.pages.map((p) => ({ ...p, wordCount: countWords(p) }));
+
+  for (const page of pages) {
+    const html = renderPage(s, page);
+    const file =
+      page.path === "/" ? join(out, "index.html") : join(out, page.path.replace(/^\//, ""), "index.html");
+    mkdirSync(dirname(file), { recursive: true });
+    writeFileSync(file, html);
+  }
+
+  writeFileSync(join(out, "sitemap.xml"), sitemap(s, pages));
+  writeFileSync(join(out, "robots.txt"), robots(s));
+  writeFileSync(join(out, "site.webmanifest"), webmanifest(s));
+  writeFileSync(join(out, "feed.xml"), feed(s, pages));
+  writeFileSync(
+    join(out, "favicon.svg"),
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="${s.theme.light.accent}"/><text x="32" y="44" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#fff" text-anchor="middle">${esc(s.mark || s.brand[0])}</text></svg>`
+  );
+  writeFileSync(
+    join(out, "humans.txt"),
+    `/* TEAM */\nSite: ${s.brand}\nURL: https://${s.domain}\n\n/* SITE */\nStandards: HTML5, CSS3\nComponents: none — hand-rolled static\n`
+  );
+
+  return { slug, brand: s.brand, domain: s.domain, pages: pages.length };
+}
+
+const only = process.argv[2];
+const slugs = only
+  ? [only]
+  : readdirSync(SITES).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, ""));
+
+if (!slugs.length) {
+  console.log("No site configs in platform/sites/. Nothing to build.");
+  process.exit(0);
+}
+
+const results = slugs.map(buildSite);
+for (const r of results) console.log(`built ${r.slug.padEnd(14)} ${String(r.pages).padStart(3)} pages  ${r.domain}`);
+console.log(`\n${results.length} site(s), ${results.reduce((a, r) => a + r.pages, 0)} pages total -> innovation/dist/`);
+
+/* ------------------------------------------------------------------ *
+ * Raster icon. Referenced in the head, so it must exist — the validator
+ * treats a dead asset link as a build error rather than a warning.
+ * Rendered from the same SVG so the two never drift apart.
+ * ------------------------------------------------------------------ */
+import { execFileSync } from "node:child_process";
+const CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome";
+for (const r of results) {
+  const out = join(DIST, r.slug);
+  try {
+    execFileSync(
+      CHROME,
+      ["--headless", "--disable-gpu", "--no-sandbox", "--hide-scrollbars",
+       "--window-size=180,180", "--default-background-color=00000000",
+       `--screenshot=${join(out, "apple-touch-icon.png")}`,
+       "file://" + join(out, "favicon.svg")],
+      { stdio: "ignore" }
+    );
+  } catch {
+    console.warn(`  ! could not rasterise icon for ${r.slug}`);
+  }
+}
