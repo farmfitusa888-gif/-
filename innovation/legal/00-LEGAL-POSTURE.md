@@ -500,7 +500,9 @@ export const BLOCKED = [
   { id: "B25", re: /\bwe (will |can |)?(negotiate|settle|adjust|handle|manage|pursue) your claim\b/i },
   { id: "B26", re: /\bwe (will |can |)?(contact|call|write to|deal with|represent you (before|to)) (your|the) (insurer|carrier|insurance company|adjuster)\b/i },
   { id: "B27", re: /\b(we|countercite) (represent|act for|act on behalf of|advocate for) you\b/i },
-  { id: "B28", re: /\b(legal|insurance) advice\b/i, unless: /\b(not|no|does not (constitute|provide)|is not) (legal|insurance) advice\b/i },
+  // Negation must appear in the same sentence, ahead of the phrase. "Nothing in
+  // this report is legal advice" passes; "here is some legal advice" does not.
+  { id: "B28", re: /\b(legal|insurance) advice\b/i, unless: /\b(not|nothing|never|no|cannot|does not|is not)\b[^.!?]{0,60}\b(legal|insurance) advice\b/i },
 
   // --- fee structures that would make us a public adjuster (see section 2) ---
   { id: "B29", re: /\b(percentage|share|%) of (your|the) (settlement|recovery|payout|proceeds)\b/i },
@@ -535,9 +537,13 @@ filter catches the sentence forms someone thought of. A model can express N4 in
 words no regex here matches. So the fixture is the floor and not the ceiling;
 the real control is that generated prose never reaches a customer unedited, and
 that the summary strings are templates from §1.4.1 rather than free text. The
-second caveat: B28 uses a negative lookaround pattern that will need testing
-against real disclaimer strings, because "does not constitute legal advice"
-must pass and "here is some legal advice" must fail.
+second caveat: B28 decides by looking for a negation earlier in the same
+sentence, which is a crude stand-in for meaning. The fixture was run against
+twelve strings, a mix of permitted templates from §1.4.1 and forbidden forms
+from §1.4.2, and behaved correctly on all of them. That is a smoke test, not
+coverage. "The letter offers legal advice, which we do not" would slip past
+B28, and "advice on legal matters" is not caught at all. Every `unless` clause
+here is a place a determined sentence can get around.
 
 ### 1.5 How existing products sit on the safe side, and the exact words they use
 
