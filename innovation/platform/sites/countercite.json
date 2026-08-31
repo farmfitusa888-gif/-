@@ -94,6 +94,7 @@
       "summary": "One advocate, unlimited cases",
       "includes": [
         "One seat",
+        "Pay by bank transfer on any plan, or by invoice on Firm",
         "Unlimited cases and documents, no per-case charge",
         "Contradiction finder, every result cited to a page",
         "Exclusion and carve-back detection",
@@ -102,8 +103,8 @@
         "Full case export in one click, any time",
         "Email support, answered within one business day"
       ],
-      "cta": "Start free trial",
-      "note": "Fourteen days free. No card to start, so nothing rolls over."
+      "cta": "Join the early list",
+      "note": "Not open yet. Joining the list costs nothing and commits you to nothing."
     },
     {
       "name": "Practice",
@@ -123,8 +124,8 @@
         "Outcome tracking per advocate and per carrier",
         "Priority support, answered the same business day"
       ],
-      "cta": "Start free trial",
-      "note": "Most practices land here. Two advocates make it cheaper than Solo."
+      "cta": "Join the early list",
+      "note": "Expected to be the common choice. Two advocates make it cheaper than Solo."
     },
     {
       "name": "Firm",
@@ -137,15 +138,14 @@
       "includes": [
         "Everything in Practice",
         "Unlimited seats",
-        "Pay by bank transfer or annual invoice, not just card",
         "Custom document types for the forms your carriers use",
         "Firm-wide outcome reporting, exportable",
         "Single sign-on",
         "Named onboarding session and help moving old case files in",
         "Quarterly accuracy review against your own closed files"
       ],
-      "cta": "Talk to us",
-      "note": "Bank transfer suits firms whose cards expire, rotate, or need a PO."
+      "cta": "Join the early list",
+      "note": "Bank transfer suits firms whose cards expire, rotate, or need a purchase order."
     }
   ],
   "glossary": [
@@ -248,7 +248,7 @@
   ],
   "cta": {
     "path": "/start",
-    "label": "Start free trial"
+    "label": "Join the early list"
   },
   "nav": [
     {
@@ -397,7 +397,7 @@
           "eyebrow": "For advocates paid on outcome",
           "h1": "Case software for people who fight institutions",
           "lede": "The insurer has software. The school district has software. The hospital has software. You have a highlighter and a Saturday. <strong>Countercite answers their citation with one of your own</strong> — it reads the documents, finds the contradiction, tracks the clock and drafts the argument.",
-          "cta": "Start a free 14-day trial",
+          "cta": "Join the early list",
           "cta2": {
             "path": "/how-it-works",
             "label": "See how it works"
@@ -516,7 +516,7 @@
         {
           "type": "cta",
           "h2": "Bring a case you already won",
-          "body": "The fastest way to judge this is to run a closed case through it and see whether it finds what you found. Fourteen days, no card, and your documents are deleted when you say so.",
+          "body": "The fastest way to judge this is to run a closed case through it and see whether it finds what you found. Fourteen days free when it opens, and no card to join the list, and your documents are deleted when you say so.",
           "cta": "Start the trial"
         }
       ]
@@ -562,7 +562,7 @@
           "eyebrow": "Step by step",
           "h1": "How it works",
           "lede": "Four steps. The one that used to take a Saturday takes about four minutes, and every output is traceable to a page you can look at.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "steps",
@@ -626,7 +626,7 @@
         {
           "type": "cta",
           "h2": "Try it on a case you already know the answer to",
-          "body": "It is the only test that tells you anything. Fourteen days, no card."
+          "body": "It is the only test that tells you anything. Fourteen days free when it opens, and no card to join the list."
         }
       ]
     },
@@ -647,7 +647,7 @@
           "eyebrow": "Three professions",
           "h1": "Who it's for",
           "lede": "Different documents, different vocabulary, identical shape of problem: an institution wrote something, a governing document says something else, and finding the gap takes hours you cannot bill enough of.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "links",
@@ -707,7 +707,7 @@
           "eyebrow": "Public adjusting",
           "h1": "For public adjusters",
           "lede": "Public adjusting does not scale because a licensed human has to read every policy. <strong>Countercite makes the reading fast, so your licence is spent on the claims worth fighting</strong> — including the small ones you have always had to turn down.",
-          "cta": "Start a free trial",
+          "cta": "Join the early list",
           "note": "Countercite is software. It does not adjust claims and does not hold a licence — you do."
         },
         {
@@ -788,7 +788,7 @@
         {
           "type": "cta",
           "h2": "Run a closed claim through it",
-          "body": "Take a claim you already settled and see whether Countercite finds what you found. Fourteen days, no card."
+          "body": "Take a claim you already settled and see whether Countercite finds what you found. Fourteen days free when it opens, and no card to join the list."
         }
       ]
     },
@@ -816,7 +816,7 @@
           "eyebrow": "Special education advocacy",
           "h1": "For special education advocates",
           "lede": "The winning argument is almost always the same: <strong>the district's own evaluation found something the IEP does not address.</strong> Finding it means reading a 40-page evaluation against a 20-page IEP, line by line. That is the part Countercite does.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "tiles",
@@ -920,7 +920,7 @@
           "eyebrow": "Patient advocacy",
           "h1": "For patient advocates",
           "lede": "An itemised bill is a document designed to be difficult. <strong>Countercite reads it against the plan documents and the coding rules</strong>, flags what does not belong, and drafts the appeal with a line-level citation.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "tiles",
@@ -996,7 +996,7 @@
         {
           "type": "cta",
           "h2": "Bring a bill you already fought",
-          "body": "Fourteen days, no card, and you can delete everything when you are done."
+          "body": "Fourteen days free when it opens, and no card to join the list, and you can delete everything when you are done."
         }
       ]
     },
@@ -1017,7 +1017,7 @@
           "eyebrow": "Pricing",
           "h1": "Flat, and unlimited",
           "lede": "Every tool adjacent to this work meters — per case, per page, per gigabyte, per claim. <strong>Metering punishes exactly the advocate who is trying to grow.</strong> Countercite charges one flat price and does not count.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "pricing",
@@ -1236,9 +1236,9 @@
             ],
             [
               "Pay by bank transfer or invoice",
-              "&mdash;",
-              "&mdash;",
-              "Yes"
+              "Yes",
+              "Yes",
+              "Yes, plus invoicing"
             ],
             [
               "Support response",
@@ -1303,8 +1303,8 @@
               "a": "On the Firm plan, yes. Bank transfer suits firms whose cards expire, rotate between partners, or need a purchase order. Ask and we will send an invoice with our bank details."
             },
             {
-              "q": "What happens after the trial?",
-              "a": "Nothing automatic. The trial takes no card, so it cannot roll into a subscription. You choose a plan or you do not hear from us again."
+              "q": "What does joining the early list commit me to?",
+              "a": "Nothing at all. No card, no contract, no obligation to buy when it opens. You get told when it is ready and you get the fourteen-day trial before anyone else. If you decide against it, one reply removes you."
             },
             {
               "q": "What if I outgrow a plan mid-month?",
@@ -1320,7 +1320,7 @@
             },
             {
               "q": "Will the price go up on me later?",
-              "a": "Not while you keep the subscription. If we raise prices, you stay on what you signed up at for as long as you stay subscribed. That is a commitment, not a promotion."
+              "a": "Not while you keep the subscription. Anyone who joins from the early list keeps the price they signed up at for as long as they stay subscribed. That is a commitment, not a promotion."
             }
           ]
         }
@@ -1376,7 +1376,7 @@
           "eyebrow": "FAQ",
           "h1": "Frequently asked questions",
           "lede": "Including the answers that are not flattering, because you are a professional evaluating a tool and you will find out anyway.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "faq",
@@ -1435,7 +1435,7 @@
           "eyebrow": "Guides",
           "h1": "Guides",
           "lede": "Written for people who do this for a living, not for search engines. Each one covers a specific piece of the work in enough depth to be useful.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "links",
@@ -1662,7 +1662,7 @@
           "eyebrow": "About",
           "h1": "Why this exists",
           "lede": "Both sides of a dispute were supposed to get better software. Only one side did.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "prose",
@@ -1691,7 +1691,7 @@
           "eyebrow": "Contact",
           "h1": "Contact",
           "lede": "A real person reads these. Tell us what you work on and what is slowest about it.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "tiles",
@@ -1717,12 +1717,12 @@
     {
       "path": "/start",
       "kind": "page",
-      "title": "Start a free Countercite trial",
+      "title": "Join the Countercite early list",
       "h1": "Start your trial",
-      "description": "Fourteen days, no card required. Bring a case you have already closed and check Countercite's findings against your own.",
+      "description": "Fourteen days free when it opens, and no card to join the list required. Bring a case you have already closed and check Countercite's findings against your own.",
       "keywords": [
-        "countercite trial",
-        "advocate software free trial"
+        "countercite early access",
+        "advocate software early access"
       ],
       "blocks": [
         {
@@ -1773,7 +1773,7 @@
           "eyebrow": "Privacy",
           "h1": "Privacy",
           "lede": "The short version, in plain words, before the long version that a lawyer will write.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "prose",
@@ -1802,7 +1802,7 @@
           "eyebrow": "Terms",
           "h1": "Terms",
           "lede": "The parts that matter most, stated plainly.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "prose",
@@ -1834,7 +1834,7 @@
           "eyebrow": "Reference",
           "h1": "Glossary",
           "lede": "The vocabulary that decides cases, defined plainly. Most of these are terms an institution uses correctly and assumes the other side does not understand.",
-          "cta": "Start a free trial"
+          "cta": "Join the early list"
         },
         {
           "type": "prose",
@@ -1843,5 +1843,6 @@
         }
       ]
     }
-  ]
+  ],
+  "launchStatus": "waitlist"
 }

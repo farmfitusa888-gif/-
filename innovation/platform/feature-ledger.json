@@ -1,0 +1,248 @@
+{
+  "_why": "Every claim the pricing page makes, mapped to whether the thing exists. The FTC fined DoNotPay $193,000 for advertising a service it never tested. A page that offers a free trial of features nobody has written is the same failure with a different logo. check-features.mjs fails the build if a claim here is marked planned while the site presents it as buyable, so this file cannot quietly rot.",
+  "_status_meanings": {
+    "shipped": "Code exists, tests cover it, evidence path is real.",
+    "partial": "The hard half exists. Something real is still missing before a customer could use it.",
+    "planned": "Designed and researched. Not written."
+  },
+  "features": [
+    {
+      "id": "contradiction",
+      "claim": "Contradiction finder",
+      "status": "partial",
+      "evidence": "engines/contradiction/core.mjs",
+      "tests": "engines/contradiction/core.test.mjs",
+      "note": "Engine and 31 tests exist. Runs on text passed to it. No document goes in yet.",
+      "aliases": [
+        "Contradiction finder, every result cited to a page",
+        "Cases per month",
+        "Unlimited cases and documents, no per-case charge",
+        "Pages per document"
+      ]
+    },
+    {
+      "id": "carveback",
+      "claim": "Exclusion and carve-back detection",
+      "status": "shipped",
+      "evidence": "engines/contradiction/core.mjs",
+      "tests": "engines/contradiction/core.test.mjs",
+      "note": "Eight marker patterns, covered by tests."
+    },
+    {
+      "id": "missing-provision",
+      "claim": "Provision cited in the letter but absent from the policy",
+      "status": "shipped",
+      "evidence": "engines/contradiction/core.mjs",
+      "tests": "engines/contradiction/core.test.mjs",
+      "note": "NO_PROVISION_CITED finding kind."
+    },
+    {
+      "id": "citations",
+      "claim": "Every finding cited to a page and passage",
+      "status": "partial",
+      "evidence": "engines/contradiction/core.mjs",
+      "tests": "engines/contradiction/core.test.mjs",
+      "note": "A Finding cannot be constructed without a Locator, enforced by the type. Locators do not yet carry real page coordinates because the PDF layer is unwritten. Design in research/07."
+    },
+    {
+      "id": "confidence",
+      "claim": "Confidence score shown on every finding",
+      "status": "shipped",
+      "evidence": "engines/contradiction/core.mjs",
+      "tests": "engines/contradiction/core.test.mjs",
+      "note": "Range-checked at construction."
+    },
+    {
+      "id": "refuses",
+      "claim": "Refuses to answer rather than guess",
+      "status": "shipped",
+      "evidence": "engines/contradiction/core.mjs",
+      "tests": "engines/contradiction/core.test.mjs",
+      "note": "resolveCitation returns null below the overlap floor. Mutation-tested."
+    },
+    {
+      "id": "no-legal-advice",
+      "claim": "Never states legal advice or predicts an outcome",
+      "status": "shipped",
+      "evidence": "engines/contradiction/language-guard.mjs",
+      "tests": "engines/contradiction/language-guard.test.mjs",
+      "note": "30-rule output filter, 20 adversarial tests."
+    },
+    {
+      "id": "ocr",
+      "claim": "Scanned and faxed documents",
+      "status": "planned",
+      "evidence": "research/05-OCR-AND-COMPUTE.md",
+      "note": "PaddleOCR cascade chosen and costed. Not written."
+    },
+    {
+      "id": "pdf-locators",
+      "claim": "Click a finding to see the highlighted passage",
+      "status": "planned",
+      "evidence": "research/07-OPENCONTRACTS-EVAL.md",
+      "note": "pdfplumber approach chosen, first test written in the doc. Not written."
+    },
+    {
+      "id": "custom-doctypes",
+      "claim": "Custom document types",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Custom document types for the forms your carriers use"
+      ]
+    },
+    {
+      "id": "draft-letter",
+      "claim": "Draft appeal letter",
+      "status": "planned",
+      "evidence": null,
+      "note": "Must pass language-guard before a customer sees it.",
+      "aliases": [
+        "Draft appeal letters that go out under your name"
+      ]
+    },
+    {
+      "id": "templates",
+      "claim": "Your templates and house style",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Your letter templates and house style"
+      ]
+    },
+    {
+      "id": "deadlines",
+      "claim": "Deadline tracking and calendar export",
+      "status": "planned",
+      "evidence": null,
+      "note": "DEADLINE finding kind exists in the engine. Nothing tracks or exports.",
+      "aliases": [
+        "Deadline tracking with calendar export"
+      ]
+    },
+    {
+      "id": "review-queue",
+      "claim": "Review queue before anything is sent",
+      "status": "partial",
+      "evidence": "engines/contradiction/core.mjs",
+      "note": "canExport() blocks while any finding is unreviewed, and is tested. There is no interface to review in.",
+      "aliases": [
+        "Supervisor review queue, so nothing leaves unreviewed"
+      ]
+    },
+    {
+      "id": "seats",
+      "claim": "Seats",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "shared-library",
+      "claim": "Shared case library",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Shared case library across the practice"
+      ]
+    },
+    {
+      "id": "sso",
+      "claim": "Single sign-on",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "outcomes",
+      "claim": "Outcome tracking on your own cases",
+      "status": "planned",
+      "evidence": "legal/NO-GUARANTEE-AND-TESTING-POLICY.md",
+      "note": "The measurement policy is written. The recording is not."
+    },
+    {
+      "id": "outcome-breakdown",
+      "claim": "Per-advocate and per-carrier breakdown",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Outcome tracking per advocate and per carrier"
+      ]
+    },
+    {
+      "id": "firm-reporting",
+      "claim": "Firm-wide reporting, exportable",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Firm-wide outcome reporting, exportable"
+      ]
+    },
+    {
+      "id": "accuracy-review",
+      "claim": "Quarterly accuracy review against your closed files",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Quarterly accuracy review against your own closed files"
+      ]
+    },
+    {
+      "id": "export",
+      "claim": "Full export, one click",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Full case export in one click, any time"
+      ]
+    },
+    {
+      "id": "delete",
+      "claim": "Delete a case and its documents permanently",
+      "status": "planned",
+      "evidence": "legal/PRIVACY-POLICY.md",
+      "note": "Promised in the privacy policy, so this one is a commitment, not a feature."
+    },
+    {
+      "id": "no-training",
+      "claim": "Documents never used to train anything",
+      "status": "partial",
+      "evidence": "legal/PRIVACY-POLICY.md",
+      "note": "True of the engine by construction, since it imports no vendor SDK and the judge is injected. Needs the provider's own no-training setting confirmed in writing before it can be advertised."
+    },
+    {
+      "id": "billing",
+      "claim": "Monthly or annual billing",
+      "status": "planned",
+      "evidence": null
+    },
+    {
+      "id": "ach",
+      "claim": "Pay by bank transfer or invoice",
+      "status": "planned",
+      "evidence": "model/payment_costs.py",
+      "note": "Costed. No processor account exists.",
+      "aliases": [
+        "Pay by bank transfer or annual invoice, not just card",
+        "Pay by bank transfer on any plan, or by invoice on Firm"
+      ]
+    },
+    {
+      "id": "support",
+      "claim": "Support response",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Email support, answered within one business day",
+        "Priority support, answered the same business day"
+      ]
+    },
+    {
+      "id": "onboarding",
+      "claim": "Onboarding session",
+      "status": "planned",
+      "evidence": null,
+      "aliases": [
+        "Named onboarding session and help moving old case files in"
+      ]
+    }
+  ]
+}
