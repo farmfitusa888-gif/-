@@ -1,0 +1,182 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Countercite: email on your own domain</title>
+<style>
+@page { size: Letter; margin: 20mm 18mm 18mm; }
+:root{--ink:#191A1C;--muted:#5C6066;--accent:#1D4E6F;--warn:#A83A2C;--rule:#D6D4CD;--tint:#F2F5F7}
+*{box-sizing:border-box}
+body{font:11pt/1.55 "Charter","Georgia",serif;color:var(--ink);margin:0}
+h1{font:700 26pt/1.15 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.02em;margin:0 0 6px;color:var(--accent)}
+.sub{font:11pt/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--muted);margin:0 0 4px}
+.meta{font:8.5pt/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--muted);margin:0 0 22px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+h2{font:700 15pt/1.2 "Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--accent);margin:26px 0 8px;padding-top:10px;border-top:1px solid var(--rule);page-break-after:avoid}
+h3{font:700 11.5pt/1.3 "Helvetica Neue",Helvetica,Arial,sans-serif;margin:16px 0 5px;page-break-after:avoid}
+p{margin:0 0 9px}
+ol,ul{margin:0 0 10px;padding-left:20px}
+li{margin:0 0 6px}
+code,.mono{font:9.5pt/1.4 "SF Mono","Menlo","Consolas",monospace;background:var(--tint);padding:1px 4px;border-radius:2px;word-break:break-all}
+table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:9.5pt;page-break-inside:avoid}
+th{background:var(--tint);text-align:left;font:700 8.5pt/1.3 "Helvetica Neue",Helvetica,Arial,sans-serif;
+   text-transform:uppercase;letter-spacing:.04em;padding:6px 8px;border:1px solid var(--rule)}
+td{padding:6px 8px;border:1px solid var(--rule);vertical-align:top;font-family:"SF Mono","Menlo",monospace;font-size:8.5pt;line-height:1.4}
+td.t{font-family:"Charter",Georgia,serif;font-size:9.5pt}
+.box{border-left:3px solid var(--accent);background:var(--tint);padding:10px 14px;margin:12px 0;page-break-inside:avoid}
+.warn{border-left-color:var(--warn)}
+.box p{margin:0 0 6px}.box p:last-child{margin:0}
+.box b{font:700 9.5pt/1.3 "Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:4px;color:var(--accent)}
+.warn b{color:var(--warn)}
+.chk{list-style:none;padding-left:0}
+.chk li{padding-left:24px;position:relative;margin-bottom:7px}
+.chk li::before{content:"";position:absolute;left:0;top:.15em;width:12px;height:12px;border:1.5px solid var(--muted);border-radius:2px}
+.step{background:var(--accent);color:#fff;font:700 9pt/18px "Helvetica Neue",Helvetica,Arial,sans-serif;
+      display:inline-block;width:18px;height:18px;border-radius:9px;text-align:center;margin-right:7px}
+.fill{background:#FFF4D6;padding:1px 4px;border-radius:2px;font-family:"SF Mono","Menlo",monospace;font-size:9pt}
+.pb{page-break-before:always}
+footer{margin-top:26px;padding-top:10px;border-top:1px solid var(--rule);font:8.5pt/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--muted)}
+</style></head><body>
+
+<h1>Email on your own domain</h1>
+<p class="sub">Microsoft 365 through GoDaddy, DNS through Cloudflare, and the three records that decide whether 3,708 people ever see your message.</p>
+<p class="meta">Countercite &middot; setup guide &middot; 31 August 2026 &middot; one afternoon, about $12</p>
+
+<h2>Why this is worth an afternoon</h2>
+
+<p>Two reasons, and the second one is larger than it looks.</p>
+
+<p><b>It unlocks the free credits.</b> A mailbox at your own domain is a stated requirement or the leading rejection reason at AWS, Google Cloud, Cloudflare, PostHog, Supabase, Notion, Vercel, Sentry and Twilio. PostHog rejects free-email domains automatically, before a person looks at the application. AWS reportedly does the same with <code>@gmail.com</code>.</p>
+
+<p><b>It protects the Florida list.</b> Florida published 3,708 licensed public adjusters and every one of them has an email address on file. That list is a one-shot asset. You cannot re-send to someone who filed your first message as spam, and you cannot un-burn a sending domain. Getting authentication right before the first message goes out is the difference between a channel and a wasted afternoon.</p>
+
+<div class="box warn"><b>Do this in order</b>
+<p>The steps below are sequenced for a reason. DNS changes take time to spread, and Microsoft will not let you turn on DKIM until the mailbox exists. Skipping ahead means waiting twice.</p></div>
+
+<h2>What you are building</h2>
+
+<table>
+<tr><th style="width:26%">Piece</th><th style="width:16%">Cost</th><th>What it does</th></tr>
+<tr><td class="t">The domain</td><td class="t">~$12/yr</td><td class="t">Your address. Already in the budget.</td></tr>
+<tr><td class="t">Cloudflare DNS</td><td class="t">$0</td><td class="t">Where the domain's records live. Faster and clearer than a registrar's own panel.</td></tr>
+<tr><td class="t">Microsoft 365 mailbox</td><td class="t">Your GoDaddy deal</td><td class="t">The real mailbox you send and receive from.</td></tr>
+<tr><td class="t">Cloudflare Email Routing</td><td class="t">$0</td><td class="t">Unlimited extra addresses (<code>support@</code>, <code>billing@</code>) forwarded into the one mailbox. No extra licences.</td></tr>
+<tr><td class="t">SPF, DKIM, DMARC</td><td class="t">$0</td><td class="t">The three records that tell the world your mail is really yours. This is the part that matters.</td></tr>
+</table>
+
+<h2><span class="step">1</span>Buy the domain</h2>
+
+<p>Per the domain decision, try these in order and take the first that is free: <code>countercite.co</code>, then <code>getcountercite.com</code>, then <code>countercite.app</code>. Buy <code>countercite.app</code> in either case, for about $12, so nobody else takes it.</p>
+
+<p>Buy at whichever registrar you like. You are moving the DNS to Cloudflare in the next step regardless, so the registrar's own DNS quality does not matter.</p>
+
+<h2><span class="step">2</span>Move DNS to Cloudflare</h2>
+
+<ol>
+<li>Create a free account at <code>cloudflare.com</code>. No card is required for this.</li>
+<li>Click <b>Add a site</b>, type your domain, choose the <b>Free</b> plan.</li>
+<li>Cloudflare scans your existing records and shows you two <b>nameservers</b>, something like <code>amy.ns.cloudflare.com</code>. Copy both.</li>
+<li>Go back to your registrar, find <b>Nameservers</b> (at GoDaddy: Domain Settings, then Nameservers, then Change, then "I'll use my own"), and paste Cloudflare's two in place of what is there.</li>
+<li>Wait. Usually under an hour, occasionally up to a day. Cloudflare emails you when it is live.</li>
+</ol>
+
+<div class="box"><b>Why bother</b>
+<p>Every record below has to be added by hand, and Cloudflare's editor shows you exactly what you typed. Registrar DNS panels tend to silently append your domain to values, which produces records that look right and do not work. That failure is common and hard to spot.</p></div>
+
+<h2><span class="step">3</span>Set up the Microsoft 365 mailbox</h2>
+
+<p>Do this through GoDaddy as planned. GoDaddy will walk you through creating the mailbox and will then show you a list of DNS records it wants added.</p>
+
+<div class="box warn"><b>The one thing to watch</b>
+<p>GoDaddy may offer to add those records for you automatically. That only works while GoDaddy controls your DNS. Since you moved DNS to Cloudflare in step 2, decline the automatic option and copy the records down instead. You will add them to Cloudflare by hand in step 4.</p>
+<p>If GoDaddy will not proceed without controlling DNS, do step 3 first and step 2 afterwards. The end state is the same.</p></div>
+
+<p>Write down every record GoDaddy shows you. You are looking for an <code>MX</code> record, one or two <code>CNAME</code> records with names starting <code>autodiscover</code> and <code>selector</code>, and a <code>TXT</code> record starting <code>v=spf1</code>.</p>
+
+<h2 class="pb"><span class="step">4</span>Add the records in Cloudflare</h2>
+
+<p>In Cloudflare, open your domain, then <b>DNS</b>, then <b>Records</b>. Add each row below with <b>Add record</b>. Anything highlighted in yellow is a value you copy from what GoDaddy gave you.</p>
+
+<table>
+<tr><th style="width:9%">Type</th><th style="width:20%">Name</th><th>Value</th><th style="width:13%">Note</th></tr>
+<tr><td>MX</td><td>@</td><td><span class="fill">from GoDaddy</span>, usually <code>yourdomain-com.mail.protection.outlook.com</code></td><td class="t">Priority 0</td></tr>
+<tr><td>TXT</td><td>@</td><td><code>v=spf1 include:spf.protection.outlook.com -all</code></td><td class="t">SPF. See below.</td></tr>
+<tr><td>CNAME</td><td>autodiscover</td><td><code>autodiscover.outlook.com</code></td><td class="t">Proxy OFF (grey cloud)</td></tr>
+<tr><td>CNAME</td><td>selector1._domainkey</td><td><span class="fill">from Microsoft</span></td><td class="t">DKIM. Proxy OFF.</td></tr>
+<tr><td>CNAME</td><td>selector2._domainkey</td><td><span class="fill">from Microsoft</span></td><td class="t">DKIM. Proxy OFF.</td></tr>
+<tr><td>TXT</td><td>_dmarc</td><td><code>v=DMARC1; p=none; rua=mailto:dmarc@<span class="fill">yourdomain</span></code></td><td class="t">DMARC. See below.</td></tr>
+</table>
+
+<div class="box warn"><b>Turn the orange cloud off</b>
+<p>Cloudflare shows a cloud icon beside CNAME records. Orange means proxied through Cloudflare, which breaks mail. Click it so it turns grey on every mail-related record. MX and TXT records have no cloud and need no action.</p></div>
+
+<h3>About the SPF record</h3>
+<p>You may only have <b>one</b> SPF record on a domain. Two is worse than none, because receiving servers treat it as a permanent error. If you later add a sending service such as a newsletter tool, you add its <code>include:</code> to the existing record rather than creating a second one.</p>
+<p>The <code>-all</code> at the end means "reject anything not on this list". Some guides suggest <code>~all</code>, which means "treat it as suspicious but deliver it". Start with <code>~all</code> for the first two weeks while you confirm everything works, then change it to <code>-all</code>.</p>
+
+<h3>About DKIM</h3>
+<p>The two <code>selector</code> records are what let Microsoft cryptographically sign your mail. After adding them, go to the Microsoft 365 admin centre, find <b>DKIM</b> under email authentication settings, and switch it on for your domain. It will refuse until the DNS records have spread, so if it fails, wait an hour and try again.</p>
+
+<h3>About DMARC</h3>
+<p><code>p=none</code> means "watch and report, do not block anything yet". That is the correct starting point. It generates reports without risking your own mail. After a month of clean reports you can move to <code>p=quarantine</code>.</p>
+<p>Create a <code>dmarc@</code> address in step 5 to receive the reports, or point <code>rua=</code> at your main mailbox. The reports are unreadable XML. You do not need to read them; you need them to exist so a filtering service can see you are configured properly.</p>
+
+<h2><span class="step">5</span>Free extra addresses with Cloudflare Email Routing</h2>
+
+<p>Microsoft charges per mailbox. Cloudflare will forward as many addresses as you like into the one you already pay for, at no cost.</p>
+
+<ol>
+<li>In Cloudflare, open <b>Email</b>, then <b>Email Routing</b>.</li>
+<li>Cloudflare offers to add its own MX records. <b>Decline.</b> Microsoft already owns your MX record and two sets will break delivery. Use the custom-address feature only.</li>
+<li>Add destination address: your Microsoft mailbox. Confirm the verification email.</li>
+<li>Create the addresses you want forwarded: <code>support@</code>, <code>billing@</code>, <code>privacy@</code>, <code>dmarc@</code>.</li>
+</ol>
+
+<div class="box"><b>If routing conflicts with Microsoft</b>
+<p>Cloudflare Email Routing wants to own the MX record, and so does Microsoft. They cannot both have it. If Cloudflare will not let you create forwarders without its MX record, skip this step: create the extra addresses as free <b>aliases</b> on your Microsoft mailbox instead. Microsoft allows many aliases per mailbox at no extra cost, which achieves the same thing.</p></div>
+
+<h2 class="pb"><span class="step">6</span>Check that it works</h2>
+
+<p>Do not skip this. Every one of these is free and takes under a minute.</p>
+
+<ul class="chk">
+<li>Send a message from the new address to a personal Gmail account. It arrives in the inbox, not in spam.</li>
+<li>In Gmail, open the message, click the three dots, choose <b>Show original</b>. Look for three lines reading <code>SPF: PASS</code>, <code>DKIM: PASS</code>, <code>DMARC: PASS</code>. All three must say PASS.</li>
+<li>Send a message to <code>check-auth@verifier.port25.com</code>. It replies within a minute with a full report on all three.</li>
+<li>Visit <code>mxtoolbox.com</code> and run its SPF, DKIM and DMARC checks against your domain. Green across the board.</li>
+<li>Reply to the test message from Gmail and confirm it reaches your new mailbox.</li>
+</ul>
+
+<div class="box warn"><b>If any of the three says FAIL</b>
+<p>Stop and fix it before sending anything else. A domain that fails authentication gets a reputation quickly and recovers slowly. The usual cause is a proxied CNAME (orange cloud), a second SPF record, or DNS that has not finished spreading. Wait an hour and re-check before changing anything.</p></div>
+
+<h2><span class="step">7</span>Warm the domain before the Florida send</h2>
+
+<p>A brand new domain that suddenly sends 3,708 messages looks exactly like a compromised account. Filters respond accordingly. Three weeks of ordinary use fixes this, and those three weeks are not wasted time because you can spend them on credit applications.</p>
+
+<table>
+<tr><th style="width:16%">Week</th><th style="width:18%">Volume per day</th><th>What to send</th></tr>
+<tr><td class="t">Week 1</td><td class="t">5 to 10</td><td class="t">Real mail. Credit programme applications, the Illinois records request, replies to anyone who writes back. Every reply you receive is a positive signal.</td></tr>
+<tr><td class="t">Week 2</td><td class="t">20 to 30</td><td class="t">First cold batch, hand-picked. Start with the 1,443 adjusters who use their own domain rather than a free mailbox, since those are firms rather than side operations.</td></tr>
+<tr><td class="t">Week 3</td><td class="t">50</td><td class="t">Widen to the tri-county segment, 1,717 of them across Dade, Broward and Palm Beach.</td></tr>
+<tr><td class="t">Week 4 on</td><td class="t">50 to 100</td><td class="t">Steady. Watch the bounce rate. Above 3% means stop and clean the list before continuing.</td></tr>
+</table>
+
+<div class="box"><b>Send cold mail one at a time, not as a blast</b>
+<p>Individually addressed messages from a normal mailbox behave completely differently from bulk sends. No BCC. No visible mail-merge artefacts. One recipient per message, and a genuine reason for writing to that specific person. It is slower and it works.</p>
+<p>CAN-SPAM permits cold business email in the United States provided you identify yourself, give a real postal address, and honour opt-outs promptly. Include an unsubscribe line and act on it the same day.</p></div>
+
+<h2>The whole thing on one line each</h2>
+
+<ul class="chk">
+<li>Buy the domain, plus <code>countercite.app</code> as insurance.</li>
+<li>Move nameservers to Cloudflare. Wait for confirmation.</li>
+<li>Create the Microsoft 365 mailbox through GoDaddy. Copy the records, decline automatic setup.</li>
+<li>Add MX, SPF, DKIM, DMARC and autodiscover in Cloudflare. Grey cloud on every CNAME.</li>
+<li>Turn on DKIM in the Microsoft admin centre.</li>
+<li>Add free extra addresses, either through Cloudflare Routing or as Microsoft aliases.</li>
+<li>Test until SPF, DKIM and DMARC all say PASS.</li>
+<li>Start the credit applications from the new address the same day.</li>
+<li>Warm for three weeks before the Florida send.</li>
+</ul>
+
+<footer>
+Countercite setup guide, 31 August 2026. Written for a first-time setup. Exact record values differ between providers, so treat the yellow fields as placeholders for what GoDaddy and Microsoft show you rather than as values to type literally. If a step does not match what is on screen, the screen is right and this page is out of date.
+</footer>
+</body></html>
