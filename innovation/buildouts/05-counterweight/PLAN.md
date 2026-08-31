@@ -172,16 +172,31 @@ thing DoNotPay never bought.
 | Line | Value |
 |---|---|
 | Price (Practice) | $299/mo |
-| Inference and infrastructure per customer | **$25–60/mo** [assumption — see risks] |
-| Gross margin | **80–92%** |
+| Inference and infrastructure per customer | **~$18.50/mo** [review, costed 2026-08-31] |
+| Gross margin | **~94%** |
 | Payment processing (~2.9% + 30¢) | ~$9/mo |
 | CAC via founder outreach | **$0 cash**, ~90 minutes of time |
 | Payback | **Immediate** — first month covers acquisition |
 
-**The margin assumption is the one to watch.** A firm running thousand-page
-medical productions could cost several times a light user, and flat pricing means
-we absorb that. Mitigation is a fair-use ceiling written into terms from day one
-— *not* a meter, but a stated point at which we talk.
+**The cost line has now been costed rather than assumed**, and it came in far
+below the $45/month the financial model uses. At 100 customers the whole stack
+is about $1,844/month, of which **$897 is Stripe and $900 is the model. Every
+other component together is roughly $47** — seven websites, OCR on 225,000 pages
+a month, embeddings, transcription, monitoring and analytics. Payment processing
+costs slightly more than the intelligence, which nobody budgets for.
+
+**The model dial stays at $45 deliberately.** It is a costing, not a bill, and a
+firm running thousand-page medical productions could cost several times a light
+user. Flat pricing means we absorb that, so the conservative dial stays and the
+fair-use ceiling still belongs in the terms from day one. Not a meter, but a
+stated point at which we talk.
+
+**Do not run the contradiction engine on a free or local model.** That is the
+one place in this business where paying is correct, and the reasoning is in
+`../../research/04-FREE-AND-OPEN-STACK.md`. Open models fail on clause-level
+legal work by reporting no related clause when a related clause is present
+[review]. That is a false negative, which is the failure this product cannot
+survive.
 
 ---
 
@@ -362,7 +377,8 @@ should be chosen deliberately rather than hoped for: adds of ~15/month instead o
 | Metric | Target | Why it is the one that matters |
 |---|---|---|
 | **Findings confirmed by the professional** | **>85%** | The product's whole claim. Below this it creates work instead of removing it. |
-| **False positives per case** | **<2** | A tool that cries wolf gets switched off. Worse than a miss. |
+| **False positives per case** | **<2** | A tool that cries wolf gets switched off. |
+| **False negatives per case** | **<0.5** | Added after the open-model research. I originally wrote that a false positive is "worse than a miss", and that is wrong. A false positive is visible and annoying. **A missed contradiction is invisible until the adjuster's claim settles low with their name on it**, and in a community of 1,203 firms across three counties you cannot buy that back. Measured by re-running closed cases where the answer is known. |
 | Hours saved per case, self-reported | >4 | The payback argument, in the customer's own words |
 | Activation: first real case in 7 days | >70% | The single best predictor of retention in tooling |
 | Monthly churn | <4% | Solo professional software churns hard; above 6% growth stalls |

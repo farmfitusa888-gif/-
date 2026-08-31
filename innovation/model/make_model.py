@@ -217,7 +217,7 @@ COUNTERWEIGHT = {
     "breakeven_hint": "101 customers at $299/mo = $30,199/mo",
     "dials": [
         ("arpu",       "Average revenue per customer per month", 299, "Practice tier. Blended will fall between Solo $149 and Firm $599.", '"$"#,##0'),
-        ("cogs",       "Cost to serve one customer per month",    45, "[ASSUMPTION] Inference plus infrastructure. Not measured. The dial most likely to be wrong.", '"$"#,##0'),
+        ("cogs",       "Cost to serve one customer per month",    45, "COSTED at ~$18.50/customer (2026-08-31). Kept at 45 deliberately as headroom, because flat pricing absorbs heavy users.", '"$"#,##0'),
         ("fixed",      "Fixed costs per month",                  400, "Domain, hosting, tooling, accounting. Excludes your own time and the one-off legal spend.", '"$"#,##0'),
         ("adds_start", "New customers in month 1",                 3, "Founder outreach, by hand, from the TDI register.", "#,##0"),
         ("adds_steady","New customers per month at steady state",  9, "[ASSUMPTION] After SEO and referral compound. Unproven.", "#,##0"),
@@ -229,7 +229,7 @@ COUNTERWEIGHT = {
     "notes": [
         "[MEASURED] 1,708 active Texas public adjuster licences as of 2026-08-28, from the Texas Department of Insurance open data file. 981 resident in Texas, 727 licensed here but living elsewhere, 293 of those in Florida. Houston has 112 resident licensees.",
         "[MEASURED] New licences issued: 160 in 2023, 323 in 2024, 274 in 2025, 187 to August 2026. The 2024-25 cohort is 597 people and is the primary launch target.",
-        "[ASSUMPTION] Cost to serve, $45/customer/month. Not measured. Flat pricing means a heavy user is absorbed, so a fair-use ceiling belongs in the terms from day one. If this is really $120, gross margin falls from 85% to 60% and the model needs a higher price.",
+        "[REVIEW, costed 2026-08-31] Real cost to serve is about $18.50/customer/month at 100 customers: roughly $9 of model inference, $9 of Stripe, and about $0.47 of everything else. The dial is left at $45 as deliberate headroom, because flat pricing absorbs heavy users and a firm running thousand-page productions costs several times a light one. If the true figure were $120, gross margin would fall from 94% to 60% and the price would need to rise.",
         "[ASSUMPTION] Steady-state adds of 9/month. No channel has been run yet. This is the second most fragile number here.",
         "[ASSUMPTION] Churn of 4.5%/month. No data. Solo-professional software is generally worse than team software, and a public adjuster with no storm has no cases in March.",
         "[NOT ESTABLISHED] Special education advocates and patient advocates cannot be counted at all -- neither is a licensed profession with a public register. The market dial covers Texas public adjusters ONLY, which makes the market-share figure conservative but also means two of three segments are unmodelled.",
