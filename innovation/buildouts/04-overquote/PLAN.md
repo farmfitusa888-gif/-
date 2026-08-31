@@ -1,4 +1,4 @@
-# Overquote — the operating plan
+# Overquote, the operating plan
 
 Photograph a car repair estimate, get a plain-English read on whether you are
 being overcharged, before you say yes. Written 2026-08-31.
@@ -13,7 +13,7 @@ below is written to disprove it cheaply, not to launch it.
 ## 1. The one-sentence version
 
 **77% of drivers distrust repair shops and cannot check a single line of the
-estimate in front of them — but the consumer arithmetic needs 1,035 paid checks
+estimate in front of them. But the consumer arithmetic needs 1,035 paid checks
 a month with no marketing budget, the core function is now a free thing a phone
 already does, and the only route that reaches $30k is a single bundling deal a
 solo operator with no track record is not yet able to close.**
@@ -39,7 +39,7 @@ warranty badges is not an untapped opportunity. **It is evidence that several
 funded companies have already attacked this and the number did not move.**
 
 And a press release found during research uses the exact same statistic as its
-hook — *"AAA: 77% of Drivers Fear Mechanic Overcharges. One Service Fixes That."*
+hook, *"AAA: 77% of Drivers Fear Mechanic Overcharges. One Service Fixes That."*
 **Someone is already selling into this precise sentence.**
 
 ### Four structural problems, in the order they kill it
@@ -55,7 +55,7 @@ Both numbers are marketing-spend numbers, and there is no marketing spend.
 
 **2. The core function became free.** Anyone can photograph an estimate, hand it
 to a general-purpose assistant on their phone, and get a plain-English read in
-thirty seconds for nothing. **That is the actual competitor now — not RepairPal.**
+thirty seconds for nothing. **That is the actual competitor now, not RepairPal.**
 It did not exist when the incumbents launched and it removes the reason to pay
 $29 for a translation.
 
@@ -70,7 +70,7 @@ which shrinks what it is allowed to say, which shrinks what anyone will pay for 
 **4. The one route that reaches the target is a single enterprise deal.** Insurers,
 roadside clubs and warranty administrators are correct as buyers. At [ASSUMPTION]
 $0.25 per member per month, **$30k/month is one club with 120,000 members.** That
-is not a consumer app plan, it is an enterprise BD plan — a 12–24 month sale, by
+is not a consumer app plan, it is an enterprise BD plan, a 12–24 month sale, by
 a solo operator with no track record, into organisations that buy on procurement
 cycles.
 
@@ -121,8 +121,8 @@ hypothesis, not a finding.** A 30-vehicle fleet paying, say, $199/month for
 estimate review has real money in it and needs only ~150 customers rather than
 1,035 transactions. **[NOT ESTABLISHED] whether any fleet operator wants this or
 already has it covered by a relationship with one shop.** What would settle it:
-ten conversations with local fleet operators — landscaping, plumbing, courier,
-non-emergency medical transport — which costs nothing but a morning.
+ten conversations with local fleet operators, landscaping, plumbing, courier,
+non-emergency medical transport, which costs nothing but a morning.
 
 **Credit unions are the recommended first B2B target** because they are the only
 one on the list where a solo operator can reach the decision-maker. NCUA publishes
@@ -150,7 +150,7 @@ Against what the driver would otherwise do:
 
 **The line that does the work:** *three specific questions to ask, so the shop can
 see you are being advised.* In a market built on asymmetry, visibly removing the
-asymmetry is what changes the price — and it is deliverable without ever telling
+asymmetry is what changes the price, and it is deliverable without ever telling
 anyone a repair is unnecessary.
 
 **What we never say:** that a repair is unnecessary. That we are mechanics. That
@@ -180,7 +180,7 @@ The transaction price is at least honest about what the product is.
 
 ### The per-customer cost that may end it
 
-**Labour time guides — Mitchell, ALLDATA, Motor — are commercial licensed data.**
+**Labour time guides. Mitchell, ALLDATA, Motor — are commercial licensed data.**
 Pricing is not public. **[NOT ESTABLISHED]**, and it is the single most important
 number to obtain, because if a per-lookup or per-seat licence costs a meaningful
 fraction of $29, **the product as designed cannot exist at consumer prices.**
@@ -197,7 +197,7 @@ that needs no licensed data at all:
   stated symptom is a reasoning question, not a data lookup
 - **"Shop supplies," disposal fees, and percentage add-ons** are visible on the
   document itself
-- **Labour hours** are the part that needs the licence — **so v1 says nothing
+- **Labour hours** are the part that needs the licence, **so v1 says nothing
   about labour hours and says so openly**
 
 **That is not a compromise, it is a better v1.** It is cheaper, it is safer, and
@@ -205,13 +205,13 @@ it is honest about its own limits, which is the whole posture of this portfolio.
 
 ---
 
-## 6. Go to market — $0, and specific
+## 6. Go to market, $0, and specific
 
 **Every channel below is organic. None of them, individually or together, produces
 1,035 paid checks a month, and the plan does not pretend otherwise.** They are
 here because they are how you get the 100 real users the day 31–60 test needs.
 
-### Channel 1 — Answer estimate questions in public, without linking
+### Channel 1, Answer estimate questions in public, without linking
 
 `r/MechanicAdvice`, `r/AskACarGuy`, model-specific owner forums, and Facebook
 owner groups have people posting photographs of estimates and asking exactly this
@@ -221,14 +221,14 @@ question, every day, for free.
 stranger's estimate builds the only asset that matters here, which is a reputation
 for being right. It also produces the graded corpus for §7 at zero cost.
 
-### Channel 2 — "Read this estimate with me" video
+### Channel 2, "Read this estimate with me" video
 
 The single highest-organic-reach format for this content, on YouTube and TikTok,
 at zero cost. Blur the shop name. Walk the lines. Say what is checkable and what
 is not. **This is the one channel where the format itself demonstrates the
 product**, which no amount of landing-page copy does.
 
-### Channel 3 — Search intent that already exists
+### Channel 3, Search intent that already exists
 
 The brief's own observation is the keyword list: **people literally type "was I
 overcharged for car repair."**
@@ -241,7 +241,7 @@ overcharged for car repair."**
 **Low competition on the long tail, brutal competition on the head terms**, which
 RepairPal has held for a decade.
 
-### Channel 4 — Credit unions (the only real B2B channel a solo operator can work)
+### Channel 4. Credit unions (the only real B2B channel a solo operator can work)
 
 NCUA publishes the complete free list. Filter to community credit unions with a
 member newsletter and an auto-loan book. **Offer a free member-benefit pilot in
@@ -249,7 +249,7 @@ exchange for a case study and permission to quote the numbers.** One pilot is
 worth more than every consumer channel above combined, because it is the only one
 that points at the model in §5 that actually reaches the target.
 
-### Channel 5 — Local fleet operators
+### Channel 5, Local fleet operators
 
 Ten conversations, one morning, zero cost. Landscaping, plumbing, courier,
 non-emergency medical transport. **This tests the most interesting hypothesis in
@@ -269,9 +269,9 @@ the plan for the price of a morning.**
 
 ---
 
-## 7. The 90-day plan — written to kill it cheaply
+## 7. The 90-day plan, written to kill it cheaply
 
-### Days 1–14 — Ask the two questions that can end it
+### Days 1–14. Ask the two questions that can end it
 
 | | |
 |---|---|
@@ -280,7 +280,7 @@ the plan for the price of a morning.**
 | **Spend** | $0 |
 | **Gate** | **If fewer than half the lines on a typical estimate are checkable without licensed data, and the licence costs more than ~$5 per check, stop here.** That is a two-week, zero-dollar kill and it is a good outcome |
 
-### Days 15–40 — Fifty estimates, graded by a real mechanic
+### Days 15–40, Fifty estimates, graded by a real mechanic
 
 | | |
 |---|---|
@@ -294,7 +294,7 @@ the plan for the price of a morning.**
 Missing an inflated line leaves the customer where they already were. Falsely
 accusing an honest shop damages a business, and eventually damages you.
 
-### Days 41–60 — Put a real price in front of 100 real people
+### Days 41–60. Put a real price in front of 100 real people
 
 | | |
 |---|---|
@@ -303,7 +303,7 @@ accusing an honest shop damages a business, and eventually damages you.
 | **Ship** | A conversion number |
 | **Gate** | **Fewer than 5 of 100 pay $29 → the consumer route is dead.** Written down now, so it cannot be renegotiated in month three |
 
-### Days 61–90 — Test the only route that reaches the target
+### Days 61–90. Test the only route that reaches the target
 
 | | |
 |---|---|
@@ -338,7 +338,7 @@ overselling this portfolio was built to avoid.**
 
 **The first three are tracked from customer one and published.** DoNotPay was not
 fined for having a bad product. It was fined for **never testing whether its
-service worked** and advertising anyway — and Overquote, which tells people
+service worked** and advertising anyway, and Overquote, which tells people
 whether a professional is cheating them, has more reason to hold that line than
 anything else in the portfolio.
 
@@ -374,7 +374,7 @@ credible answer to "why should I pay you when a free chatbot reads it too."
 
 **1. The consumer will not pay, and there is no budget to find 1,035 who will.**
 The central risk, and the plan tests it by day 60 for under $600. *Mitigation:
-none available — it is a fact to discover, not a problem to manage.*
+none available. It is a fact to discover, not a problem to manage.*
 
 **2. The core function is free on every phone.** A general assistant reads an
 estimate in plain English for nothing. *Mitigation: the only defensible ground is
@@ -433,8 +433,8 @@ not renegotiate it afterwards.**
 **Do not start here. The portfolio README already says so, and building the plan
 out in detail confirms it rather than rescuing it.**
 
-The pain is genuine and enormous — 77% distrust, 82% delaying repairs, markups of
-25–80% — and it has been genuinely enormous for a decade while funded companies
+The pain is genuine and enormous, 77% distrust, 82% delaying repairs, markups of
+25–80%. And it has been genuinely enormous for a decade while funded companies
 attacked it and the number did not move. **The information asymmetry is real; the
 willingness to pay $29 to close it is not established, and the arithmetic needs
 1,035 of those payments every month with no way to buy attention.**
@@ -446,7 +446,7 @@ people.
 
 **If the false-flag rate holds and people pay, that is genuine new information and
 this plan becomes worth rewriting.** If they do not, you will have learned it in
-two months for the price of one afternoon of a mechanic's time — which is a much
+two months for the price of one afternoon of a mechanic's time, which is a much
 better outcome than spending a year finding out.
 
 **And if the numbers do come back good, the right move still is not the consumer

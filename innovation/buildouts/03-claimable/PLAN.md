@@ -1,4 +1,4 @@
-# Claimable — the operating plan
+# Claimable, the operating plan
 
 Finds the government benefits a low-income older adult already qualifies for,
 and files the application. Sold to whoever gets richer when that person is
@@ -13,7 +13,7 @@ and given away.
 ## 1. The one-sentence version
 
 **$58 billion a year in benefits goes unclaimed because free screeners hand the
-hardest part of the job back to the person least able to do it — so complete the
+hardest part of the job back to the person least able to do it, so complete the
 application instead, prove the enrolment, and bill the hospital, plan or
 operator whose economics improved, at $200 a head, 150 a month.**
 
@@ -44,7 +44,7 @@ whether the product works.**
    a line of code for the hospital segment until counsel does.** See §9.
 2. **Payment on verified enrolment means you do the work months before you get
    paid.** Under a $1,000 budget that is not a cash-flow inconvenience, it is a
-   structural problem, and the fix — a paid pilot fee up front — is an
+   structural problem, and the fix. A paid pilot fee up front — is an
    [ASSUMPTION] about buyer behaviour that has not been tested.
 3. **The brief's own risk note is correct: this is the slowest sales cycle in
    the portfolio.** It probably does not clear a 6–12 month revenue target. §7
@@ -108,8 +108,8 @@ Senior housing operator   →  FQHC / clinic  →  Hospital system  →  MA plan
 **Start at the left.** A 90-bed assisted living operator has one decision-maker,
 no procurement committee, no InfoSec review, and an obvious problem. A Medicare
 Advantage plan has all four and a compliance department. The brief's own note
-already said this — *"a smaller first customer (senior housing operator, a single
-clinic) is the realistic entry"* — and the 90-day plan below takes it literally.
+already said this, *"a smaller first customer (senior housing operator, a single
+clinic) is the realistic entry"*. And the 90-day plan below takes it literally.
 
 ### The ROI argument, and why I am not putting a number on it
 
@@ -117,14 +117,14 @@ The temptation is to write "the average converted Medicaid inpatient admission i
 worth $X." **I do not have that number and will not invent it.**
 
 The sales asset is not a number I claim. **It is a one-page calculator the buyer
-fills in with their own figures** — their uninsured self-pay volume, their bad
-debt write-off rate, their average reimbursement — because a buyer who computes
+fills in with their own figures**, their uninsured self-pay volume, their bad
+debt write-off rate, their average reimbursement, because a buyer who computes
 the answer themselves believes it, and a buyer handed a vendor's average does not.
 
 The only thing to assert is the direction, which is safe: **$200 is trivially
 small next to any inpatient reimbursement, any month of assisted-living rent, or
 any year of Part B premiums paid by a Medicare Savings Program.** The published
-annual Part B premium is the cleanest single figure for that argument — it is
+annual Part B premium is the cleanest single figure for that argument, it is
 published by CMS each year, it is **[NOT ESTABLISHED here]**, and it should be
 looked up and used verbatim rather than approximated.
 
@@ -181,7 +181,7 @@ The adjudication window is **[NOT ESTABLISHED in this document]**. Federal SNAP
 rules set a processing standard measured in weeks, with a shorter expedited
 track, and state Medicare Savings Program timelines vary. **Look up the exact
 federal SNAP standard and the MSP timeline for your launch state before
-modelling cash flow — it is a published rule, it takes ten minutes, and it sets
+modelling cash flow. It is a published rule, it takes ten minutes, and it sets
 the entire working-capital requirement of the business.**
 
 [ASSUMPTION] end to end, work-to-cash is **3–5 months**. Against a $1,000 budget
@@ -196,7 +196,7 @@ Not the sale. Not the model. **The human minutes per case.**
 Every case needs intake, document chase (proof of income, assets, residency),
 filing, and follow-up through adjudication. Some need an interview scheduled.
 Assume the software does the eligibility determination and drafts the
-application perfectly — a human still touches every one.
+application perfectly, a human still touches every one.
 
 | Minutes per case [ASSUMPTION] | Hours/month at 150 cases | Solo operator verdict |
 |---:|---:|---|
@@ -227,14 +227,14 @@ keep and where the build effort belongs.
 
 **That third line is the one to watch.** Payment on outcome means every denial is
 work you did for free. A model tuned for precision files fewer, better
-applications — which is also the safety requirement — so precision and margin
+applications. Which is also the safety requirement — so precision and margin
 push the same direction here. That is a rare piece of luck and the plan leans on it.
 
 ---
 
-## 6. Go to market — $0, and specific
+## 6. Go to market, $0, and specific
 
-### Channel 1 — State assisted-living and home-care registers (primary)
+### Channel 1, State assisted-living and home-care registers (primary)
 
 Every state licenses these facilities and **publishes the register free**. Texas
 HHS long-term-care provider search and Florida AHCA facility locator are the two
@@ -248,21 +248,21 @@ A single-property operator has an owner who answers email.
 residents statistically likely to be eligible-but-unenrolled for a Medicare
 Savings Program, and what that is worth to a resident's ability to keep paying.
 
-### Channel 2 — HRSA's health centre directory
+### Channel 2, HRSA's health centre directory
 
 Free, public, names every FQHC. FQHCs serve exactly this population, already
 employ enabling-services and outreach staff, and are mission-aligned in a way
 that makes the `.org` domain choice pay off. **Smaller decision loop than a
 hospital, larger patient volume than a care home.**
 
-### Channel 3 — Publish the false-positive number
+### Channel 3, Publish the false-positive number
 
 **This is the content asset, and it is the only one worth building.**
 
 Nobody in benefits screening publishes accuracy. A short, honest, methods-first
-write-up — *"we ran 100 profiles with known outcomes through an eligibility
+write-up, *"we ran 100 profiles with known outcomes through an eligibility
 engine, here is how often it was wrong, and here is the direction it was wrong
-in"* — is publishable to an audience of benefits professionals who have never
+in"*. Is publishable to an audience of benefits professionals who have never
 seen such a thing.
 
 Target search intents, all low-competition and high-intent:
@@ -270,24 +270,24 @@ Target search intents, all low-competition and high-intent:
 - "hospital financial counselor Medicaid enrollment"
 - "senior SNAP application help"
 
-### Channel 4 — The professional networks, entered with results rather than a pitch
+### Channel 4. The professional networks, entered with results rather than a pitch
 
-- **HFMA** (Healthcare Financial Management Association) — local chapters, the
+- **HFMA** (Healthcare Financial Management Association), local chapters, the
   revenue-cycle audience, meetings that cost little and admit outsiders who have
   something to say
-- **LeadingAge** and **Argentum** — senior living operator associations
-- **NCOA's Benefits Enrollment Center network** — they do this work by hand today
+- **LeadingAge** and **Argentum**, senior living operator associations
+- **NCOA's Benefits Enrollment Center network**, they do this work by hand today
   and are the best available source of ground truth about what a case really costs
-- **SHIP** (State Health Insurance Assistance Programs) — free counsellors in
+- **SHIP** (State Health Insurance Assistance Programs), free counsellors in
   every state, referral partners, and the fastest way to learn where the rules
   actually bite
 
 **These are referral and credibility channels, not sales channels.** One
 association newsletter mention reaches more qualified buyers than a month of cold
-email — the same logic as Counterweight's channel 2, and it works here for the
+email. The same logic as Counterweight's channel 2, and it works here for the
 same reason.
 
-### Channel 5 — Area Agencies on Aging and the Eldercare Locator network
+### Channel 5. Area Agencies on Aging and the Eldercare Locator network
 
 Not buyers. **Referrers, and the reality check.** An AAA that will take your
 overflow, or send you theirs, tells you more about demand in one call than any
@@ -308,7 +308,7 @@ amount of desk research.
 
 ## 7. The 90-day plan
 
-### Days 1–10 — Answer the legal question before building anything
+### Days 1–10, Answer the legal question before building anything
 
 | | |
 |---|---|
@@ -320,7 +320,7 @@ amount of desk research.
 **This comes first because it can invalidate the business model, and everything
 after it assumes an answer.**
 
-### Days 11–40 — One state, one programme, graded against ground truth
+### Days 11–40. One state, one programme, graded against ground truth
 
 | | |
 |---|---|
@@ -336,10 +336,10 @@ after it assumes an answer.**
 eligibility examples and worked scenarios, SHIP and NCOA counsellor training
 materials, published case studies, or synthetic profiles graded by a working
 benefits counsellor. **If none of these yields a defensible graded set, you cannot
-run the gate — and being unable to measure the thing is itself the answer.** That
+run the gate. And being unable to measure the thing is itself the answer.** That
 is written into §11.
 
-### Days 41–70 — One paying pilot, not ten customers
+### Days 41–70, One paying pilot, not ten customers
 
 | | |
 |---|---|
@@ -348,7 +348,7 @@ is written into §11.
 | **Ship** | One signed pilot, and the first real measurement of minutes per case |
 | **Gate** | **If 40 approaches produce zero pilots, the offer is wrong, not the volume. Rewrite once.** |
 
-### Days 71–90 — Run cases end to end and count the minutes
+### Days 71–90. Run cases end to end and count the minutes
 
 | | |
 |---|---|
@@ -362,14 +362,14 @@ is written into §11.
 rest of this portfolio refuses to do.
 
 At [ASSUMPTION] one new buyer per quarter after the first pilot, each supplying
-[ASSUMPTION] 20–40 verified enrolments a month at steady state, month 12 is
-**three or four buyers and 60–120 enrolments a month — $12,000 to $24,000.** And
+[ASSUMPTION] 20–30 verified enrolments a month at steady state, month 12 is
+**three or four buyers and 60–120 enrolments a month, $12,000 to $24,000.** And
 because payment lags enrolment, **cash collected in month 12 reflects work done
 in month 9.**
 
 **$30k/month is a month 15–20 outcome on these dials**, and the way to pull it
 left is not more selling. It is one Medicare Advantage plan or one hospital
-system that supplies 150 enrolments alone — which is the slowest sale in the
+system that supplies 150 enrolments alone, which is the slowest sale in the
 portfolio, which is the whole problem, and which is why this ranks fifth.
 
 ---
@@ -416,11 +416,11 @@ adviser, a law firm, or a provider of legal advice.
 **The precision architecture, because it is a legal control and not just a
 product decision.** Three verdicts, and only three:
 
-1. **QUALIFIES** — file it. Requires every rule satisfied on verified inputs.
-2. **LIKELY, PENDING VERIFICATION** — names the two or three specific facts that
+1. **QUALIFIES**. File it. Requires every rule satisfied on verified inputs.
+2. **LIKELY, PENDING VERIFICATION**. Names the two or three specific facts that
    must be confirmed before anything is filed. Never shown to the applicant as
    "you qualify."
-3. **DO NOT FILE / REFER** — including every mixed-immigration-status household.
+3. **DO NOT FILE / REFER**, including every mixed-immigration-status household.
 
 **Precision over recall, permanently.** Missing someone who qualified costs them
 a benefit they were already not receiving. Telling someone they qualify when they
@@ -442,7 +442,7 @@ and the fallback in §2 is already specified.*
 
 **2. Work-to-cash is 3–5 months and the budget is $1,000.** You can be right about
 everything and still run out of money waiting for a state agency to adjudicate.
-*Mitigation: pilot fee up front — an untested [ASSUMPTION] — and a first buyer
+*Mitigation: pilot fee up front. An untested [ASSUMPTION] — and a first buyer
 small enough to pay it from a chequebook rather than a purchase order.*
 
 **3. The sales cycle does not clear the 6–12 month target.** Stated in the brief,
@@ -495,7 +495,7 @@ not renegotiate it afterwards.**
 
 **The idea is good and the timing is wrong.** The money is measured, the buyer's
 incentive is real, the failure of free screeners is documented, and the structural
-insight — route the payment to where the value lands — is correct.
+insight. Route the payment to where the value lands — is correct.
 
 **What is wrong with it is everything downstream of that insight:** the buyer list
 is not pulled, the pricing model has an unanswered legal question in front of it,
@@ -504,5 +504,5 @@ might cap the business below target, and the buyers who could supply the volume
 buy on a timescale a solo operator with $1,000 cannot wait out.
 
 **Start it second. Answer the counsel question first. And if that answer is bad,
-this becomes a Counterweight segment rather than a business — which is a good
+this becomes a Counterweight segment rather than a business, which is a good
 outcome, not a failure.**

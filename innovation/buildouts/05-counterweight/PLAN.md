@@ -1,4 +1,4 @@
-# Counterweight — the operating plan
+# Counterweight, the operating plan
 
 Case software for public adjusters, special education advocates and patient
 advocates. Written 2026-08-28.
@@ -12,7 +12,7 @@ not have it.
 ## 1. The one-sentence version
 
 **Sell software to the people who already charge 10–50% to fight institutions by
-hand, so they can carry five times the caseload — and reach break-even at 101
+hand, so they can carry five times the caseload, and reach break-even at 101
 customers, in a market where Houston alone has 112.**
 
 ---
@@ -32,7 +32,7 @@ Of the seven businesses, this is the least exciting and the most likely to work.
 
 It is also the **compliant vehicle for idea 2 (Overturn)**. Where state law
 requires a licensed public adjuster to negotiate a claim for a fee, you cannot
-do that work yourself — but you can sell that adjuster the tool, learn the
+do that work yourself. But you can sell that adjuster the tool, learn the
 domain from the inside, and build the relationships that make a contingency
 business possible later. **Counterweight is the front door to the portfolio, not
 just a business on its own.**
@@ -41,7 +41,7 @@ just a business on its own.**
 
 ## 3. The customer, with real numbers
 
-### Segment A — Public adjusters (launch here)
+### Segment A, Public adjusters (launch here)
 
 From the Texas Department of Insurance file, as of 2026-08-28:
 
@@ -68,13 +68,13 @@ defend, no incumbent software contract, and an acute need to look professional
 in front of their first clients.** They are the easiest sale in the file and they
 are individually identifiable by issue date.
 
-### Segment B — Special education advocates (second)
+### Segment B, Special education advocates (second)
 
-Population **not established** — no licence registry exists because the role is
+Population **not established**. No licence registry exists because the role is
 not licensed. Reachable through certification bodies and directories instead.
 Rates $75–300/hour, 10–15 hours per case.
 
-### Segment A2 — Florida public adjusting FIRMS (the best list in the project)
+### Segment A2. Florida public adjusting FIRMS (the best list in the project)
 
 From the Florida DFS business licence file, 2026-08-28:
 
@@ -91,30 +91,30 @@ From the Florida DFS business licence file, 2026-08-28:
 | **Dade + Broward + Palm Beach counties** | **612 (56% of all Florida firms)** |
 
 Separately, the file holds **599 INDEPENDENT ADJUSTING FIRM** licences. **Those
-are not customers** — independent adjusters work *for carriers*. They are on the
+are not customers**. Independent adjusters work *for carriers*. They are on the
 other side of the table and should be excluded from every list.
 
 **Why firms beat individuals as a target.** Texas gives you 1,708 named
 individuals with no contact details. Florida gives you **1,203 businesses, every
 one with an email address, concentrated so heavily that three adjacent counties
 hold 56% of them.** A firm also buys the **Practice tier at $299 or the Firm tier
-at $599** rather than Solo at $149 — the same sale at twice the revenue.
+at $599** rather than Solo at $149, the same sale at twice the revenue.
 
 **1,203 firms against a 101-customer break-even is 8.4%.**
 
 Firm licence issuance: 278 in 2021, **387 in 2022**, 125 in 2023, 172 in 2024,
 159 in 2025, 82 to August 2026.
 
-### Segment C — Patient advocates (third)
+### Segment C, Patient advocates (third)
 
 Population **not established**. Reachable through professional associations.
 
 **The honest read: segments A and A2 are the only ones where I can name the
-customers — 1,708 Texas individuals and 1,203 Florida firms. Segments B and C are
+customers, 1,708 Texas individuals and 1,203 Florida firms. Segments B and C are
 hypotheses until proven, and the plan below does not depend on them.**
 
-**Do not add 1,708 and 1,203 together.** They count different things — people in
-one, businesses in the other — and a Florida firm employs Florida-licensed
+**Do not add 1,708 and 1,203 together.** They count different things, people in
+one, businesses in the other, and a Florida firm employs Florida-licensed
 individuals, 24 of those firms are Texas-based, and 293 of the Texas individuals
 live in Florida. **The overlap is real and unquantified.** Treat them as two
 separate lists to work, not as a market of 2,911.
@@ -154,7 +154,7 @@ headline. The FTC's DoNotPay order is the reason, and it is in the terms.
 | **Practice** | **$299/mo** | Up to five advocates | **101** |
 | **Firm** | $599/mo | Unlimited seats | 51 |
 
-**Flat and unlimited, deliberately.** Every adjacent tool meters — per case, per
+**Flat and unlimited, deliberately.** Every adjacent tool meters, per case, per
 page, per gigabyte. A meter changes behaviour: the customer starts deciding
 whether a case is *worth uploading*, and a tool people ration is a tool people
 cancel.
@@ -164,7 +164,7 @@ more than the discount when the budget is under $1,000.
 
 **Founding cohort: first 20 customers get $199/month locked for life**, in
 exchange for a testimonial after 60 days and the right to quote their numbers.
-That price is not a discount, it is the cost of evidence — and evidence is the
+That price is not a discount, it is the cost of evidence, and evidence is the
 thing DoNotPay never bought.
 
 ### Unit economics
@@ -185,7 +185,7 @@ we absorb that. Mitigation is a fair-use ceiling written into terms from day one
 
 ---
 
-## 6. Go to market — $0, and specific
+## 6. Go to market, $0, and specific
 
 ### The list already exists
 
@@ -197,7 +197,7 @@ downloaded.**
 location only. So the sequence is: identify from the file, find the business
 through search, approach through the business.
 
-### Channel 1 — The 2024–25 cohort (primary)
+### Channel 1, The 2024–25 cohort (primary)
 
 **Who:** the 597 adjusters licensed in 2024 and 2025, filtered to Texas
 residents, sorted by city.
@@ -206,23 +206,23 @@ residents, sorted by city.
 of how long the reading takes because they have not yet built shortcuts.
 
 **How:** each one has a business. Find it, and approach with something useful
-rather than a pitch — see `ASSETS.md` for the exact message. **Twenty a day is
+rather than a pitch. See `ASSETS.md` for the exact message. **Twenty a day is
 sustainable by hand and exhausts the cohort in a month.**
 
-### Channel 1b — The Florida firm list (now the primary channel)
+### Channel 1b. The Florida firm list (now the primary channel)
 
 **This is the strongest channel in the project and it did not exist until the
 Florida file arrived.**
 
 1,203 firms, 100% with an email address on the public licence record, and
-**612 of them inside Dade, Broward and Palm Beach.** Miami alone has 174 — more
+**612 of them inside Dade, Broward and Palm Beach.** Miami alone has 174, more
 than Houston, and they are businesses rather than sole practitioners.
 
 **Work it in this order:** Miami (174) → Dade/Broward/Palm Beach remainder (438)
 → Orlando (55) → Tampa (33). Exclude the 599 independent adjusting firms
 entirely.
 
-**On the legality of using those addresses — I was too cautious before and want
+**On the legality of using those addresses, I was too cautious before and want
 to correct it.** I previously wrote that using licence-record emails for outreach
 "invites CAN-SPAM exposure." **That was overstated.** CAN-SPAM permits unsolicited
 commercial email, including cold B2B, provided you comply with it: accurate
@@ -236,26 +236,26 @@ contact details on a public licence record.**
 genuinely, and stop after two messages. Volume is not the constraint here —
 welcome is.
 
-### Channel 2 — NAPIA and the state association
+### Channel 2, NAPIA and the state association
 
 The **National Association of Public Insurance Adjusters** (napia.com) has a
 member directory and holds conferences. **Members are the professionalised, engaged
-segment — a better list than a bigger one.** The Texas Association of Public
+segment. A better list than a bigger one.** The Texas Association of Public
 Insurance Adjusters is the state equivalent.
 
 **The move is not to advertise.** It is to publish something the membership
-actually wants — the denial-letter guide already on the site — and let it be
+actually wants. The denial-letter guide already on the site — and let it be
 shared. One association newsletter mention reaches more qualified buyers than
 any amount of cold outreach.
 
-### Channel 3 — SEO, which is already built
+### Channel 3, SEO, which is already built
 
 Eighteen pages live, 293 metadata signals per page, three long-form guides and a
 24-term glossary. **This is a compounding asset that costs nothing to hold.**
 
 Target intents, all low-competition and high-purchase-intent:
 - "public adjuster software" · "IEP advocate software" · "patient advocate tools"
-- "how to read an insurance denial letter" — genuine search volume, and it pulls
+- "how to read an insurance denial letter", genuine search volume, and it pulls
   in policyholders who then ask their adjuster about the tool
 - "public adjuster license Texas" · "public adjuster license Illinois"
 
@@ -263,7 +263,7 @@ Target intents, all low-competition and high-purchase-intent:
 adjuster who finds a genuinely good guide on denial letters forms an opinion
 about whoever wrote it.
 
-### Channel 4 — The catastrophe cycle
+### Channel 4, The catastrophe cycle
 
 **42.6% of Texas licensees live out of state, and 293 of them are in Florida.**
 That is the catastrophe-response population. After a named storm, adjusters
@@ -274,7 +274,7 @@ they have no time.
 predictable in season. Have the guide, the offer and the outreach ready before
 the event, not after.
 
-### Channel 5 — Referral
+### Channel 5, Referral
 
 An adjuster who saves six hours on a claim tells other adjusters. **One month
 free for both sides on a referral that converts.** This is how small professional
@@ -285,7 +285,7 @@ communities actually buy, and it costs nothing until it works.
 - **No paid ads.** No budget, and the audience is too small for ad platforms to
   target efficiently.
 - **No bulk email to the 757,686 addresses in the appointments file.** Those are
-  agents, not adjusters — the wrong audience entirely, and blasting them would
+  agents, not adjusters. The wrong audience entirely, and blasting them would
   burn the sending domain that the 1,203 real prospects need. **Cold email to the
   1,203 licensed adjusting firms is legitimate and is channel 1b; cold email to
   the other 757,686 is spam.** The difference is relevance, not legality.
@@ -296,7 +296,7 @@ communities actually buy, and it costs nothing until it works.
 
 ## 7. The 90-day plan
 
-### Days 1–30 — Prove it on real documents
+### Days 1–30, Prove it on real documents
 
 | | |
 |---|---|
@@ -306,7 +306,7 @@ communities actually buy, and it costs nothing until it works.
 | **Spend** | Domain, ~$12 |
 | **Gate** | **If it does not find the contradiction a professional finds, stop and fix. Do not sell before this.** |
 
-### Days 31–60 — Ten founding customers
+### Days 31–60, Ten founding customers
 
 | | |
 |---|---|
@@ -315,7 +315,7 @@ communities actually buy, and it costs nothing until it works.
 | **Ship** | 10 customers, 10 recorded onboarding calls, the objection list |
 | **Gate** | **If 100 approaches produce fewer than 3 customers, the problem is positioning, not volume. Rewrite before continuing.** |
 
-### Days 61–90 — Evidence, then scale the channel
+### Days 61–90, Evidence, then scale the channel
 
 | | |
 |---|---|
@@ -323,13 +323,13 @@ communities actually buy, and it costs nothing until it works.
 | **Do** | Collect hours-saved and win-rate data from the founding cohort. Publish it. Approach NAPIA and the Texas association with the results, not with a pitch. Open segment B (special education) with one guide and ten approaches. |
 | **Ship** | 25 customers ≈ $5,000 MRR, one case study with real numbers |
 
-### Month 12 — and a correction against my own plan
+### Month 12, and a correction against my own plan
 
 I originally wrote month 12 as the target. **Then I built the financial model and
 it disagreed with me, so the model wins.**
 
-At the plan's own dials — 3 adds in month 1 ramping to 9/month over 9 months,
-4.5% monthly churn, $299 ARPU — the model produces:
+At the plan's own dials, 3 adds in month 1 ramping to 9/month over 9 months,
+4.5% monthly churn, $299 ARPU, the model produces:
 
 | Milestone | Result |
 |---|---|
@@ -344,7 +344,7 @@ $30k arriving around month 19.** Anyone promising $30k in year one at these
 acquisition rates is promising a number the arithmetic does not produce.
 
 **The cell that actually decides it** is the steady-state ceiling: adds ÷ churn.
-At 9 adds and 4.5% churn that is **200 customers — 198% of break-even**, so the
+At 9 adds and 4.5% churn that is **200 customers, 198% of break-even**, so the
 target is reachable and the only question is when. But at 5 adds and 6% churn
 the ceiling is **83**, which is *below* the 101 break-even, and the business then
 **never reaches its target no matter how long it runs**. Churn eats it first.
@@ -426,7 +426,7 @@ cost more than it pays. *Mitigation: fair-use ceiling in the terms from day one,
 and watch cost-per-customer weekly.*
 
 **5. A funded competitor arrives.** Nothing here is technically unreachable. *The
-defence is not technology — it is being the tool the profession's associations
+defence is not technology. It is being the tool the profession's associations
 already recommend, which is why channel 2 matters more than it looks.*
 
 ---
