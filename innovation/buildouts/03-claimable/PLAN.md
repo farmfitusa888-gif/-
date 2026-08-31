@@ -173,7 +173,8 @@ trivial, and it means you do the work now and get paid much later.
 ### The cash conversion cycle
 
 ```
-intake → documents → file → agency adjudicates → enrolment letter → invoice → buyer AP pays
+intake → documents → file → agency adjudicates → enrolment letter → invoice →
+buyer AP pays
   day 0     +2wk      +3wk        + weeks              + days        + net 30-60
 ```
 

@@ -233,8 +233,7 @@ contact details on a public licence record.**
 
 **The reputational caution stands and is the real constraint.** A community of
 1,203 firms in three counties talks to itself. Send in small batches, personalise
-genuinely, and stop after two messages. Volume is not the constraint here —
-welcome is.
+genuinely, and stop after two messages. Volume is not the constraint here, welcome is.
 
 ### Channel 2, NAPIA and the state association
 

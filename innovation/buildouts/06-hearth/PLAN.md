@@ -202,16 +202,14 @@ the caregiver to choose.
 2. Sudden change from *this person's* baseline in speech, facial symmetry, or
    one-sided weakness
 3. Choking, or coughing on fluids
-4. Fall with any suspicion of injury, any head strike, or unable to get up —
-   and head strike on an anticoagulant is an escalation with no further
+4. Fall with any suspicion of injury, any head strike, or unable to get up. And head strike on an anticoagulant is an escalation with no further
    questions asked
 5. Seizure activity
 6. Person is missing, wandering, not in the house
 7. Violence occurring now, or the caregiver stating they are afraid for their
    physical safety
 
-**To poison control and the clinician, immediately:** any medication error —
-wrong drug, double dose, missed dose of something time-critical.
+**To poison control and the clinician, immediately:** any medication error. Wrong drug, double dose, missed dose of something time-critical.
 
 **To 988, immediately:** any statement of suicidal intent, plan or ideation by
 the caregiver. With up to 40% depression prevalence in this population [review],
@@ -485,8 +483,7 @@ sounds affordable.
 
 ## 7. Go to market, $0, and specific
 
-**Every channel here is gated on section 4.** No responsible gatekeeper —
-chapter, care manager, agency. Will put an unproven AI voice in front of
+**Every channel here is gated on section 4.** No responsible gatekeeper. Chapter, care manager, agency. Will put an unproven AI voice in front of
 vulnerable families, nor should they. The safety evidence is not just a
 compliance step, **it is the only asset that opens any of these doors.**
 

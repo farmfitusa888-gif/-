@@ -378,8 +378,9 @@ none available. It is a fact to discover, not a problem to manage.*
 
 **2. The core function is free on every phone.** A general assistant reads an
 estimate in plain English for nothing. *Mitigation: the only defensible ground is
-licensed labour data, real local part pricing, and a published accuracy record —
-and if none of those is achievable within budget, there is no product.*
+licensed labour data, real local part pricing, and a published accuracy
+record. And if none of those is achievable within budget, there is no
+product.*
 
 **3. Licensed labour data may be unaffordable or unusable in consumer output.**
 *Mitigation: the no-labour-data v1 in §5, decided in advance rather than

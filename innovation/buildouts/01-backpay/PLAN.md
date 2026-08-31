@@ -81,8 +81,9 @@ where the arithmetic clears.
 ### The worked example, re-run and confirmed
 
 The research file cites $399 in one week and $32,718 over nineteen months. I did
-not take that on trust. Running `computeWorkweek` against a warehouse pattern —
-**six days, nine hours a day, $19/hour, a $108 weekly non-discretionary bonus, no
+not take that on trust. Running `computeWorkweek` against a warehouse pattern,
+**six days, nine hours a day, $19/hour, a $108 weekly non-discretionary bonus,
+no
 meal or rest periods taken**, the engine returns:
 
 | Line | Amount |
