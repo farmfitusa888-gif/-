@@ -1,6 +1,6 @@
 # How to run the trademark search yourself — step by step
 
-You asked what I meant by "run TESS on Counterweight (class 42)". Here is the
+You asked what I meant by "run TESS on Countercite (class 42)". Here is the
 whole thing, start to finish. It is free, it takes about ten minutes per name,
 and it is the cheapest risk in this entire project to retire.
 
@@ -31,16 +31,16 @@ just called Trademark Search. Same database.
 
 ### 2. Search the name
 
-Type the word on its own — `Counterweight` — and search.
+Type the word on its own — `Countercite` — and search.
 
 Do this **three** ways for each name, because trademark conflict is about
 confusion, not identical spelling:
 
 | Search | Why |
 |---|---|
-| `Counterweight` | The exact word |
+| `Countercite` | The exact word |
 | `Counter*` | Wildcard. Catches Counterforce, Counterpoint, Counterpart — anything a lawyer would call confusingly similar |
-| `Counterweight` in **goods and services text** | Catches marks that describe your service even under a different name |
+| `Countercite` in **goods and services text** | Catches marks that describe your service even under a different name |
 
 ### 3. Filter to LIVE marks only
 
@@ -57,10 +57,10 @@ for this project:
 
 | Class | Covers | Which ideas |
 |---|---|---|
-| **042** | Software as a service, software design, technology services | Counterweight, Backpay, Overquote |
-| **036** | Insurance, financial affairs, claims administration | Overturn, Counterweight |
+| **042** | Software as a service, software design, technology services | Countercite, Backpay, Overquote |
+| **036** | Insurance, financial affairs, claims administration | Overturn, Countercite |
 | **044** | Medical and health services | Hearth, Fourth |
-| **045** | Legal services, personal and social services | Counterweight, Claimable |
+| **045** | Legal services, personal and social services | Countercite, Claimable |
 
 **The rule:** a live mark in a **different** class is usually survivable —
 Delta the airline and Delta the tap manufacturer coexist. A live mark in **your**
@@ -98,7 +98,7 @@ practice management" is narrow and probably irrelevant to you.
 
 | Name | Primary class | Also check | Specifically look for |
 |---|---|---|---|
-| **Counterweight** | 042 | 036, 045 | `Counter*` — **Counterforce Health** does claim appeals and is the known adjacent player. This is the one with a live flag and the one already built. |
+| **Countercite** | 042 | 036, 045 | `Counter*` — **Counterforce Health** does claim appeals and is the known adjacent player. This is the one with a live flag and the one already built. |
 | **Backpay** | 042 | 045, 036 | `Backpay`, `Back Pay`, `BackPay*`. Expect payroll-industry hits. |
 | **Overturn** | 036 | 042, 045 | `Overturn*`. Watch for legal-services marks. |
 | **Claimable** | 036 | 042, 044 | `Claim*` in 036 is a crowded field — read carefully. |

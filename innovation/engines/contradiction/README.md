@@ -1,6 +1,6 @@
 # The contradiction engine
 
-The thing Counterweight sells. A denial letter says a claim is not covered and
+The thing Countercite sells. A denial letter says a claim is not covered and
 cites a policy provision. This reads both documents and reports whether the
 provision actually says what the letter claims.
 

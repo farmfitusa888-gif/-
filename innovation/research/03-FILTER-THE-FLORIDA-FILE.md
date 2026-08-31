@@ -106,4 +106,4 @@ Same as the Texas file: count active licences, split resident versus
 out-of-state, rank by city, and chart the licence-issue trend. That completes
 the picture across your three named states and tells us — accounting for the
 overlap, since 293 of Texas's licensees are Florida residents — how large the
-real, de-duplicated addressable pool is for Counterweight.
+real, de-duplicated addressable pool is for Countercite.

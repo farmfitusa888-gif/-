@@ -1,0 +1,16 @@
+# Countercite
+User-agent: *
+Allow: /
+
+# AI answer engines are a real referral channel now; they are welcomed
+# deliberately rather than by omission.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://countercite.app/sitemap.xml

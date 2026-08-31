@@ -184,7 +184,7 @@ and it is written into §12.
 
 ## 4. The customer, with real numbers
 
-There are two, and I can size neither as precisely as Counterweight sized public
+There are two, and I can size neither as precisely as Countercite sized public
 adjusters. Say so plainly.
 
 ### Segment A, California plaintiff-side employment firms (the paying customer)
@@ -344,7 +344,7 @@ A flat monthly software subscription to plaintiff-side employment firms, for
 computing wage-and-hour damages from payroll and time records. No percentage, no
 per-case fee, no referral, no capping, no UPL. **A firm paying for software is
 the cleanest transaction available in this entire category**, and it is the same
-transaction Counterweight makes.
+transaction Countercite makes.
 
 | Plan | Price | For | Firms needed for $30k |
 |---|---|---|---:|
@@ -352,7 +352,7 @@ transaction Counterweight makes.
 | **Practice** | **$349/mo** | Up to five | **86** |
 | **Firm** | $999/mo | Unlimited seats, class-scale batches | 31 |
 
-**Flat and unlimited, for the same reason as Counterweight.** A meter makes the
+**Flat and unlimited, for the same reason as Countercite.** A meter makes the
 customer decide whether a matter is worth running, and a tool people ration is a
 tool people cancel.
 
@@ -379,7 +379,7 @@ from day one, not a meter.
 
 #### And the arithmetic still disagrees with the twelve-month ambition
 
-I built the model. It says the same thing Counterweight's said, and I am not
+I built the model. It says the same thing Countercite's said, and I am not
 going to argue with it twice.
 
 Dials: adds ramping from 1 to 8 firms a month over nine months, **4% monthly
@@ -400,7 +400,7 @@ arriving around month 19.** The brief's "6–12 months to revenue" is right abou
 The target lands in month 19.
 
 **The cell that decides the whole business is adds ÷ churn**, exactly as it was
-for Counterweight:
+for Countercite:
 
 | Scenario | Adds/mo | Churn | ARPU | Steady-state ceiling |
 |---|---:|---:|---:|---|
@@ -653,7 +653,7 @@ none is optional:
    flat-fee arrangement with a firm and a prohibited referral fee.
 
 **Budget $2,000–4,000 and treat it as the first real cost of the business.**
-Slightly more than Counterweight's, because two of the three questions are
+Slightly more than Countercite's, because two of the three questions are
 genuinely unsettled rather than merely undrafted.
 
 ---

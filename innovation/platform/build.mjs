@@ -106,7 +106,9 @@ ol.steps p{margin:0;color:var(--muted);font-size:15.5px}
 .price ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px;font-size:15px}
 .price li{padding-left:20px;position:relative;color:var(--muted)}
 .price li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--accent)}
+.price .annual{font-size:13px;color:var(--accent);margin-top:6px;font-weight:600}
 .price .btn{margin-top:auto;text-align:center}
+.price .pnote{font-size:12.5px;color:var(--muted);margin:12px 0 0;line-height:1.5}
 
 details.faq{border-bottom:1px solid var(--rule);padding:16px 0}
 details.faq summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;gap:12px;align-items:baseline}
@@ -246,8 +248,10 @@ const R = {
         <h3>${esc(t.name)}</h3>
         <div class="amt">${esc(t.price)}</div>
         <div class="per">${esc(t.per || "")}</div>
+        ${t.annual ? `<div class="annual">${esc(t.annual)}</div>` : ""}
         <ul>${t.includes.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
         <a class="btn${t.featured ? "" : " ghost"}" href="${s.cta.path}">${esc(t.cta || s.cta.label)}</a>
+        ${t.note ? `<p class="pnote">${esc(t.note)}</p>` : ""}
       </div>`
       )
       .join("")}</div>

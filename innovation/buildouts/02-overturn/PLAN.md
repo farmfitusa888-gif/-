@@ -47,7 +47,7 @@ The portfolio README calls Overturn the **strongest money** of the seven, and
 that is right on the demand side. It is also the only one of the seven with a
 licensing statute pointed straight at the wrong version of it.
 
-| | Overturn | Counterweight |
+| | Overturn | Countercite |
 |---|---|---|
 | Buyer known by name | No — homeowners, reachable only at the moment of denial | **Yes — 1,708 Texas licensees, 1,203 Florida firms** [MEASURED] |
 | Regulatory exposure | **Licensing. Acting as a public adjuster unlicensed is prohibited and enforced in both launch states; Illinois flags criminal exposure explicitly** [criminal grading in Texas NOT ESTABLISHED — check Tex. Ins. Code ch. 4102 subch. E] | None — software sold to licensed professionals |
@@ -60,7 +60,7 @@ licensing statute pointed straight at the wrong version of it.
 first one.** A contingency practice collects nothing until claims settle, the
 founder has under $1,000, and the licence alone takes weeks. Starting Overturn
 cold means working four to eight months unpaid. Starting it on top of
-Counterweight's monthly revenue means the cash lag is an inconvenience instead
+Countercite's monthly revenue means the cash lag is an inconvenience instead
 of a wall.
 
 That is not a reason to skip it. It is a reason to run section 7's licence track
@@ -126,7 +126,7 @@ bulletin pre-empts the label by reaching indirect value and shared economics.
 Two survivable fragments of (a) are worth naming, because they are not the same
 thing:
 
-1. **Software with no lead flow at all.** Legal, and it is Counterweight. See (c).
+1. **Software with no lead flow at all.** Legal, and it is Countercite. See (c).
 2. **Employment or a genuine service contract with a licensed adjuster where
    you do the non-licensed work**, document assembly, research, drafting, under
    their supervision, paid as wages or a flat service fee, with **no client
@@ -186,7 +186,7 @@ version of that rule available anywhere in this portfolio.
 
 #### (c) Software only, sold to adjusters
 
-**Verdict: already built. It is Counterweight, and it is the right first
+**Verdict: already built. It is Countercite, and it is the right first
 business, but it is not Overturn.**
 
 This is the fully compliant structure and it is why the portfolio README ranks
@@ -223,7 +223,7 @@ order:
    permitted, preferred, or irrelevant.
 2. **Where is the line between permitted back-office support and unlicensed
    adjusting?** Needed for the pre-licence period and for any future contractor.
-3. **Does an unpaid, unreciprocated referral from a Counterweight customer
+3. **Does an unpaid, unreciprocated referral from a Countercite customer
    create exposure under § 4102.160 or § 4102.164 for either party?** Including
    whether a software discount counts as consideration. Assume it does until
    told otherwise.
@@ -309,46 +309,46 @@ road.
 
 ---
 
-## 5. The relationship to Counterweight: advantage or conflict
+## 5. The relationship to Countercite: advantage or conflict
 
-The brief calls Counterweight and Overturn "natural siblings." Having worked
+The brief calls Countercite and Overturn "natural siblings." Having worked
 through the licensing, that is only half true, and the untrue half matters more.
 
-**The overlap is exact.** Counterweight's two best lists are 1,708 Texas public
+**The overlap is exact.** Countercite's two best lists are 1,708 Texas public
 adjusters and 1,203 Florida public adjusting firms. Under structure (b), those
 same people are Overturn's direct competitors for the same homeowners.
 
 ### Where it is a genuine advantage
 
-- **Domain knowledge with a feedback loop.** Counterweight's users are working
+- **Domain knowledge with a feedback loop.** Countercite's users are working
   real files. The failure modes they report are the same failure modes Overturn's
   own practice will hit, six months earlier and at no cost.
 - **The engine is one engine.** The policy-versus-denial-letter comparison is the
-  same build. Overturn is Counterweight's engine with a different customer at the
+  same build. Overturn is Countercite's engine with a different customer at the
   front. **That halves the build and it is the strongest argument for the pair
   existing at all.**
-- **Counterweight's cash funds Overturn's lag.** Section 2's sequencing verdict.
-- **Counterweight's SEO already ranks a denial-letter guide** for exactly the
+- **Countercite's cash funds Overturn's lag.** Section 2's sequencing verdict.
+- **Countercite's SEO already ranks a denial-letter guide** for exactly the
   query a denied homeowner types. That page currently sends adjusters to
-  Counterweight; it can send homeowners to Overturn.
+  Countercite; it can send homeowners to Overturn.
 
 ### Where it is a real conflict
 
 - **You would be competing with your own paying customers, for revenue, in their
   own state.** No framing survives that being discovered.
-- **The community is small and it talks.** Counterweight's own plan says so
+- **The community is small and it talks.** Countercite's own plan says so
   about the 1,203 Florida firms in three counties: *"a community of 1,203 firms
   in three counties talks to itself."* The same is true of 112 adjusters in
   Houston.
-- **A referral loop between them is legally loaded.** The obvious move. Counterweight customers send Overturn the small claims they decline, runs
+- **A referral loop between them is legally loaded.** The obvious move. Countercite customers send Overturn the small claims they decline, runs
   straight into Texas § 4102.164 on the referring adjuster's side and § 4102.160
   on Overturn's, if anything of value flows in either direction. **A software
   discount is a thing of value.** Question 3 to the lawyer exists for this.
 
 ### The verdict
 
-**It is a conflict, and Counterweight is the more valuable business, so Overturn
-must be built so that it does not take a claim a Counterweight customer would
+**It is a conflict, and Countercite is the more valuable business, so Overturn
+must be built so that it does not take a claim a Countercite customer would
 have taken.**
 
 That is not a compromise; it is the same sentence as the brief's own innovation.
@@ -481,7 +481,7 @@ inference **[NOT ESTABLISHED, plausibly $3–15 per file, but no measurement
 exists]**, and E&O if required. The business breaks even on its second settled
 file. **Cash timing is the problem, and it is section 7.4.**
 
-### 7.4 The cash lag, which Counterweight does not have
+### 7.4 The cash lag, which Countercite does not have
 
 A contingency practice is paid **when the claim settles**, not when it is signed.
 
@@ -520,7 +520,7 @@ written down by someone qualified.
 
 ### Channel 2. Search, on the exact denial query
 
-Counterweight's site already publishes a guide on reading an insurance denial
+Countercite's site already publishes a guide on reading an insurance denial
 letter, built on the same platform in `platform/`. **A homeowner-facing sibling
 costs one build and reuses the whole toolchain.**
 
@@ -547,7 +547,7 @@ from *accepting* consideration for referring an insured to an attorney, and
 of value moves in either direction, ever, including reciprocal referral
 promises.** [NEEDS LAWYER, question 3.]
 
-### Channel 4. Counterweight customers who decline files
+### Channel 4. Countercite customers who decline files
 
 Same rule, same statutes, same lawyer question. Read section 5 before using this
 channel at all; it is the one with the conflict in it.
@@ -597,7 +597,7 @@ rules come before the plan.**
 |---|---|
 | **Goal** | Licence application filed; engine measured |
 | **Track A — licence** | Book the Texas PA exam. Get the $10,000 bond quote. IdentoGO fingerprints. Register the entity with the Texas SOS if using an agency licence — **no DBA, TDI does not accept them.** |
-| **Track B — measurement** | 20 real denial letters with their policies, from public consumer-complaint threads and law-firm example pages. Run the engine. **Grade every finding against a licensed adjuster's read.** This is the same gate as Counterweight day 1–30 and it can be the same 20 documents. |
+| **Track B — measurement** | 20 real denial letters with their policies, from public consumer-complaint threads and law-firm example pages. Run the engine. **Grade every finding against a licensed adjuster's read.** This is the same gate as Countercite day 1–30 and it can be the same 20 documents. |
 | **Track C — lawyer** | Send the six questions in 3.4. |
 | **Ship** | An accuracy number; an exam date; six answers |
 | **Spend** | Exam ~$49, prints ~$41, licence ~$50, bond premium [NOT ESTABLISHED], lawyer $2,000–4,000, domain ~$12 |
@@ -635,7 +635,7 @@ $25,000 a month signed, and $30,000 collected lands somewhere past month 18**.
 And that is on the favourable side of every assumption in this document.
 
 **The cell that decides it is hours per file**, exactly as churn was the deciding
-cell for Counterweight. At 4 hours a file the solo ceiling is roughly 30–35
+cell for Countercite. At 4 hours a file the solo ceiling is roughly 30–35
 files a month and the target is reachable. At 8 hours it is 15–17, the ceiling is
 about $18,000 a month, and **the business never reaches $30,000 no matter how
 long it runs.** That single comparison is the whole risk.
@@ -646,7 +646,7 @@ long it runs.** That single comparison is the whole risk.
 
 | Metric | Target | Why it is the one that matters |
 |---|---|---|
-| **Findings confirmed by a licensed read** | **>85%** | The product's whole claim. Same gate as Counterweight, same reason. |
+| **Findings confirmed by a licensed read** | **>85%** | The product's whole claim. Same gate as Countercite, same reason. |
 | **Decline rate — reviews where we say the denial was correct** | **>25%** | **The integrity metric.** A service that never says no is not a second opinion, it is a sales funnel. Published. |
 | False positives per review | **<1** | We are advising a homeowner directly. A wrong "you were cheated" is worse than a miss. |
 | **Recovery rate on accepted files** | **>60%** [target, not evidence] | Whether the selection is any good |
@@ -684,7 +684,7 @@ provider of legal advice, an insurance company, or anyone's guarantee.
 | **FTC deceptive claims** | No guarantees. No unbacked accuracy claims. Every published number reproducible from the file log. The 44% figure always carries its caveat. |
 | **Client confidentiality** | Policies and claim files are sensitive. Encrypted, never used for training, deleted on request. |
 | **Bond and E&O** | $10,000 bond required. E&O **[NOT ESTABLISHED]** — question 6. |
-| **The Counterweight disclosure** | Common ownership stated plainly on both sites. Section 5. |
+| **The Countercite disclosure** | Common ownership stated plainly on both sites. Section 5. |
 
 ---
 
@@ -692,7 +692,7 @@ provider of legal advice, an insurance company, or anyone's guarantee.
 
 **1. The cash lag against no capital.** Files signed today pay in months. The
 budget is under $1,000. **This is the most likely cause of death and it has
-nothing to do with whether the product works.** *Mitigation: build Counterweight
+nothing to do with whether the product works.** *Mitigation: build Countercite
 first and run Overturn on top of it. There is no other mitigation available at
 this budget.*
 
@@ -708,7 +708,7 @@ answer including "the denial was correct"; a published decline rate; no
 door-knocking; no upfront fees; the fee charged on the increase only. **Every one
 of these costs money and every one of them is the product.***
 
-**4. The conflict with Counterweight.** Competing with your own customers, in a
+**4. The conflict with Countercite.** Competing with your own customers, in a
 professional community that talks. *Mitigation: the declined-claims mandate and
 proactive disclosure in section 5, which also caps Overturn's claim size and
 therefore its revenue per file. The mitigation and risk 2 pull against each
@@ -743,14 +743,14 @@ Written now, while it is cheap to be honest.
 
 | By | If | Then |
 |---|---|---|
-| Day 30 | The lawyer says structure (b) as described is not clean | **Stop.** The business is Counterweight. This document is the record of why. |
+| Day 30 | The lawyer says structure (b) as described is not clean | **Stop.** The business is Countercite. This document is the record of why. |
 | Day 30 | Findings confirmed by a licensed read are **below 70%** | **Stop.** Do not offer a review to a real homeowner. |
-| Day 60 | The licence does not issue | **Stop.** Section 3 is exhaustive: there is no compliant fallback for Overturn as a contingency service. The fallback is Counterweight. |
+| Day 60 | The licence does not issue | **Stop.** Section 3 is exhaustive: there is no compliant fallback for Overturn as a contingency service. The fallback is Countercite. |
 | Day 90 | **Fewer than 5 signed files** from the channels in section 8 | The channel does not work. Homeowner acquisition is the untested half of this business and this is the test. Rewrite once. |
-| Month 6 | **Average recovery per settled file below $4,000** | The uplift assumption is half wrong. At a 10% cap the model does not close. Move upmarket — which puts you against Counterweight's customers — or stop. |
+| Month 6 | **Average recovery per settled file below $4,000** | The uplift assumption is half wrong. At a 10% cap the model does not close. Move upmarket — which puts you against Countercite's customers — or stop. |
 | Month 6 | **Hours per file above 8** | The solo ceiling is ~$18,000/month. Hire a licensed adjuster or stop. |
 | Any time | **One upheld TDI complaint** | **Stop and fix before taking another file.** In this category reputation is the asset. |
-| Month 12 | **Under $10,000/month collected** | The lag plus the cap means $30,000 is not reachable on this path. Fold the engine back into Counterweight. |
+| Month 12 | **Under $10,000/month collected** | The lag plus the cap means $30,000 is not reachable on this path. Fold the engine back into Countercite. |
 
 **The rule that makes these real: write the number down before the test, and do
 not renegotiate it afterwards.**

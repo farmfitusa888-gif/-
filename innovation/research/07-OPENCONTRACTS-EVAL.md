@@ -1,4 +1,4 @@
-# 07 — OpenContracts as Counterweight's citation layer
+# 07 — OpenContracts as Countercite's citation layer
 
 **Question:** can `Open-Source-Legal/OpenContracts` supply the PDF → coordinates →
 anchor → highlight layer that `engines/contradiction/core.mjs` is missing?
@@ -237,7 +237,7 @@ But the backend test fixtures disagree with the code. I loaded both:
 And `Annotation.page` on the model defaults to `1` while every JSON payload it
 sits next to is 0-based. Two conventions inside one row. This is exactly the
 class of bug that sends a reviewer to the wrong page, which is the one thing
-Counterweight cannot afford, so §7 puts both numbers in the Locator explicitly.
+Countercite cannot afford, so §7 puts both numbers in the Locator explicitly.
 
 ---
 
@@ -420,7 +420,7 @@ between OpenContracts, plasmapdf, Warp-Ingest and Docling converters. Matching
 it costs nothing and keeps the option of pointing another tool at my output.
 
 Against the file, for a single-purpose tool: PAWLS has no place for the two
-things Counterweight needs most. There is no character offset per token, and no
+things Countercite needs most. There is no character offset per token, and no
 page-level text string. Both have to be reconstructed in memory on every load.
 That reconstruction is exactly what `build_translation_layer` is for, and it is
 exactly where the off-by-one lives. Storing a derived value that is cheap to
@@ -608,7 +608,7 @@ Run it against one real denial letter and one real policy. Only then widen
   "units": "pdf-points-topleft",
   "tokens": [[11, 340], [11, 341], [11, 342]],
 
-  "extractor": "pdfplumber-0.11.10/counterweight-1"
+  "extractor": "pdfplumber-0.11.10/countercite-1"
 }
 ```
 

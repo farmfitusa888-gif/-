@@ -83,7 +83,7 @@ which suggests a template that was never fully filled in.
 
 **Does it permit commercial use in a paid SaaS product?** Yes, explicitly and
 without a separate licence, until you cross 100 million monthly active users or
-$20 million of monthly revenue. Counterweight's break-even model is $29,900 of
+$20 million of monthly revenue. Countercite's break-even model is $29,900 of
 monthly revenue. You would need to be roughly 670 times larger before the
 threshold bites. Treat it as unreachable.
 
@@ -424,7 +424,7 @@ Type II and supports HIPAA workloads, but the BAA sits on the **Enterprise plan*
 kills the "$30 of free credit covers it" plan the moment a health-plan denial
 enters the pipeline. One caveat that cuts the other way: one source says RunPod
 reserves custom legal agreements for customers committing $3,000/month or more
-[review]. **Verify both before you sign anything.** If Counterweight's document
+[review]. **Verify both before you sign anything.** If Countercite's document
 set is purely property and casualty, hail claims and carrier correspondence with
 no PHI, this whole paragraph relaxes and Modal becomes competitive again.
 

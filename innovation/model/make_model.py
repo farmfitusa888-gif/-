@@ -210,8 +210,8 @@ def build(spec):
 
 # ---------------------------------------------------------------- specs
 
-COUNTERWEIGHT = {
-    "name": "Counterweight",
+COUNTERCITE = {
+    "name": "Countercite",
     "market_note": "Denominator is 1,708 active Texas public adjuster licences (TDI file, 2026-08-28). "
                    "Texas alone, one of three target professions, before Illinois or Florida.",
     "breakeven_hint": "101 customers at $299/mo = $30,199/mo",
@@ -229,7 +229,7 @@ COUNTERWEIGHT = {
     "notes": [
         "[MEASURED] 1,708 active Texas public adjuster licences as of 2026-08-28, from the Texas Department of Insurance open data file. 981 resident in Texas, 727 licensed here but living elsewhere, 293 of those in Florida. Houston has 112 resident licensees.",
         "[MEASURED] New licences issued: 160 in 2023, 323 in 2024, 274 in 2025, 187 to August 2026. The 2024-25 cohort is 597 people and is the primary launch target.",
-        "[REVIEW, costed 2026-08-31] Real cost to serve is about $18.50/customer/month at 100 customers: roughly $9 of model inference, $9 of Stripe, and about $0.47 of everything else. The dial is left at $45 as deliberate headroom, because flat pricing absorbs heavy users and a firm running thousand-page productions costs several times a light one. If the true figure were $120, gross margin would fall from 94% to 60% and the price would need to rise.",
+        "[RECOSTED 2026-08-31] Real cost to serve is about $10.60/customer/month at 100 customers on the $299 Practice tier: $1.20 of model inference, $8.97 of card processing, and about $0.47 of everything else. The inference figure is computed in api_cost.py from the pipeline the engine actually runs, not estimated -- retrieval is deterministic, so only candidate passage pairs reach a model and cost scales with pairs rather than page count. It replaces an earlier $9 guess that was 7.5x too high. Note what that leaves: card processing is now 85% of cost to serve, so annual billing and ACH on the Firm tier matter more to margin than any model choice. The dial stays at $45 as deliberate headroom, because flat pricing absorbs heavy users and a firm running thousand-page productions costs several times a light one. If the true figure were $120, gross margin would fall from 94% to 60% and the price would need to rise.",
         "[ASSUMPTION] Steady-state adds of 9/month. No channel has been run yet. This is the second most fragile number here.",
         "[ASSUMPTION] Churn of 4.5%/month. No data. Solo-professional software is generally worse than team software, and a public adjuster with no storm has no cases in March.",
         "[NOT ESTABLISHED] Special education advocates and patient advocates cannot be counted at all -- neither is a licensed profession with a public register. The market dial covers Texas public adjusters ONLY, which makes the market-share figure conservative but also means two of three segments are unmodelled.",
@@ -240,6 +240,6 @@ COUNTERWEIGHT = {
 
 if __name__ == "__main__":
     import os
-    out = os.path.join(os.path.dirname(__file__), "Counterweight-Model.xlsx")
-    build(COUNTERWEIGHT).save(out)
+    out = os.path.join(os.path.dirname(__file__), "Countercite-Model.xlsx")
+    build(COUNTERCITE).save(out)
     print("wrote", out)

@@ -33,11 +33,11 @@ because if it misses once there is no business.**
 
 ## 2. Why this one, and why it is last
 
-Counterweight is the business to build first. **Fourth is the one I would build
+Countercite is the business to build first. **Fourth is the one I would build
 last, and possibly not at all.** That belongs at the top of the plan, not
 buried in the risks.
 
-| | Counterweight | Fourth |
+| | Countercite | Fourth |
 |---|---|---|
 | Is the need proven? | Inferred from an intermediary's fee | **Yes — families already spend $10,000–35,000 on it** [review] |
 | Is the *form* proven? | Yes | **No.** [NOT ESTABLISHED] |
@@ -133,7 +133,7 @@ The acute need lasts **8–16 weeks** [review], two to four months. At $99:
 | …at a 3-month life | **101** [derived] |
 | …at a 4-month life | **76** [derived] |
 
-**Counterweight needs 101 customers once. Fourth needs roughly 101 customers
+**Countercite needs 101 customers once. Fourth needs roughly 101 customers
 every month, forever, with no advertising budget.**
 
 That is not a churn risk to be listed in section 11. **It is the structure of
@@ -437,7 +437,7 @@ an outcome we do not control.**
 
 **Launch at $99/month.** Founding cohort of 20 at **$49 locked for the
 lifetime of their subscription**, in exchange for full logging, a weekly call and
-the right to publish their numbers. As in Counterweight: that price is not a
+the right to publish their numbers. As in Countercite: that price is not a
 discount, it is the cost of evidence.
 
 **Prepay the whole fourth trimester, 4 months for $299 [ASSUMPTION on the
@@ -643,7 +643,7 @@ that finding matters more than any satisfaction score.
 ### Beyond 90 days
 
 **No month-12 projection is offered, and one should not be invented.** The
-Counterweight plan earned its month-19 figure by building a model and then
+Countercite plan earned its month-19 figure by building a model and then
 losing an argument to it. Fourth has two unknowns that make any such model
 fiction. Average hold time and escalation rate — and both are measured in the
 pilot. **Build the model in month 4, with real numbers, and let it disagree with

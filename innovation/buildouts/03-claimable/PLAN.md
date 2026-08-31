@@ -26,7 +26,7 @@ arithmetic rather than persuasion. **And it is still the wrong first move for a
 solo operator with under $1,000, for three reasons that have nothing to do with
 whether the product works.**
 
-| | Claimable | Counterweight (the one to start) |
+| | Claimable | Countercite (the one to start) |
 |---|---|---|
 | Buyer known by name and address | **No.** No buyer list pulled. See §3 | Yes — 1,708 Texas individuals, 1,203 Florida firms |
 | Time to first dollar | **Months.** Hospital and health-plan procurement | Weeks |
@@ -52,7 +52,7 @@ whether the product works.**
 
 ### The version of this that *is* available immediately
 
-**Hospital and clinic financial counsellors are Counterweight's segment C.**
+**Hospital and clinic financial counsellors are Countercite's segment C.**
 They do this work by hand today. The eligibility rules engine described below,
 sold to them as a monthly software seat instead of billed per enrolment, has:
 no adjudication lag, no per-head payment question, no per-case labour on your
@@ -84,7 +84,7 @@ should never be treated as one.
 
 ### The buyer side is not measured, and that is the honest headline
 
-**I have not pulled a buyer list.** Counterweight's plan works because a state
+**I have not pulled a buyer list.** Countercite's plan works because a state
 licence file put 1,708 names on the desk. Claimable has no equivalent file
 pulled, and every count below is **[NOT ESTABLISHED]**.
 
@@ -239,7 +239,7 @@ push the same direction here. That is a rare piece of luck and the plan leans on
 
 Every state licenses these facilities and **publishes the register free**. Texas
 HHS long-term-care provider search and Florida AHCA facility locator are the two
-to pull first, for the same reason Counterweight started with Texas and Florida:
+to pull first, for the same reason Countercite started with Texas and Florida:
 the files are public, downloadable and carry addresses.
 
 **Filter to independent operators of 40–150 beds.** Large chains have procurement.
@@ -285,7 +285,7 @@ Target search intents, all low-competition and high-intent:
 
 **These are referral and credibility channels, not sales channels.** One
 association newsletter mention reaches more qualified buyers than a month of cold
-email. The same logic as Counterweight's channel 2, and it works here for the
+email. The same logic as Countercite's channel 2, and it works here for the
 same reason.
 
 ### Channel 5. Area Agencies on Aging and the Eldercare Locator network
@@ -430,7 +430,7 @@ errors are not symmetric and the product must never treat them as if they are.**
 
 **Budget $1,500–3,000 for counsel** across the day 1–10 question, terms, privacy
 policy and the BAA. Treat it as the first real cost of the business, exactly as
-Counterweight does.
+Countercite does.
 
 ---
 
@@ -505,5 +505,5 @@ might cap the business below target, and the buyers who could supply the volume
 buy on a timescale a solo operator with $1,000 cannot wait out.
 
 **Start it second. Answer the counsel question first. And if that answer is bad,
-this becomes a Counterweight segment rather than a business, which is a good
+this becomes a Countercite segment rather than a business, which is a good
 outcome, not a failure.**

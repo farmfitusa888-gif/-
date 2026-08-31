@@ -68,7 +68,7 @@ Then a fragment. Like that.
   "a substantial market."
 - **Admitting the thing you don't know**, in the same sentence as the thing you
   do.
-- **A correction against yourself**, left in. The Counterweight plan says the
+- **A correction against yourself**, left in. The Countercite plan says the
   model contradicted the plan and the model won. That single line does more for
   credibility than a page of polish.
 - **An opinion with a reason.** "Don't start with this one, because…"

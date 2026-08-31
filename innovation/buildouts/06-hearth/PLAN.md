@@ -31,10 +31,10 @@ fire correctly before selling a single subscription.**
 
 ## 2. Why this one, and why it is not first
 
-Counterweight is the business to build first. This is not that, and the plan
+Countercite is the business to build first. This is not that, and the plan
 should say why in the first hundred lines rather than the last.
 
-| | Counterweight | Hearth |
+| | Countercite | Hearth |
 |---|---|---|
 | Is the need proven? | Inferred from the fee an intermediary already charges | **Yes — 97% said so when asked directly** [review] |
 | Is the *form* proven? | Yes — software sold to professionals is a known shape | **No. Unevidenced.** [NOT ESTABLISHED] |
@@ -420,7 +420,7 @@ will be tempting to write, and it is the one that ends the business.**
 
 **Launch at $49.** Founding cohort of 20 at **$29/month locked for life**, in
 exchange for full call logging, a monthly interview and the right to publish
-their numbers. As in Counterweight, **that price is not a discount, it is the
+their numbers. As in Countercite, **that price is not a discount, it is the
 cost of evidence**. And evidence is precisely what DoNotPay never bought.
 
 Annual prepay at ten months for twelve. Cash up front matters when the budget is
@@ -428,7 +428,7 @@ under $1,000, and it partly answers grief churn.
 
 ### Unit economics, and the problem the brief missed
 
-Counterweight sells software, where the marginal cost of a heavy user is
+Countercite sells software, where the marginal cost of a heavy user is
 tolerable. **Hearth sells minutes, and its heaviest user is by definition the
 one in crisis.** You cannot ration a crisis line. That inverts the usual
 subscription logic and it is the second-largest risk in this business after
@@ -493,7 +493,7 @@ compliance step, **it is the only asset that opens any of these doors.**
 directory of care managers who work with exactly these families, charge by the
 hour, and cannot be on call at 2am.
 
-**Why this is the strongest channel:** it is the Counterweight move applied
+**Why this is the strongest channel:** it is the Countercite move applied
 here. You are not persuading an exhausted caregiver; you are giving a
 professional something to hand their client between visits. They already have
 the trust, the client list, and the problem, **their phone rings at 2am and
@@ -546,7 +546,7 @@ It does two jobs at once:
    exactly the way that gets discovered by a customer.
 2. **It is the SEO plan.** Each real question is a page that answers it
    properly. A caregiver searching that question at 1am finds a genuinely good
-   answer and forms an opinion about who wrote it. This is the Counterweight
+   answer and forms an opinion about who wrote it. This is the Countercite
    guides pattern, and it compounds at zero cost.
 
 ### Channel 5, Memory clinics and neurology practices
@@ -621,7 +621,7 @@ signal is whether the phone gets picked up at 2am.
 ### Beyond 90 days, the arithmetic, stated before it is flattering
 
 I have not built a financial model for Hearth and **I am not going to project a
-month-12 number from acquisition rates I have never observed.** The Counterweight
+month-12 number from acquisition rates I have never observed.** The Countercite
 plan earned its month-19 figure by building a model and then losing an argument
 to it; Hearth has no such model and inventing one would be the opposite of what
 that section demonstrated.
@@ -629,7 +629,7 @@ that section demonstrated.
 What can be said now:
 
 - **613 families at $49 is the target.** Retaining them is a different problem
-  from Counterweight's, because **churn here is partly mortality and is not a
+  from Countercite's, because **churn here is partly mortality and is not a
   product defect.**
 - **Churn cause must be recorded separately from day one**, death, placement in
   residential care, cost, dissatisfaction. Blending them produces a number that

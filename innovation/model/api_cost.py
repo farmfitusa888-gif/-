@@ -6,7 +6,7 @@ I had a $900/month figure floating around from an early estimate. That number
 was a ceiling I guessed at before the engine existed. The engine exists now, so
 this file computes the cost from the pipeline it actually runs instead.
 
-The important structural fact: Counterweight never sends a whole policy to a
+The important structural fact: Countercite never sends a whole policy to a
 model. Retrieval is deterministic (see engines/contradiction/core.mjs). A model
 is asked exactly one narrow question, many times: "do these two passages agree?"
 That keeps token spend proportional to the number of candidate pairs, not to the

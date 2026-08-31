@@ -1,7 +1,7 @@
 # The free and open stack
 
 Researched 2026-08-31, against the seven businesses in `README.md` and the
-Counterweight plan in `buildouts/05-counterweight/PLAN.md`.
+Countercite plan in `buildouts/05-countercite/PLAN.md`.
 
 The owner's instruction was to use every free and open technology available. I
 have taken that seriously and the answer is mostly yes. There is one place where
@@ -32,7 +32,7 @@ vendor's own page before it enters a financial model.
 
 ## The recommended stack
 
-At **100 Counterweight customers on the Practice tier**, which is $29,900/month
+At **100 Countercite customers on the Practice tier**, which is $29,900/month
 of revenue and the break-even point the plan is built around.
 
 | Layer | What to use | Licence | $/month at 100 customers |
@@ -609,7 +609,7 @@ trains on your inputs cannot both be true.
 
 ### And one thing that is fine to leave paid-adjacent
 
-The **$1,500–3,000 for a lawyer** in §9 of the Counterweight plan is not a
+The **$1,500–3,000 for a lawyer** in §9 of the Countercite plan is not a
 technology cost and no open-source project replaces it. It is the cheapest line
 item in this entire document relative to what it prevents.
 
@@ -664,7 +664,7 @@ Named, verified to exist, with what they actually give you.
 
 | Repo | Licence | Why it matters here |
 |---|---|---|
-| `Open-Source-Legal/OpenContracts` | **MIT** [verified] | The closest thing to prior art for Counterweight. 1.5k stars, 185 forks. Does document annotation, **clause comparison across many contracts**, and **text-to-coordinate mapping that preserves PDF layout fidelity** [verified]. That last capability is precisely the citation-to-source-page mechanism the plan's positioning rests on. **Read this repo before building the citation layer** |
+| `Open-Source-Legal/OpenContracts` | **MIT** [verified] | The closest thing to prior art for Countercite. 1.5k stars, 185 forks. Does document annotation, **clause comparison across many contracts**, and **text-to-coordinate mapping that preserves PDF layout fidelity** [verified]. That last capability is precisely the citation-to-source-page mechanism the plan's positioning rests on. **Read this repo before building the citation layer** |
 | `olivialiu121/ContractEval` | [NOT ESTABLISHED] | The benchmark from §2. If you want to test your own engine the way the paper tested nineteen models, start here |
 | `LexPredict/lexpredict-lexnlp` | **AGPLv3** by default [verified] | Legal-aware sentence parsing, extraction of money, dates, courts, citations. **Last release 2.3.0 on 2022-11-30** [verified]. Read it for the extraction patterns, do not depend on it |
 | `evolsb/legal-redline-tools` | [NOT ESTABLISHED] | Tracked-changes DOCX and redline PDFs from a review [review]. Relevant to output formatting, not to finding |
@@ -674,7 +674,7 @@ open-source insurance denial and claim-appeal projects. Twenty-three
 repositories matched. **The most-starred has five stars, and it is a 2020
 hackathon project.** Every other result has zero or one star and dates from 2026.
 
-There is no open-source project doing what Counterweight does. That is not a
+There is no open-source project doing what Countercite does. That is not a
 gap in this research. It is a finding about the market, and it is consistent
 with the thesis: the institution's side got the software, and nobody built the
 other side.

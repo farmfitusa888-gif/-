@@ -65,7 +65,7 @@ workflow to defend:
 
 ### What this does to idea 5
 
-Counterweight breaks even at **101 customers at $299/month**. Against Texas
+Countercite breaks even at **101 customers at $299/month**. Against Texas
 alone:
 
 - **101 ÷ 1,708 active TX licences = 5.9%**
@@ -77,7 +77,7 @@ alone:
 adjuster licensed in Texas may also be licensed in Florida and Illinois — so
 adding state registries together **double-counts**, and the national total is
 much smaller than the sum of the states. Second, public adjusters are only one
-of Counterweight's three audiences; the other two are still uncounted.
+of Countercite's three audiences; the other two are still uncounted.
 
 ---
 

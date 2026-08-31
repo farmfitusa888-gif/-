@@ -1,7 +1,7 @@
 # Free credits and startup programmes, for a solo founder who has not incorporated
 
-Researched 2026-08-31 against the Counterweight plan in
-`../buildouts/05-counterweight/PLAN.md`. Written for one person, pre-revenue,
+Researched 2026-08-31 against the Countercite plan in
+`../buildouts/05-countercite/PLAN.md`. Written for one person, pre-revenue,
 no investor, budget under $1,000, not yet a company.
 
 This is a companion to `04-FREE-AND-OPEN-STACK.md`, which has a short credits
@@ -44,7 +44,7 @@ domains automatically at submission**, before a human sees the form [review].
 AWS is reported to auto-reject `@gmail.com`, `@yahoo.com` and `@hotmail.com`
 [review].
 
-The domain is already in the Counterweight plan at roughly $12. The mailbox does
+The domain is already in the Countercite plan at roughly $12. The mailbox does
 not have to cost anything on top:
 
 | Option | Cost | Catch |
@@ -61,7 +61,7 @@ entity [review]. Everything else on the apply-this-week list appears reachable
 without it.
 
 So the order is: **domain and mailbox first, real site second, incorporate
-third, and only when there is a reason beyond credits.** The Counterweight plan
+third, and only when there is a reason beyond credits.** The Countercite plan
 already needs a lawyer for terms and privacy before the first paying customer at
 $1,500 to $3,000. Incorporation belongs in that same conversation, not in a
 credits sprint.
@@ -87,7 +87,7 @@ For someone who is not incorporated, has no investor, and has one afternoon.
 | 10 | Sentry, Twilio, DigitalOcean Hatch | Variable, see entries | 15 min each | No |
 
 **Rank 1 deserves a caveat.** $50,000 of PostHog credits is the largest number
-on this page and it is the least useful to this particular business. Counterweight's
+on this page and it is the least useful to this particular business. Countercite's
 cost problem is inference, not analytics, and `04-FREE-AND-OPEN-STACK.md` prices
 the whole analytics layer at $0 on PostHog's free tier anyway. It is ranked first
 because value divided by effort is what was asked for and fifteen minutes for a
@@ -148,7 +148,7 @@ through the engine and rate limits are what will bite.
 
 - **Claude for Open Source.** Six months of free Claude Max 20x for maintainers
   of a public repo with **5,000+ GitHub stars or 1M+ monthly npm downloads**,
-  active in the last 3 months, capped at 10,000 recipients [review]. Counterweight
+  active in the last 3 months, capped at 10,000 recipients [review]. Countercite
   does not qualify and will not. There is an "Ecosystem Impact Track" for
   less-visible critical packages [review]. Not a path here.
 - **Anthology Fund.** A $100M venture fund with Menlo Ventures, cheques from
@@ -224,7 +224,7 @@ not verify which of those apply at the entry tier.
 
 **Approval time.** "Within days" [review].
 
-**The catch.** Azure is not in the Counterweight stack. The realistic uses are
+**The catch.** Azure is not in the Countercite stack. The realistic uses are
 the app VPS and object storage, which `04-FREE-AND-OPEN-STACK.md` prices at
 about $15 a month combined. $5,000 against $15 a month is more credit than the
 business can spend inside a credit window. **Take it, but do not restructure the
@@ -305,7 +305,7 @@ problem in section 0, if the timing works out.
 - Aimed at startups that have **not yet taken institutional venture funding**
   [review].
 - Described as for "digital-native technology startups with a working MVP, a
-  clear business model and plans to seek venture funding" [review]. Counterweight
+  clear business model and plans to seek venture funding" [review]. Countercite
   has the MVP and the business model. It does not plan to seek venture funding.
   Whether that is enforced is [NOT ESTABLISHED].
 - Company-domain email. Personal Gmail is the reported top rejection reason
@@ -510,7 +510,7 @@ everything else is rounding error.
 Note also: Flex Commit credit terms apply to startups accepted on or after
 6 August 2026 [review], so older write-ups of the programme are already stale.
 
-**The catch, generally.** Counterweight's marketing sites are seven static sites
+**The catch, generally.** Countercite's marketing sites are seven static sites
 on Cloudflare Pages at $0. Vercel credits solve a problem this project does not
 have.
 
@@ -572,7 +572,7 @@ credits than under the previous programme [review]. A separate promotion of
 single scalable software product rather than operating as an agency.
 
 **The catch.** A programme that will not publish its own numbers is a programme
-you cannot plan around. More to the point, Counterweight's data layer in
+you cannot plan around. More to the point, Countercite's data layer in
 `04-FREE-AND-OPEN-STACK.md` is SQLite with `sqlite-vec`, at $0. **Adopting
 MongoDB to collect MongoDB credits would be the tail wagging the dog.** Skip.
 
@@ -674,7 +674,7 @@ business concern in the general case, which in practice means an entity, a
 UEI/SAM.gov registration and an agency-specific solicitation.
 
 **The honest verdict for this business.** SBIR funds research with a technical
-risk and a public-interest angle. Counterweight is B2B SaaS built on commercial
+risk and a public-interest angle. Countercite is B2B SaaS built on commercial
 models, aimed at licensed professionals, with a 90-day plan to revenue. That is
 close to the opposite of an SBIR profile, and the application effort is weeks,
 not hours. **Do not chase this.** It is on the list because it was asked for, and
@@ -707,7 +707,7 @@ Atlas credits), not a reason on its own.
 |---|---|---|---|
 | **PostHog for Startups** | **$50,000 credits, 12 months, + ~$12,000 partner perks** [review] | **Under 2 years old, raised under $5M**, PostHog account on a **company email domain**, signed up on or after 1 Jan 2023. Free-email domains rejected automatically at submission. **No VC referral** [review] | **Apply. Rank 1 on effort. Auto-approved on submit, then manually reviewed** [review] |
 | **Sentry for Startups** | Discounted plans, amount variable [review] | Bootstrapped, pre-seed, seed. **No VC referral** [review] | Apply. Review 3 to 10 business days [review]. Sentry's Developer free tier already covers this project |
-| **Twilio for Startups** | API credits, amount variable [review]. `04-FREE-AND-OPEN-STACK.md` records ~$5,000, founded within 5 years, raised under $5M | Bootstrapped, pre-seed, seed. **No VC referral** [review] | Not relevant to Counterweight. Relevant to the phone-line ideas elsewhere in the portfolio |
+| **Twilio for Startups** | API credits, amount variable [review]. `04-FREE-AND-OPEN-STACK.md` records ~$5,000, founded within 5 years, raised under $5M | Bootstrapped, pre-seed, seed. **No VC referral** [review] | Not relevant to Countercite. Relevant to the phone-line ideas elsewhere in the portfolio |
 | **Modal** | **$30/month of compute credit on the Starter plan, no application, no card** [review]. A startup programme up to $50,000 also exists [review] | Sign up [review] | **Just sign up.** May cover the whole OCR and embeddings GPU line, costed at ~$10/month |
 | **Groq / Deepgram / AssemblyAI** | Free tiers or signup credits, **no credit card** [review] | Sign up | Free tier, not a programme. Take it |
 | **Together AI** | $5 minimum purchase [review] | Paid | Not a credit |

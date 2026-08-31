@@ -1,7 +1,7 @@
 /**
  * core.mjs, the contradiction engine.
  *
- * This is the thing Counterweight sells. A denial letter says a claim is not
+ * This is the thing Countercite sells. A denial letter says a claim is not
  * covered and cites a policy provision. The engine reads both documents, finds
  * the cited provision, and reports whether the provision actually says what the
  * letter claims it says.
@@ -444,7 +444,7 @@ function surroundingClaim(text, index, radius = 500) {
  * ------------------------------------------------------------------ */
 
 /**
- * Counterweight refuses to export a finished document while any finding is
+ * Countercite refuses to export a finished document while any finding is
  * unreviewed. Same discipline as the wage engine: the machine may find, only a
  * person may clear.
  */

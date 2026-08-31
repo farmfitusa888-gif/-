@@ -71,3 +71,42 @@ blocked from this environment. Before spending anything on a brand:
 
 **This is the single cheapest risk to retire on the whole project and it costs
 nothing but an hour.** Do it before printing anything.
+
+---
+
+## Rename, 2026-08-31: Counterweight becomes Countercite
+
+Two things forced this, and neither was available when the name was chosen.
+
+**A live company at the adjacent domain.** `counterweight-app.com` sells C2PA
+provenance certification and names **insurance adjusters** on its served-market
+list. Different product, same buyer, and a name one hyphen apart. Coexistence
+would have been legally arguable and commercially useless: an adjuster searching
+for us would find them.
+
+**Domain availability closed the question.** `counterweight.app`, `countercite.com`
+and `crosscheck.com` were all unavailable or contested. `countercite.app` was free.
+
+Countercite is the better name on the merits anyway, which is why the rename was
+cheap rather than painful:
+
+| | Counterweight | Crosscheck | **Countercite** |
+|---|---|---|---|
+| Names the mechanic | A metaphor about scales | Generic verification | **Answering their citation with yours** |
+| Coined or common | Common noun | Very common | **Coined** |
+| Search competition | High | Extreme | **Effectively none** |
+| Trademark distinctiveness | Suggestive | Descriptive, weak | **Fanciful, strongest class** |
+| Domain | Taken and contested | `.com` and `.app` taken | **`countercite.app` free** |
+
+The SEO point decided it. This portfolio's whole thesis is metadata density, and
+the site already runs at 294 signals a page against a competitor baseline of 21.
+That advantage compounds on a term nobody else competes for and evaporates on a
+word like "crosscheck". Ranking first for your own name should be free.
+
+One line of copy did not survive the change. "Counterweight puts weight back on
+your side of the scale" was a metaphor about the old name, so it was rewritten as
+"Countercite answers their citation with one of your own" rather than
+string-replaced into nonsense.
+
+Fallbacks if `countercite.app` is gone by the time it is bought, in order:
+`countercite.io`, `getcountercite.com`, `citecounter.app`.
