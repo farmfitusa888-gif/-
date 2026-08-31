@@ -1,5 +1,22 @@
 # 2 — The claim advocate
 
+> **CORRECTED 2026-08-31, and the correction matters.** This brief quotes the
+> national public adjuster fee range of 10-20% and models the business at 15%.
+> **Both launch states cap it lower.** Texas Insurance Code § 4102.104 caps a
+> public adjuster's total commission at **10% of the settlement**; Illinois
+> (215 ILCS 5, Art. XLV) caps it at **10% for a personal residence**. The 15%
+> and 20% figures below are unlawful in Texas and Illinois, and every money
+> figure in this brief is therefore optimistic by a third to a half. The
+> recomputed numbers are in [`../buildouts/02-overturn/PLAN.md`](../buildouts/02-overturn/PLAN.md).
+>
+> That plan also finds that the partnering structure chosen for this business
+> is **not available in either launch state**. See the licensing section there
+> before acting on anything below.
+>
+> Statute text reached this project through search summaries rather than the
+> source pages, because the egress proxy blocks the statute sites. Verify with
+> a Texas insurance-regulatory lawyer before relying on it.
+
 **Insurers brought AI to the claim. The homeowner brought a phone call.**
 
 `PROVEN — money already changing hands` · Buyer: the homeowner · Form: service with AI inside, contingency

@@ -1,4 +1,4 @@
-# Overturn — the operating plan
+# Overturn, the operating plan
 
 A contingency service that fights denied and underpaid home insurance claims for
 homeowners. Written 2026-08-31.
@@ -18,7 +18,7 @@ The brief's fee assumptions are not legal in either launch state.
 Every statute and bulletin cited below was found through a **search-engine
 summary, not by reading the statute page**. This environment's egress proxy
 blocks `law.justia.com`, `flsenate.gov`, `idoi.illinois.gov` and every other
-primary legal source — the same block documented in
+primary legal source, the same block documented in
 [`research/01-DATA-SOURCES.md`](../../research/01-DATA-SOURCES.md).
 
 So: **the citations are directionally reliable and specifically unverified.**
@@ -35,8 +35,8 @@ Where a number came from a file I actually computed over, it is marked
 ## 1. The one-sentence version
 
 **Tell a homeowner for free whether their denial was wrong, take the ones that
-were on contingency, and charge the statutory maximum of 10% of what we add —
-which means the whole business is roughly twenty to forty claims a month, and
+were on contingency, and charge the statutory maximum of 10% of what we add.
+Which means the whole business is roughly twenty to forty claims a month, and
 the whole risk is that you cannot legally do any of it without a licence.**
 
 ---
@@ -45,12 +45,12 @@ the whole risk is that you cannot legally do any of it without a licence.**
 
 The portfolio README calls Overturn the **strongest money** of the seven, and
 that is right on the demand side. It is also the only one of the seven with a
-criminal statute pointed at the wrong version of it.
+licensing statute pointed straight at the wrong version of it.
 
 | | Overturn | Counterweight |
 |---|---|---|
 | Buyer known by name | No — homeowners, reachable only at the moment of denial | **Yes — 1,708 Texas licensees, 1,203 Florida firms** [MEASURED] |
-| Regulatory exposure | **Licensing. Unlicensed public adjusting is a criminal offence in both launch states** | None — software sold to licensed professionals |
+| Regulatory exposure | **Licensing. Acting as a public adjuster unlicensed is prohibited and enforced in both launch states; Illinois flags criminal exposure explicitly** [criminal grading in Texas NOT ESTABLISHED — check Tex. Ins. Code ch. 4102 subch. E] | None — software sold to licensed professionals |
 | Cash timing | **Paid on settlement, months after the work** | Paid monthly, in advance |
 | Working capital needed | **Real, and unquantified** | Effectively none |
 | Founder is the constraint | **Yes — one licensed human, one set of hours** | No — software scales |
@@ -64,12 +64,12 @@ Counterweight's monthly revenue means the cash lag is an inconvenience instead
 of a wall.
 
 That is not a reason to skip it. It is a reason to run section 7's licence track
-now — it is cheap and slow — and open the practice when there is money
+now. It is cheap and slow. And open the practice when there is money
 underneath it.
 
 ---
 
-## 3. The licensing structure — decide this before anything else
+## 3. The licensing structure, decide this before anything else
 
 The owner is not a licensed public adjuster. In Texas and Illinois, negotiating
 or settling an insurance claim on behalf of a policyholder for compensation is
@@ -91,8 +91,8 @@ than any other because it decides whether there is a business at all.
 
 **Illinois Bulletin 2026-02 is the single most important document in this plan
 and it is seven months old.** It says a licensed public adjuster may not use a
-third-party lead generator — a roofer, a contractor, or a standalone lead-gen
-firm — unless that third party is itself licensed as an Illinois public
+third-party lead generator. A roofer, a contractor, or a standalone lead-gen
+firm. Unless that third party is itself licensed as an Illinois public
 adjuster, and that **any compensation or "thing of value" tied to those leads
 triggers the licensing requirement**, expressly including indirect value such as
 shared ownership, shared expenses, or the third party benefiting from a larger
@@ -106,7 +106,7 @@ the payment itself unlawful from the adjuster's side.
 
 ### 3.2 The three structures, worked through
 
-#### (a) Partner — the licensed adjuster contracts, Overturn supplies software and lead flow for a fee that is not a share of the claim
+#### (a) Partner, where the licensed adjuster contracts and Overturn supplies software plus lead flow for a fee that is not a share of the claim
 
 **Verdict: not available in either launch state in the form described. Do not
 build it.**
@@ -128,18 +128,18 @@ thing:
 
 1. **Software with no lead flow at all.** Legal, and it is Counterweight. See (c).
 2. **Employment or a genuine service contract with a licensed adjuster where
-   you do the non-licensed work** — document assembly, research, drafting — under
+   you do the non-licensed work**, document assembly, research, drafting, under
    their supervision, paid as wages or a flat service fee, with **no client
    origination and no share of the claim.** This is probably lawful and it is
    also not a business; it is a job. It is, however, an excellent way to learn
    the trade in the months while the licence is pending, and it is worth doing
-   for that reason alone. **[NEEDS LAWYER — the line between permitted
+   for that reason alone. **[NEEDS LAWYER, the line between permitted
    back-office support and unlicensed adjusting is exactly what the statute is
    ambiguous about.]**
 
 **One more trap, since it is the most common one in this industry and it is the
 reason both rules exist: never take a contractor or roofer lead, and never give
-one.** The economics look obvious — a roofer meets the homeowner first — and it
+one.** The economics look obvious. A roofer meets the homeowner first, and it
 is precisely the arrangement Illinois wrote a bulletin about in January and
 Texas made a statute about years ago.
 
@@ -161,12 +161,12 @@ is the finding that decides this section. The structure with the least
 regulatory risk is also the cheapest one on the list, and it fits inside the
 under-$1,000 budget with room for the lawyer.
 
-**Illinois does not fit the budget on its own** — $900–2,000 before a single
+**Illinois does not fit the budget on its own**, $900–2,000 before a single
 claim, driven almost entirely by the $50,000 bond. Illinois also looks thin on
 the supply side: of 1,708 active Texas public adjuster licensees, **14 are
 resident in Illinois**; of 1,203 valid Florida public adjusting firms, **2 are
 Illinois-based** [both MEASURED, from the files in `research/data/`]. Those are
-weak proxies rather than a count of Illinois licensees — **[NOT ESTABLISHED:
+weak proxies rather than a count of Illinois licensees, **[NOT ESTABLISHED:
 the number of active Illinois public adjuster licences. The FOIA route in
 `research/01-DATA-SOURCES.md` settles it in 21 working days for free, and it
 should be sent this week regardless.]**
@@ -180,14 +180,14 @@ check, weeks of waiting, and CE forever. What it buys: you become the contractin
 party, you keep the entire capped fee instead of splitting it, and **the whole of
 section 3 stops being a risk.**
 
-It also converts the second DoNotPay rule — *a licensed human in the loop, on the
-file, paid* — from an overhead line into the founder. That is the cheapest
+It also converts the second DoNotPay rule, *a licensed human in the loop, on the
+file, paid*. From an overhead line into the founder. That is the cheapest
 version of that rule available anywhere in this portfolio.
 
 #### (c) Software only, sold to adjusters
 
 **Verdict: already built. It is Counterweight, and it is the right first
-business — but it is not Overturn.**
+business, but it is not Overturn.**
 
 This is the fully compliant structure and it is why the portfolio README ranks
 idea 5 above idea 2. It is worth naming what is given up by choosing it: the
@@ -204,7 +204,7 @@ Reasoning, shortest version:
 
 1. Structure (a) is prohibited in both launch states in the form the brief
    assumed. This is not a grey area; Illinois wrote it down in January.
-2. Structure (b) costs **under $400 in Texas** — less than the legal opinion
+2. Structure (b) costs **under $400 in Texas**, less than the legal opinion
    needed to make (a) survivable, and (a) would still not survive it.
 3. Structure (c) is a different business that already exists.
 4. Licensure is the only structure where the founder controls the client
@@ -217,8 +217,8 @@ Budget **$2,000–4,000** for a Texas insurance-regulatory lawyer. This is the
 first real cost of the business and it is not optional. Six questions, in this
 order:
 
-1. **Is the planned structure — sole licensee, own clients, TDI form FIN535,
-   10% of the increase — clean under ch. 4102?** Confirm § 4102.104's cap
+1. **Is the planned structure, sole licensee, own clients, TDI form FIN535,
+   10% of the increase. Clean under ch. 4102?** Confirm § 4102.104's cap
    applies to the settlement total and whether charging only on the increase is
    permitted, preferred, or irrelevant.
 2. **Where is the line between permitted back-office support and unlicensed
@@ -229,10 +229,10 @@ order:
    told otherwise.
 4. **Advertising.** What may the site say about outcomes, and what triggers TDI's
    advertising rules for adjusters?
-5. **Post-catastrophe solicitation.** **[NOT ESTABLISHED — whether Texas
+5. **Post-catastrophe solicitation.** **[NOT ESTABLISHED, whether Texas
    restricts the timing or manner of solicitation after a declared catastrophe.
    Subchapter D of ch. 4102 is the place to look.]**
-6. **Errors and omissions cover** — is it required, and what does it cost?
+6. **Errors and omissions cover**. Is it required, and what does it cost?
    **[NOT ESTABLISHED.]**
 
 **Write these six down and do not start until all six come back.** The plan below
@@ -246,7 +246,7 @@ is (c) and this document is a record of why.
 Overturn has two populations to count: homeowners with contested claims, and
 licensed adjusters. Only one of them is countable from here.
 
-### The homeowner — the buyer
+### The homeowner, the buyer
 
 | | |
 |---|---|
@@ -273,10 +273,10 @@ Information Source complaint index by carrier
 (`content.naic.org/cis_consumer_information.htm`) and TDI's complaint data
 (`tdi.texas.gov/consumer/complfrm.html`), both named in
 `research/01-DATA-SOURCES.md` and both currently blocked from this environment.
-**This is the single biggest unmeasured number in the plan** — every volume
+**This is the single biggest unmeasured number in the plan**, every volume
 figure in section 7 is a capacity calculation, not a demand estimate.**
 
-### The licensed adjuster — the competitor, and possibly the referrer
+### The licensed adjuster, the competitor and possibly the referrer
 
 From the Texas Department of Insurance file, recomputed 2026-08-31 [MEASURED]:
 
@@ -297,7 +297,7 @@ these 1,708 people are the incumbents Overturn takes claims away from. The
 **The gap they leave is the whole opportunity.** A public adjuster earning 10% of
 a settlement has an economic floor below which a claim is not worth their time,
 and that floor is set by how many hours the file takes. **[NOT ESTABLISHED:
-where that floor sits — the number most often quoted informally is around
+where that floor sits. The number most often quoted informally is around
 $10,000 of claim value, and I have no source for it, so it is not stated as a
 figure here. What would settle it: ask ten of the 112 Houston licensees what
 their minimum claim size is. That is a ten-conversation research task, not a
@@ -309,7 +309,7 @@ road.
 
 ---
 
-## 5. The relationship to Counterweight — advantage or conflict
+## 5. The relationship to Counterweight: advantage or conflict
 
 The brief calls Counterweight and Overturn "natural siblings." Having worked
 through the licensing, that is only half true, and the untrue half matters more.
@@ -340,8 +340,7 @@ same people are Overturn's direct competitors for the same homeowners.
   about the 1,203 Florida firms in three counties: *"a community of 1,203 firms
   in three counties talks to itself."* The same is true of 112 adjusters in
   Houston.
-- **A referral loop between them is legally loaded.** The obvious move —
-  Counterweight customers send Overturn the small claims they decline — runs
+- **A referral loop between them is legally loaded.** The obvious move. Counterweight customers send Overturn the small claims they decline, runs
   straight into Texas § 4102.164 on the referring adjuster's side and § 4102.160
   on Overturn's, if anything of value flows in either direction. **A software
   discount is a thing of value.** Question 3 to the lawyer exists for this.
@@ -353,17 +352,16 @@ must be built so that it does not take a claim a Counterweight customer would
 have taken.**
 
 That is not a compromise; it is the same sentence as the brief's own innovation.
-**Overturn's mandate is the claims public adjusters decline** — the ones under
+**Overturn's mandate is the claims public adjusters decline**, the ones under
 their economic floor. Stated as a rule and published on both sites:
 
 > Overturn takes claims that public adjusters turn down. If a licensed adjuster
-> in your area will take your claim, hire them — they will do a better job on a
+> in your area will take your claim, hire them. They will do a better job on a
 > large loss than we will, and we will tell you so.
 
 **Three operating consequences, all of which cost money:**
 
-1. A stated claim-size ceiling above which Overturn declines and refers out —
-   for free, with no payment or benefit in either direction.
+1. A stated claim-size ceiling above which Overturn declines and refers out. For free, with no payment or benefit in either direction.
 2. **Disclose the common ownership on both sites, in plain words, before anyone
    asks.** In a community this small, being discovered is worse than being known.
 3. Section 7.3 shows the arithmetic problem this creates: **the claims adjusters
@@ -386,7 +384,7 @@ Against the four things a denied homeowner actually does:
 | **Appeal it themselves** | Free, and occasionally works. Loses on knowing which clause to cite and which deadline is running. |
 
 **The line that does the work:** *we will tell you free whether your denial was
-wrong — including when it was right, in which case you owe nothing and we are
+wrong. Including when it was right, in which case you owe nothing and we are
 finished.*
 
 **Being willing to say the denial was correct is the entire brand.** It is the
@@ -397,7 +395,7 @@ the decline rate is a published metric in section 9 rather than an internal one.
 insurers are denying claims with AI to cheat people (the 44% figure does not
 support it and the caveat in section 4 is why); that we work for anyone but the
 insured. The TDI contract form already carries **"WE REPRESENT THE INSURED
-ONLY"** in boldface — that is the state's own sentence and it should be the
+ONLY"** in boldface. That is the state's own sentence and it should be the
 site's too.
 
 ---
@@ -412,8 +410,8 @@ adjuster's total commission at **10% of the insurance settlement** (§ 4102.104)
 Illinois caps compensation at **10% of total payments** where the damaged
 property is a personal residence.
 
-The 10–20% range in the thesis is a national range. It is real — Florida allows
-20% outside a declared emergency — but **it is not available in Texas or
+The 10–20% range in the thesis is a national range. It is real, Florida allows
+20% outside a declared emergency. But **it is not available in Texas or
 Illinois at all**, and the entire money section of the brief is built on rates
 that cannot be charged here.
 
@@ -432,11 +430,11 @@ that cannot be charged here.
 **That last line is a deliberate margin sacrifice and it should be understood as
 one.** The statutes appear to permit charging on the settlement total. Charging
 only on the increase costs real money on every partially-paid file. It buys a
-sentence that cannot be attacked — *you pay a tenth of what we add, and nothing
-on what you already had* — and in a category with predators in it, an
+sentence that cannot be attacked, *you pay a tenth of what we add, and nothing
+on what you already had*. And in a category with predators in it, an
 unattackable fee structure is worth more than the margin.
 
-**On post-catastrophe fee compression — the brief flags this and it turns out to
+**On post-catastrophe fee compression. The brief flags this and it turns out to
 be a Florida problem, not a Texas or Illinois one.** Florida drops 20% to 10% for
 claims arising from a declared emergency. **Texas and Illinois are already at 10%
 in all conditions for a residence**, so a declared catastrophe changes the fee by
@@ -459,8 +457,8 @@ reputational hazard of being one more van in a flooded neighbourhood. See risk 3
 small claims that are supposed to be the entire opening it is 50.**
 
 **The $8,000 uplift is mine and it is unsourced.** It is the number this model is
-most sensitive to — the table above moves from 20 files a month to 75 on that one
-figure — and establishing it from real settled files is the first job of the
+most sensitive to. The table above moves from 20 files a month to 75 on that one
+figure. And establishing it from real settled files is the first job of the
 practice, not a later refinement.
 
 **The constraint that is not in the table: hours.**
@@ -476,10 +474,10 @@ practice, not a later refinement.
 hours end to end, a solo Overturn cannot reach $30,000 a month at a 10% cap.**
 That is arithmetic, not pessimism, and it has three exits: the AI genuinely takes
 the file under four hours; the average claim is much larger than $8,000; or a
-second licensed person joins — which is a hiring plan, not a solo business.
+second licensed person joins. Which is a hiring plan, not a solo business.
 
 **Fixed costs are near zero and are not the problem.** Bond premium, domain,
-inference **[NOT ESTABLISHED — plausibly $3–15 per file, but no measurement
+inference **[NOT ESTABLISHED, plausibly $3–15 per file, but no measurement
 exists]**, and E&O if required. The business breaks even on its second settled
 file. **Cash timing is the problem, and it is section 7.4.**
 
@@ -494,14 +492,14 @@ known, assume months rather than weeks.]**
 
 The consequence, stated plainly: **files signed in month 1 pay in month 5 or
 later, so the first four to eight months produce work and no money.** With under
-$1,000 and no capital, that period has to be funded by something else — which is
+$1,000 and no capital, that period has to be funded by something else, which is
 the sequencing verdict in section 2, arriving from a second direction.
 
 ---
 
-## 8. Go to market — $0, and legal
+## 8. Go to market, $0 and legal
 
-### Channel 1 — The free denial review (primary; the product is the funnel)
+### Channel 1. The free denial review (primary, and the product is the funnel)
 
 Upload the denial letter and the policy, get back a specific answer: **which
 provision the carrier cited, what that provision actually says, and whether the
@@ -516,11 +514,11 @@ never built.
 **Do not run it before the licence is in hand.** In Texas, advertising or
 soliciting as a public adjuster without a licence is itself the violation, and a
 free service offered as the front door to a contingency practice is soliciting.
-**[NEEDS LAWYER — question 4.]** Until then it can run as pure information with
+**[NEEDS LAWYER. Question 4.]** Until then it can run as pure information with
 no offer to take the case, and that distinction is precisely the one to have
 written down by someone qualified.
 
-### Channel 2 — Search, on the exact denial query
+### Channel 2. Search, on the exact denial query
 
 Counterweight's site already publishes a guide on reading an insurance denial
 letter, built on the same platform in `platform/`. **A homeowner-facing sibling
@@ -532,13 +530,13 @@ Intents worth owning, all high-purchase-intent and low-competition:
 - "what does [exclusion name] mean in my policy"
 - "insurance company underpaid my roof claim"
 - "how long does my insurer have to pay my claim in Texas"
-- "do I need a public adjuster for a small claim" — this one is the position
+- "do I need a public adjuster for a small claim", this one is the position
 
 **The guide is the acquisition engine, not the pricing page.** A homeowner who
 finds a genuinely useful explanation forms an opinion about who wrote it, and
 that is the whole mechanism.
 
-### Channel 3 — Attorneys who decline small property cases
+### Channel 3. Attorneys who decline small property cases
 
 A property-damage lawyer on a 33–40% contingency turns down claims below their
 own floor constantly. Those are Overturn's files exactly.
@@ -547,14 +545,14 @@ own floor constantly. Those are Overturn's files exactly.
 from *accepting* consideration for referring an insured to an attorney, and
 § 4102.160 prohibits *paying* an unlicensed person for a referral in. **Nothing
 of value moves in either direction, ever, including reciprocal referral
-promises.** [NEEDS LAWYER — question 3.]
+promises.** [NEEDS LAWYER, question 3.]
 
-### Channel 4 — Counterweight customers who decline files
+### Channel 4. Counterweight customers who decline files
 
 Same rule, same statutes, same lawyer question. Read section 5 before using this
 channel at all; it is the one with the conflict in it.
 
-### Channel 5 — Being present where people are already asking
+### Channel 5. Being present where people are already asking
 
 `r/InsuranceClaims`, `r/HomeownersInsurance`, BBB complaint threads, state
 consumer forums. **Answer questions properly and do not pitch.** One correct,
@@ -562,14 +560,14 @@ detailed answer to a stranger's denial question is worth more than a hundred
 impressions, and it is the only free channel that scales with effort rather than
 money.
 
-### Channel 6 — After a catastrophe
+### Channel 6. After a catastrophe
 
 **The highest-volume moment and the highest-risk moment in this business, and the
 rules come before the plan.**
 
 - **Nothing goes out until section 3.4 question 5 is answered.**
 - **No door-knocking. No storm lists. No vans. No signage in affected
-  neighbourhoods.** Not because they are all unlawful — some may not be — but
+  neighbourhoods.** Not because they are all unlawful, some may not be, but
   because they are indistinguishable from the behaviour of the people this
   business exists to be the opposite of.
 - What is legitimate: having the guide, the free review and the honest position
@@ -593,7 +591,7 @@ rules come before the plan.**
 
 ## 9. The 90-day plan
 
-### Days 1–30 — Two tracks, neither of which earns anything
+### Days 1–30. Two tracks, neither of which earns anything
 
 | | |
 |---|---|
@@ -605,7 +603,7 @@ rules come before the plan.**
 | **Spend** | Exam ~$49, prints ~$41, licence ~$50, bond premium [NOT ESTABLISHED], lawyer $2,000–4,000, domain ~$12 |
 | **Gate** | **No client contact of any kind. Not one free review offered to a real person.** |
 
-### Days 31–60 — Licence, then five files for free
+### Days 31–60. Licence, then five files for free
 
 | | |
 |---|---|
@@ -615,7 +613,7 @@ rules come before the plan.**
 | **Ship** | Five files open, hours-per-file data, the first real uplift figures |
 | **Gate** | **If the licence does not issue, stop. There is no fallback structure — see section 3.** |
 
-### Days 61–90 — First paid files, first published numbers
+### Days 61–90. First paid files, first published numbers
 
 | | |
 |---|---|
@@ -624,17 +622,17 @@ rules come before the plan.**
 | **Ship** | 10 signed files, one published outcomes page with real numbers, decline rate stated |
 | **Note** | **Signed is not paid.** Expect little or no cash inside 90 days. |
 
-### Month 12 — what the arithmetic actually says
+### Month 12, what the arithmetic actually says
 
 Take the blend of $1,170 per settled file from 7.3, files ramping from 5/month at
 month 4 by roughly +2/month, and a settlement lag of six months [ASSUMPTION
 throughout]: **signed volume reaches roughly 21 files a month around month 12,
-which is about $24,500 a month of eventual fee value — but the cash arriving in
+which is about $24,500 a month of eventual fee value, but the cash arriving in
 month 12 is what was signed in month 6, which is closer to $10,000.**
 
 **So the honest twelve-month target is about $10,000 a month collected against
-$25,000 a month signed, and $30,000 collected lands somewhere past month 18** —
-and that is on the favourable side of every assumption in this document.
+$25,000 a month signed, and $30,000 collected lands somewhere past month 18**.
+And that is on the favourable side of every assumption in this document.
 
 **The cell that decides it is hours per file**, exactly as churn was the deciding
 cell for Counterweight. At 4 hours a file the solo ceiling is roughly 30–35
@@ -677,7 +675,7 @@ provider of legal advice, an insurance company, or anyone's guarantee.
 
 | Exposure | Handling |
 |---|---|
-| **Unlicensed public adjusting** | Hold the Texas licence before any client contact. This is the whole of section 3 and it is non-negotiable. |
+| **Unlicensed public adjusting** | Hold the Texas licence before any client contact. This is the whole of section 3 and it is non-negotiable. **[NOT ESTABLISHED: the penalty grading in Texas. It does not change the decision, only how bad the downside is.]** |
 | **Contract form** | TDI **FIN535**, unmodified. 72-hour rescission. **"WE REPRESENT THE INSURED ONLY"** in 12-point boldface, as the statute requires. |
 | **Fee cap** | 10%, charged on the increase only. Audited monthly. |
 | **Referral payments** | None paid (§ 4102.160), none accepted (§ 4102.164). No contractor leads, no lead-gen firms, no reciprocal arrangements, no discounts as consideration. |
@@ -704,7 +702,7 @@ depends on it.** *Mitigation: the five free files in days 31–60 exist to measu
 exactly this, before any pricing is published.*
 
 **3. Reputation.** Post-disaster claim assistance contains genuine predators, and
-being mistaken for one is fatal — not gradually, but immediately, because the
+being mistaken for one is fatal, not gradually, but immediately, because the
 first thing a homeowner does is search the name. *Mitigation: the free honest
 answer including "the denial was correct"; a published decline rate; no
 door-knocking; no upfront fees; the fee charged on the increase only. **Every one
@@ -712,7 +710,7 @@ of these costs money and every one of them is the product.***
 
 **4. The conflict with Counterweight.** Competing with your own customers, in a
 professional community that talks. *Mitigation: the declined-claims mandate and
-proactive disclosure in section 5 — which also caps Overturn's claim size and
+proactive disclosure in section 5, which also caps Overturn's claim size and
 therefore its revenue per file. The mitigation and risk 2 pull against each
 other, and that is unresolved.*
 
@@ -728,7 +726,7 @@ enough that a rule change does not invalidate the contracts already signed.*
 
 **7. Carriers deploy counter-AI.** 65% of insurers plan scaled AI claims agents in
 2026, resolving 75% faster at 30–40% lower cost. This becomes an arms race
-against better-funded opponents. *Mitigation: the asymmetry works both ways — a
+against better-funded opponents. *Mitigation: the asymmetry works both ways, a
 faster, cheaper carrier process is also a more consistent one, and consistency is
 easier to argue against than a human's discretion. This is a hope, not a plan.*
 
@@ -747,7 +745,7 @@ Written now, while it is cheap to be honest.
 |---|---|---|
 | Day 30 | The lawyer says structure (b) as described is not clean | **Stop.** The business is Counterweight. This document is the record of why. |
 | Day 30 | Findings confirmed by a licensed read are **below 70%** | **Stop.** Do not offer a review to a real homeowner. |
-| Day 60 | The licence does not issue | **Stop.** There is no compliant fallback — section 3 is exhaustive. |
+| Day 60 | The licence does not issue | **Stop.** Section 3 is exhaustive: there is no compliant fallback for Overturn as a contingency service. The fallback is Counterweight. |
 | Day 90 | **Fewer than 5 signed files** from the channels in section 8 | The channel does not work. Homeowner acquisition is the untested half of this business and this is the test. Rewrite once. |
 | Month 6 | **Average recovery per settled file below $4,000** | The uplift assumption is half wrong. At a 10% cap the model does not close. Move upmarket — which puts you against Counterweight's customers — or stop. |
 | Month 6 | **Hours per file above 8** | The solo ceiling is ~$18,000/month. Hire a licensed adjuster or stop. |

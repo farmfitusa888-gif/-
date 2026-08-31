@@ -244,7 +244,7 @@ segment. A better list than a bigger one.** The Texas Association of Public
 Insurance Adjusters is the state equivalent.
 
 **The move is not to advertise.** It is to publish something the membership
-actually wants. The denial-letter guide already on the site — and let it be
+actually wants. The denial-letter guide already on the site, and let it be
 shared. One association newsletter mention reaches more qualified buyers than
 any amount of cold outreach.
 

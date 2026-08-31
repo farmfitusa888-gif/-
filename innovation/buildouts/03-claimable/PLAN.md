@@ -44,7 +44,7 @@ whether the product works.**
    a line of code for the hospital segment until counsel does.** See §9.
 2. **Payment on verified enrolment means you do the work months before you get
    paid.** Under a $1,000 budget that is not a cash-flow inconvenience, it is a
-   structural problem, and the fix. A paid pilot fee up front — is an
+   structural problem, and the fix. A paid pilot fee up front, is an
    [ASSUMPTION] about buyer behaviour that has not been tested.
 3. **The brief's own risk note is correct: this is the slowest sales cycle in
    the portfolio.** It probably does not clear a 6–12 month revenue target. §7
@@ -227,7 +227,7 @@ keep and where the build effort belongs.
 
 **That third line is the one to watch.** Payment on outcome means every denial is
 work you did for free. A model tuned for precision files fewer, better
-applications. Which is also the safety requirement — so precision and margin
+applications. Which is also the safety requirement, so precision and margin
 push the same direction here. That is a rare piece of luck and the plan leans on it.
 
 ---
@@ -442,7 +442,7 @@ and the fallback in §2 is already specified.*
 
 **2. Work-to-cash is 3–5 months and the budget is $1,000.** You can be right about
 everything and still run out of money waiting for a state agency to adjudicate.
-*Mitigation: pilot fee up front. An untested [ASSUMPTION] — and a first buyer
+*Mitigation: pilot fee up front. An untested [ASSUMPTION], and a first buyer
 small enough to pay it from a chequebook rather than a purchase order.*
 
 **3. The sales cycle does not clear the 6–12 month target.** Stated in the brief,
@@ -495,7 +495,7 @@ not renegotiate it afterwards.**
 
 **The idea is good and the timing is wrong.** The money is measured, the buyer's
 incentive is real, the failure of free screeners is documented, and the structural
-insight. Route the payment to where the value lands — is correct.
+insight. Route the payment to where the value lands, is correct.
 
 **What is wrong with it is everything downstream of that insight:** the buyer list
 is not pulled, the pricing model has an unanswered legal question in front of it,

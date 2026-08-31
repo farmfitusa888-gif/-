@@ -180,7 +180,7 @@ The transaction price is at least honest about what the product is.
 
 ### The per-customer cost that may end it
 
-**Labour time guides. Mitchell, ALLDATA, Motor — are commercial licensed data.**
+**Labour time guides. Mitchell, ALLDATA, Motor, are commercial licensed data.**
 Pricing is not public. **[NOT ESTABLISHED]**, and it is the single most important
 number to obtain, because if a per-lookup or per-seat licence costs a meaningful
 fraction of $29, **the product as designed cannot exist at consumer prices.**

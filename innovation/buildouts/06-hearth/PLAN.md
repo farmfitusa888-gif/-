@@ -168,7 +168,7 @@ a nurse line, or to 911, by severity, never by preference.
 
 ### 4.2 The failure mode that makes this genuinely dangerous
 
-**Hearth's core competence, behavioural technique — is exactly the wrong
+**Hearth's core competence, behavioural technique, is exactly the wrong
 response to delirium, and delirium presents as behaviour.**
 
 A sudden escalation in agitation or confusion in a person with dementia is
@@ -456,7 +456,7 @@ Revenue $49, less ~$1.72 payment processing (2.9% + 30¢) = **$47.28 net**
 [derived, $47.28 ÷ each rate]
 
 **Read the $0.20 row.** 236 minutes is roughly four hours of talking a month. A
-family in a bad sundowning month, 30 nights, 20 minutes each — burns 600
+family in a bad sundowning month, 30 nights, 20 minutes each, burns 600
 minutes and costs $120 against $49 of revenue. **The month a family needs Hearth
 most is the month it loses money on them**, and the honest response to that is
 not a meter.
