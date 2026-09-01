@@ -629,6 +629,17 @@ chapter's penalty subchapter `[review]`. **The grading of that offence is
 `buildouts/02-overturn/PLAN.md` and I could not close it either. Do not state a
 grading anywhere until the section is read.
 
+> **`[conflict]` recorded 2026-08-31.** `research/11-LIABILITY-SCREEN.md`
+> reports the criminal penalty at **§ 4102.206, a Class B misdemeanour**, and
+> puts **§ 4102.207** as the insured's option to void the contract and owe
+> nothing for services already rendered `[review]`. That contradicts the
+> section number used here. Neither reading has been checked against the
+> statute text, because the Texas legislature's site is blocked from this
+> machine. Do not cite either number until one of them is read. Five minutes on
+> an unblocked browser closes it: open the Texas Insurance Code chapter 4102,
+> subchapter E, and read the titles of §§ 4102.206 and 4102.207.
+
+
 **The Texas technical-assistance exemption is a weaker fit than it first looks.**
 It requires the person to be **employed by** the public adjuster. A software
 vendor selling a subscription is not employed by anyone. Compare Illinois below,

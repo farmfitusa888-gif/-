@@ -50,7 +50,7 @@ licensing statute pointed straight at the wrong version of it.
 | | Overturn | Countercite |
 |---|---|---|
 | Buyer known by name | No — homeowners, reachable only at the moment of denial | **Yes — 1,708 Texas licensees, 1,203 Florida firms** [MEASURED] |
-| Regulatory exposure | **Licensing. Acting as a public adjuster unlicensed is prohibited and enforced in both launch states; Illinois flags criminal exposure explicitly** [criminal grading in Texas NOT ESTABLISHED — check Tex. Ins. Code ch. 4102 subch. E] | None — software sold to licensed professionals |
+| Regulatory exposure | **Licensing. Acting as a public adjuster unlicensed is prohibited and enforced in both launch states; Illinois flags criminal exposure explicitly** [criminal grading in Texas NOT ESTABLISHED, and now also [conflict]: one source puts the criminal penalty at § 4102.206 as a Class B misdemeanour and § 4102.207 as the insured's option to void the contract. Neither has been read. Check Tex. Ins. Code ch. 4102 subch. E before citing either] | None — software sold to licensed professionals |
 | Cash timing | **Paid on settlement, months after the work** | Paid monthly, in advance |
 | Working capital needed | **Real, and unquantified** | Effectively none |
 | Founder is the constraint | **Yes — one licensed human, one set of hours** | No — software scales |
