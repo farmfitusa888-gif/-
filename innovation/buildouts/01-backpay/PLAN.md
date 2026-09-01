@@ -189,10 +189,15 @@ adjusters. Say so plainly.
 
 ### Segment A, California plaintiff-side employment firms (the paying customer)
 
-**Population: [NOT ESTABLISHED].** What would settle it: the **California
-Employment Lawyers Association** (`cela.org`) is the plaintiff-side employment
-bar and publishes a member directory. Pull the member count and the firm count in
-week one. That single number decides whether 101 firms is 5% of the market or
+**Population: [NOT ESTABLISHED, being resolved].** Sized in
+`research/12-CA-EMPLOYMENT-BAR.md` from five independent angles: the California
+Employment Lawyers Association's own published membership figures, including the
+statement-of-interest paragraph in its amicus filings, which are public court
+documents; State Bar of California section counts; practice-area directory
+counts, treated as upper bounds because they include defence-side attorneys;
+annual PAGA notice volume and the count of distinct filing firms, which measures
+the active market rather than the nominal one; and any published study of the
+plaintiff-side bar. That single number decides whether 101 firms is 5% of the market or
 80% of it, and the plan cannot be trusted until it exists.
 
 What I do know:
@@ -205,9 +210,19 @@ What I do know:
   destination the worker has to be routed to anyway. **The customer and the
   compliance mechanism are the same people.**
 
-**Hours saved per matter: [NOT ESTABLISHED].** What would settle it: ask five
-firms what a wage-and-hour damages model costs them in paralegal hours per
-matter. That is a ten-minute question and it is the entire payback argument.
+**Hours saved per matter: [NOT ESTABLISHED, being resolved].** The method
+originally written here was wrong and is corrected: it said to ask five firms.
+
+Do not ask anyone. **The answer is filed under oath in public court records.**
+Plaintiff firms seeking fees in class settlements file declarations itemising
+their lodestar, hours by timekeeper and rate by role, and courts write opinions
+ruling on whether those hours were reasonable. California wage-and-hour
+settlements produce these constantly. A firm asked to estimate from memory would
+give a worse answer than the one they already swore to, and would have no reason
+to answer an unsolicited question from a stranger with no product.
+
+Being answered from fee motions, fee opinions and expert declarations in
+`research/13-DAMAGES-MODEL-COST.md`.
 
 ### Segment B. California hourly workers (the beneficiary, not the payer)
 
