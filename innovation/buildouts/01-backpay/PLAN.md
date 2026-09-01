@@ -189,7 +189,40 @@ adjusters. Say so plainly.
 
 ### Segment A, California plaintiff-side employment firms (the paying customer)
 
-**Population: [NOT ESTABLISHED, being resolved].** Sized in
+**Population: ~400 firms. Range 350 to 600.** Resolved in
+`research/12-CA-EMPLOYMENT-BAR.md`, and the answer changes the plan.
+
+The question this section asked, whether 101 firms is 5% or 80% of the market,
+was the wrong question. The answer is **25%**, and the harder problem is the
+shape rather than the size.
+
+**The best figure is a count of behaviour, not of self-description: 396 firms
+filed at least one PAGA case in California in the twelve months to May 2026.**
+It converges independently with CELA's stated membership of over 1,400
+attorneys divided by roughly 3.5 attorneys per plaintiff-side firm.
+
+**The market is steeply concentrated, and that is the finding that matters.**
+Five firms take about 24% of all filings; twenty take half. The remaining ~376
+split the rest at roughly a dozen notices each per year. Three consequences:
+
+- **The top five are probably not customers.** At 400-plus notices a year they
+  have already built this internally. Selling to them is a distraction.
+- **The natural buyer is the tail and the upper middle**, call it 300 to 400
+  firms, filing often enough to need this and not often enough to have solved it.
+- **One price will be wrong for both ends of the market.** Which hundred firms
+  you win changes revenue by an order of magnitude.
+
+**The revised first target is 20 firms, not 100.** That is 5% of the market and
+roughly 30% of the matters, and it is reachable by name. A quarter of a defined
+professional market is a three-to-five-year outcome for a solo operator on a
+$1,000 budget, not a year-one one.
+
+`tools/paga_firm_census.py` turns the reported 396 into a measured number and
+produces the filings-per-firm distribution the tail estimate above is currently
+guessing at. It self-tests clean and has never run against the live site,
+because this environment's proxy returns 403 for the LWDA host.
+
+*(Superseded, kept for the record: the original text below.)* Sized in
 `research/12-CA-EMPLOYMENT-BAR.md` from five independent angles: the California
 Employment Lawyers Association's own published membership figures, including the
 statement-of-interest paragraph in its amicus filings, which are public court
