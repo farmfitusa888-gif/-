@@ -94,6 +94,40 @@ if (mode === "waitlist") {
   }
 }
 
+// 4. The audience rule.
+//
+// Selling flat-fee software to licensed professionals is the posture the legal
+// work assessed as safe. Selling the same thing direct to a policyholder is
+// where every unauthorized-practice and licensing question in this project
+// comes from. That distinction is worth more than any feature on the roadmap,
+// and it is exactly the kind of thing that erodes one well-meant landing page
+// at a time. So it is checked rather than remembered.
+//
+// These patterns match copy addressed to the affected individual. Describing a
+// policyholder in the third person is fine and expected, since that is the
+// customer's client.
+const CONSUMER_SELL = [
+  /\byour (claim|denial|policy) (was|has been|is) denied\b/i,
+  /\bif your claim was denied\b/i,
+  /\bupload your denial letter\b/i,
+  /\bwe(?:'| wi)ll fight your (claim|insurer|denial)\b/i,
+  /\bget your claim (paid|approved|overturned)\b/i,
+  /\bhomeowners?,? (start|sign up|upload)\b/i,
+  /\bfor policyholders\b/i,
+];
+
+if (site.audience !== "licensed-professionals-only") {
+  err(`site.audience must be "licensed-professionals-only", got ${JSON.stringify(site.audience)}. ` +
+      `Changing it is a legal-posture decision, not a copy decision.`);
+} else {
+  const prose = JSON.stringify(site);
+  for (const re of CONSUMER_SELL) {
+    const m = prose.match(re);
+    if (m) err(`copy sells direct to the affected individual: "${m[0]}". ` +
+               `See legal/00-LEGAL-POSTURE.md section 2.3.`);
+  }
+}
+
 // Unmatched claims are only fatal when selling. Before launch they are a list
 // of things to add to the ledger.
 for (const c of unmatched) {

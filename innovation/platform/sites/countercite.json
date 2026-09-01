@@ -1844,5 +1844,6 @@
       ]
     }
   ],
-  "launchStatus": "waitlist"
+  "launchStatus": "waitlist",
+  "audience": "licensed-professionals-only"
 }

@@ -24,7 +24,7 @@ Of the seven businesses, this is the least exciting and the most likely to work.
 | | Countercite | The others |
 |---|---|---|
 | Buyer known by name and address | **Yes — 1,708 of them, from a state file** | Estimated |
-| Regulatory exposure | **None.** Software sold to licensed professionals | Licensing, medical advice, FTC claim risk |
+| Regulatory exposure | **Low, and conditional.** Flat-fee software sold to licensed professionals, never contingent, never direct to the affected individual. See `../../legal/00-LEGAL-POSTURE.md` §2.3. Enforced by `platform/check-features.mjs`, not by memory. | Licensing, medical advice, FTC claim risk |
 | Consumer marketing spend needed | **None** | Substantial |
 | Payback argument | **1–2 billable hours** | Varies |
 | Customers needed for $30k/month | **101** | 105–535 |
@@ -460,3 +460,47 @@ Written now, while it is cheap to be honest.
 
 **The rule that makes these real: write the number down before the test, and do
 not renegotiate it afterwards.**
+
+
+---
+
+## Decision, 2026-08-31: professional-only, and the consumer line is closed
+
+Two pieces of research reached the same conclusion from opposite directions,
+neither having seen the other.
+
+The legal work found that selling flat-fee software to a licensed public
+adjuster is the safest posture available, with a near-express exemption in
+Illinois for furnishing technical assistance to a licensed adjuster and a
+narrower version of the same idea in Texas. It also found that every
+unauthorized-practice and licensing question in this project attaches to the
+policyholder-direct line and to nothing else.
+
+The go-to-market work, applying this plan's own adds-divided-by-churn formula,
+found that a policyholder base churns at something near 50% a month because a
+denied claim is an event rather than a condition. Holding 100 paying
+policyholders would need 50 new ones every month, forever. The professional
+base churns near 3.5% and needs four.
+
+So the consumer line was simultaneously the source of all the legal risk, the
+smaller share of revenue, and an arithmetic impossibility. It is closed.
+
+**What this changes in practice: very little, because the product was built
+this way.** The site has always addressed public adjusters, special education
+advocates and patient advocates. Policyholders appear in the copy only as the
+customer's client, which is correct and stays. The consumer product was
+introduced during the legal discussion and never built.
+
+**What it changes on paper:** the regulatory exposure row above, which was
+written when professionals were the only buyer and had quietly become wrong.
+And the plan now carries an enforced rule rather than an intention. The site
+config declares `audience: "licensed-professionals-only"`, and the build fails
+if that field changes or if copy appears that addresses the affected individual
+directly. Tested by injecting consumer copy and confirming the build refused it.
+
+**The rule that must never be broken, in any state, with anyone: never take a
+contingent fee.** A percentage of the settlement is the defining commercial
+feature of public adjusting. It is what all four states cap, and taking one
+would convert a software business into an unlicensed adjusting business
+everywhere at once. Flat pricing was chosen for product reasons. It is also the
+licensing defence.
