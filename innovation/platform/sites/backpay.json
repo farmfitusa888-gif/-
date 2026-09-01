@@ -473,8 +473,8 @@
     {
       "path": "/check",
       "kind": "page",
-      "title": "Check a California paycheck, free",
-      "h1": "Check one week of pay",
+      "title": "Check a California pay period, free",
+      "h1": "Check your pay period",
       "description": "Enter one week of hours and what you were paid. Backpay works out what California required and names the Labor Code section behind every figure. Runs in your browser; nothing is sent anywhere.",
       "keywords": [
         "california overtime calculator",
@@ -485,14 +485,14 @@
       "blocks": [
         {
           "type": "hero",
-          "h1": "Check one week of pay",
+          "h1": "Check your pay period",
           "lede": "Free, and it runs on your own device. No account, nothing sent anywhere, and no way for us to contact your employer even if we wanted to. It takes about two minutes with your stub in front of you.",
           "cta": false
         },
         {
           "type": "prose",
           "h2": "Before you start",
-          "body": "<p>You need one week's hours, the rate on your stub, and any bonus you were paid that week. The bonus matters more than anything else here: it changes the rate every overtime hour should have been paid at, and that rate appears on no document you receive. If a day is missing, leave it blank.</p>"
+          "body": "<p>You need your hours for the period, the rate on your stub, and any bonus you were paid that week. The bonus matters more than anything else here: it changes the rate every overtime hour should have been paid at, and that rate appears on no document you receive. If a day is missing, leave it blank.</p>"
         },
         {
           "type": "calculator",
