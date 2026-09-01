@@ -190,6 +190,40 @@ if (existsSync(bpPath)) {
   console.log(`\n  backpay: worker tier ${worker ? worker.price : "MISSING"}, mode ${bp.launchStatus}`);
 }
 
+// 7. Flood Facts must never collect a contact detail.
+//
+// This is the rule that keeps the whole idea legal, and it is one careless
+// landing page away from being broken. Collecting a name, email or phone number
+// in connection with insurance would make the operator an insurance producer in
+// many states, which needs a licence, which is the exact category of risk this
+// business was chosen to avoid. Display advertising and plain affiliate links
+// are fine because neither involves a contact.
+//
+// So no form fields, no mailto capture, no newsletter, no "get a quote". The
+// site config is scanned for the shapes that would do it.
+const ffPath = join(root, "platform/sites/floodfacts.json");
+if (existsSync(ffPath)) {
+  const ff = JSON.parse(readFileSync(ffPath, "utf8"));
+  const text = JSON.stringify(ff);
+  const LEAD_CAPTURE = [
+    [/<input\b(?![^>]*type=["']?(?:hidden|submit|button)\b)/i, "an input field"],
+    [/<form\b/i, "a form element"],
+    [/\btype=["']?email\b/i, "an email input"],
+    [/\b(get|request|compare) (a |your )?(free )?quotes?\b/i, "a quote offer"],
+    [/\b(sign up|subscribe|join our|newsletter|mailing list)\b/i, "a signup"],
+    [/\byour (name|email|phone|address) (to|and we)\b/i, "a contact request"],
+    [/\bwe(?:'ll| will) (call|email|contact|match) you\b/i, "a promise to make contact"],
+  ];
+  for (const [re, what] of LEAD_CAPTURE) {
+    const m = text.match(re);
+    if (m) err(`floodfacts: ${what} found ("${m[0]}"). Collecting a contact for insurance ` +
+               `would make the operator a producer in many states. Display and affiliate only.`);
+  }
+  if (ff.audience !== "no-customer-relationship")
+    err(`floodfacts: audience must be "no-customer-relationship", got ${JSON.stringify(ff.audience)}`);
+  console.log(`  floodfacts: ${ff.pages.length} pages, no contact capture, audience ${ff.audience}`);
+}
+
 const counts = ledger.features.reduce((a, f) => ((a[f.status] = (a[f.status] || 0) + 1), a), {});
 console.log(`\n  mode: ${mode}`);
 console.log(`  ledger: ${counts.shipped || 0} shipped, ${counts.partial || 0} partial, ${counts.planned || 0} planned`);

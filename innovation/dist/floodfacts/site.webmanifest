@@ -1,0 +1,16 @@
+{
+  "name": "Flood Facts",
+  "short_name": "Flood Facts",
+  "description": "Flood Facts reads FEMA's National Flood Insurance Program transaction files and reports what policies actually cost by county and flood zone, how often they claim, and what share of losses were paid.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E7ECEE",
+  "theme_color": "#9A6415",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+/* TEAM */
+Site: Flood Facts
+URL: https://floodfacts.example
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: none — hand-rolled static

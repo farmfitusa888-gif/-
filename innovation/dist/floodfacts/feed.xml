@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+    <title>Flood Facts</title>
+    <link>https://floodfacts.example/</link>
+    <description>Flood Facts reads FEMA's National Flood Insurance Program transaction files and reports what policies actually cost by county and flood zone, how often they claim, and what share of losses were paid.</description>
+    <language>en</language>
+
+</channel></rss>
