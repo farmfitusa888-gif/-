@@ -12,7 +12,7 @@
  *   node platform/build.mjs paystub    # build one
  */
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, copyFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { head, sitemap, robots, webmanifest, feed, abs, esc, clamp, plain } from "./seo.mjs";
@@ -106,6 +106,54 @@ ol.steps p{margin:0;color:var(--muted);font-size:15.5px}
 .price ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px;font-size:15px}
 .price li{padding-left:20px;position:relative;color:var(--muted)}
 .price li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--accent)}
+/* The calculator. Deliberately plain: someone reading this has a pay stub in
+   one hand and is deciding whether to trust a website with a number that
+   matters to them. Ornament would be the wrong signal. */
+.calc form{margin-top:26px}
+table.days thead th{text-transform:none;letter-spacing:0;font-size:13.5px}
+.calc fieldset{border:1px solid var(--rule);background:var(--card);padding:20px 22px 22px;margin:0 0 18px}
+.calc legend{font-family:var(--display);font-size:19px;font-weight:600;padding:0 8px;color:var(--ink)}
+.calc .hint{display:block;font-size:13.5px;color:var(--muted);line-height:1.5;margin:4px 0 0;font-weight:400}
+.calc .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px;margin-top:6px}
+.calc label{display:block;font-size:15px;font-weight:600}
+.calc input[type=number],.calc select{width:100%;margin-top:7px;padding:9px 11px;font:inherit;
+  font-size:16px;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:2px}
+.calc input:focus-visible,.calc select:focus-visible,.calc button:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px}
+table.days{width:100%;border-collapse:collapse;margin-top:12px}
+table.days th{text-align:left;font-size:13px;font-weight:600;color:var(--muted);padding:6px 8px 6px 0}
+table.days tbody th{font-weight:500;font-size:15px;color:var(--ink);white-space:nowrap;padding-right:14px}
+table.days td{padding:5px 8px 5px 0}
+table.days td:first-of-type{width:22%}
+.calc .checks{display:grid;gap:11px;margin-top:12px}
+.calc label.chk{font-weight:400;font-size:15px;display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+.calc label.chk input{margin-top:3px;flex:0 0 auto;width:auto}
+.calc button.btn{cursor:pointer;font-size:16px;padding:12px 26px}
+.calc-noscript{margin-top:16px;padding:14px 16px;border-left:3px solid var(--accent);background:var(--accentSoft);font-size:15px}
+@media(max-width:620px){
+  table.days,table.days tbody,table.days tr,table.days td,table.days th{display:block}
+  table.days thead{display:none}
+  table.days tr{border-top:1px solid var(--rule);padding:10px 0}
+  table.days tbody th{padding:0 0 6px}
+  table.days td{padding:0 0 8px}
+  table.days td:first-of-type{width:auto}
+}
+
+.result{margin-top:30px;border-top:2px solid var(--ink);padding-top:24px}
+.result h2{margin-top:0}
+.result.refused{border-top-color:var(--accent)}
+.result.refused ul{margin:14px 0;padding-left:20px}
+.result.refused li{margin-bottom:8px;color:var(--accent);font-size:15px;line-height:1.55}
+.result .v-short{font-size:20px;line-height:1.5;margin-top:20px}
+.result .v-short strong{color:var(--accent)}
+.result .v-ok,.result .v-none{font-size:17px;line-height:1.55;margin-top:20px;color:var(--muted)}
+.result .whys{margin-top:26px;border-top:1px solid var(--rule);padding-top:18px}
+.result .whys h3{font-size:16px;margin:0 0 12px}
+.result p.why{font-size:14.5px;line-height:1.6;color:var(--muted);margin-bottom:10px;max-width:66ch}
+.result p.why .cite{font-family:var(--mono);font-size:12.5px;color:var(--accent);display:block}
+.result .after{margin-top:24px;font-size:14.5px;color:var(--muted);line-height:1.62;max-width:64ch;
+  border-left:2px solid var(--rule);padding-left:14px}
+
 /* ---------------------------------------------------------------------------
    Backpay's visual language. Grounded in the subject's own material: a pay
    stub is printed on safety paper, and a person checking one marks the error
@@ -301,9 +349,9 @@ const R = {
     ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
     <h1>${esc(b.h1)}</h1>
     <p class="lede">${b.lede}</p>
-    <div class="cta-row"><a class="btn" href="${s.cta.path}">${esc(b.cta || s.cta.label)}</a>${
+    ${b.cta === false ? "" : `<div class="cta-row"><a class="btn" href="${s.cta.path}">${esc(b.cta || s.cta.label)}</a>${
       b.cta2 ? `<a class="btn ghost" href="${b.cta2.path}">${esc(b.cta2.label)}</a>` : ""
-    }</div>
+    }</div>`}
     ${b.note ? `<p class="note">${esc(b.note)}</p>` : ""}
   </div></section>`,
 
@@ -378,6 +426,14 @@ const R = {
   // run, so this cannot drift into being a picture of something that used to
   // be true. Every row names the statute that produced it, which is the whole
   // product argument stated as a layout rather than a claim.
+  calculator: (b) => `<section class="calc-sec"><div class="wrap">
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    ${b.intro ? `<p class="lede">${b.intro}</p>` : ""}
+    <div id="calculator" class="calc"></div>
+    <noscript><p class="calc-noscript">${esc(b.noscript || "This calculator runs entirely in your browser, which means it needs JavaScript switched on. Nothing is sent anywhere either way.")}</p></noscript>
+    <script type="module" src="/app/check.js"></script>
+  </div></section>`,
+
   stub: (b) => `<section class="stub-sec"><div class="wrap">
     <div class="stub-grid">
       <div class="stub-copy">
@@ -556,6 +612,16 @@ function buildSite(slug) {
       page.path === "/" ? join(out, "index.html") : join(out, page.path.replace(/^\//, ""), "index.html");
     mkdirSync(dirname(file), { recursive: true });
     writeFileSync(file, html);
+  }
+
+  // Ship the calculator, for sites that have one.
+  if (s.app?.length) {
+    mkdirSync(join(out, "app"), { recursive: true });
+    for (const src of s.app) {
+      const from = join(ROOT, "..", src);
+      if (!existsSync(from)) throw new Error(`app asset missing: ${src}`);
+      copyFileSync(from, join(out, "app", src.split("/").pop()));
+    }
   }
 
   writeFileSync(join(out, "sitemap.xml"), sitemap(s, pages));

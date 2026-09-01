@@ -83,6 +83,10 @@
   "audience": "free-to-workers-paid-by-firms",
   "nav": [
     {
+      "path": "/check",
+      "label": "Check a paycheck"
+    },
+    {
       "path": "/how-it-works",
       "label": "How it works"
     },
@@ -128,6 +132,10 @@
     {
       "title": "Who it's for",
       "links": [
+        {
+          "label": "Check a paycheck",
+          "path": "/check"
+        },
         {
           "label": "California workers",
           "path": "/for-workers"
@@ -451,6 +459,45 @@
               "a": "It refuses to answer and says why. An alternative workweek schedule, a collective bargaining agreement, piece-rate pay or an exempt classification each change the calculation in ways this engine does not model. A tool that overstates a claim is worse than no tool, because an overstated claim is what gets a whole damages model thrown out."
             }
           ]
+        }
+      ]
+    },
+    {
+      "path": "/check",
+      "kind": "page",
+      "title": "Check a California paycheck, free",
+      "h1": "Check one week of pay",
+      "description": "Enter one week of hours and what you were paid. Backpay works out what California required and names the Labor Code section behind every figure. Runs in your browser; nothing is sent anywhere.",
+      "keywords": [
+        "california overtime calculator",
+        "check my paycheck",
+        "am i owed overtime california",
+        "regular rate calculator"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "Check one week of pay",
+          "lede": "Free, and it runs on your own device. No account, nothing sent anywhere, and no way for us to contact your employer even if we wanted to. It takes about two minutes with your stub in front of you.",
+          "cta": false
+        },
+        {
+          "type": "prose",
+          "h2": "Before you start",
+          "body": "<p>You need one week's hours, the rate on your stub, and any bonus you were paid that week. The bonus matters more than anything else here: it changes the rate every overtime hour should have been paid at, and that rate appears on no document you receive. If a day is missing, leave it blank.</p>"
+        },
+        {
+          "type": "calculator",
+          "h2": "One week",
+          "intro": "Everything below happens in this page. Close the tab and it is gone."
+        },
+        {
+          "type": "prose",
+          "h2": "What this is and is not",
+          "body": "<p>It is arithmetic. It multiplies your hours by the rate California required and names the section that says so, and it will tell you when the answer comes out right, which is worth knowing too.</p><p>It is not advice, and it has not seen your schedule agreement, your union contract or anything your employer would say. It cannot tell you whether to do anything. What it can do is hand you a number you did not have, which is the thing standing between most people and any of the rest of it.</p>"
+        },
+        {
+          "type": "disclaimer"
         }
       ]
     },
@@ -830,5 +877,9 @@
         }
       ]
     }
+  ],
+  "app": [
+    "engines/ca-wage/rules.mjs",
+    "platform/app/check.js"
   ]
 }
