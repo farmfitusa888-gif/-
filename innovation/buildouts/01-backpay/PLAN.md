@@ -243,7 +243,55 @@ What I do know:
   destination the worker has to be routed to anyway. **The customer and the
   compliance mechanism are the same people.**
 
-**Hours saved per matter: [NOT ESTABLISHED, being resolved].** The method
+**Hours per damages model: ~45. Cash cost to the firm: ~$2,300.** Answered in
+`research/13-DAMAGES-MODEL-COST.md` from fee motions, fee opinions and expert
+declarations, which is where the answer was filed under oath all along.
+
+| | |
+|---|---|
+| Hours per damages model | 25 to 80, centre ~45 |
+| Cash cost, paralegal time loaded | **~$2,300** |
+| Lodestar value of the same time | ~$16,200 |
+| Hiring a damages expert instead | $3,000 to $10,000 |
+| **$299/month pays for itself at** | **1.6 to 4.0 matters a year** |
+
+Any firm doing this work at all clears four matters a year. The payback bar is
+low, and rates are the solid part of the finding: paralegals $150 to $300 with
+a centre near $225, from rates actually claimed and actually approved or cut by
+California courts.
+
+### The objection this research found, which the pitch has to survive
+
+**Hours are an asset in a fee motion, not only a cost.** Plaintiff firms justify
+fee requests with lodestar, frequently as a negative multiplier, meaning they
+claim more lodestar than the fee they ask for. A tool that removes 45 hours
+removes 45 hours of lodestar. A partner can reasonably say that hurts.
+
+This is a genuine objection and the plan was written without it. Three answers,
+and the first is the only one that fully works:
+
+1. **A contingency firm's constraint is matters, not hours.** A negative
+   multiplier is the firm telling the court it already has more hours than the
+   fee justifies. Hours are not scarce for them; capacity is. Time not spent
+   rebuilding a spreadsheet is time spent on the next case, and the next case is
+   where the money is.
+2. **Defensibility, which lodestar does not buy.** A model where every figure
+   names its statute survives an attack that a hand-built spreadsheet does not,
+   and an excluded damages model costs the whole fee rather than 45 hours of it.
+3. **The matters that never justified an expert.** A $3,000 to $10,000 expert is
+   right on a large case and impossible on a small one. Those small matters are
+   where a $299 subscription competes against nothing at all.
+
+**So the pitch is not "save paralegal hours."** It is capacity, defensibility,
+and matters you would otherwise decline. §6 should be read with that correction.
+
+### Quote the cash number, not the lodestar
+
+Sell against **$2,250**, never against $16,200. The lodestar figure is the value
+of the time, not the cost of it, and quoting it invites a partner to check it
+against a salary, find the gap, and stop trusting the rest of the page.
+
+*(Superseded, kept for the record: the original text below.)* The method
 originally written here was wrong and is corrected: it said to ask five firms.
 
 Do not ask anyone. **The answer is filed under oath in public court records.**
@@ -485,7 +533,7 @@ Against what each buyer would otherwise do:
 |---|---|
 | **The worker checks it themselves** | They cannot. The worked example's error is in the regular rate, which is not a number on the stub. This is the real competitor and it wins by default today. |
 | **The worker asks a lawyer** | A lawyer can only act on a case that walks in. EPI's finding is that the worker never knows to walk. Not a competitor — the destination. |
-| **The firm's paralegal and a spreadsheet** | Free, and it is what they do now. Backpay wins on hours and on defensibility, and only on those. |
+| **The firm's paralegal and a spreadsheet** | Free, and it is what they do now. Backpay wins on **capacity and defensibility**, not on hours. Corrected: hours are an asset in a fee motion, so "we save you 45 hours" argues against itself. See §4. |
 | **A generic AI chatbot** | Firms are already trying it. It pyramids daily and weekly overtime, it invents Labor Code sections, and no attorney will sign a damages model they cannot trace. Backpay wins on **citation to the statute**. |
 | **DOL or the Labor Commissioner** | Compliance actions are down 49%. The small claim has been squeezed out. That is the gap, not the competition. |
 

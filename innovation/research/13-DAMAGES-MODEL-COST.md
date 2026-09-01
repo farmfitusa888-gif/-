@@ -325,7 +325,7 @@ $299/month ÷ saving per matter = matters per month the tool must touch.
 Annualised: at $2,250 saved per matter the subscription needs **1.6 matters a
 year**. At a pessimistic $900 it needs **4.0 matters a year**.
 
-**Is that a low bar or a high one? Low.** A California firm that takes
+**That is a low bar.** A California firm that takes
 wage-and-hour class or PAGA work at all is carrying more than four such matters
 a year; the fee declarations above come from firms running many simultaneously.
 The threshold is cleared by a firm doing this work occasionally, let alone one
