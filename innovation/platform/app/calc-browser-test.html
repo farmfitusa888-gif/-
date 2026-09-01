@@ -10,30 +10,35 @@
 <div id="verdict">running</div>
 <script type="module">
 import { mount } from "http://127.0.0.1:8901/app/check.js";
-import { computeWorkweek } from "http://127.0.0.1:8901/app/rules.mjs";
+import { computeWorkweek, cumulative } from "http://127.0.0.1:8901/app/rules.mjs";
 const root = document.getElementById("calculator");
 mount(root);
 const f = document.getElementById("wk");
-// The exact week from engines/ca-wage/demo.mjs. If the browser path and the
-// Node path disagree, two versions of the law are shipping.
+// The exact week from engines/ca-wage/demo.mjs, entered twice. If the browser
+// path and the Node path disagree, two versions of the law are shipping.
 f.elements.rate.value = "19.00";
 f.elements.bonus.value = "75.00";
-f.elements.paid.value = String(59.5*19 + 75);
 const hrs = [8, 8.5, 8, 13, 8, 9, 5];
 const meals = [1,1,1,1,0,1,1];
-hrs.forEach((h,i)=>{ f.elements["h"+i].value = String(h);
-  f.elements["m"+i].value = String(meals[i]);
-  f.elements["r"+i].value = i===6 ? "1" : "2"; });
+for (const n of [0, 1]) {
+  hrs.forEach((h,i)=>{ f.elements[`w${n}h${i}`].value = String(h);
+    f.elements[`w${n}m${i}`].value = String(meals[i]);
+    f.elements[`w${n}r${i}`].value = i===6 ? "1" : "2"; });
+  f.elements[`w${n}paid`].value = String(59.5*19 + 75);
+}
 f.dispatchEvent(new Event("submit", {cancelable:true, bubbles:true}));
-await new Promise(r=>setTimeout(r,120));
+await new Promise(r=>setTimeout(r,150));
 const txt = document.getElementById("out").textContent;
-const expect = computeWorkweek({
+const week = computeWorkweek({
   baseHourlyRate:19, nonDiscretionaryPay:75,
   days: hrs.map((h,i)=>({date:"d"+i,hoursWorked:h,mealPeriodsTaken:meals[i],restPeriodsTaken:i===6?1:2})),
   paid:{grossPay:59.5*19+75, totalHours:59.5}});
-const want = "$" + expect.shortfall.difference.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmt = (n) => "$" + n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const want = fmt(week.shortfall.difference);
+const wantTotal = fmt(cumulative([week, week]).totalShortfall);
 document.getElementById("verdict").textContent =
-  "EXPECT " + want + " | FOUND_IN_DOM " + (txt.includes(want) ? "YES" : "NO") +
+  "EXPECT " + wantTotal + " | FOUND_IN_DOM " + (txt.includes(wantTotal) ? "YES" : "NO") +
+  " | PERWEEK " + (txt.includes(want) ? "YES":"NO") +
   " | RATE_SHOWN " + (txt.includes("$20.26") ? "YES":"NO") +
   " | CITES " + (txt.includes("510") ? "YES":"NO");
 </script></body></html>

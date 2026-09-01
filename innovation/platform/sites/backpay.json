@@ -87,6 +87,10 @@
       "label": "Check a paycheck"
     },
     {
+      "path": "/stub-check",
+      "label": "Check a stub"
+    },
+    {
       "path": "/how-it-works",
       "label": "How it works"
     },
@@ -135,6 +139,10 @@
         {
           "label": "Check a paycheck",
           "path": "/check"
+        },
+        {
+          "label": "Check a stub",
+          "path": "/stub-check"
         },
         {
           "label": "California workers",
@@ -488,13 +496,56 @@
         },
         {
           "type": "calculator",
-          "h2": "One week",
-          "intro": "Everything below happens in this page. Close the tab and it is gone."
+          "h2": "Your pay period",
+          "intro": "Two weeks to start. Add more if your period is longer. Everything below happens in this page.",
+          "mount": "calculator",
+          "script": "check.js"
         },
         {
           "type": "prose",
           "h2": "What this is and is not",
           "body": "<p>It is arithmetic. It multiplies your hours by the rate California required and names the section that says so, and it will tell you when the answer comes out right, which is worth knowing too.</p><p>It is not advice, and it has not seen your schedule agreement, your union contract or anything your employer would say. It cannot tell you whether to do anything. What it can do is hand you a number you did not have, which is the thing standing between most people and any of the rest of it.</p>"
+        },
+        {
+          "type": "disclaimer"
+        }
+      ]
+    },
+    {
+      "path": "/stub-check",
+      "kind": "page",
+      "title": "Does your California pay stub show what it must?",
+      "h1": "What your stub is required to show",
+      "description": "California requires nine specific items on every pay stub. Missing ones carry penalties of their own, whether or not the pay was right. Nine questions, no arithmetic, runs in your browser.",
+      "keywords": [
+        "california pay stub requirements",
+        "labor code 226",
+        "itemized wage statement",
+        "what must a pay stub show"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "What your stub is required to show",
+          "cta": false,
+          "lede": "California law lists nine things every pay stub must carry. Missing ones carry a penalty of their own, whether or not a single cent of your pay was wrong. This takes about a minute and needs no arithmetic."
+        },
+        {
+          "type": "prose",
+          "h2": "Why this is a separate question",
+          "body": "<p>Most people assume a pay stub is a receipt: if the number is right, the stub is fine. California does not treat it that way. Section 226(a) of the Labor Code requires nine specific items, and the reason is practical rather than bureaucratic. A stub that omits the hourly rates and the hours worked at each is a stub nobody can check, and a pay error inside it stays invisible for years.</p><p>So the missing items carry their own penalty, independent of the pay. That is worth knowing before you work out anything else, because it is the one thing on this site you can answer by looking.</p>"
+        },
+        {
+          "type": "calculator",
+          "mount": "stubcheck",
+          "script": "stubcheck.js",
+          "h2": "The nine items",
+          "intro": "Tick what is actually printed on your stub. Leave anything you cannot find unticked."
+        },
+        {
+          "type": "prose",
+          "h2": "After this",
+          "body": "<p>Whether the stub is complete and whether the pay was right are different questions with different answers. <a href='/check'>The calculator</a> handles the second one.</p>"
         },
         {
           "type": "disclaimer"
@@ -880,6 +931,7 @@
   ],
   "app": [
     "engines/ca-wage/rules.mjs",
-    "platform/app/check.js"
+    "platform/app/check.js",
+    "platform/app/stubcheck.js"
   ]
 }

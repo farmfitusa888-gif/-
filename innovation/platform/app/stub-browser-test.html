@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- Browser test for the stub checker. The penalty arithmetic is trivial and
+     therefore exactly the kind of thing that ships wrong: an off-by-one on the
+     first violation, or a cap that never applies. Driven in a real browser
+     against the real form. Run: node platform/app/run-stub-test.mjs -->
+<html><body>
+<div id="stubcheck"></div>
+<div id="verdict">running</div>
+<script type="module">
+import { mount } from "http://127.0.0.1:8901/app/stubcheck.js";
+const root = document.getElementById("stubcheck");
+mount(root);
+const f = document.getElementById("sc");
+
+// Case 1: everything ticked except the two that matter most, over 26 periods.
+// $50 first + $100 x 25 = $2,550, under the $4,000 cap.
+for (const el of f.querySelectorAll('input[type=checkbox]')) el.checked = true;
+f.elements.hourlyRatesAndHours.checked = false;
+f.elements.payPeriodDates.checked = false;
+f.elements.periods.value = "26";
+f.dispatchEvent(new Event("submit", {cancelable:true, bubbles:true}));
+await new Promise(r=>setTimeout(r,80));
+const a = document.getElementById("scout").textContent;
+
+// Case 2: 100 periods must hit the cap and stop, not keep climbing.
+f.elements.periods.value = "100";
+f.dispatchEvent(new Event("submit", {cancelable:true, bubbles:true}));
+await new Promise(r=>setTimeout(r,80));
+const b = document.getElementById("scout").textContent;
+
+// Case 3: a complete stub must not report a penalty at all.
+for (const el of f.querySelectorAll('input[type=checkbox]')) el.checked = true;
+f.dispatchEvent(new Event("submit", {cancelable:true, bubbles:true}));
+await new Promise(r=>setTimeout(r,80));
+const c = document.getElementById("scout").textContent;
+
+// The marker is assembled at runtime. --dump-dom returns the script source as
+// well as the rendered page, so a literal marker string in this file would be
+// found by the grep regardless of whether anything actually ran. The first
+// version of this test passed that way, on a truncated match, which is a worse
+// outcome than failing.
+const MARK = ["RES", "ULT"].join("");
+document.getElementById("verdict").textContent = MARK + " " +
+  "TWOMISSING " + (a.includes("2 required items are missing") ? "YES":"NO") +
+  " | P26 " + (a.includes("$2,550") ? "YES":"NO") +
+  " | CAP " + (b.includes("$4,000") ? "YES":"NO") +
+  " | COMPLETE " + (c.includes("Every required item is there") ? "YES":"NO") +
+  " | NOPENALTY " + (/\$\d/.test(c) ? "NO":"YES") +
+  " | CITES " + (a.includes("226") ? "YES":"NO");
+</script></body></html>

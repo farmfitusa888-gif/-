@@ -10,14 +10,14 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "../..");
 const DIST = join(ROOT, "dist/backpay");
 const CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome";
 const TYPES = { ".js": "text/javascript", ".mjs": "text/javascript", ".html": "text/html" };
-const PORT = 8917;
+const PORT = 8919;
 
 if (!existsSync(join(DIST, "app/rules.mjs"))) {
   console.error("\n  dist/backpay/app not built. Run: node platform/build.mjs\n");
   process.exit(1);
 }
 
-const test = readFileSync(join(ROOT, "platform/app/calc-browser-test.html"), "utf8")
+const test = readFileSync(join(ROOT, "platform/app/stub-browser-test.html"), "utf8")
   .replaceAll("8901", String(PORT));
 
 const server = createServer((req, res) => {
@@ -47,9 +47,8 @@ server.listen(PORT, "127.0.0.1", () => {
     { encoding: "utf8", maxBuffer: 32 * 1024 * 1024, timeout: 60000 },
     (err, dom) => {
       server.close();
-      console.log("\ncalculator, in a real browser\n");
-      const line = (String(dom || "").match(
-        /EXPECT \$[\d.,]+ \| FOUND_IN_DOM \w+ \| PERWEEK \w+ \| RATE_SHOWN \w+ \| CITES \w+/) || [])[0];
+      console.log("\nstub checker, in a real browser\n");
+        const line = (String(dom || "").match(/RESULT TWOMISSING \w+ \| P26 \w+ \| CAP \w+ \| COMPLETE \w+ \| NOPENALTY \w+ \| CITES \w+/) || [])[0];
       if (!line) {
         console.log("  FAIL  no verdict on the page. The module probably threw.");
         if (err) console.log("        " + err.message.split("\n")[0]);
@@ -57,12 +56,15 @@ server.listen(PORT, "127.0.0.1", () => {
         process.exit(1);
       }
       console.log("  " + line);
-      const ok = line.includes("FOUND_IN_DOM YES") && line.includes("PERWEEK YES")
-        && line.includes("RATE_SHOWN YES") && line.includes("CITES YES");
+        // Require every flag to be YES explicitly. "contains no NO" passes on a
+      // truncated match, which is how the first version of this reported a pass
+      // while testing nothing.
+      const flags = line.match(/\b(YES|NO)\b/g) || [];
+      const ok = flags.length === 6 && flags.every((f) => f === "YES");
       console.log(ok
-        ? "\n  PASS  the page and the engine agree, the corrected rate is shown, "
-          + "and findings cite a statute.\n"
-        : "\n  FAIL  the page and the engine disagree.\n");
+        ? "\n  PASS  missing items detected, penalty arithmetic right, cap applied, "
+          + "complete stub reports no penalty.\n"
+        : "\n  FAIL  see the flags above.\n");
       process.exit(ok ? 0 : 1);
     });
 });

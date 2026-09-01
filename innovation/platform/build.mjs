@@ -109,6 +109,18 @@ ol.steps p{margin:0;color:var(--muted);font-size:15.5px}
 /* The calculator. Deliberately plain: someone reading this has a pay stub in
    one hand and is deciding whether to trust a website with a number that
    matters to them. Ornament would be the wrong signal. */
+.wk-actions{display:flex;gap:12px;margin:0 0 18px;flex-wrap:wrap}
+.wk-actions .btn{font-size:14.5px;padding:8px 16px;cursor:pointer}
+.calc label.wk-pay{margin-top:14px;display:block;max-width:320px}
+.calc label.chk span{display:block}
+.calc label.chk .hint{margin-top:2px}
+.wk-result{margin-top:24px}
+.wk-result h3{font-family:var(--display);font-size:19px;font-weight:600;margin:0 0 10px}
+.wk-result.refused ul{margin:8px 0 0;padding-left:20px}
+.wk-result.refused li{color:var(--accent);font-size:14.5px;line-height:1.55;margin-bottom:6px}
+.result h2 .big{color:var(--accent);white-space:nowrap}
+.weeks-out{margin-top:8px}
+
 .calc form{margin-top:26px}
 table.days thead th{text-transform:none;letter-spacing:0;font-size:13.5px}
 .calc fieldset{border:1px solid var(--rule);background:var(--card);padding:20px 22px 22px;margin:0 0 18px}
@@ -429,9 +441,9 @@ const R = {
   calculator: (b) => `<section class="calc-sec"><div class="wrap">
     ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
     ${b.intro ? `<p class="lede">${b.intro}</p>` : ""}
-    <div id="calculator" class="calc"></div>
-    <noscript><p class="calc-noscript">${esc(b.noscript || "This calculator runs entirely in your browser, which means it needs JavaScript switched on. Nothing is sent anywhere either way.")}</p></noscript>
-    <script type="module" src="/app/check.js"></script>
+    <div id="${esc(b.mount || "calculator")}" class="calc"></div>
+    <noscript><p class="calc-noscript">${esc(b.noscript || "This tool runs entirely in your browser, which means it needs JavaScript switched on. Nothing is sent anywhere either way.")}</p></noscript>
+    <script type="module" src="/app/${esc(b.script || "check.js")}"></script>
   </div></section>`,
 
   stub: (b) => `<section class="stub-sec"><div class="wrap">
