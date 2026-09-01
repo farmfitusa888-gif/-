@@ -29,8 +29,18 @@ No customer. Nobody signs up, nobody pays, nobody has an account. Revenue would
 be display advertising and plain affiliate links. It needs no entity, no
 outreach and no contact of any kind, which is the whole of `../CONSTRAINTS.md`.
 
-And it survives what killed the ad-supported category generally: the answer
-requires the reader's own address, so an AI summary cannot pre-empt it.
+**A claim that was here and is wrong.** This file previously said the site
+survives what killed the ad-supported category generally, because the answer
+requires the reader's own address so an AI summary cannot pre-empt it. The
+revenue research refuted it. Ahrefs' study of 146 million result pages finds
+that queries of seven or more words trigger an AI Overview **46.4%** of the
+time against **9.5%** for single words. Specificity is the trigger, not the
+shield. What actually protects a page like this is Google currently throttling
+AI Overviews on financial content to 22.9%, which is a policy rather than a
+property of the subject, and it can be withdrawn without notice.
+
+See `../research/18-AD-AND-AFFILIATE-RATES.md`. The rest of that document is
+harder reading than this correction.
 
 ## Status
 
