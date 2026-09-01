@@ -21,7 +21,7 @@
 Countercite is operated by **[[FILL: legal entity name, e.g. Countercite
 Software LLC, a Texas limited liability company]]**, at **[[FILL: full street
 address, including city, state and ZIP. A real address, not a PO box. This has
-to be here.]]**. You can reach us at **[[FILL: support email address]]**.
+to be here.]]**. You can reach us at **support@countercite.app**.
 
 In these terms, "we" and "us" mean that company. "You" means the person or
 business using Countercite.
@@ -96,7 +96,7 @@ You agree that:
 
 ## 5. Accounts, payment and cancellation
 
-**Plans and prices** are listed at [[FILL: pricing page URL]]. Subscriptions
+**Plans and prices** are listed at https://countercite.app/pricing. Subscriptions
 renew automatically each [[FILL: month / year]] until you cancel.
 
 **Cancelling.** You can cancel at any time from your account settings. Your
@@ -199,7 +199,7 @@ you, where it already sat before you started using us.
 
 ## 10. If something goes wrong between us
 
-**Talk to us first.** Email [[FILL: support email]] with what happened. Most
+**Talk to us first.** Email support@countercite.app with what happened. Most
 things get sorted out here, and we would rather fix a problem than argue about
 one. We will respond within [[FILL: 10]] business days.
 
@@ -259,4 +259,4 @@ where old versions live]] so you can see what changed and when.
 
 ---
 
-**Questions about any of this: [[FILL: support email address]].**
+**Questions about any of this: support@countercite.app.**

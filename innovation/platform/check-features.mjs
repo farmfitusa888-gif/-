@@ -120,12 +120,44 @@ if (site.audience !== "licensed-professionals-only") {
   err(`site.audience must be "licensed-professionals-only", got ${JSON.stringify(site.audience)}. ` +
       `Changing it is a legal-posture decision, not a copy decision.`);
 } else {
-  const prose = JSON.stringify(site);
+  // Scan the marketing pages only. The legal pages are generated from
+  // legal/*.md, and DISCLAIMERS.md necessarily quotes the forbidden sentences
+  // in order to promise we will never say them. Flagging a document for
+  // containing the list of things it forbids is the false-positive class that
+  // gets a guard switched off, so it is excluded by path rather than by luck.
+  const LEGAL_PAGES = new Set(["/terms", "/privacy", "/disclaimers", "/accuracy"]);
+  const marketing = {
+    ...site,
+    pages: site.pages.filter((pg) => !LEGAL_PAGES.has(pg.path)),
+  };
+  const prose = JSON.stringify(marketing);
   for (const re of CONSUMER_SELL) {
     const m = prose.match(re);
     if (m) err(`copy sells direct to the affected individual: "${m[0]}". ` +
                `See legal/00-LEGAL-POSTURE.md section 2.3.`);
   }
+}
+
+// 5. No selling with a draft contract.
+//
+// A terms of service reading "operated by [[FILL: legal entity name]]" is not a
+// typo, it is an unenforceable agreement, and the limitation-of-liability
+// clause is the layer doing the most work in a business-to-business posture.
+// It only protects transactions that happened after it existed and said
+// something.
+const LEGAL_DOCS = ["legal/TERMS-OF-SERVICE.md", "legal/PRIVACY-POLICY.md",
+                    "legal/DISCLAIMERS.md", "legal/NO-GUARANTEE-AND-TESTING-POLICY.md"];
+let blanks = 0;
+for (const f of LEGAL_DOCS) {
+  const full = join(root, f);
+  if (!existsSync(full)) { err(`legal document missing: ${f}`); continue; }
+  const n = (readFileSync(full, "utf8").match(/\[\[FILL:/g) || []).length;
+  blanks += n;
+  if (n && mode === "selling") err(`${f} still has ${n} unfilled blanks`);
+}
+if (blanks && mode !== "selling") {
+  warn(`${blanks} blanks across the legal documents. Fine for a waitlist, ` +
+       `fatal before the first paying customer.`);
 }
 
 // Unmatched claims are only fatal when selling. Before launch they are a list

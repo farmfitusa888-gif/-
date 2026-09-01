@@ -33,7 +33,7 @@ The rest of this document is the same thing said carefully.
 ## 1. Who is responsible for your information
 
 **[[FILL: legal entity name]]**, at **[[FILL: full street address, city, state,
-ZIP]]**. Contact: **[[FILL: privacy contact email address]]**.
+ZIP]]**. Contact: **privacy@countercite.app**.
 
 Countercite is run by one person. That is unusual for a company handling
 documents like these, and you should know it. It means there is a very short
@@ -124,10 +124,10 @@ cannot do ourselves, and each one sees only what that job requires.
 
 | Service | What it is for | What it sees | Where |
 |---|---|---|---|
-| **[[FILL: hosting and storage provider]]** | Running the service, storing your documents | Everything you upload, encrypted at rest | [[FILL: region]] |
-| **[[FILL: language model provider, named]]** | The single narrow comparison in step 4 above | Short passages from your documents. **Not the whole file, not your identity, not your policy or claim numbers** | [[FILL: region]] |
-| **[[FILL: OCR provider, named, or "none, OCR runs on our own servers"]]** | Turning scanned pages into text | The pages of scanned documents only | [[FILL: region]] |
-| **[[FILL: payment processor, e.g. Stripe]]** | Taking payment | Your name, email, billing details, card data. **We never see the card** | [[FILL: region]] |
+| **Cloudflare (Pages and R2)** | Running the service, storing your documents | Everything you upload, encrypted at rest | [[FILL: region]] |
+| **Anthropic (Claude models)** | The single narrow comparison in step 4 above | Short passages from your documents. **Not the whole file, not your identity, not your policy or claim numbers** | [[FILL: region]] |
+| **none. Text extraction and OCR run on our own servers** | Turning scanned pages into text | The pages of scanned documents only | [[FILL: region]] |
+| **Stripe** | Taking payment | Your name, email, billing details, card data. **We never see the card** | [[FILL: region]] |
 | **[[FILL: email provider]]** | Account emails, receipts, support replies | Your email address and the contents of those emails | [[FILL: region]] |
 | **[[FILL: error monitoring or analytics, or "none"]]** | Finding bugs | [[FILL: be specific. If it can capture document contents in an error report, say so, and turn that off]] | [[FILL: region]] |
 

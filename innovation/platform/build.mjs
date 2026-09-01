@@ -106,6 +106,10 @@ ol.steps p{margin:0;color:var(--muted);font-size:15.5px}
 .price ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px;font-size:15px}
 .price li{padding-left:20px;position:relative;color:var(--muted)}
 .price li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--accent)}
+mark.fill{background:#FFF4D6;color:#7A5A00;padding:1px 5px;border-radius:2px;font-size:.92em;
+  font-family:var(--mono);font-style:normal}
+:root[data-theme="dark"] mark.fill,
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) mark.fill{background:#4A3B10;color:#F0D98A}}
 .price .annual{font-size:13px;color:var(--accent);margin-top:6px;font-weight:600}
 .price .btn{margin-top:auto;text-align:center}
 .price .pnote{font-size:12.5px;color:var(--muted);margin:12px 0 0;line-height:1.5}

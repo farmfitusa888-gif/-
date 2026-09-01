@@ -169,7 +169,7 @@ on every page:**
 Top of page one:
 
 > **Prepared using Countercite, [[FILL: legal entity name]],
-> [[FILL: city, state]], [[FILL: website]].**
+> [[FILL: city, state]], countercite.app.**
 >
 > Countercite is not a law firm, is not a licensed public insurance adjuster,
 > and is not a substitute for the advice of an attorney. This document was
@@ -180,7 +180,7 @@ Top of page one:
 Footer on every page:
 
 > Prepared using Countercite. Not legal advice. Not a substitute for the
-> advice of an attorney. [[FILL: website]]
+> advice of an attorney. countercite.app
 
 **Why.** The exported file is the only part of this product that reaches a third
 party, which means it is the only part a regulator or an insurer's counsel is
