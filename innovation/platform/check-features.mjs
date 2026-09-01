@@ -166,6 +166,30 @@ for (const c of unmatched) {
   (mode === "selling" ? err : warn)(`claim not in the ledger: "${c}"`);
 }
 
+// 6. Backpay's own load-bearing rule.
+//
+// The liability screen's sharpest finding was that the variable protecting a
+// business like this is not who signs the cheque, it is how the fee is
+// computed. For Backpay that resolves to one fact: the worker pays nothing.
+// The moment a worker is charged to find out whether they were underpaid, the
+// product is selling a remedy to a distressed consumer, which is the shape the
+// FTC acted on in the DoNotPay matter and the shape the whole idea was chosen
+// to avoid. It is also, separately, the thing that would make it a worse
+// product. Checked, not remembered.
+const bpPath = join(root, "platform/sites/backpay.json");
+if (existsSync(bpPath)) {
+  const bp = JSON.parse(readFileSync(bpPath, "utf8"));
+  const worker = (bp.pricing || []).find((t) => /worker/i.test(t.name));
+  if (!worker) err("backpay: no Worker tier found. The free tier is not optional.");
+  else if (worker.priceValue !== 0)
+    err(`backpay: the Worker tier costs ${worker.price}. It must be $0.`);
+  if (bp.audience !== "free-to-workers-paid-by-firms")
+    err(`backpay: audience must be "free-to-workers-paid-by-firms", got ${JSON.stringify(bp.audience)}`);
+  if (!["waitlist", "selling"].includes(bp.launchStatus))
+    err(`backpay: launchStatus must be "waitlist" or "selling"`);
+  console.log(`\n  backpay: worker tier ${worker ? worker.price : "MISSING"}, mode ${bp.launchStatus}`);
+}
+
 const counts = ledger.features.reduce((a, f) => ((a[f.status] = (a[f.status] || 0) + 1), a), {});
 console.log(`\n  mode: ${mode}`);
 console.log(`  ledger: ${counts.shipped || 0} shipped, ${counts.partial || 0} partial, ${counts.planned || 0} planned`);

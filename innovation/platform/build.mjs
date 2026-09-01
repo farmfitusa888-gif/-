@@ -106,6 +106,106 @@ ol.steps p{margin:0;color:var(--muted);font-size:15.5px}
 .price ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px;font-size:15px}
 .price li{padding-left:20px;position:relative;color:var(--muted)}
 .price li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--accent)}
+/* ---------------------------------------------------------------------------
+   Backpay's visual language. Grounded in the subject's own material: a pay
+   stub is printed on safety paper, and a person checking one marks the error
+   in red pencil. So the ground is a desaturated safety green and the accent is
+   audit red, neither of which is decoration.
+
+   Three deliberate departures from the shared template, each because the
+   shared version is a generated-page tell rather than a choice:
+     - no tracked-out capital eyebrow above every heading
+     - monospace only on columns of money, where tabular figures are the
+       functional requirement, never on labels
+     - the signature element carries the boldness; everything else stays quiet
+   --------------------------------------------------------------------------- */
+/* Four corrections, all found by rendering the page and looking at it rather
+   than by any check that exists. */
+
+/* 1. The shared .note is monospace, which is the "mono for small labels" tell
+      and reads as a system message rather than a sentence. */
+body.v-ledger .note{font-family:var(--body);font-size:14.5px}
+
+/* 2. The split heading sat directly on its own body copy with no gap. */
+body.v-ledger .split .sp-a .col{margin-top:14px}
+body.v-ledger .split .sp-a h2{margin-bottom:0}
+
+/* 3. The shortfall is the payoff of the whole stub and was rendering as one
+      more row. It now closes the figure the way a total closes a column. */
+figure.stub tr:last-of-type th,figure.stub tr:last-of-type td.n{
+  border-top:2px solid var(--ink);padding-top:13px;padding-bottom:14px;
+  font-weight:600;font-size:16px}
+figure.stub tr:last-of-type td.n{color:var(--accent);font-size:18px}
+
+/* 4. Stacked sections were producing a hero's worth of empty ground between
+      blocks. Consecutive full-bleed sections share one rhythm instead. */
+body.v-ledger section{padding:clamp(34px,4.4vw,58px) 0}
+body.v-ledger .stub-sec{padding-top:clamp(30px,4vw,54px);padding-bottom:clamp(40px,5vw,70px)}
+body.v-ledger .bignum-sec{padding:clamp(44px,6vw,82px) 0}
+
+/* A stray partial rule was showing under the last stub row: the row above it
+   zeroes its own borders, so the total's border-top was drawing against a
+   cell that had already collapsed. Borders are now set once, deliberately. */
+figure.stub th,figure.stub td{border:0}
+body.v-ledger .stub-sec + .bignum-sec{padding-top:clamp(46px,6vw,86px)}
+
+body.v-ledger .eyebrow{display:none}
+body.v-ledger h1{font-size:clamp(38px,5.4vw,66px);line-height:1.02;letter-spacing:-.025em;font-weight:500}
+body.v-ledger h2{font-size:clamp(25px,2.9vw,36px);line-height:1.12;letter-spacing:-.016em;font-weight:500}
+body.v-ledger .lede{font-size:19px;line-height:1.62;max-width:54ch}
+body.v-ledger .btn{border-radius:2px}
+
+.stub-sec{padding-top:clamp(34px,5vw,60px)}
+.stub-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:start}
+@media(max-width:900px){.stub-grid{grid-template-columns:1fr}}
+.stub-copy h1{margin:0 0 18px}
+.stub-copy .note{margin-top:20px;font-size:14px;color:var(--muted);max-width:46ch;line-height:1.6}
+
+figure.stub{margin:0;background:var(--card);border:1px solid var(--rule);
+  box-shadow:0 1px 0 var(--rule),0 18px 40px -28px rgba(0,0,0,.45);padding:0}
+figure.stub figcaption{font-size:12.5px;letter-spacing:.02em;color:var(--muted);
+  padding:13px 20px;border-bottom:1px solid var(--rule);background:var(--accentSoft)}
+figure.stub table{width:100%;border-collapse:collapse}
+figure.stub th{text-align:left;font-weight:400;font-size:14.5px;color:var(--muted);
+  padding:9px 20px;white-space:nowrap}
+figure.stub td.n{text-align:right;font-family:var(--mono);font-size:14.5px;
+  font-variant-numeric:tabular-nums;padding:9px 20px;color:var(--ink)}
+figure.stub tr.flagged th,figure.stub tr.flagged td{color:var(--accent);font-weight:600}
+figure.stub tr.mark td{padding:0 20px 12px;border:0}
+figure.stub tr.mark span{display:inline-block;font-size:13px;line-height:1.5;color:var(--accent);
+  border-left:2px solid var(--accent);padding:2px 0 2px 11px;max-width:38ch}
+.stub-foot{margin:0;padding:13px 20px;border-top:1px solid var(--rule);
+  font-size:12.5px;color:var(--muted);line-height:1.55}
+
+.ledger-sec .ledger{margin-top:26px;border:1px solid var(--rule);background:var(--card)}
+.lg-head{display:flex;justify-content:space-between;padding:12px 20px;
+  border-bottom:1px solid var(--rule);font-size:12.5px;color:var(--muted);background:var(--accentSoft)}
+.lg-row,.lg-total{display:flex;justify-content:space-between;gap:24px;padding:11px 20px;
+  border-bottom:1px solid color-mix(in srgb,var(--rule) 55%,transparent)}
+.lg-row.strong{font-weight:600}
+.lg-label{font-size:15px;line-height:1.45}
+.lg-cite{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.lg-val{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:15px;white-space:nowrap}
+.lg-total{border-bottom:0;border-top:2px solid var(--ink);background:var(--accentSoft);
+  font-weight:600;font-size:17px}
+.lg-total .lg-val{font-size:19px;color:var(--accent)}
+.lg-after{margin-top:18px;font-size:14.5px;color:var(--muted);max-width:62ch;line-height:1.62}
+
+.bignum{display:grid;grid-template-columns:auto 1fr;gap:clamp(22px,4vw,50px);align-items:baseline}
+@media(max-width:760px){.bignum{grid-template-columns:1fr}}
+.bn-fig{font-family:var(--display);font-size:clamp(58px,11vw,132px);line-height:.86;
+  letter-spacing:-.04em;color:var(--accent);font-variant-numeric:tabular-nums}
+.bn-body h2{margin:0 0 10px}
+.bn-body p{max-width:56ch}
+.bn-src{font-size:13px;color:var(--muted);margin-top:12px}
+
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(26px,5vw,58px)}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.sp-item{padding:18px 0;border-top:1px solid var(--rule)}
+.sp-item:first-child{border-top:0;padding-top:0}
+.sp-item h3{margin:0 0 6px;font-size:17px;font-weight:600}
+.sp-item p{margin:0;color:var(--muted);font-size:15px;line-height:1.62;max-width:58ch}
+
 mark.fill{background:#FFF4D6;color:#7A5A00;padding:1px 5px;border-radius:2px;font-size:.92em;
   font-family:var(--mono);font-style:normal}
 :root[data-theme="dark"] mark.fill,
@@ -273,6 +373,80 @@ const R = {
       .join("")}
   </div></section>`,
 
+  // A week of arithmetic, shown as a ledger rather than described in prose.
+  // The figures come from engines/ca-wage/demo.mjs, which recomputes on every
+  // run, so this cannot drift into being a picture of something that used to
+  // be true. Every row names the statute that produced it, which is the whole
+  // product argument stated as a layout rather than a claim.
+  stub: (b) => `<section class="stub-sec"><div class="wrap">
+    <div class="stub-grid">
+      <div class="stub-copy">
+        ${b.h1 ? `<h1>${b.h1}</h1>` : ""}
+        ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+        <p class="lede">${b.lede}</p>
+        ${b.cta !== false ? `<div class="cta-row"><a class="btn" href="${b.ctaPath || "/start"}">${esc(b.ctaLabel || "Join the early list")}</a>${
+          b.cta2 ? `<a class="btn ghost" href="${b.cta2.path}">${esc(b.cta2.label)}</a>` : ""}</div>` : ""}
+        ${b.note ? `<p class="note">${b.note}</p>` : ""}
+      </div>
+      <figure class="stub">
+        <figcaption>${esc(b.stubTitle || "Earnings statement")}</figcaption>
+        <table>
+          <tbody>${b.lines.map((l) => `<tr class="${l.flag ? "flagged" : ""}">
+            <th scope="row">${esc(l.label)}</th>
+            <td class="n">${esc(l.value)}</td>
+          </tr>${l.flag ? `<tr class="mark"><td colspan="2"><span>${l.flag}</span></td></tr>` : ""}`).join("")}</tbody>
+        </table>
+        ${b.stubFoot ? `<p class="stub-foot">${b.stubFoot}</p>` : ""}
+      </figure>
+    </div>
+  </div></section>`,
+
+  ledger: (b) => `<section class="ledger-sec"><div class="wrap">
+    ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+    ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+    ${b.intro ? `<p class="lede">${b.intro}</p>` : ""}
+    <div class="ledger">
+      <div class="lg-head"><span>${esc(b.caption || "")}</span><span>${esc(b.captionRight || "")}</span></div>
+      ${b.rows.map((r) => `<div class="lg-row${r.strong ? " strong" : ""}${r.rule ? " cited" : ""}">
+        <div class="lg-label">${esc(r.label)}${r.rule ? `<span class="lg-cite">${esc(r.rule)}</span>` : ""}</div>
+        <div class="lg-val">${esc(r.value)}</div>
+      </div>`).join("")}
+      ${b.total ? `<div class="lg-total">
+        <div class="lg-label">${esc(b.total.label)}</div>
+        <div class="lg-val">${esc(b.total.value)}</div>
+      </div>` : ""}
+    </div>
+    ${b.after ? `<p class="lg-after">${b.after}</p>` : ""}
+  </div></section>`,
+
+  // One figure, at a size that makes the reader stop. Used sparingly: three
+  // times across the whole site, each on a number that carries an argument.
+  bignum: (b) => `<section class="bignum-sec"><div class="wrap">
+    <div class="bignum">
+      <div class="bn-fig">${esc(b.figure)}</div>
+      <div class="bn-body">
+        ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+        ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+        <p>${b.body}</p>
+        ${b.source ? `<p class="bn-src">${esc(b.source)}</p>` : ""}
+      </div>
+    </div>
+  </div></section>`,
+
+  // Two columns that are deliberately unequal, for content that genuinely is.
+  split: (b) => `<section class="split-sec"><div class="wrap">
+    <div class="split">
+      <div class="sp-a">
+        ${b.eyebrow ? `<span class="eyebrow">${esc(b.eyebrow)}</span>` : ""}
+        ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
+        ${b.body ? `<div class="col">${b.body}</div>` : ""}
+      </div>
+      <div class="sp-b">${(b.items || []).map((i) => `<div class="sp-item">
+        <h3>${esc(i.name)}</h3><p>${i.text}</p>
+      </div>`).join("")}</div>
+    </div>
+  </div></section>`,
+
   table: (b) => `<section><div class="wrap">
     ${b.h2 ? `<h2>${esc(b.h2)}</h2>` : ""}
     ${b.intro ? `<p class="lede">${b.intro}</p>` : ""}
@@ -347,7 +521,7 @@ ${head(s, page)}
 ${s.fontsHref ? `<link rel="stylesheet" href="${esc(s.fontsHref)}">` : ""}
 <style>${css(s)}</style>
 </head>
-<body>
+<body${s.styleVariant ? ` class="v-${s.styleVariant}"` : ""}>
 ${nav(s)}
 ${crumbs(s, page)}
 <main id="main">

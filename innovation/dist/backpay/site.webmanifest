@@ -1,0 +1,16 @@
+{
+  "name": "Backpay",
+  "short_name": "Backpay",
+  "description": "Backpay computes California wage-and-hour damages from payroll records and cites the Labor Code section behind every figure. Free for workers checking one paycheck. Paid software for the plaintiff-side firms who build the class-wide model.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E9EDE6",
+  "theme_color": "#A8322A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

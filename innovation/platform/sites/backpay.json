@@ -1,0 +1,834 @@
+{
+  "brand": "Backpay",
+  "shortName": "Backpay",
+  "mark": "B",
+  "domain": "backpay.co",
+  "fontsHref": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap",
+  "theme": {
+    "displayFont": "\"Newsreader\", Georgia, \"Times New Roman\", serif",
+    "bodyFont": "\"Public Sans\", system-ui, \"Segoe UI\", Helvetica, sans-serif",
+    "monoFont": "\"IBM Plex Mono\", ui-monospace, Menlo, monospace",
+    "light": {
+      "paper": "#E9EDE6",
+      "card": "#F6F8F3",
+      "ink": "#161A15",
+      "muted": "#59614F",
+      "accent": "#A8322A",
+      "accentSoft": "#DFE6DA",
+      "rule": "#C7D0C1"
+    },
+    "dark": {
+      "paper": "#101310",
+      "card": "#191D18",
+      "ink": "#E7EAE2",
+      "muted": "#98A08E",
+      "accent": "#DE7A6E",
+      "accentSoft": "#1E2620",
+      "rule": "#2A302A"
+    }
+  },
+  "legalName": "Backpay",
+  "tagline": "Wage-and-hour damages, computed and cited",
+  "description": "Backpay computes California wage-and-hour damages from payroll records and cites the Labor Code section behind every figure. Free for workers checking one paycheck. Paid software for the plaintiff-side firms who build the class-wide model.",
+  "lang": "en",
+  "foundingDate": "2026",
+  "modified": "2026-08-31",
+  "email": "hello@backpay.co",
+  "themeColor": "#A8322A",
+  "bgColor": "#E9EDE6",
+  "coverage": "California",
+  "areaServed": [
+    "California"
+  ],
+  "geoRegions": [
+    "US-CA"
+  ],
+  "geoPlacename": "California, United States",
+  "knowsAbout": [
+    "California Labor Code",
+    "wage and hour law",
+    "overtime calculation",
+    "regular rate of pay",
+    "meal and rest period premiums",
+    "wage statement violations",
+    "class action damages modelling",
+    "unpaid overtime",
+    "wage theft"
+  ],
+  "contactPoint": {
+    "email": "hello@backpay.co",
+    "contactType": "customer support",
+    "availableLanguage": [
+      "English",
+      "Spanish"
+    ]
+  },
+  "service": {
+    "name": "Backpay wage damages engine",
+    "type": "Wage-and-hour damages computation software",
+    "audience": "Plaintiff-side employment law firms, legal aid organisations and California hourly workers",
+    "description": "Computes California wage-and-hour damages from payroll records, week by week, with every figure traced to the Labor Code section that produced it."
+  },
+  "software": {
+    "name": "Backpay",
+    "category": "BusinessApplication",
+    "os": "Web",
+    "description": "Wage-and-hour damages computation with statutory citations"
+  },
+  "cta": {
+    "path": "/start",
+    "label": "Join the early list"
+  },
+  "launchStatus": "waitlist",
+  "audience": "free-to-workers-paid-by-firms",
+  "nav": [
+    {
+      "path": "/how-it-works",
+      "label": "How it works"
+    },
+    {
+      "path": "/for-workers",
+      "label": "For workers"
+    },
+    {
+      "path": "/for-firms",
+      "label": "For firms"
+    },
+    {
+      "path": "/pricing",
+      "label": "Pricing"
+    },
+    {
+      "path": "/method",
+      "label": "Method"
+    }
+  ],
+  "footer": [
+    {
+      "title": "Product",
+      "links": [
+        {
+          "label": "How it works",
+          "path": "/how-it-works"
+        },
+        {
+          "label": "Pricing",
+          "path": "/pricing"
+        },
+        {
+          "label": "How this is checked",
+          "path": "/method"
+        },
+        {
+          "label": "Join the early list",
+          "path": "/start"
+        }
+      ]
+    },
+    {
+      "title": "Who it's for",
+      "links": [
+        {
+          "label": "California workers",
+          "path": "/for-workers"
+        },
+        {
+          "label": "Plaintiff-side firms",
+          "path": "/for-firms"
+        }
+      ]
+    },
+    {
+      "title": "Reference",
+      "links": [
+        {
+          "label": "Glossary",
+          "path": "/glossary"
+        },
+        {
+          "label": "About",
+          "path": "/about"
+        },
+        {
+          "label": "Contact",
+          "path": "/contact"
+        }
+      ]
+    }
+  ],
+  "footerLegal": [
+    {
+      "path": "/terms",
+      "label": "Terms"
+    },
+    {
+      "path": "/privacy",
+      "label": "Privacy"
+    },
+    {
+      "path": "/disclaimers",
+      "label": "Disclaimers"
+    }
+  ],
+  "disclaimer": "Backpay is software. It is not a law firm, it does not give legal advice, and it does not represent anyone. It computes what the California Labor Code requires from the hours and pay you enter, and it names the section behind every figure so the arithmetic can be checked. Whether you have a claim, and what to do about it, is a question for a lawyer.",
+  "pricing": [
+    {
+      "name": "Worker",
+      "price": "$0",
+      "priceValue": 0,
+      "per": "forever, no account required",
+      "annual": "",
+      "summary": "For one person checking one paycheck",
+      "includes": [
+        "Check one week or two years of pay",
+        "Every figure cites the Labor Code section behind it",
+        "English and Spanish",
+        "We never contact your employer",
+        "No account, no card, nothing stored unless you ask"
+      ],
+      "cta": "Join the early list",
+      "note": "Free is the product, not a trial. Charging someone to find out whether they were underpaid inverts the point."
+    },
+    {
+      "name": "Practice",
+      "price": "$299",
+      "priceValue": 299,
+      "per": "per month, up to five users",
+      "annual": "or $2,990 a year, two months free",
+      "annualValue": 2990,
+      "summary": "For a plaintiff-side employment practice",
+      "featured": true,
+      "includes": [
+        "Everything in Worker",
+        "Import payroll records in bulk",
+        "Class-wide models: one worker or two hundred",
+        "Per-week breakdown with statutory citations, exportable",
+        "Refuses to compute where the law does not fit, and says why",
+        "Audit trail showing which rule produced which dollar"
+      ],
+      "cta": "Join the early list",
+      "note": "Priced against paralegal hours, not against other software."
+    },
+    {
+      "name": "Firm",
+      "price": "$599",
+      "priceValue": 599,
+      "per": "per month, unlimited users",
+      "annual": "or $5,990 a year, two months free",
+      "annualValue": 5990,
+      "summary": "For a firm running wage-and-hour at volume",
+      "includes": [
+        "Everything in Practice",
+        "Unlimited users",
+        "Your own payroll formats mapped once and reused",
+        "Damages models across a whole matter portfolio",
+        "Pay by bank transfer or invoice",
+        "Named onboarding, and help mapping your first export"
+      ],
+      "cta": "Join the early list",
+      "note": "Bank transfer suits firms whose cards rotate between partners."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Regular rate of pay",
+      "definition": "The hourly figure overtime is actually calculated from. It is not the base hourly rate. Non-discretionary bonuses, shift differentials and commissions are spread across the hours they were earned in, which raises it. This number appears on no document a worker receives, and getting it wrong is the single most common error in wage arithmetic."
+    },
+    {
+      "term": "Daily overtime",
+      "definition": "California pays 1.5x for hours over eight in a single workday, regardless of the weekly total. Most of the country has no such rule, so payroll systems configured federally miss it."
+    },
+    {
+      "term": "Double time",
+      "definition": "California pays 2x for hours over twelve in a single workday. A thirteen-hour shift contains one double-time hour that a federal payroll configuration will price at straight time."
+    },
+    {
+      "term": "Weekly overtime",
+      "definition": "1.5x for straight-time hours over forty in a workweek. Hours already paid as daily overtime are not counted a second time."
+    },
+    {
+      "term": "Pyramiding",
+      "definition": "Paying the same hour twice, once as daily overtime and again as weekly. It is not allowed, and it is the error that inflates a damages figure and gets the whole model excluded. Backpay refuses to pyramid and says so in its output."
+    },
+    {
+      "term": "Seventh consecutive day",
+      "definition": "Working seven days in one workweek pays 1.5x for the first eight hours of the seventh day and 2x beyond, no matter how few hours the week held in total."
+    },
+    {
+      "term": "Meal period",
+      "definition": "An unpaid thirty-minute break that must begin before the end of the fifth hour, and a second before the end of the tenth. A missed, late or short one owes an hour of pay at the regular rate."
+    },
+    {
+      "term": "Rest period",
+      "definition": "A paid ten-minute break per four hours worked, or major fraction of four. Major fraction means strictly more than two hours, which is why a six-hour shift owes one rest period and not two."
+    },
+    {
+      "term": "Premium pay",
+      "definition": "The one hour of pay at the regular rate owed for each workday with a missed meal period, and separately for each with a missed rest period. Two separate premiums, capped at one of each per day."
+    },
+    {
+      "term": "Wage statement",
+      "definition": "The itemised pay stub California requires, with nine specific items on it. Missing items carry their own penalties, independent of whether the pay itself was correct."
+    },
+    {
+      "term": "Alternative workweek",
+      "definition": "A schedule adopted by employee election, such as four ten-hour days, under which the daily overtime thresholds change. Backpay refuses to compute where one is in effect rather than guessing at the schedule."
+    },
+    {
+      "term": "Non-exempt",
+      "definition": "An employee entitled to overtime. Backpay models non-exempt employees only, and refuses where the worker is classified exempt, because the classification itself is the disputed question and not one arithmetic can settle."
+    },
+    {
+      "term": "Class period",
+      "definition": "The span of time a wage-and-hour class action covers. In California it commonly runs four years back under the unfair competition statute, which is why a $200 weekly shortfall becomes a six-figure claim."
+    },
+    {
+      "term": "Named plaintiff",
+      "definition": "The individual whose payroll records anchor a class action. Their damages model is computed first and in the most detail, because it is what gets checked line by line."
+    },
+    {
+      "term": "Wage theft",
+      "definition": "The general term for pay an employer owed and did not pay. It covers deliberate underpayment and payroll misconfiguration alike, and the arithmetic does not distinguish between them."
+    },
+    {
+      "term": "Non-discretionary bonus",
+      "definition": "A bonus promised in advance for meeting a target, as opposed to a surprise gift. It must be included in the regular rate. Production bonuses, attendance bonuses and piece incentives all qualify."
+    }
+  ],
+  "styleVariant": "ledger",
+  "pages": [
+    {
+      "path": "/",
+      "kind": "page",
+      "title": "Backpay — California wage damages, cited",
+      "h1": "Backpay",
+      "description": "Backpay computes California wage-and-hour damages from hours and pay, and names the Labor Code section behind every figure. Free for workers. Paid software for the firms that build the class-wide model.",
+      "keywords": [
+        "california overtime calculator",
+        "wage and hour damages",
+        "regular rate of pay",
+        "unpaid overtime california"
+      ],
+      "blocks": [
+        {
+          "type": "stub",
+          "h1": "The number on your stub is not the number they owe you",
+          "lede": "California pays overtime on your <em>regular rate</em>, not your hourly rate. A bonus changes it. Almost no pay stub shows it. Backpay computes what the Labor Code required, week by week, and names the section behind every figure.",
+          "ctaLabel": "Join the early list",
+          "cta2": {
+            "path": "/how-it-works",
+            "label": "See how it works"
+          },
+          "note": "Free for workers, in English and Spanish. We never contact your employer.",
+          "stubTitle": "Earnings statement · week ending 8 March 2026",
+          "lines": [
+            {
+              "label": "Regular hours",
+              "value": "40.00"
+            },
+            {
+              "label": "Overtime hours",
+              "value": "19.50"
+            },
+            {
+              "label": "Base rate",
+              "value": "$19.00"
+            },
+            {
+              "label": "Production bonus",
+              "value": "$75.00"
+            },
+            {
+              "label": "Gross pay",
+              "value": "$1,205.50"
+            },
+            {
+              "label": "Rate used for overtime",
+              "value": "$19.00",
+              "flag": "Wrong. A production bonus is non-discretionary, so it has to be spread across the hours it was earned in. The real regular rate for this week is <strong>$20.26</strong>."
+            },
+            {
+              "label": "Shortfall this week",
+              "value": "$207.64",
+              "flag": false
+            }
+          ],
+          "stubFoot": "Figures recomputed by <code>engines/ca-wage/demo.mjs</code> on every build. Lab. Code § 510; 29 C.F.R. § 778.109."
+        },
+        {
+          "type": "bignum",
+          "figure": "0.5%",
+          "h2": "of stolen wages get recovered",
+          "body": "Between $40 and $60 billion a year is taken from American workers in unpaid wages. Over thirteen years the Department of Labor recovered <strong>$3.28 billion</strong> of it. Against the midpoint estimate for that period, that is one half of one percent.",
+          "source": "Computed from the DOL Wage and Hour Division enforcement file, FY2013 to FY2025, held at research/data/dol-whd-allacts-fy2013-2025.csv."
+        },
+        {
+          "type": "split",
+          "h2": "Two people need this arithmetic, and only one of them can pay for it",
+          "body": "<p>A worker needs to know whether one paycheck was short. A law firm needs the same computation run across two hundred workers and four years, in a form an opposing expert can attack and a judge can follow.</p><p>It is the same engine. The worker's version is free and always will be, because charging someone to find out whether they were robbed inverts the point of the exercise. The firm's version is the business.</p>",
+          "items": [
+            {
+              "name": "For the worker",
+              "text": "Enter the hours and what you were paid. Get back what the law required, week by week, with the section number behind each line. No account, no employer contact, nothing kept unless you ask."
+            },
+            {
+              "name": "For the firm",
+              "text": "Import payroll records, model a class, export a schedule where every dollar traces to a statute. Priced against the paralegal hours it replaces, not against other software."
+            },
+            {
+              "name": "For legal aid and worker centres",
+              "text": "The same tool the firms use, free, because you already sit in front of exactly these workers and are chronically under-resourced."
+            }
+          ]
+        },
+        {
+          "type": "ledger",
+          "h2": "One ordinary week, taken apart",
+          "intro": "Nothing about this schedule looks like theft. Five normal days, one long one, a short Sunday, a production bonus. It is the shape of a warehouse week, and it is short by $207.64.",
+          "caption": "Week ending 8 March 2026 · 59.5 hours",
+          "captionRight": "Base rate $19.00",
+          "rows": [
+            {
+              "label": "Regular rate, once the bonus is apportioned",
+              "value": "$20.26",
+              "rule": "Lab. Code § 510; 29 C.F.R. § 778.109"
+            },
+            {
+              "label": "Straight time, 40 hours",
+              "value": "$810.40"
+            },
+            {
+              "label": "Overtime at 1.5×, 18.5 hours",
+              "value": "$562.22",
+              "rule": "Lab. Code § 510(a)"
+            },
+            {
+              "label": "Double time at 2×, 1 hour",
+              "value": "$40.52",
+              "rule": "Lab. Code § 510(a)"
+            },
+            {
+              "label": "Total the law required",
+              "value": "$1,413.14",
+              "strong": true
+            },
+            {
+              "label": "Gross pay actually issued",
+              "value": "$1,205.50"
+            }
+          ],
+          "total": {
+            "label": "Short by",
+            "value": "$207.64"
+          },
+          "after": "Repeat that week across a 96-week class period and one worker is owed <strong>$19,933.44</strong>. A class of two hundred is owed just under four million. That is the arithmetic a paralegal currently does by hand, in a spreadsheet, for every named plaintiff, and it is what gets checked line by line in a motion for class certification."
+        },
+        {
+          "type": "bignum",
+          "figure": "−49%",
+          "h2": "in federal compliance actions since 2013",
+          "body": "Compliance actions fell from 33,146 to 16,924. Workers receiving back wages fell by a third. The money recovered stayed flat. Read those three together and the picture is an agency running fewer, larger cases, which means <strong>the small individual claim is what got squeezed out</strong>. That claim is this product's entire subject.",
+          "source": "Same file. Thirteen fiscal years, counted directly."
+        },
+        {
+          "type": "faq",
+          "h2": "The questions people actually ask first",
+          "items": [
+            {
+              "q": "Is this free for workers, or free until it isn't?",
+              "a": "Free. Not a trial, not a freemium tier with the answer behind a card. The workers this serves are the least able to pay of anyone involved, and the business is funded by the law firms who need the same arithmetic at scale."
+            },
+            {
+              "q": "Will my employer find out I used this?",
+              "a": "No. Backpay never contacts an employer, and it has no way to. It reads hours and pay that you enter and computes what the Labor Code required. What you do with that is entirely yours."
+            },
+            {
+              "q": "Is Backpay a law firm?",
+              "a": "No, and it will not act like one. It does arithmetic and cites the section behind each figure. Whether you have a claim worth bringing is a question for a lawyer, and the answer depends on facts arithmetic cannot see."
+            },
+            {
+              "q": "What happens when the law does not fit?",
+              "a": "It refuses to answer and says why. An alternative workweek schedule, a collective bargaining agreement, piece-rate pay or an exempt classification each change the calculation in ways this engine does not model. A tool that overstates a claim is worse than no tool, because an overstated claim is what gets a whole damages model thrown out."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/how-it-works",
+      "kind": "page",
+      "title": "How Backpay works",
+      "h1": "How it works",
+      "description": "Four steps from a stack of pay stubs to a damages schedule where every figure names the Labor Code section that produced it. What the engine sees, and what it refuses to guess at.",
+      "keywords": [
+        "how backpay works",
+        "wage damages calculation",
+        "california overtime how calculated"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "How it works",
+          "lede": "Four steps, and one of them is the engine refusing to answer.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "steps",
+          "h2": "From a stack of stubs to a schedule",
+          "items": [
+            {
+              "name": "Give it the hours and the pay",
+              "text": "A worker types in one week. A firm imports a payroll export covering hundreds of people and four years. Same engine either way, different loop."
+            },
+            {
+              "name": "It works out the regular rate first",
+              "text": "Before any overtime hour can be priced, the rate has to be right. Non-discretionary bonuses, shift differentials and commissions get apportioned across the hours they were earned in. This step is where most hand-built spreadsheets go wrong, and the error is invisible on the stub."
+            },
+            {
+              "name": "It classifies every hour, and refuses to double-count",
+              "text": "Daily overtime over eight, double time over twelve, weekly overtime over forty straight-time hours, and the seventh-consecutive-day rule on top. Hours already paid as daily overtime are not counted again as weekly. That rule against pyramiding is what separates a defensible model from an inflated one."
+            },
+            {
+              "name": "It prices the premiums, then shows its work",
+              "text": "One hour of pay for each day with a missed meal period, separately for each with a missed rest period. Then every line comes back with the section number behind it, so the arithmetic can be checked rather than believed."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "h2": "What it will not do",
+          "body": "<p>The engine stops and says so when the law does not fit the facts it was given. Four conditions do that: an alternative workweek schedule, a qualifying collective bargaining agreement, an exempt classification, and piece-rate pay. Each one changes the calculation in a way this engine does not model.</p><p>That refusal is a feature you can sell to a lawyer. An attorney will not sign a damages model they cannot trace, and an overstated claim does more damage than a missing one, because it is the thing an opposing expert attacks first and the reason a whole schedule gets excluded. A generic chatbot asked the same question will produce a confident number, pyramid the daily and weekly overtime, and cite a Labor Code section that does not exist.</p>"
+        }
+      ],
+      "howto": {
+        "name": "How to compute California wage damages with Backpay",
+        "description": "Four steps from payroll records to a cited damages schedule.",
+        "totalTime": "PT10M",
+        "steps": [
+          {
+            "name": "Enter hours and pay",
+            "text": "One week by hand, or a payroll export in bulk."
+          },
+          {
+            "name": "Regular rate is computed",
+            "text": "Non-discretionary pay is apportioned across the hours it was earned in."
+          },
+          {
+            "name": "Hours are classified",
+            "text": "Daily and weekly overtime, double time and the seventh-day rule, without pyramiding."
+          },
+          {
+            "name": "Premiums priced and cited",
+            "text": "Meal and rest premiums added, and every figure returned with its statute."
+          }
+        ]
+      }
+    },
+    {
+      "path": "/for-workers",
+      "kind": "page",
+      "title": "Check your paycheck, free",
+      "h1": "If your paycheck is short, this will show you where",
+      "description": "Free for California hourly workers. Enter your hours and what you were paid, and Backpay shows what the Labor Code required, with the section behind every figure. No account. No employer contact.",
+      "keywords": [
+        "check my paycheck california",
+        "am i owed overtime",
+        "california overtime calculator free"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "If your paycheck is short, this will show you where",
+          "lede": "Free, in English and Spanish. No account. We never contact your employer, and we have no way to.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "prose",
+          "h2": "Why you cannot check this yourself",
+          "body": "<p>The error is almost never in a number printed on your stub. It is in the rate those numbers were multiplied by.</p><p>California pays overtime on the <strong>regular rate</strong>, which is not the same as your hourly rate. If you got a production bonus, an attendance bonus, a shift differential or a commission, that money has to be spread across the hours you earned it in, and it raises the rate every overtime hour gets paid at. The regular rate appears on no document you receive. You cannot check a number you were never shown.</p><p>The Economic Policy Institute found the mechanism plainly: most workers do not recognise their pay is being shorted in the first place. Not that they lack the will to act, that they lack the number.</p>"
+        },
+        {
+          "type": "tiles",
+          "h2": "What Backpay looks for",
+          "items": [
+            {
+              "name": "Overtime priced at the wrong rate",
+              "text": "The commonest error, and the hardest to see. A bonus in the period changes what every overtime hour is worth."
+            },
+            {
+              "name": "Daily overtime missed entirely",
+              "text": "California pays 1.5× over eight hours in a day, whatever the weekly total. Payroll set up for federal rules does not know that."
+            },
+            {
+              "name": "Double time not paid",
+              "text": "Over twelve hours in one day is 2×. A thirteen-hour shift contains an hour most systems price at straight time."
+            },
+            {
+              "name": "The seventh day",
+              "text": "Seven days in one workweek pays 1.5× for the first eight hours of the seventh, no matter how short the week was."
+            },
+            {
+              "name": "Meal and rest premiums",
+              "text": "A missed, late or short break owes an hour of pay at the regular rate. Two separate premiums, and both are commonly ignored."
+            },
+            {
+              "name": "What is missing from the stub itself",
+              "text": "California requires nine specific items on a wage statement. Missing ones carry penalties of their own, whether or not the pay was right."
+            }
+          ]
+        },
+        {
+          "type": "disclaimer"
+        }
+      ]
+    },
+    {
+      "path": "/for-firms",
+      "kind": "page",
+      "title": "Wage damages for plaintiff-side firms",
+      "h1": "Damages models your expert can defend",
+      "description": "Class-wide California wage-and-hour damages computed from payroll records, with every figure citing the Labor Code section behind it, and an engine that refuses rather than guesses.",
+      "keywords": [
+        "wage and hour damages software",
+        "class action damages model",
+        "plaintiff employment law software california"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "Damages models your expert can defend",
+          "lede": "The same computation your paralegal builds in a spreadsheet, run across a class, with a statute behind every dollar and a written refusal wherever the law does not fit.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "split",
+          "h2": "What you are replacing",
+          "body": "<p>Right now the damages model for a wage-and-hour matter is a spreadsheet. Someone builds it by hand for the named plaintiff, checks it, extends it to the class, and then defends every cell of it under Rule 23 scrutiny.</p><p>Backpay is priced against those hours, not against other software. If it saves a paralegal four hours on one matter it has paid for the month.</p>",
+          "items": [
+            {
+              "name": "The spreadsheet",
+              "text": "Free, and it is what you do now. It also pyramids daily and weekly overtime more often than anyone admits, and the error only surfaces when the other side finds it."
+            },
+            {
+              "name": "A generic AI assistant",
+              "text": "Firms are trying this already. It invents Labor Code sections and produces a confident number with nothing behind it. No attorney signs a model they cannot trace."
+            },
+            {
+              "name": "An outside damages expert",
+              "text": "The right answer on a large matter and disproportionate on a small one. Backpay is for the matters that never justified the expert."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "h2": "The part that matters in a deposition",
+          "body": "<p>Every figure comes back with the section that produced it. Not a footnote at the bottom of the report, a citation on the line. When opposing counsel asks why an hour was priced at double time, the answer is Labor Code section 510(a) and the hour count that triggered it, on the same row.</p><p>And where the engine cannot model the facts, it returns a refusal instead of a number, naming the reason: an alternative workweek election, a collective bargaining agreement, piece-rate compensation, an exempt classification. A schedule that quietly guesses at any of those is a schedule that gets excluded.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/pricing",
+      "kind": "page",
+      "title": "Pricing",
+      "h1": "Pricing",
+      "description": "Free forever for workers. $299 a month for a plaintiff-side practice, $599 for a firm, both with two months free on annual billing. Priced against paralegal hours.",
+      "keywords": [
+        "backpay pricing",
+        "wage damages software cost"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "Pricing",
+          "lede": "Free for the people it happened to. Paid by the firms who need it at scale.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "pricing"
+        },
+        {
+          "type": "faq",
+          "h2": "Billing questions",
+          "items": [
+            {
+              "q": "Why is the worker version free?",
+              "a": "Because the alternative is charging someone to find out whether they were robbed, which is both wrong and commercially incoherent. The population with the largest unremedied claims is the one least able to pay a subscription, and the firms need the same arithmetic anyway."
+            },
+            {
+              "q": "What does annual billing save?",
+              "a": "Two months. Practice is $2,990 rather than $3,588, Firm is $5,990 rather than $7,188. You can switch at any point and we credit the unused part of the month."
+            },
+            {
+              "q": "Can we pay by invoice?",
+              "a": "Yes on Firm. Bank transfer suits practices whose cards rotate between partners or need a purchase order."
+            },
+            {
+              "q": "Will the price rise later?",
+              "a": "Not while you keep the subscription. Anyone joining from the early list keeps the price they signed up at for as long as they stay subscribed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/method",
+      "kind": "page",
+      "title": "How Backpay is checked",
+      "h1": "How this is checked",
+      "description": "The engine has 24 tests, refuses four categories of input it cannot model, and was corrected twice by its own test suite before anyone saw it. What is measured, and what is not yet.",
+      "keywords": [
+        "backpay accuracy",
+        "wage calculation methodology",
+        "how is this tested"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "How this is checked",
+          "lede": "An arithmetic tool that is confidently wrong is worse than no tool. Here is what has actually been tested, and what has not.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "prose",
+          "h2": "What the tests found",
+          "body": "<p>The engine carries 24 tests. Two of them were written after the code and immediately failed, which is the reason to write them.</p><p>The first: the rest-period rule owes one break per four hours worked <em>or major fraction of four</em>, and a major fraction means strictly more than two hours. A six-hour shift therefore owes one rest period. The first implementation returned two. That error then cascaded into a false premium on a meal period that had been validly waived, so one arithmetic slip was producing two wrong numbers.</p><p>Both were fixed at the source rather than patched at the output. The tests that caught them are still in the suite and still run on every change.</p>"
+        },
+        {
+          "type": "table",
+          "h2": "What it refuses, and why",
+          "headers": [
+            "Condition",
+            "Why the engine stops"
+          ],
+          "rows": [
+            [
+              "Alternative workweek schedule",
+              "Daily overtime thresholds are set by the election, not by statute. Guessing at the schedule produces a number with no basis."
+            ],
+            [
+              "Qualifying collective bargaining agreement",
+              "Statutory overtime rules can be displaced by the agreement. The agreement is the authority and the engine has not read it."
+            ],
+            [
+              "Exempt classification",
+              "Whether the classification is correct is usually the disputed question in the matter. Arithmetic cannot settle it."
+            ],
+            [
+              "Piece-rate compensation",
+              "The regular rate and rest-period pay are computed on a different basis entirely."
+            ]
+          ]
+        },
+        {
+          "type": "prose",
+          "h2": "What has not been established yet",
+          "body": "<p>Two things, stated plainly because a page like this is worthless if it only lists what went well.</p><p>The engine has been tested against constructed cases, not against a corpus of real payroll records with known-correct answers. Until that exists, no accuracy percentage will be published. When it does, the number will be a fraction rather than a percentage until the sample is large enough to support a decimal point, because at twenty cases one item moves the figure five points.</p><p>And the engine currently models California only. Every rule in it is a California rule, and a figure produced for another state would be arithmetic dressed as law.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/glossary",
+      "kind": "page",
+      "title": "Glossary of California wage terms",
+      "h1": "Glossary",
+      "description": "The California wage-and-hour terms that decide whether a paycheck was correct, defined plainly. Regular rate, pyramiding, major fraction, premium pay and the rest.",
+      "keywords": [
+        "california wage terms",
+        "regular rate definition",
+        "pyramiding overtime"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "Glossary",
+          "lede": "Sixteen terms that decide whether a paycheck was right. Most of the money hides in the first one.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "prose",
+          "h2": "Terms",
+          "body": "<h3 id='t-regular-rate-of-pay'>Regular rate of pay</h3><p>The hourly figure overtime is actually calculated from. It is not the base hourly rate. Non-discretionary bonuses, shift differentials and commissions are spread across the hours they were earned in, which raises it. This number appears on no document a worker receives, and getting it wrong is the single most common error in wage arithmetic.</p><h3 id='t-daily-overtime'>Daily overtime</h3><p>California pays 1.5x for hours over eight in a single workday, regardless of the weekly total. Most of the country has no such rule, so payroll systems configured federally miss it.</p><h3 id='t-double-time'>Double time</h3><p>California pays 2x for hours over twelve in a single workday. A thirteen-hour shift contains one double-time hour that a federal payroll configuration will price at straight time.</p><h3 id='t-weekly-overtime'>Weekly overtime</h3><p>1.5x for straight-time hours over forty in a workweek. Hours already paid as daily overtime are not counted a second time.</p><h3 id='t-pyramiding'>Pyramiding</h3><p>Paying the same hour twice, once as daily overtime and again as weekly. It is not allowed, and it is the error that inflates a damages figure and gets the whole model excluded. Backpay refuses to pyramid and says so in its output.</p><h3 id='t-seventh-consecutive-day'>Seventh consecutive day</h3><p>Working seven days in one workweek pays 1.5x for the first eight hours of the seventh day and 2x beyond, no matter how few hours the week held in total.</p><h3 id='t-meal-period'>Meal period</h3><p>An unpaid thirty-minute break that must begin before the end of the fifth hour, and a second before the end of the tenth. A missed, late or short one owes an hour of pay at the regular rate.</p><h3 id='t-rest-period'>Rest period</h3><p>A paid ten-minute break per four hours worked, or major fraction of four. Major fraction means strictly more than two hours, which is why a six-hour shift owes one rest period and not two.</p><h3 id='t-premium-pay'>Premium pay</h3><p>The one hour of pay at the regular rate owed for each workday with a missed meal period, and separately for each with a missed rest period. Two separate premiums, capped at one of each per day.</p><h3 id='t-wage-statement'>Wage statement</h3><p>The itemised pay stub California requires, with nine specific items on it. Missing items carry their own penalties, independent of whether the pay itself was correct.</p><h3 id='t-alternative-workweek'>Alternative workweek</h3><p>A schedule adopted by employee election, such as four ten-hour days, under which the daily overtime thresholds change. Backpay refuses to compute where one is in effect rather than guessing at the schedule.</p><h3 id='t-non-exempt'>Non-exempt</h3><p>An employee entitled to overtime. Backpay models non-exempt employees only, and refuses where the worker is classified exempt, because the classification itself is the disputed question and not one arithmetic can settle.</p><h3 id='t-class-period'>Class period</h3><p>The span of time a wage-and-hour class action covers. In California it commonly runs four years back under the unfair competition statute, which is why a $200 weekly shortfall becomes a six-figure claim.</p><h3 id='t-named-plaintiff'>Named plaintiff</h3><p>The individual whose payroll records anchor a class action. Their damages model is computed first and in the most detail, because it is what gets checked line by line.</p><h3 id='t-wage-theft'>Wage theft</h3><p>The general term for pay an employer owed and did not pay. It covers deliberate underpayment and payroll misconfiguration alike, and the arithmetic does not distinguish between them.</p><h3 id='t-non-discretionary-bonus'>Non-discretionary bonus</h3><p>A bonus promised in advance for meeting a target, as opposed to a surprise gift. It must be included in the regular rate. Production bonuses, attendance bonuses and piece incentives all qualify.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/about",
+      "kind": "page",
+      "title": "About Backpay",
+      "h1": "About",
+      "description": "Backpay is a one-person software business in California wage-and-hour arithmetic. What it is, what it is not, and why the worker product is free.",
+      "keywords": [
+        "about backpay",
+        "who makes backpay"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "About",
+          "lede": "A small software business doing one narrow thing carefully.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "prose",
+          "h2": "Why this exists",
+          "body": "<p>The Department of Labor recovered $3.28 billion in back wages over thirteen years. Estimates of what is taken run between $40 and $60 billion a year. Over the same thirteen years, federal compliance actions fell by half and the number of workers receiving back wages fell by a third, while the money recovered stayed flat.</p><p>That combination describes an agency running fewer and larger cases. The small individual claim is what got squeezed out, and the small individual claim is almost always the one where nobody ever computed the number.</p><p>Backpay computes the number. It gives that away to the person it happened to, and sells the same arithmetic, at scale, to the firms who are the only realistic route from a wrong paycheck to money actually recovered.</p>"
+        },
+        {
+          "type": "prose",
+          "h2": "What Backpay is not",
+          "body": "<p>Not a law firm. Not a representative. Not a guarantee of anything. It does not contact employers, it does not file, and it does not tell anyone whether to bring a claim. It multiplies hours by the rate the Labor Code required and names the section that says so.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/contact",
+      "kind": "page",
+      "title": "Contact",
+      "h1": "Contact",
+      "description": "How to reach Backpay. One address, answered by the person who built it.",
+      "keywords": [
+        "contact backpay"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "Contact",
+          "lede": "One address, and the person who answers it is the person who wrote the engine.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "prose",
+          "h2": "Write to us",
+          "body": "<p><a href='mailto:hello@backpay.co'>hello@backpay.co</a></p><p>If you run a legal aid organisation or a worker centre, say so and the paid features are yours at no charge. That is not a discount programme with an application form; it is a reply to an email.</p>"
+        }
+      ]
+    },
+    {
+      "path": "/start",
+      "kind": "page",
+      "title": "Join the early list",
+      "h1": "Join the early list",
+      "description": "Backpay is not open yet. Joining the list costs nothing, commits you to nothing, and gets you in before anyone else.",
+      "keywords": [
+        "backpay early access",
+        "backpay waitlist"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "h1": "Join the early list",
+          "lede": "Not open yet. No card, no commitment, and one reply removes you.",
+          "cta": "Join the early list"
+        },
+        {
+          "type": "prose",
+          "h2": "What you get by joining",
+          "body": "<p>An email when it opens, and nothing else in the meantime. Workers get the free tool at launch. Firms get the fourteen-day trial and keep whatever price they joined at, for as long as they stay subscribed.</p><p>Write to <a href='mailto:hello@backpay.co'>hello@backpay.co</a> with the word <em>worker</em> or <em>firm</em> and that is the whole process.</p>"
+        },
+        {
+          "type": "disclaimer"
+        }
+      ]
+    }
+  ]
+}
