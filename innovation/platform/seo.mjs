@@ -235,11 +235,19 @@ function softwareNode(site) {
 }
 
 function faqNode(site, page) {
-  if (!page.faqs?.length) return null;
+  // FAQ content lives in a block, not on the page object. Reading only
+  // page.faqs meant every FAQ on every site rendered visibly and emitted no
+  // schema at all, which is the half that earns a rich result. Blocks are the
+  // source; page.faqs stays supported for anything that sets it directly.
+  const fromBlocks = (page.blocks || [])
+    .filter((b) => b.type === "faq")
+    .flatMap((b) => b.items || []);
+  const faqs = page.faqs?.length ? page.faqs : fromBlocks;
+  if (!faqs.length) return null;
   return {
     "@type": "FAQPage",
     "@id": abs(site, page.path) + "#faq",
-    mainEntity: page.faqs.map((f) => ({
+    mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: plain(f.a) },

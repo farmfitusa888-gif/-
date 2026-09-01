@@ -16,15 +16,24 @@ ROOT = os.path.join(os.path.dirname(__file__), "..", "..")
 DATA = os.path.join(ROOT, "floodfacts", "data", "by-county.json")
 OUT = os.path.join(ROOT, "platform", "sites", "floodfacts.json")
 
-# Enough to render the fixture counties with real names. The live run replaces
-# this from the Census county file; hard-coding the whole country here would be
-# data pretending to be code.
-COUNTY_NAMES = {
+# Names come from the Census file when it has been fetched. The four below are
+# a fallback so the fixture renders with real names before that runs, and they
+# are the only county names that will ever be hardcoded here.
+FALLBACK_NAMES = {
     "48201": ("Harris County", "Texas", "TX"),
     "12086": ("Miami-Dade County", "Florida", "FL"),
     "17031": ("Cook County", "Illinois", "IL"),
     "22071": ("Orleans Parish", "Louisiana", "LA"),
 }
+
+def _load_names():
+    path = os.path.join(ROOT, "floodfacts", "data", "counties.json")
+    if os.path.exists(path):
+        raw = json.load(io.open(path, encoding="utf-8"))
+        return {k: tuple(v) for k, v in raw.items()}
+    return dict(FALLBACK_NAMES)
+
+COUNTY_NAMES = _load_names()
 
 ZONE_PLAIN = {
     "AE": "High risk. A mapped 1% annual chance floodplain with a known base flood elevation.",
@@ -33,6 +42,40 @@ ZONE_PLAIN = {
     "X":  "Moderate to low risk, outside the mapped 1% floodplain. Roughly a quarter of all claims come from zones like this one.",
     "UNKNOWN": "Not recorded in the file.",
 }
+
+
+GLOSSARY = [
+ ("Base flood elevation", "The height floodwater is expected to reach in a 1% annual chance flood. Almost every rating question comes back to how your building's lowest floor sits relative to this line, and a building a foot above it can pay a fraction of what one a foot below pays."),
+ ("Special Flood Hazard Area", "The mapped 1% annual chance floodplain, shown on FEMA maps as an A or V zone. If a federally backed mortgage sits on a building here, flood insurance is mandatory."),
+ ("Risk Rating 2.0", "FEMA's rating method since 2021. It prices each property on its own characteristics, including distance to water, flood frequency and rebuilding cost, rather than mainly on which zone it sits in. It is why two neighbours can pay very different premiums."),
+ ("Elevation certificate", "A surveyed document recording a building's elevations. No longer required for rating under Risk Rating 2.0, but still useful, because it can prove a building sits higher than FEMA assumed."),
+ ("Pre-FIRM and post-FIRM", "Built before or after the community's first Flood Insurance Rate Map. Pre-FIRM buildings were often subsidised historically, and the removal of those subsidies is why some premiums have climbed steeply."),
+ ("Increased Cost of Compliance", "Up to $30,000 toward elevating, relocating or demolishing a building that is substantially damaged, on top of the damage payment. Frequently unclaimed because nobody mentions it."),
+ ("Mandatory purchase requirement", "The federal rule that a building in a Special Flood Hazard Area with a federally backed mortgage must carry flood cover. It is a lender requirement, not a state law, and it ends when the mortgage does."),
+ ("Thirty-day waiting period", "Most new NFIP policies do not take effect for thirty days. Buying as a storm approaches does not work, which is the single most common and most expensive misunderstanding about flood insurance."),
+ ("Contents coverage", "Cover for belongings, sold separately from building cover and often not bought. It is a large part of why a payout can look small against the damage: the loss included contents and the policy did not."),
+ ("Community Rating System", "A voluntary programme that discounts premiums across a whole community, by 5% to 45%, when it exceeds minimum floodplain management standards. Two identical houses in neighbouring towns can differ because of it."),
+ ("Policy-year", "One policy in force for one year. Claim rates on this site are per policy-year so the figure means \"in a given year, this share of policies claimed\" rather than an unanchored count."),
+ ("Substantial damage", "Damage costing 50% or more of a building's value to repair. Crossing it triggers a requirement to bring the building up to current floodplain standards, which is what Increased Cost of Compliance pays toward."),
+]
+
+FAQ = [
+ ("Is this a quote?",
+  "No, and it cannot become one. These are medians of what other people in your county and flood zone actually paid. Your own premium depends on your building's elevation, its age, the coverage and deductible you choose, and factors under Risk Rating 2.0 that are property-level and not in these files."),
+ ("Why is the cost so different between two zones in the same county?",
+  "Zone is the strongest single predictor in the data. An AE zone is inside the mapped 1% annual chance floodplain and an X zone is outside it. The gap in premium reflects that, though under Risk Rating 2.0 the zone is no longer the whole story."),
+ ("A low claim rate here. Does that mean it does not flood?",
+  "Not necessarily, and this is the easiest mistake to make with this data. These files contain only people who bought NFIP cover. In most inland counties that is a small minority. A low claim rate can mean the place does not flood, or it can mean the people who flooded had no policy and never appear in a file about insurance."),
+ ("Why does the share of loss paid come out below 100%?",
+  "Several ordinary reasons before any bad ones: policy limits cap what can be paid, the deductible comes off the top, and contents cover is separate and often not purchased. The figure is worth seeing because it shows the gap between a loss and a cheque, which no risk score expresses."),
+ ("Some zones show no numbers at all.",
+  "Those cells have too few policies to say anything honest about. Below the threshold a median is noise, so nothing is shown rather than a figure carrying an error bar you would never see. The policy count is still shown, because very few policies is itself a real fact about a place."),
+ ("Where does this data come from?",
+  "FEMA's own redacted NFIP policy and claims files, published through OpenFEMA and updated roughly monthly. They are public. They are also large enough that FEMA warns they will not open in a spreadsheet, which is why almost nothing is built on them."),
+ ("Do you sell insurance, or pass my details to anyone?",
+  "No. This site has no form, collects no contact details and has no way to reach you. It cannot sell you a policy and does not want to."),
+]
+
 
 def money(n):
     return "$" + format(int(round(n)), ",")
@@ -99,6 +142,48 @@ def county_page(fips, zones, min_cell, synthetic):
     if not reported and not suppressed:
         blocks.append({"type": "prose", "h2": "No data", "body":
             "<p>No NFIP policy transactions are recorded for this county in the extract.</p>"})
+
+    # A FAQ built from this county's own figures. Generic questions on every
+    # page would be filler; these are answerable only because the data exists,
+    # which is the same reason the page exists.
+    if reported:
+        top = max(reported.items(), key=lambda kv: kv[1]["cost"]["median"])
+        low = min(reported.items(), key=lambda kv: kv[1]["cost"]["median"])
+        best = max(reported.items(), key=lambda kv: kv[1]["cost"]["n"])
+        bz, br = best
+        items = [
+          {"q": f"What does flood insurance cost in {name}?",
+           "a": (f"It depends on your flood zone more than anything else. The most common zone "
+                 f"here is {bz}, where the typical policy costs {money(br['cost']['median'])} a "
+                 f"year and half of policies fall between {money(br['cost']['p25'])} and "
+                 f"{money(br['cost']['p75'])}. That is what people actually paid, not a quote.")},
+        ]
+        if top[0] != low[0]:
+            items.append({"q": f"Why is zone {top[0]} so much more expensive than zone {low[0]} here?",
+              "a": (f"{money(top[1]['cost']['median'])} against {money(low[1]['cost']['median'])}, "
+                    f"a difference of about {round(top[1]['cost']['median']/max(low[1]['cost']['median'],1),1)} times. "
+                    f"Zone {top[0]} sits inside the mapped high-risk floodplain and zone {low[0]} does not. "
+                    f"Under Risk Rating 2.0 the zone is no longer the whole story, but it remains the "
+                    f"strongest single signal in this data.")})
+        if br.get("claimRatePerYear") is not None:
+            items.append({"q": f"How often do policies in {name} actually claim?",
+              "a": (f"In zone {bz}, about {br['claimRatePerYear']*100:.1f}% of policies claimed in a "
+                    f"given year, across {format(br['policies'], ',')} policies. Remember this counts "
+                    f"only people who had NFIP cover. Anyone who flooded without a policy never "
+                    f"appears in a file about insurance, so a low rate is not proof a place is dry.")})
+        if br.get("shareOfDamagePaid") is not None:
+            items.append({"q": "When people here claimed, how much did they get back?",
+              "a": (f"The median claim in zone {bz} was paid about {br['shareOfDamagePaid']*100:.0f}% "
+                    f"of the assessed damage, from {br['paidRatioN']} claims where both figures were "
+                    f"recorded. Under 100% is normal rather than sinister: policy limits cap payouts, "
+                    f"the deductible comes off the top, and contents cover is bought separately and "
+                    f"often not bought at all.")})
+        items.append({"q": "Do I have to buy flood insurance here?",
+          "a": ("Only if a federally backed mortgage sits on a building inside a Special Flood Hazard "
+                "Area, which means a zone beginning with A or V. That is a lender requirement rather "
+                "than a state law, and it ends when the mortgage does. Note that a large share of all "
+                "claims come from outside those zones.")})
+        blocks.append({"type": "faq", "h2": f"Questions about flood cover in {name}", "items": items})
 
     blocks.append({"type": "prose", "h2": "Before you use these numbers", "body":
         "<p>These are what people actually paid and were actually paid, which is different from "
@@ -205,6 +290,8 @@ def home_page(counties, synthetic):
             "is written and tested; it has not yet run against FEMA's live interface. The site is "
             "here so the shape can be judged, not so the numbers can be used.</p>"})
     blocks += [
+        {"type": "faq", "h2": "Questions people ask first",
+         "items": [{"q": q, "a": a} for q, a in FAQ]},
         {"type": "tiles", "h2": "The three things this can tell you", "items": [
             {"name": "What people here actually pay",
              "text": "A median and the middle half of the range, by county and flood zone, from "
@@ -236,6 +323,26 @@ def home_page(counties, synthetic):
             "keywords": ["flood insurance cost by county", "nfip claims data",
                          "what does flood insurance cost", "flood insurance payout"],
             "blocks": blocks}
+
+
+def glossary_page():
+    return {"path": "/glossary", "kind": "page",
+            "title": "Flood insurance terms, in plain words",
+            "h1": "The words on your policy",
+            "description": ("Base flood elevation, Risk Rating 2.0, Increased Cost of Compliance and "
+                            "the rest of the flood insurance vocabulary, explained without jargon."),
+            "keywords": ["flood insurance terms", "base flood elevation", "risk rating 2.0",
+                         "special flood hazard area"],
+            "blocks": [
+              {"type": "hero", "cta": False, "h1": "The words on your policy",
+               "lede": ("Twelve terms that decide what you pay and what you get back. Two of them, "
+                        "Increased Cost of Compliance and the thirty-day waiting period, cost people "
+                        "real money purely through not knowing they exist.")},
+              {"type": "prose", "h2": "Terms", "body": "".join(
+                  f"<h3 id='t-{t.lower().replace(chr(32), chr(45))}'>{t}</h3><p>{d}</p>"
+                  for t, d in GLOSSARY)},
+              {"type": "disclaimer"},
+            ]}
 
 
 def main():
@@ -299,8 +406,9 @@ def main():
                        "does not collect contact details, and cannot give you a quote. Figures are "
                        "medians of what other people paid, not a prediction of what you will pay."),
         "pricing": [],
-        "glossary": [],
-        "pages": [home_page(counties, synthetic), limits_page(min_cell, synthetic)]
+        "glossary": [{"term": t, "definition": d} for t, d in GLOSSARY],
+        "pages": [home_page(counties, synthetic), limits_page(min_cell, synthetic),
+                  glossary_page()]
                  + [county_page(f, z, min_cell, synthetic) for f, z in sorted(counties.items())],
     }
     io.open(OUT, "w", encoding="utf-8").write(json.dumps(site, ensure_ascii=False, indent=2) + "\n")

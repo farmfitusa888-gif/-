@@ -13,6 +13,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://floodfacts.example/glossary</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://floodfacts.example/county/12086</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>

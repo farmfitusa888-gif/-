@@ -123,7 +123,56 @@
   ],
   "disclaimer": "Flood Facts is a reference built from FEMA's public National Flood Insurance Program files. It is not an insurance producer, does not sell insurance, does not collect contact details, and cannot give you a quote. Figures are medians of what other people paid, not a prediction of what you will pay.",
   "pricing": [],
-  "glossary": [],
+  "glossary": [
+    {
+      "term": "Base flood elevation",
+      "definition": "The height floodwater is expected to reach in a 1% annual chance flood. Almost every rating question comes back to how your building's lowest floor sits relative to this line, and a building a foot above it can pay a fraction of what one a foot below pays."
+    },
+    {
+      "term": "Special Flood Hazard Area",
+      "definition": "The mapped 1% annual chance floodplain, shown on FEMA maps as an A or V zone. If a federally backed mortgage sits on a building here, flood insurance is mandatory."
+    },
+    {
+      "term": "Risk Rating 2.0",
+      "definition": "FEMA's rating method since 2021. It prices each property on its own characteristics, including distance to water, flood frequency and rebuilding cost, rather than mainly on which zone it sits in. It is why two neighbours can pay very different premiums."
+    },
+    {
+      "term": "Elevation certificate",
+      "definition": "A surveyed document recording a building's elevations. No longer required for rating under Risk Rating 2.0, but still useful, because it can prove a building sits higher than FEMA assumed."
+    },
+    {
+      "term": "Pre-FIRM and post-FIRM",
+      "definition": "Built before or after the community's first Flood Insurance Rate Map. Pre-FIRM buildings were often subsidised historically, and the removal of those subsidies is why some premiums have climbed steeply."
+    },
+    {
+      "term": "Increased Cost of Compliance",
+      "definition": "Up to $30,000 toward elevating, relocating or demolishing a building that is substantially damaged, on top of the damage payment. Frequently unclaimed because nobody mentions it."
+    },
+    {
+      "term": "Mandatory purchase requirement",
+      "definition": "The federal rule that a building in a Special Flood Hazard Area with a federally backed mortgage must carry flood cover. It is a lender requirement, not a state law, and it ends when the mortgage does."
+    },
+    {
+      "term": "Thirty-day waiting period",
+      "definition": "Most new NFIP policies do not take effect for thirty days. Buying as a storm approaches does not work, which is the single most common and most expensive misunderstanding about flood insurance."
+    },
+    {
+      "term": "Contents coverage",
+      "definition": "Cover for belongings, sold separately from building cover and often not bought. It is a large part of why a payout can look small against the damage: the loss included contents and the policy did not."
+    },
+    {
+      "term": "Community Rating System",
+      "definition": "A voluntary programme that discounts premiums across a whole community, by 5% to 45%, when it exceeds minimum floodplain management standards. Two identical houses in neighbouring towns can differ because of it."
+    },
+    {
+      "term": "Policy-year",
+      "definition": "One policy in force for one year. Claim rates on this site are per policy-year so the figure means \"in a given year, this share of policies claimed\" rather than an unanchored count."
+    },
+    {
+      "term": "Substantial damage",
+      "definition": "Damage costing 50% or more of a building's value to repair. Crossing it triggers a requirement to bring the building up to current floodplain standards, which is what Increased Cost of Compliance pays toward."
+    }
+  ],
   "pages": [
     {
       "path": "/",
@@ -148,6 +197,40 @@
           "type": "prose",
           "h2": "Built, but not yet real",
           "body": "<p><strong>Every figure on this site is currently fixture data.</strong> The pipeline is written and tested; it has not yet run against FEMA's live interface. The site is here so the shape can be judged, not so the numbers can be used.</p>"
+        },
+        {
+          "type": "faq",
+          "h2": "Questions people ask first",
+          "items": [
+            {
+              "q": "Is this a quote?",
+              "a": "No, and it cannot become one. These are medians of what other people in your county and flood zone actually paid. Your own premium depends on your building's elevation, its age, the coverage and deductible you choose, and factors under Risk Rating 2.0 that are property-level and not in these files."
+            },
+            {
+              "q": "Why is the cost so different between two zones in the same county?",
+              "a": "Zone is the strongest single predictor in the data. An AE zone is inside the mapped 1% annual chance floodplain and an X zone is outside it. The gap in premium reflects that, though under Risk Rating 2.0 the zone is no longer the whole story."
+            },
+            {
+              "q": "A low claim rate here. Does that mean it does not flood?",
+              "a": "Not necessarily, and this is the easiest mistake to make with this data. These files contain only people who bought NFIP cover. In most inland counties that is a small minority. A low claim rate can mean the place does not flood, or it can mean the people who flooded had no policy and never appear in a file about insurance."
+            },
+            {
+              "q": "Why does the share of loss paid come out below 100%?",
+              "a": "Several ordinary reasons before any bad ones: policy limits cap what can be paid, the deductible comes off the top, and contents cover is separate and often not purchased. The figure is worth seeing because it shows the gap between a loss and a cheque, which no risk score expresses."
+            },
+            {
+              "q": "Some zones show no numbers at all.",
+              "a": "Those cells have too few policies to say anything honest about. Below the threshold a median is noise, so nothing is shown rather than a figure carrying an error bar you would never see. The policy count is still shown, because very few policies is itself a real fact about a place."
+            },
+            {
+              "q": "Where does this data come from?",
+              "a": "FEMA's own redacted NFIP policy and claims files, published through OpenFEMA and updated roughly monthly. They are public. They are also large enough that FEMA warns they will not open in a spreadsheet, which is why almost nothing is built on them."
+            },
+            {
+              "q": "Do you sell insurance, or pass my details to anyone?",
+              "a": "No. This site has no form, collects no contact details and has no way to reach you. It cannot sell you a policy and does not want to."
+            }
+          ]
         },
         {
           "type": "tiles",
@@ -274,6 +357,35 @@
       ]
     },
     {
+      "path": "/glossary",
+      "kind": "page",
+      "title": "Flood insurance terms, in plain words",
+      "h1": "The words on your policy",
+      "description": "Base flood elevation, Risk Rating 2.0, Increased Cost of Compliance and the rest of the flood insurance vocabulary, explained without jargon.",
+      "keywords": [
+        "flood insurance terms",
+        "base flood elevation",
+        "risk rating 2.0",
+        "special flood hazard area"
+      ],
+      "blocks": [
+        {
+          "type": "hero",
+          "cta": false,
+          "h1": "The words on your policy",
+          "lede": "Twelve terms that decide what you pay and what you get back. Two of them, Increased Cost of Compliance and the thirty-day waiting period, cost people real money purely through not knowing they exist."
+        },
+        {
+          "type": "prose",
+          "h2": "Terms",
+          "body": "<h3 id='t-base-flood-elevation'>Base flood elevation</h3><p>The height floodwater is expected to reach in a 1% annual chance flood. Almost every rating question comes back to how your building's lowest floor sits relative to this line, and a building a foot above it can pay a fraction of what one a foot below pays.</p><h3 id='t-special-flood-hazard-area'>Special Flood Hazard Area</h3><p>The mapped 1% annual chance floodplain, shown on FEMA maps as an A or V zone. If a federally backed mortgage sits on a building here, flood insurance is mandatory.</p><h3 id='t-risk-rating-2.0'>Risk Rating 2.0</h3><p>FEMA's rating method since 2021. It prices each property on its own characteristics, including distance to water, flood frequency and rebuilding cost, rather than mainly on which zone it sits in. It is why two neighbours can pay very different premiums.</p><h3 id='t-elevation-certificate'>Elevation certificate</h3><p>A surveyed document recording a building's elevations. No longer required for rating under Risk Rating 2.0, but still useful, because it can prove a building sits higher than FEMA assumed.</p><h3 id='t-pre-firm-and-post-firm'>Pre-FIRM and post-FIRM</h3><p>Built before or after the community's first Flood Insurance Rate Map. Pre-FIRM buildings were often subsidised historically, and the removal of those subsidies is why some premiums have climbed steeply.</p><h3 id='t-increased-cost-of-compliance'>Increased Cost of Compliance</h3><p>Up to $30,000 toward elevating, relocating or demolishing a building that is substantially damaged, on top of the damage payment. Frequently unclaimed because nobody mentions it.</p><h3 id='t-mandatory-purchase-requirement'>Mandatory purchase requirement</h3><p>The federal rule that a building in a Special Flood Hazard Area with a federally backed mortgage must carry flood cover. It is a lender requirement, not a state law, and it ends when the mortgage does.</p><h3 id='t-thirty-day-waiting-period'>Thirty-day waiting period</h3><p>Most new NFIP policies do not take effect for thirty days. Buying as a storm approaches does not work, which is the single most common and most expensive misunderstanding about flood insurance.</p><h3 id='t-contents-coverage'>Contents coverage</h3><p>Cover for belongings, sold separately from building cover and often not bought. It is a large part of why a payout can look small against the damage: the loss included contents and the policy did not.</p><h3 id='t-community-rating-system'>Community Rating System</h3><p>A voluntary programme that discounts premiums across a whole community, by 5% to 45%, when it exceeds minimum floodplain management standards. Two identical houses in neighbouring towns can differ because of it.</p><h3 id='t-policy-year'>Policy-year</h3><p>One policy in force for one year. Claim rates on this site are per policy-year so the figure means \"in a given year, this share of policies claimed\" rather than an unanchored count.</p><h3 id='t-substantial-damage'>Substantial damage</h3><p>Damage costing 50% or more of a building's value to repair. Crossing it triggers a requirement to bring the building up to current floodplain standards, which is what Increased Cost of Compliance pays toward.</p>"
+        },
+        {
+          "type": "disclaimer"
+        }
+      ]
+    },
+    {
       "path": "/county/12086",
       "kind": "page",
       "title": "Flood insurance cost in Miami-Dade County, Florida",
@@ -331,6 +443,32 @@
           "type": "prose",
           "h2": "What the zones mean",
           "body": "<h3>AE</h3><p>High risk. A mapped 1% annual chance floodplain with a known base flood elevation.</p><h3>VE</h3><p>High risk, coastal. Exposed to wave action on top of flooding.</p>"
+        },
+        {
+          "type": "faq",
+          "h2": "Questions about flood cover in Miami-Dade County",
+          "items": [
+            {
+              "q": "What does flood insurance cost in Miami-Dade County?",
+              "a": "It depends on your flood zone more than anything else. The most common zone here is AE, where the typical policy costs $1,888 a year and half of policies fall between $1,489 and $2,389. That is what people actually paid, not a quote."
+            },
+            {
+              "q": "Why is zone VE so much more expensive than zone AE here?",
+              "a": "$4,112 against $1,888, a difference of about 2.2 times. Zone VE sits inside the mapped high-risk floodplain and zone AE does not. Under Risk Rating 2.0 the zone is no longer the whole story, but it remains the strongest single signal in this data."
+            },
+            {
+              "q": "How often do policies in Miami-Dade County actually claim?",
+              "a": "In zone AE, about 4.0% of policies claimed in a given year, across 2,500 policies. Remember this counts only people who had NFIP cover. Anyone who flooded without a policy never appears in a file about insurance, so a low rate is not proof a place is dry."
+            },
+            {
+              "q": "When people here claimed, how much did they get back?",
+              "a": "The median claim in zone AE was paid about 58% of the assessed damage, from 100 claims where both figures were recorded. Under 100% is normal rather than sinister: policy limits cap payouts, the deductible comes off the top, and contents cover is bought separately and often not bought at all."
+            },
+            {
+              "q": "Do I have to buy flood insurance here?",
+              "a": "Only if a federally backed mortgage sits on a building inside a Special Flood Hazard Area, which means a zone beginning with A or V. That is a lender requirement rather than a state law, and it ends when the mortgage does. Note that a large share of all claims come from outside those zones."
+            }
+          ]
         },
         {
           "type": "prose",
@@ -392,6 +530,28 @@
           "type": "prose",
           "h2": "What the zones mean",
           "body": "<h3>X</h3><p>Moderate to low risk, outside the mapped 1% floodplain. Roughly a quarter of all claims come from zones like this one.</p>"
+        },
+        {
+          "type": "faq",
+          "h2": "Questions about flood cover in Cook County",
+          "items": [
+            {
+              "q": "What does flood insurance cost in Cook County?",
+              "a": "It depends on your flood zone more than anything else. The most common zone here is X, where the typical policy costs $415 a year and half of policies fall between $330 and $526. That is what people actually paid, not a quote."
+            },
+            {
+              "q": "How often do policies in Cook County actually claim?",
+              "a": "In zone X, about 0.4% of policies claimed in a given year, across 3,000 policies. Remember this counts only people who had NFIP cover. Anyone who flooded without a policy never appears in a file about insurance, so a low rate is not proof a place is dry."
+            },
+            {
+              "q": "When people here claimed, how much did they get back?",
+              "a": "The median claim in zone X was paid about 69% of the assessed damage, from 12 claims where both figures were recorded. Under 100% is normal rather than sinister: policy limits cap payouts, the deductible comes off the top, and contents cover is bought separately and often not bought at all."
+            },
+            {
+              "q": "Do I have to buy flood insurance here?",
+              "a": "Only if a federally backed mortgage sits on a building inside a Special Flood Hazard Area, which means a zone beginning with A or V. That is a lender requirement rather than a state law, and it ends when the mortgage does. Note that a large share of all claims come from outside those zones."
+            }
+          ]
         },
         {
           "type": "prose",
@@ -499,6 +659,32 @@
           "type": "prose",
           "h2": "What the zones mean",
           "body": "<h3>AE</h3><p>High risk. A mapped 1% annual chance floodplain with a known base flood elevation.</p><h3>X</h3><p>Moderate to low risk, outside the mapped 1% floodplain. Roughly a quarter of all claims come from zones like this one.</p>"
+        },
+        {
+          "type": "faq",
+          "h2": "Questions about flood cover in Harris County",
+          "items": [
+            {
+              "q": "What does flood insurance cost in Harris County?",
+              "a": "It depends on your flood zone more than anything else. The most common zone here is X, where the typical policy costs $481 a year and half of policies fall between $380 and $611. That is what people actually paid, not a quote."
+            },
+            {
+              "q": "Why is zone AE so much more expensive than zone X here?",
+              "a": "$1,151 against $481, a difference of about 2.4 times. Zone AE sits inside the mapped high-risk floodplain and zone X does not. Under Risk Rating 2.0 the zone is no longer the whole story, but it remains the strongest single signal in this data."
+            },
+            {
+              "q": "How often do policies in Harris County actually claim?",
+              "a": "In zone X, about 1.2% of policies claimed in a given year, across 6,000 policies. Remember this counts only people who had NFIP cover. Anyone who flooded without a policy never appears in a file about insurance, so a low rate is not proof a place is dry."
+            },
+            {
+              "q": "When people here claimed, how much did they get back?",
+              "a": "The median claim in zone X was paid about 69% of the assessed damage, from 72 claims where both figures were recorded. Under 100% is normal rather than sinister: policy limits cap payouts, the deductible comes off the top, and contents cover is bought separately and often not bought at all."
+            },
+            {
+              "q": "Do I have to buy flood insurance here?",
+              "a": "Only if a federally backed mortgage sits on a building inside a Special Flood Hazard Area, which means a zone beginning with A or V. That is a lender requirement rather than a state law, and it ends when the mortgage does. Note that a large share of all claims come from outside those zones."
+            }
+          ]
         },
         {
           "type": "prose",
